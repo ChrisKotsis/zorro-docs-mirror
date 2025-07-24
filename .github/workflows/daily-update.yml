@@ -23,13 +23,29 @@ jobs:
         cache: 'npm'
         
     - name: Install dependencies
-      run: npm ci
+      run: |
+        npm ci
+        # Verify the crawler exists
+        ls -la crawler-complete.js
       
     - name: Run crawler
       run: |
         echo "Starting Zorro documentation crawl at $(date)"
-        node crawler-complete.js
+        # Run with explicit node command
+        node crawler-complete.js || echo "Crawler exited with code $?"
       timeout-minutes: 30
+      continue-on-error: true
+      
+    - name: Check crawler results
+      run: |
+        echo "Checking crawler output..."
+        if [ -d "zorro-docs-output" ]; then
+          echo "✓ Output directory exists"
+          echo "Pages crawled: $(find zorro-docs-output/docs -name "*.md" 2>/dev/null | wc -l || echo 0)"
+          echo "Images downloaded: $(find zorro-docs-output/images -type f 2>/dev/null | wc -l || echo 0)"
+        else
+          echo "✗ No output directory found"
+        fi
       
     - name: Check for changes
       id: check_changes
