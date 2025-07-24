@@ -1,104 +1,101 @@
-# Zorro Documentation Crawler
+# Zorro Documentation Mirror
 
-This tool crawls and converts the Zorro Trading Platform documentation into a GitHub-friendly format suitable for Context7 integration.
+**Official mirror of the Zorro Trading Platform documentation for Context7 integration.**
 
-**Repository Location**: `/mnt/c/ats/public-repos/zorro-docs-crawler`
+This repository contains a complete mirror of the [Zorro Trading Platform](https://zorro-project.com) documentation, converted to Markdown format and optimized for modern documentation tools.
 
-## 🤖 Automated Daily Updates
+## 📜 License & Permission
 
-This crawler is configured for automated daily updates. See [automation/SETUP_INSTRUCTIONS.md](automation/SETUP_INSTRUCTIONS.md) for setup details.
+This documentation mirror is published with explicit permission from the Zorro Project team. The documentation content remains the property of oP group Germany.
 
-## Prerequisites
+- **Original Documentation**: https://zorro-project.com/manual/
+- **Purpose**: Making Zorro documentation accessible through Context7 and modern dev tools
+- **Permission**: Granted by the Zorro Project team for Context7 integration
 
-- Node.js 18+ installed
-- npm or yarn
-- Internet connection
+## 🤖 Automated Updates
 
-## Installation
+This repository automatically updates daily to ensure the documentation stays current with the official Zorro manual.
 
-```bash
-npm install
+- **Update Schedule**: Daily at 2 AM UTC
+- **Update Method**: GitHub Actions workflow
+- **Last Update**: Check the commit history
+
+## 📁 Repository Structure
+
+```
+zorro-docs-output/
+├── docs/              # All documentation pages in Markdown
+├── images/            # All diagrams and screenshots
+├── README.md          # Main documentation index
+├── SUMMARY.md         # Table of contents
+└── context7.json      # Context7 configuration
 ```
 
-## Quick Start
+## 🚀 Using with Context7
 
-```bash
-# Navigate to the repository
-cd /mnt/c/ats/public-repos/zorro-docs-crawler
+This documentation is optimized for use with [Context7](https://context7.com), allowing you to:
 
-# Install dependencies
-npm install
+- Access Zorro documentation directly in your IDE
+- Search across all documentation instantly
+- Get context-aware code suggestions
+- View documentation offline
 
-# Run the crawler with images
-node crawler-complete.js
+### Integration Steps
 
-# Check crawler health
-node automation/check-health.js
-```
+1. Install Context7 in your IDE
+2. Search for "Zorro" in Context7
+3. Select this documentation source
+4. Start coding with instant documentation access!
 
-## Usage
+## 📖 Documentation Contents
 
-### 1. Test the Crawler
+The mirror includes:
 
-First, test on a single page to ensure everything works:
+- **Complete API Reference**: All Zorro functions and indicators
+- **Trading Strategies**: Examples and tutorials
+- **Workshops**: Step-by-step learning materials
+- **Deep Learning**: Machine learning with Zorro
+- **Broker Integration**: Connection guides
+- **Performance Analysis**: Backtesting and optimization
 
-```bash
-node test-crawler.js
-```
+## 🛠️ Technical Details
 
-### 2. Run the Full Crawler
+### Crawler Information
 
-To crawl the entire documentation:
+This documentation is maintained by an automated crawler that:
 
-```bash
-node crawler-v2.js
-```
+- Respects server resources with rate limiting
+- Preserves the original documentation structure
+- Downloads all images with original filenames
+- Converts HTML to clean Markdown
+- Maintains internal links between pages
 
-This will:
-- Fetch the table of contents from https://zorro-project.com/manual/toc.php
-- Download each documentation page
-- Convert HTML to clean Markdown
-- Create a structured output in `./zorro-docs-output/`
-- Generate navigation files (SUMMARY.md)
-- Create a context7.json configuration
+### For Contributors
 
-### 3. Review the Output
+If you notice any issues with the documentation mirror:
 
-Check the generated files in `./zorro-docs-output/`:
-- `README.md` - Main documentation readme
-- `SUMMARY.md` - Navigation structure
-- `context7.json` - Context7 configuration
-- `docs/` - All documentation pages in Markdown
+1. Check if the issue exists in the [original documentation](https://zorro-project.com/manual/)
+2. If it's a conversion issue, please [open an issue](https://github.com/ChrisKotsis/zorro-docs-mirror/issues)
+3. For content corrections, contact the Zorro Project team directly
 
-## Important: Get Permission First!
+## 🔄 Manual Update
 
-**DO NOT** publish the documentation without permission from Zorro's creator. Use the provided email template in `email-template.md`.
+To manually trigger a documentation update:
 
-## After Getting Permission
+1. Go to [Actions](https://github.com/ChrisKotsis/zorro-docs-mirror/actions)
+2. Select "Daily Zorro Documentation Update"
+3. Click "Run workflow"
 
-1. Create a new GitHub repository (e.g., `zorro-docs-mirror`)
-2. Copy the contents of `./zorro-docs-output/` to the repository
-3. Commit and push to GitHub
-4. Go to https://context7.com/add-package
-5. Submit your GitHub repository URL
+## 📞 Contact
 
-## Features
+- **Zorro Project**: https://zorro-project.com
+- **Repository Issues**: [GitHub Issues](https://github.com/ChrisKotsis/zorro-docs-mirror/issues)
+- **Context7**: https://context7.com
 
-- Respectful crawling with rate limiting
-- Preserves documentation structure
-- Converts code blocks with syntax highlighting
-- Generates navigation
-- Creates Context7-compatible structure
-- Handles special characters and long filenames
+## ⚖️ Legal
 
-## Troubleshooting
+This is an authorized mirror of the Zorro documentation. All documentation content is © oP group Germany. The crawler and conversion tools in this repository are provided under the MIT license.
 
-If the crawler fails:
-- Check your internet connection
-- Ensure the Zorro manual website is accessible
-- Review error messages in the console
-- Try reducing MAX_CONCURRENT in crawler-v2.js
+---
 
-## License
-
-This crawler tool is provided as-is. The Zorro documentation remains the property of the Zorro Project / oP group Germany.
+*This repository is not affiliated with oP group Germany except for having permission to mirror the documentation for Context7 integration.*
