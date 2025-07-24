@@ -1,0 +1,21 @@
+{
+  "name": "zorro-docs-crawler",
+  "version": "1.0.0",
+  "description": "Web crawler to convert Zorro documentation to GitHub-friendly format for Context7",
+  "main": "crawler.js",
+  "type": "module",
+  "scripts": {
+    "start": "node crawler.js",
+    "test": "node test-crawler.js"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "cheerio": "^1.0.0-rc.12",
+    "fs-extra": "^11.2.0",
+    "jsdom": "^26.1.0",
+    "node-fetch": "^3.3.2",
+    "p-limit": "^5.0.0",
+    "turndown": "^7.1.2",
+    "turndown-plugin-gfm": "^1.0.2"
+  }
+}

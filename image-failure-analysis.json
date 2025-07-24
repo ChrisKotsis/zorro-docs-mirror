@@ -1,0 +1,338 @@
+{
+  "totalReferences": 128,
+  "successfulDownloads": 109,
+  "failedDownloads": 19,
+  "failedImages": [
+    "prompt.png \"R console\"",
+    "plot1.jpeg \"R plot\"",
+    "plot2.jpeg \"Line plot in R\"",
+    "plot3.jpeg \"Scatter plot in R\"",
+    "plot4.jpeg \"Multiple R plots\"",
+    "copyArray.png \"memory in R\"",
+    "loadPackages.png \"Loading packages in R\"",
+    "regression_graph.png \"regression in R graph\"",
+    "residuals.png \"Regression residuals in R\"",
+    "pairs_trade.png \"pairs trading in R\"",
+    "spread_histogram.png \"spread distribution in R\"",
+    "spread_prices.png \"spread prices in R\"",
+    "gif.latex \"Var(aX",
+    "gif(1",
+    "gif(2",
+    "gif(3",
+    "gif(4",
+    "gif(5",
+    "gif(6"
+  ],
+  "sampleReferences": [
+    {
+      "imageName": "3e5227ed.png",
+      "references": [
+        {
+          "file": "001_Getting_Started.md",
+          "path": "../images/3e5227ed.png",
+          "fullMatch": "![](../images/3e5227ed.png)"
+        }
+      ]
+    },
+    {
+      "imageName": "368c3ab6.jpg",
+      "references": [
+        {
+          "file": "001_Getting_Started.md",
+          "path": "../images/368c3ab6.jpg",
+          "fullMatch": "![](../images/368c3ab6.jpg)"
+        }
+      ]
+    },
+    {
+      "imageName": "216bc2d2.png",
+      "references": [
+        {
+          "file": "004_Trading_Strategies.md",
+          "path": "../images/216bc2d2.png",
+          "fullMatch": "![](../images/216bc2d2.png)"
+        }
+      ]
+    },
+    {
+      "imageName": "623ae639.png",
+      "references": [
+        {
+          "file": "004_Trading_Strategies.md",
+          "path": "../images/623ae639.png",
+          "fullMatch": "![](../images/623ae639.png)"
+        }
+      ]
+    },
+    {
+      "imageName": "38125933.png",
+      "references": [
+        {
+          "file": "004_Trading_Strategies.md",
+          "path": "../images/38125933.png",
+          "fullMatch": "![](../images/38125933.png)"
+        }
+      ]
+    },
+    {
+      "imageName": "106a2af8.png",
+      "references": [
+        {
+          "file": "005_Bars_and_Candles.md",
+          "path": "../images/106a2af8.png",
+          "fullMatch": "![](../images/106a2af8.png)"
+        }
+      ]
+    },
+    {
+      "imageName": "be526219.png",
+      "references": [
+        {
+          "file": "006_Testing.md",
+          "path": "../images/be526219.png",
+          "fullMatch": "![](../images/be526219.png)"
+        }
+      ]
+    },
+    {
+      "imageName": "de622182.png",
+      "references": [
+        {
+          "file": "006_Testing.md",
+          "path": "../images/de622182.png",
+          "fullMatch": "![](../images/de622182.png)"
+        }
+      ]
+    },
+    {
+      "imageName": "8f21f0ab.png",
+      "references": [
+        {
+          "file": "006_Testing.md",
+          "path": "../images/8f21f0ab.png",
+          "fullMatch": "![](../images/8f21f0ab.png)"
+        }
+      ]
+    },
+    {
+      "imageName": "6b8605b7.png",
+      "references": [
+        {
+          "file": "007_Training.md",
+          "path": "../images/6b8605b7.png",
+          "fullMatch": "![](../images/6b8605b7.png)"
+        }
+      ]
+    },
+    {
+      "imageName": "35a49dea.png",
+      "references": [
+        {
+          "file": "007_Training.md",
+          "path": "../images/35a49dea.png",
+          "fullMatch": "![](../images/35a49dea.png)"
+        },
+        {
+          "file": "108_optimize.md",
+          "path": "../images/35a49dea.png",
+          "fullMatch": "![](../images/35a49dea.png)"
+        }
+      ]
+    },
+    {
+      "imageName": "1fb8066b.png",
+      "references": [
+        {
+          "file": "007_Training.md",
+          "path": "../images/1fb8066b.png",
+          "fullMatch": "![](../images/1fb8066b.png)"
+        },
+        {
+          "file": "108_optimize.md",
+          "path": "../images/1fb8066b.png",
+          "fullMatch": "![](../images/1fb8066b.png)"
+        },
+        {
+          "file": "169_Dataset_handling.md",
+          "path": "../images/1fb8066b.png",
+          "fullMatch": "![](../images/1fb8066b.png)"
+        }
+      ]
+    },
+    {
+      "imageName": "a45a49f9.png",
+      "references": [
+        {
+          "file": "008_Trading.md",
+          "path": "../images/a45a49f9.png",
+          "fullMatch": "![](../images/a45a49f9.png)"
+        }
+      ]
+    },
+    {
+      "imageName": "ddfdd90c.png",
+      "references": [
+        {
+          "file": "008_Trading.md",
+          "path": "../images/ddfdd90c.png",
+          "fullMatch": "![](../images/ddfdd90c.png)"
+        },
+        {
+          "file": "241_The_Z_Strategies.md",
+          "path": "../images/ddfdd90c.png",
+          "fullMatch": "![](../images/ddfdd90c.png)"
+        }
+      ]
+    },
+    {
+      "imageName": "f915fa67.png",
+      "references": [
+        {
+          "file": "011_Chart_Viewer_-_Debugger.md",
+          "path": "../images/f915fa67.png",
+          "fullMatch": "![](../images/f915fa67.png)"
+        },
+        {
+          "file": "012_Performance_Report.md",
+          "path": "../images/f915fa67.png",
+          "fullMatch": "![](../images/f915fa67.png)"
+        }
+      ]
+    },
+    {
+      "imageName": "827e090a.png",
+      "references": [
+        {
+          "file": "011_Chart_Viewer_-_Debugger.md",
+          "path": "../images/827e090a.png",
+          "fullMatch": "![](../images/827e090a.png)"
+        }
+      ]
+    },
+    {
+      "imageName": "e245357f.png",
+      "references": [
+        {
+          "file": "011_Chart_Viewer_-_Debugger.md",
+          "path": "../images/e245357f.png",
+          "fullMatch": "![Single Step Debugging](../images/e245357f.png)"
+        },
+        {
+          "file": "237_Troubleshooting.md",
+          "path": "../images/e245357f.png",
+          "fullMatch": "![Single Step Debugging](../images/e245357f.png)"
+        }
+      ]
+    },
+    {
+      "imageName": "d1af4588.png",
+      "references": [
+        {
+          "file": "015_Deep_Learning.md",
+          "path": "../images/d1af4588.png",
+          "fullMatch": "![](../images/d1af4588.png)"
+        }
+      ]
+    },
+    {
+      "imageName": "662c5c1a.gif",
+      "references": [
+        {
+          "file": "019_Virtual_Hedging.md",
+          "path": "../images/662c5c1a.gif",
+          "fullMatch": "![](../images/662c5c1a.gif)"
+        },
+        {
+          "file": "019_Virtual_Hedging.md",
+          "path": "../images/662c5c1a.gif",
+          "fullMatch": "![](../images/662c5c1a.gif)"
+        },
+        {
+          "file": "019_Virtual_Hedging.md",
+          "path": "../images/662c5c1a.gif",
+          "fullMatch": "![](../images/662c5c1a.gif)"
+        },
+        {
+          "file": "019_Virtual_Hedging.md",
+          "path": "../images/662c5c1a.gif",
+          "fullMatch": "![](../images/662c5c1a.gif)"
+        },
+        {
+          "file": "029_Integrating_Zorro.md",
+          "path": "../images/662c5c1a.gif",
+          "fullMatch": "![](../images/662c5c1a.gif)"
+        },
+        {
+          "file": "029_Integrating_Zorro.md",
+          "path": "../images/662c5c1a.gif",
+          "fullMatch": "![](../images/662c5c1a.gif)"
+        },
+        {
+          "file": "029_Integrating_Zorro.md",
+          "path": "../images/662c5c1a.gif",
+          "fullMatch": "![](../images/662c5c1a.gif)"
+        },
+        {
+          "file": "029_Integrating_Zorro.md",
+          "path": "../images/662c5c1a.gif",
+          "fullMatch": "![](../images/662c5c1a.gif)"
+        },
+        {
+          "file": "029_Integrating_Zorro.md",
+          "path": "../images/662c5c1a.gif",
+          "fullMatch": "![](../images/662c5c1a.gif)"
+        },
+        {
+          "file": "029_Integrating_Zorro.md",
+          "path": "../images/662c5c1a.gif",
+          "fullMatch": "![](../images/662c5c1a.gif)"
+        },
+        {
+          "file": "029_Integrating_Zorro.md",
+          "path": "../images/662c5c1a.gif",
+          "fullMatch": "![](../images/662c5c1a.gif)"
+        },
+        {
+          "file": "029_Integrating_Zorro.md",
+          "path": "../images/662c5c1a.gif",
+          "fullMatch": "![](../images/662c5c1a.gif)"
+        },
+        {
+          "file": "115_Indicators.md",
+          "path": "../images/662c5c1a.gif",
+          "fullMatch": "![](../images/662c5c1a.gif)"
+        },
+        {
+          "file": "115_Indicators.md",
+          "path": "../images/662c5c1a.gif",
+          "fullMatch": "![](../images/662c5c1a.gif)"
+        },
+        {
+          "file": "115_Indicators.md",
+          "path": "../images/662c5c1a.gif",
+          "fullMatch": "![](../images/662c5c1a.gif)"
+        },
+        {
+          "file": "115_Indicators.md",
+          "path": "../images/662c5c1a.gif",
+          "fullMatch": "![](../images/662c5c1a.gif)"
+        },
+        {
+          "file": "115_Indicators.md",
+          "path": "../images/662c5c1a.gif",
+          "fullMatch": "![](../images/662c5c1a.gif)"
+        }
+      ]
+    },
+    {
+      "imageName": "adfb1340.png",
+      "references": [
+        {
+          "file": "019_Virtual_Hedging.md",
+          "path": "../images/adfb1340.png",
+          "fullMatch": "![](../images/adfb1340.png)"
+        }
+      ]
+    }
+  ]
+}

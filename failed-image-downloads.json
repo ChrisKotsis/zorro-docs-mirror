@@ -1,0 +1,580 @@
+{
+  "totalFailed": 115,
+  "failures": [
+    {
+      "imageName": "3e5227ed.png",
+      "url": "https://zorro-project.com/manual/images/3e5227ed.png",
+      "originalPath": "../images/3e5227ed.png"
+    },
+    {
+      "imageName": "368c3ab6.jpg",
+      "url": "https://zorro-project.com/manual/images/368c3ab6.jpg",
+      "originalPath": "../images/368c3ab6.jpg"
+    },
+    {
+      "imageName": "216bc2d2.png",
+      "url": "https://zorro-project.com/manual/images/216bc2d2.png",
+      "originalPath": "../images/216bc2d2.png"
+    },
+    {
+      "imageName": "623ae639.png",
+      "url": "https://zorro-project.com/manual/images/623ae639.png",
+      "originalPath": "../images/623ae639.png"
+    },
+    {
+      "imageName": "38125933.png",
+      "url": "https://zorro-project.com/manual/images/38125933.png",
+      "originalPath": "../images/38125933.png"
+    },
+    {
+      "imageName": "106a2af8.png",
+      "url": "https://zorro-project.com/manual/images/106a2af8.png",
+      "originalPath": "../images/106a2af8.png"
+    },
+    {
+      "imageName": "be526219.png",
+      "url": "https://zorro-project.com/manual/images/be526219.png",
+      "originalPath": "../images/be526219.png"
+    },
+    {
+      "imageName": "de622182.png",
+      "url": "https://zorro-project.com/manual/images/de622182.png",
+      "originalPath": "../images/de622182.png"
+    },
+    {
+      "imageName": "8f21f0ab.png",
+      "url": "https://zorro-project.com/manual/images/8f21f0ab.png",
+      "originalPath": "../images/8f21f0ab.png"
+    },
+    {
+      "imageName": "6b8605b7.png",
+      "url": "https://zorro-project.com/manual/images/6b8605b7.png",
+      "originalPath": "../images/6b8605b7.png"
+    },
+    {
+      "imageName": "35a49dea.png",
+      "url": "https://zorro-project.com/manual/images/35a49dea.png",
+      "originalPath": "../images/35a49dea.png"
+    },
+    {
+      "imageName": "1fb8066b.png",
+      "url": "https://zorro-project.com/manual/images/1fb8066b.png",
+      "originalPath": "../images/1fb8066b.png"
+    },
+    {
+      "imageName": "a45a49f9.png",
+      "url": "https://zorro-project.com/manual/images/a45a49f9.png",
+      "originalPath": "../images/a45a49f9.png"
+    },
+    {
+      "imageName": "ddfdd90c.png",
+      "url": "https://zorro-project.com/manual/images/ddfdd90c.png",
+      "originalPath": "../images/ddfdd90c.png"
+    },
+    {
+      "imageName": "f915fa67.png",
+      "url": "https://zorro-project.com/manual/images/f915fa67.png",
+      "originalPath": "../images/f915fa67.png"
+    },
+    {
+      "imageName": "827e090a.png",
+      "url": "https://zorro-project.com/manual/images/827e090a.png",
+      "originalPath": "../images/827e090a.png"
+    },
+    {
+      "imageName": "e245357f.png",
+      "url": "https://zorro-project.com/manual/images/e245357f.png",
+      "originalPath": "../images/e245357f.png"
+    },
+    {
+      "imageName": "d1af4588.png",
+      "url": "https://zorro-project.com/manual/images/d1af4588.png",
+      "originalPath": "../images/d1af4588.png"
+    },
+    {
+      "imageName": "662c5c1a.gif",
+      "url": "https://zorro-project.com/manual/images/662c5c1a.gif",
+      "originalPath": "../images/662c5c1a.gif"
+    },
+    {
+      "imageName": "adfb1340.png",
+      "url": "https://zorro-project.com/manual/images/adfb1340.png",
+      "originalPath": "../images/adfb1340.png"
+    },
+    {
+      "imageName": "d28f265a.png",
+      "url": "https://zorro-project.com/manual/images/d28f265a.png",
+      "originalPath": "../images/d28f265a.png"
+    },
+    {
+      "imageName": "7d48d947.png",
+      "url": "https://zorro-project.com/manual/images/7d48d947.png",
+      "originalPath": "../images/7d48d947.png"
+    },
+    {
+      "imageName": "ed7228bd.png",
+      "url": "https://zorro-project.com/manual/images/ed7228bd.png",
+      "originalPath": "../images/ed7228bd.png"
+    },
+    {
+      "imageName": "19647107.png",
+      "url": "https://zorro-project.com/manual/images/19647107.png",
+      "originalPath": "../images/19647107.png"
+    },
+    {
+      "imageName": "7e41be8e.png",
+      "url": "https://zorro-project.com/manual/images/7e41be8e.png",
+      "originalPath": "../images/7e41be8e.png"
+    },
+    {
+      "imageName": "5ce5b713.png",
+      "url": "https://zorro-project.com/manual/images/5ce5b713.png",
+      "originalPath": "../images/5ce5b713.png"
+    },
+    {
+      "imageName": "2732dfa1.png",
+      "url": "https://zorro-project.com/manual/images/2732dfa1.png",
+      "originalPath": "../images/2732dfa1.png"
+    },
+    {
+      "imageName": "c56312ae.jpg",
+      "url": "https://zorro-project.com/manual/images/c56312ae.jpg",
+      "originalPath": "../images/c56312ae.jpg"
+    },
+    {
+      "imageName": "e668b6b0.jpg",
+      "url": "https://zorro-project.com/manual/images/e668b6b0.jpg",
+      "originalPath": "../images/e668b6b0.jpg"
+    },
+    {
+      "imageName": "1f7460c4.png",
+      "url": "https://zorro-project.com/manual/images/1f7460c4.png",
+      "originalPath": "../images/1f7460c4.png"
+    },
+    {
+      "imageName": "2e546582.png",
+      "url": "https://zorro-project.com/manual/images/2e546582.png",
+      "originalPath": "../images/2e546582.png"
+    },
+    {
+      "imageName": "d2b77d52.png",
+      "url": "https://zorro-project.com/manual/images/d2b77d52.png",
+      "originalPath": "../images/d2b77d52.png"
+    },
+    {
+      "imageName": "d028ecdb.png",
+      "url": "https://zorro-project.com/manual/images/d028ecdb.png",
+      "originalPath": "../images/d028ecdb.png"
+    },
+    {
+      "imageName": "6164062f.png",
+      "url": "https://zorro-project.com/manual/images/6164062f.png",
+      "originalPath": "../images/6164062f.png"
+    },
+    {
+      "imageName": "25974b61.png",
+      "url": "https://zorro-project.com/manual/images/25974b61.png",
+      "originalPath": "../images/25974b61.png"
+    },
+    {
+      "imageName": "53904c3b.png",
+      "url": "https://zorro-project.com/manual/images/53904c3b.png",
+      "originalPath": "../images/53904c3b.png"
+    },
+    {
+      "imageName": "1feb92f6.png",
+      "url": "https://zorro-project.com/manual/images/1feb92f6.png",
+      "originalPath": "../images/1feb92f6.png"
+    },
+    {
+      "imageName": "ec2e48f1.png",
+      "url": "https://zorro-project.com/manual/images/ec2e48f1.png",
+      "originalPath": "../images/ec2e48f1.png"
+    },
+    {
+      "imageName": "daa2f44e.png",
+      "url": "https://zorro-project.com/manual/images/daa2f44e.png",
+      "originalPath": "../images/daa2f44e.png"
+    },
+    {
+      "imageName": "635e44ba.png",
+      "url": "https://zorro-project.com/manual/images/635e44ba.png",
+      "originalPath": "../images/635e44ba.png"
+    },
+    {
+      "imageName": "1cf4193b.png",
+      "url": "https://zorro-project.com/manual/images/1cf4193b.png",
+      "originalPath": "../images/1cf4193b.png"
+    },
+    {
+      "imageName": "5a22460c.png",
+      "url": "https://zorro-project.com/manual/images/5a22460c.png",
+      "originalPath": "../images/5a22460c.png"
+    },
+    {
+      "imageName": "e8107550.png",
+      "url": "https://zorro-project.com/manual/images/e8107550.png",
+      "originalPath": "../images/e8107550.png"
+    },
+    {
+      "imageName": "1d5535c3.png",
+      "url": "https://zorro-project.com/manual/images/1d5535c3.png",
+      "originalPath": "../images/1d5535c3.png"
+    },
+    {
+      "imageName": "43f1292a.png",
+      "url": "https://zorro-project.com/manual/images/43f1292a.png",
+      "originalPath": "../images/43f1292a.png"
+    },
+    {
+      "imageName": "16972843.png",
+      "url": "https://zorro-project.com/manual/images/16972843.png",
+      "originalPath": "../images/16972843.png"
+    },
+    {
+      "imageName": "9ddee5b5.png",
+      "url": "https://zorro-project.com/manual/images/9ddee5b5.png",
+      "originalPath": "../images/9ddee5b5.png"
+    },
+    {
+      "imageName": "gif(1",
+      "url": "https://zorro-project.com/manual/images/gif(1",
+      "originalPath": "../images/gif(1"
+    },
+    {
+      "imageName": "gif(2",
+      "url": "https://zorro-project.com/manual/images/gif(2",
+      "originalPath": "../images/gif(2"
+    },
+    {
+      "imageName": "6a52a6c5.png",
+      "url": "https://zorro-project.com/manual/images/6a52a6c5.png",
+      "originalPath": "../images/6a52a6c5.png"
+    },
+    {
+      "imageName": "gif(3",
+      "url": "https://zorro-project.com/manual/images/gif(3",
+      "originalPath": "../images/gif(3"
+    },
+    {
+      "imageName": "gif(4",
+      "url": "https://zorro-project.com/manual/images/gif(4",
+      "originalPath": "../images/gif(4"
+    },
+    {
+      "imageName": "gif(5",
+      "url": "https://zorro-project.com/manual/images/gif(5",
+      "originalPath": "../images/gif(5"
+    },
+    {
+      "imageName": "gif(6",
+      "url": "https://zorro-project.com/manual/images/gif(6",
+      "originalPath": "../images/gif(6"
+    },
+    {
+      "imageName": "0efaa1d7.png",
+      "url": "https://zorro-project.com/manual/images/0efaa1d7.png",
+      "originalPath": "../images/0efaa1d7.png"
+    },
+    {
+      "imageName": "947ad70b.png",
+      "url": "https://zorro-project.com/manual/images/947ad70b.png",
+      "originalPath": "../images/947ad70b.png"
+    },
+    {
+      "imageName": "bcb9d032.png",
+      "url": "https://zorro-project.com/manual/images/bcb9d032.png",
+      "originalPath": "../images/bcb9d032.png"
+    },
+    {
+      "imageName": "c1449eee.png",
+      "url": "https://zorro-project.com/manual/images/c1449eee.png",
+      "originalPath": "../images/c1449eee.png"
+    },
+    {
+      "imageName": "8b9940bb.png",
+      "url": "https://zorro-project.com/manual/images/8b9940bb.png",
+      "originalPath": "../images/8b9940bb.png"
+    },
+    {
+      "imageName": "effe649b.png",
+      "url": "https://zorro-project.com/manual/images/effe649b.png",
+      "originalPath": "../images/effe649b.png"
+    },
+    {
+      "imageName": "a93c7171.png",
+      "url": "https://zorro-project.com/manual/images/a93c7171.png",
+      "originalPath": "../images/a93c7171.png"
+    },
+    {
+      "imageName": "8caa76fc.png",
+      "url": "https://zorro-project.com/manual/images/8caa76fc.png",
+      "originalPath": "../images/8caa76fc.png"
+    },
+    {
+      "imageName": "7e749d12.png",
+      "url": "https://zorro-project.com/manual/images/7e749d12.png",
+      "originalPath": "../images/7e749d12.png"
+    },
+    {
+      "imageName": "8fcb58ae.png",
+      "url": "https://zorro-project.com/manual/images/8fcb58ae.png",
+      "originalPath": "../images/8fcb58ae.png"
+    },
+    {
+      "imageName": "976d68e7.png",
+      "url": "https://zorro-project.com/manual/images/976d68e7.png",
+      "originalPath": "../images/976d68e7.png"
+    },
+    {
+      "imageName": "5251dc13.png",
+      "url": "https://zorro-project.com/manual/images/5251dc13.png",
+      "originalPath": "../images/5251dc13.png"
+    },
+    {
+      "imageName": "6f2a745b.png",
+      "url": "https://zorro-project.com/manual/images/6f2a745b.png",
+      "originalPath": "../images/6f2a745b.png"
+    },
+    {
+      "imageName": "17150652.png",
+      "url": "https://zorro-project.com/manual/images/17150652.png",
+      "originalPath": "../images/17150652.png"
+    },
+    {
+      "imageName": "791b34da.png",
+      "url": "https://zorro-project.com/manual/images/791b34da.png",
+      "originalPath": "../images/791b34da.png"
+    },
+    {
+      "imageName": "d84c1e2f.png",
+      "url": "https://zorro-project.com/manual/images/d84c1e2f.png",
+      "originalPath": "../images/d84c1e2f.png"
+    },
+    {
+      "imageName": "59f96f90.png",
+      "url": "https://zorro-project.com/manual/images/59f96f90.png",
+      "originalPath": "../images/59f96f90.png"
+    },
+    {
+      "imageName": "b0f3b1af.png",
+      "url": "https://zorro-project.com/manual/images/b0f3b1af.png",
+      "originalPath": "../images/b0f3b1af.png"
+    },
+    {
+      "imageName": "f64e2cc8.png",
+      "url": "https://zorro-project.com/manual/images/f64e2cc8.png",
+      "originalPath": "../images/f64e2cc8.png"
+    },
+    {
+      "imageName": "336cb577.png",
+      "url": "https://zorro-project.com/manual/images/336cb577.png",
+      "originalPath": "../images/336cb577.png"
+    },
+    {
+      "imageName": "224f13cc.png",
+      "url": "https://zorro-project.com/manual/images/224f13cc.png",
+      "originalPath": "../images/224f13cc.png"
+    },
+    {
+      "imageName": "ce186357.png",
+      "url": "https://zorro-project.com/manual/images/ce186357.png",
+      "originalPath": "../images/ce186357.png"
+    },
+    {
+      "imageName": "ae96903f.png",
+      "url": "https://zorro-project.com/manual/images/ae96903f.png",
+      "originalPath": "../images/ae96903f.png"
+    },
+    {
+      "imageName": "05d1e98f.png",
+      "url": "https://zorro-project.com/manual/images/05d1e98f.png",
+      "originalPath": "../images/05d1e98f.png"
+    },
+    {
+      "imageName": "aac4391f.png",
+      "url": "https://zorro-project.com/manual/images/aac4391f.png",
+      "originalPath": "../images/aac4391f.png"
+    },
+    {
+      "imageName": "07cea018.png",
+      "url": "https://zorro-project.com/manual/images/07cea018.png",
+      "originalPath": "../images/07cea018.png"
+    },
+    {
+      "imageName": "41b1fdf3.png",
+      "url": "https://zorro-project.com/manual/images/41b1fdf3.png",
+      "originalPath": "../images/41b1fdf3.png"
+    },
+    {
+      "imageName": "153ecf79.png",
+      "url": "https://zorro-project.com/manual/images/153ecf79.png",
+      "originalPath": "../images/153ecf79.png"
+    },
+    {
+      "imageName": "21326a0b.png",
+      "url": "https://zorro-project.com/manual/images/21326a0b.png",
+      "originalPath": "../images/21326a0b.png"
+    },
+    {
+      "imageName": "d16845e2.png",
+      "url": "https://zorro-project.com/manual/images/d16845e2.png",
+      "originalPath": "../images/d16845e2.png"
+    },
+    {
+      "imageName": "416b9b78.png",
+      "url": "https://zorro-project.com/manual/images/416b9b78.png",
+      "originalPath": "../images/416b9b78.png"
+    },
+    {
+      "imageName": "983fd0d1.png",
+      "url": "https://zorro-project.com/manual/images/983fd0d1.png",
+      "originalPath": "../images/983fd0d1.png"
+    },
+    {
+      "imageName": "b6d33d7f.png",
+      "url": "https://zorro-project.com/manual/images/b6d33d7f.png",
+      "originalPath": "../images/b6d33d7f.png"
+    },
+    {
+      "imageName": "0b6e7e31.png",
+      "url": "https://zorro-project.com/manual/images/0b6e7e31.png",
+      "originalPath": "../images/0b6e7e31.png"
+    },
+    {
+      "imageName": "fb46fb7a.png",
+      "url": "https://zorro-project.com/manual/images/fb46fb7a.png",
+      "originalPath": "../images/fb46fb7a.png"
+    },
+    {
+      "imageName": "cda55b9f.png",
+      "url": "https://zorro-project.com/manual/images/cda55b9f.png",
+      "originalPath": "../images/cda55b9f.png"
+    },
+    {
+      "imageName": "f8c040d0.png",
+      "url": "https://zorro-project.com/manual/images/f8c040d0.png",
+      "originalPath": "../images/f8c040d0.png"
+    },
+    {
+      "imageName": "927ca638.png",
+      "url": "https://zorro-project.com/manual/images/927ca638.png",
+      "originalPath": "../images/927ca638.png"
+    },
+    {
+      "imageName": "325d6858.png",
+      "url": "https://zorro-project.com/manual/images/325d6858.png",
+      "originalPath": "../images/325d6858.png"
+    },
+    {
+      "imageName": "b5d94e7a.png",
+      "url": "https://zorro-project.com/manual/images/b5d94e7a.png",
+      "originalPath": "../images/b5d94e7a.png"
+    },
+    {
+      "imageName": "4047a17a.png",
+      "url": "https://zorro-project.com/manual/images/4047a17a.png",
+      "originalPath": "../images/4047a17a.png"
+    },
+    {
+      "imageName": "7bdcb570.png",
+      "url": "https://zorro-project.com/manual/images/7bdcb570.png",
+      "originalPath": "../images/7bdcb570.png"
+    },
+    {
+      "imageName": "e4544d14.png",
+      "url": "https://zorro-project.com/manual/images/e4544d14.png",
+      "originalPath": "../images/e4544d14.png"
+    },
+    {
+      "imageName": "e1a0f7a2.png",
+      "url": "https://zorro-project.com/manual/images/e1a0f7a2.png",
+      "originalPath": "../images/e1a0f7a2.png"
+    },
+    {
+      "imageName": "628ca28e.png",
+      "url": "https://zorro-project.com/manual/images/628ca28e.png",
+      "originalPath": "../images/628ca28e.png"
+    },
+    {
+      "imageName": "33b999b3.png",
+      "url": "https://zorro-project.com/manual/images/33b999b3.png",
+      "originalPath": "../images/33b999b3.png"
+    },
+    {
+      "imageName": "9c649bc0.png",
+      "url": "https://zorro-project.com/manual/images/9c649bc0.png",
+      "originalPath": "../images/9c649bc0.png"
+    },
+    {
+      "imageName": "70340a00.png",
+      "url": "https://zorro-project.com/manual/images/70340a00.png",
+      "originalPath": "../images/70340a00.png"
+    },
+    {
+      "imageName": "53d3b150.png",
+      "url": "https://zorro-project.com/manual/images/53d3b150.png",
+      "originalPath": "../images/53d3b150.png"
+    },
+    {
+      "imageName": "ab7da077.png",
+      "url": "https://zorro-project.com/manual/images/ab7da077.png",
+      "originalPath": "../images/ab7da077.png"
+    },
+    {
+      "imageName": "3a8a6917.png",
+      "url": "https://zorro-project.com/manual/images/3a8a6917.png",
+      "originalPath": "../images/3a8a6917.png"
+    },
+    {
+      "imageName": "d3017196.png",
+      "url": "https://zorro-project.com/manual/images/d3017196.png",
+      "originalPath": "../images/d3017196.png"
+    },
+    {
+      "imageName": "118554d5.png",
+      "url": "https://zorro-project.com/manual/images/118554d5.png",
+      "originalPath": "../images/118554d5.png"
+    },
+    {
+      "imageName": "9d7b6e34.png",
+      "url": "https://zorro-project.com/manual/images/9d7b6e34.png",
+      "originalPath": "../images/9d7b6e34.png"
+    },
+    {
+      "imageName": "73a6b848.jpg",
+      "url": "https://zorro-project.com/manual/images/73a6b848.jpg",
+      "originalPath": "../images/73a6b848.jpg"
+    },
+    {
+      "imageName": "b0774716.png",
+      "url": "https://zorro-project.com/manual/images/b0774716.png",
+      "originalPath": "../images/b0774716.png"
+    },
+    {
+      "imageName": "e353a13b.png",
+      "url": "https://zorro-project.com/manual/images/e353a13b.png",
+      "originalPath": "../images/e353a13b.png"
+    },
+    {
+      "imageName": "e7603083.png",
+      "url": "https://zorro-project.com/manual/images/e7603083.png",
+      "originalPath": "../images/e7603083.png"
+    },
+    {
+      "imageName": "fc7ebbad.png",
+      "url": "https://zorro-project.com/manual/images/fc7ebbad.png",
+      "originalPath": "../images/fc7ebbad.png"
+    },
+    {
+      "imageName": "a6a68f1d.png",
+      "url": "https://zorro-project.com/manual/images/a6a68f1d.png",
+      "originalPath": "../images/a6a68f1d.png"
+    },
+    {
+      "imageName": "69c7ff60.png",
+      "url": "https://zorro-project.com/manual/images/69c7ff60.png",
+      "originalPath": "../images/69c7ff60.png"
+    }
+  ]
+}

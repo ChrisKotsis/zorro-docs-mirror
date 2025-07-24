@@ -1,0 +1,11 @@
+[Unit]
+Description=Run Zorro Documentation Updater daily
+Requires=zorro-docs-updater.service
+
+[Timer]
+OnCalendar=daily
+Persistent=true
+RandomizedDelaySec=1h
+
+[Install]
+WantedBy=timers.target

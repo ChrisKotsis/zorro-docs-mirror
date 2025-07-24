@@ -1,0 +1,2706 @@
+{
+  "completed": [
+    {
+      "url": "https://zorro-project.com/manual/en/content.htm",
+      "filename": "001_Content.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/started.htm",
+      "filename": "002_Main_Topics.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/zorro.png",
+          "path": "zorro.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/monitors.jpg",
+          "path": "monitors.jpg"
+        }
+      ]
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/new.htm",
+      "filename": "003_What_s_New.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/strategy.htm",
+      "filename": "004_Trading_Strategies.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/spectrum.png",
+          "path": "spectrum.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/sae_3.png",
+          "path": "sae_3.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/distribution.png",
+          "path": "distribution.png"
+        }
+      ]
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/bars.htm",
+      "filename": "005_Bars_and_Candles.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/chart.png",
+          "path": "chart.png"
+        }
+      ]
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/testing.htm",
+      "filename": "006_Testing.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/testing1.png",
+          "path": "testing1.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/WFOProfile_placebo.png",
+          "path": "WFOProfile_placebo.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/MRC_placebo.png",
+          "path": "MRC_placebo.png"
+        }
+      ]
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/training.htm",
+      "filename": "007_Training.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/training.png",
+          "path": "training.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/optimize.png",
+          "path": "optimize.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/contour.png",
+          "path": "contour.png"
+        }
+      ]
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/trading.htm",
+      "filename": "008_Trading.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/trading.png",
+          "path": "trading.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/zstatus.png",
+          "path": "zstatus.png"
+        }
+      ]
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/retraining.htm",
+      "filename": "009_Retraining.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/log.htm",
+      "filename": "010_Log_Messages.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/chart.htm",
+      "filename": "011_Chart_Viewer_Debugger.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/chartviewer.png",
+          "path": "chartviewer.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/chartdetail.png",
+          "path": "chartdetail.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/debugging2.png",
+          "path": "debugging2.png"
+        }
+      ]
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/performance.htm",
+      "filename": "012_Performance_Report.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/chartviewer.png",
+          "path": "chartviewer.png"
+        }
+      ]
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/account.htm",
+      "filename": "013_Asset_Account_Lists.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/symbol.htm",
+      "filename": "014_Asset_Symbols.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/deeplearning.htm",
+      "filename": "015_Deep_Learning.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/deepnet4.png",
+          "path": "deepnet4.png"
+        }
+      ]
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/optimalf.htm",
+      "filename": "016_OptimalF_money_management.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/montecarlo.htm",
+      "filename": "017_Monte_Carlo_analysis.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/trademode.htm",
+      "filename": "018_TradeMode.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/hedge.htm",
+      "filename": "019_Hedge_modes.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/arrow.gif",
+          "path": "arrow.gif"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/arrow.gif",
+          "path": "arrow.gif"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/arrow.gif",
+          "path": "arrow.gif"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/arrow.gif",
+          "path": "arrow.gif"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/z5perf102.png",
+          "path": "z5perf102.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/z5perf112.png",
+          "path": "z5perf112.png"
+        }
+      ]
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/scripts.htm",
+      "filename": "020_Included_Scripts.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/conversion.htm",
+      "filename": "021_Conversion_from_other_platforms.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/history.htm",
+      "filename": "022_Price_History.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/import.htm",
+      "filename": "023_Import.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/dlls.htm",
+      "filename": "024_Visual_Studio.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/vcpp1.png",
+          "path": "vcpp1.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/vcpp8.png",
+          "path": "vcpp8.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/vcpp7.png",
+          "path": "vcpp7.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/vcpp6.png",
+          "path": "vcpp6.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/vcpp5.png",
+          "path": "vcpp5.png"
+        }
+      ]
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/rbridge.htm",
+      "filename": "025_R_Bridge.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/rbridge1.png",
+          "path": "rbridge1.png"
+        }
+      ]
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/python.htm",
+      "filename": "026_Python_Bridge.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/command.htm",
+      "filename": "027_Command_Line_Options.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/ini.htm",
+      "filename": "028_Zorro_ini.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/engine.htm",
+      "filename": "029_zInit_zOpen.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/arrow.gif",
+          "path": "arrow.gif"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/arrow.gif",
+          "path": "arrow.gif"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/arrow.gif",
+          "path": "arrow.gif"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/arrow.gif",
+          "path": "arrow.gif"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/arrow.gif",
+          "path": "arrow.gif"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/arrow.gif",
+          "path": "arrow.gif"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/arrow.gif",
+          "path": "arrow.gif"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/arrow.gif",
+          "path": "arrow.gif"
+        }
+      ]
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/npp.htm",
+      "filename": "030_Script_Editor.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/npp2.jpg",
+          "path": "npp2.jpg"
+        }
+      ]
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/tutorial_var.htm",
+      "filename": "031_Strategy_Coding_1_8.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/mandelbrot.jpg",
+          "path": "mandelbrot.jpg"
+        }
+      ]
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/tutorial_trade.htm",
+      "filename": "032_W4_Trend_Trading.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/work4_lp.png",
+          "path": "work4_lp.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/work4_detail.png",
+          "path": "work4_detail.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/work4_13.png",
+          "path": "work4_13.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/work4_25.png",
+          "path": "work4_25.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/work4_15.png",
+          "path": "work4_15.png"
+        }
+      ]
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/tutorial_lowpass.htm",
+      "filename": "033_W4a_Indicator_implementation.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/work4_lp.png",
+          "path": "work4_lp.png"
+        }
+      ]
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/tutorial_fisher.htm",
+      "filename": "034_W5_Optimizing_WFO.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/work5_p12.png",
+          "path": "work5_p12.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/work5_p22.png",
+          "path": "work5_p22.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/work5_p32.png",
+          "path": "work5_p32.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/work5_45.png",
+          "path": "work5_45.png"
+        }
+      ]
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/tutorial_kelly.htm",
+      "filename": "035_W6_Portfolios_Money_Management.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/work6_22.png",
+          "path": "work6_22.png"
+        }
+      ]
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/tutorial_pre.htm",
+      "filename": "036_W7_Machine_Learning.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/work7_16.png",
+          "path": "work7_16.png"
+        }
+      ]
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/tutorial_options.htm",
+      "filename": "037_W8_Options_Trading.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/workshop8.png",
+          "path": "workshop8.png"
+        }
+      ]
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/Lecture 1.htm",
+      "filename": "038_R_Lectures_1_7.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/prompt.png",
+          "path": "prompt.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/plot1.jpeg",
+          "path": "plot1.jpeg"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/plot2.jpeg",
+          "path": "plot2.jpeg"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/plot3.jpeg",
+          "path": "plot3.jpeg"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/plot4.jpeg",
+          "path": "plot4.jpeg"
+        }
+      ]
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/Lecture 2.htm",
+      "filename": "039_Lecture_2.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/copyArray.png",
+          "path": "copyArray.png"
+        }
+      ]
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/Lecture 3.htm",
+      "filename": "040_Lecture_3.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/loadPackages.png",
+          "path": "loadPackages.png"
+        }
+      ]
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/Lecture 4.htm",
+      "filename": "041_Lecture_4.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/regression_graph.png",
+          "path": "regression_graph.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/residuals.png",
+          "path": "residuals.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/pairs_trade.png",
+          "path": "pairs_trade.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/spread_histogram.png",
+          "path": "spread_histogram.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/spread_prices.png",
+          "path": "spread_prices.png"
+        }
+      ]
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/Lecture 5.htm",
+      "filename": "042_Lecture_5.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/sample_vs_population_statistics.png",
+          "path": "sample_vs_population_statistics.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/law-of-large-numbers-in-R.png",
+          "path": "law-of-large-numbers-in-R.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/central-limit-theorem-in-R.png",
+          "path": "central-limit-theorem-in-R.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/non-normal-distribution-in-R1.png",
+          "path": "non-normal-distribution-in-R1.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/central-limit-theorem-non-normal-in-R.png",
+          "path": "central-limit-theorem-non-normal-in-R.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/bias-and-efficiency-of-estimator-in-R.png",
+          "path": "bias-and-efficiency-of-estimator-in-R.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/gif.latex",
+          "path": "gif.latex"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/gif(1).latex",
+          "path": "gif(1).latex"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/gif(2).latex",
+          "path": "gif(2).latex"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/linear-and-non-linear-relationship-in-R.png",
+          "path": "linear-and-non-linear-relationship-in-R.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/gif(3).latex",
+          "path": "gif(3).latex"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/gif(4).latex",
+          "path": "gif(4).latex"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/gif(5).latex",
+          "path": "gif(5).latex"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/gif(6).latex",
+          "path": "gif(6).latex"
+        }
+      ]
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/Lecture 6.htm",
+      "filename": "043_Lecture_6.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/random_variable.png",
+          "path": "random_variable.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/flip-coins-in-R.png",
+          "path": "flip-coins-in-R.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/brownian-motion-in-R.png",
+          "path": "brownian-motion-in-R.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/autocorrelation-in-R.png",
+          "path": "autocorrelation-in-R.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/random-walk-distribution.png",
+          "path": "random-walk-distribution.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/histogram-in-R.png",
+          "path": "histogram-in-R.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/stock-price-in-R.png",
+          "path": "stock-price-in-R.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/stock-return-distribution-in-R.png",
+          "path": "stock-return-distribution-in-R.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/autocorrelation-of-returns-in-R.png",
+          "path": "autocorrelation-of-returns-in-R.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/simulation-of-stock-price-in-R.png",
+          "path": "simulation-of-stock-price-in-R.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/price-graph-in-R.png",
+          "path": "price-graph-in-R.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/correlation-of-stocks-in-R.png",
+          "path": "correlation-of-stocks-in-R.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/simulated-stock-prices-in-R.png",
+          "path": "simulated-stock-prices-in-R.png"
+        }
+      ]
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/Lecture 7.htm",
+      "filename": "044_Lecture_7.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/cars-dataframe.png",
+          "path": "cars-dataframe.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/graph11.png",
+          "path": "graph11.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/graph2.png",
+          "path": "graph2.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/graph3.png",
+          "path": "graph3.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/graph4.png",
+          "path": "graph4.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/ggplot2-graph.png",
+          "path": "ggplot2-graph.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/Rstudio-Knitr-document.png",
+          "path": "Rstudio-Knitr-document.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/Knitr-pdf-document.png",
+          "path": "Knitr-pdf-document.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/pdf-with-graph-knitr.png",
+          "path": "pdf-with-graph-knitr.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/knitr-with-R-output.png",
+          "path": "knitr-with-R-output.png"
+        }
+      ]
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/aarray.htm",
+      "filename": "045_Variables.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/apointer.htm",
+      "filename": "046_Pointers.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/structs.htm",
+      "filename": "047_Structs.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/function.htm",
+      "filename": "048_Functions.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/return.htm",
+      "filename": "049_return.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/expressions.htm",
+      "filename": "050_Expressions.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/comparisions.htm",
+      "filename": "051_Comparisons.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/if.htm",
+      "filename": "052_if_else.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/while.htm",
+      "filename": "053_while_do.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/for.htm",
+      "filename": "054_for.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/switch.htm",
+      "filename": "055_switch_case.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/acrt-break.htm",
+      "filename": "056_break.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/acrt-continue.htm",
+      "filename": "057_continue.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/include.htm",
+      "filename": "058_include.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/ifdef.htm",
+      "filename": "059_ifdef_ifndef_else_endif.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/define.htm",
+      "filename": "060_define_undef.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/litec_h.htm",
+      "filename": "061_Lite_C_Headers.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/litec_api.htm",
+      "filename": "062_DefineApi_LoadLibrary.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/litec_c.htm",
+      "filename": "063_Conversion_from_C_C.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/funclist.htm",
+      "filename": "064_Functions.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/abs.htm",
+      "filename": "065_abs.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/sign.htm",
+      "filename": "066_sign.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/min.htm",
+      "filename": "067_min_max.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/between.htm",
+      "filename": "068_between.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/invalid.htm",
+      "filename": "069_invalid.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/clamp.htm",
+      "filename": "070_clamp.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/cdf.htm",
+      "filename": "071_cdf_erf_dnorm_qnorm.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/avar-sqrt.htm",
+      "filename": "072_sqrt.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/avar-exp.htm",
+      "filename": "073_exp.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/avar-log.htm",
+      "filename": "074_log.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/avar-pow.htm",
+      "filename": "075_pow.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/floor.htm",
+      "filename": "076_floor_ceil.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/fmod.htm",
+      "filename": "077_fmod.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/modf.htm",
+      "filename": "078_modf.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/avar-sin.htm",
+      "filename": "079_sin_cos_tan.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/avar-asin.htm",
+      "filename": "080_asin_acos_atan_atan2.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/avar-sinh.htm",
+      "filename": "081_sinh_cosh_tanh.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/round.htm",
+      "filename": "082_round_roundto.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/norm.htm",
+      "filename": "083_Normalization.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/normalize.png",
+          "path": "normalize.png"
+        }
+      ]
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/random.htm",
+      "filename": "084_random_seed.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/hmac.htm",
+      "filename": "085_hmac.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/matrix.htm",
+      "filename": "086_vector_matrix.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/fuzzy.htm",
+      "filename": "087_Fuzzy_Logic.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/run.htm",
+      "filename": "088_run.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/tick.htm",
+      "filename": "089_tick_tock.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/bar.htm",
+      "filename": "090_bar.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/rangebars.png",
+          "path": "rangebars.png"
+        }
+      ]
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/series.htm",
+      "filename": "091_series.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/asset.htm",
+      "filename": "092_asset_assetList.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/loadhistory.htm",
+      "filename": "093_assetHistory.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/price.htm",
+      "filename": "094_price.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/algo.htm",
+      "filename": "095_algo.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/contract.htm",
+      "filename": "096_contract.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/combo.htm",
+      "filename": "097_combo.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/condor.png",
+          "path": "condor.png"
+        }
+      ]
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/buylong.htm",
+      "filename": "098_enterLong_enterShort.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/selllong.htm",
+      "filename": "099_exitLong_exitShort_exitTrade.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/tradeupdate.htm",
+      "filename": "100_tradeUpdate.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/trade.htm",
+      "filename": "101_Trade_Variables.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/fortrades.htm",
+      "filename": "102_for_open_trades.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/advisor.htm",
+      "filename": "103_adviseLong_adviseShort.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/results.htm",
+      "filename": "104_results.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/markowitz.htm",
+      "filename": "105_markowitz.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/markowitz.png",
+          "path": "markowitz.png"
+        }
+      ]
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/renorm.htm",
+      "filename": "106_distribute_knapsack.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/optimize.htm",
+      "filename": "107_optimize.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/optimize.png",
+          "path": "optimize.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/contour.png",
+          "path": "contour.png"
+        }
+      ]
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/objective.htm",
+      "filename": "108_objective_parameters.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/loop.htm",
+      "filename": "109_loop.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/mode.htm",
+      "filename": "110_Mode_flags.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/order.htm",
+      "filename": "111_order.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/login.htm",
+      "filename": "112_login.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/brokercommand.htm",
+      "filename": "113_brokerCommand.md",
+      "images": []
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/ta.htm",
+      "filename": "114_Indicators.md",
+      "images": [
+        {
+          "url": "https://zorro-project.com/manual/images/arrow.gif",
+          "path": "arrow.gif"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/arrow.gif",
+          "path": "arrow.gif"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/arrow.gif",
+          "path": "arrow.gif"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/arrow.gif",
+          "path": "arrow.gif"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/arrow.gif",
+          "path": "arrow.gif"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/ta.png",
+          "path": "ta.png"
+        },
+        {
+          "url": "https://zorro-project.com/manual/images/ta1.png",
+          "path": "ta1.png"
+        }
+      ]
+    }
+  ],
+  "failed": [],
+  "tocLinks": [
+    {
+      "url": "https://zorro-project.com/manual/en/content.htm",
+      "title": "Content",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/started.htm",
+      "title": "Main Topics",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/new.htm",
+      "title": "What's New?",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/strategy.htm",
+      "title": "Trading Strategies",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/bars.htm",
+      "title": "Bars and Candles",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/testing.htm",
+      "title": "Testing",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/training.htm",
+      "title": "Training",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/trading.htm",
+      "title": "Trading",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/retraining.htm",
+      "title": "Retraining",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/log.htm",
+      "title": "Log Messages",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/chart.htm",
+      "title": "Chart Viewer / Debugger",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/performance.htm",
+      "title": "Performance Report",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/account.htm",
+      "title": "Asset / Account Lists",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/symbol.htm",
+      "title": "Asset Symbols",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/deeplearning.htm",
+      "title": "Deep Learning",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/optimalf.htm",
+      "title": "OptimalF, money management",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/montecarlo.htm",
+      "title": "Monte Carlo analysis",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/trademode.htm",
+      "title": "TradeMode",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/hedge.htm",
+      "title": "Hedge modes",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/scripts.htm",
+      "title": "Included Scripts",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/conversion.htm",
+      "title": "Conversion from other platforms",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/history.htm",
+      "title": "Price History",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/import.htm",
+      "title": "Import",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/dlls.htm",
+      "title": "Visual Studio",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/rbridge.htm",
+      "title": "R Bridge",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/python.htm",
+      "title": "Python Bridge",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/command.htm",
+      "title": "Command Line Options",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/ini.htm",
+      "title": "Zorro.ini",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/engine.htm",
+      "title": "zInit, zOpen, ...",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/npp.htm",
+      "title": "Script Editor",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/tutorial_var.htm",
+      "title": "Strategy Coding, 1-8",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/tutorial_trade.htm",
+      "title": "W4 - Trend Trading",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/tutorial_lowpass.htm",
+      "title": "W4a - Indicator implementation",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/tutorial_fisher.htm",
+      "title": "W5 - Optimizing, WFO",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/tutorial_kelly.htm",
+      "title": "W6 - Portfolios, Money Management",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/tutorial_pre.htm",
+      "title": "W7 - Machine Learning",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/tutorial_options.htm",
+      "title": "W8 - Options Trading",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/Lecture 1.htm",
+      "title": "R Lectures, 1-7",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/Lecture 2.htm",
+      "title": "Lecture 2",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/Lecture 3.htm",
+      "title": "Lecture 3",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/Lecture 4.htm",
+      "title": "Lecture 4",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/Lecture 5.htm",
+      "title": "Lecture 5",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/Lecture 6.htm",
+      "title": "Lecture 6",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/Lecture 7.htm",
+      "title": "Lecture 7",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/aarray.htm",
+      "title": "Variables",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/apointer.htm",
+      "title": "Pointers",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/structs.htm",
+      "title": "Structs",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/function.htm",
+      "title": "Functions",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/return.htm",
+      "title": "return",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/expressions.htm",
+      "title": "Expressions",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/comparisions.htm",
+      "title": "Comparisons",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/if.htm",
+      "title": "if .. else",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/while.htm",
+      "title": "while, do",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/for.htm",
+      "title": "for",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/switch.htm",
+      "title": "switch .. case",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/acrt-break.htm",
+      "title": "break",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/acrt-continue.htm",
+      "title": "continue",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/include.htm",
+      "title": "#include",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/ifdef.htm",
+      "title": "#ifdef, #ifndef, #else, #endif",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/define.htm",
+      "title": "#define, #undef",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/litec_h.htm",
+      "title": "Lite-C Headers",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/litec_api.htm",
+      "title": "DefineApi, LoadLibrary",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/litec_c.htm",
+      "title": "Conversion from C++, C#",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/funclist.htm",
+      "title": "Functions",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/abs.htm",
+      "title": "abs",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/sign.htm",
+      "title": "sign",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/min.htm",
+      "title": "min, max",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/between.htm",
+      "title": "between",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/invalid.htm",
+      "title": "invalid",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/clamp.htm",
+      "title": "clamp",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/cdf.htm",
+      "title": "cdf, erf, dnorm, qnorm",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/avar-sqrt.htm",
+      "title": "sqrt",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/avar-exp.htm",
+      "title": "exp",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/avar-log.htm",
+      "title": "log",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/avar-pow.htm",
+      "title": "pow",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/floor.htm",
+      "title": "floor, ceil",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/fmod.htm",
+      "title": "fmod",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/modf.htm",
+      "title": "modf",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/avar-sin.htm",
+      "title": "sin, cos, tan",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/avar-asin.htm",
+      "title": "asin, acos, atan, atan2",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/avar-sinh.htm",
+      "title": "sinh, cosh, tanh",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/round.htm",
+      "title": "round, roundto",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/norm.htm",
+      "title": "Normalization",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/random.htm",
+      "title": "random, seed",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/hmac.htm",
+      "title": "hmac",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/matrix.htm",
+      "title": "vector, matrix",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/fuzzy.htm",
+      "title": "Fuzzy Logic",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/run.htm",
+      "title": "run",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/tick.htm",
+      "title": "tick, tock",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/bar.htm",
+      "title": "bar",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/series.htm",
+      "title": "series",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/asset.htm",
+      "title": "asset, assetList, ...",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/loadhistory.htm",
+      "title": "assetHistory",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/price.htm",
+      "title": "price, ...",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/algo.htm",
+      "title": "algo",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/contract.htm",
+      "title": "contract, ...",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/combo.htm",
+      "title": "combo, ...",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/buylong.htm",
+      "title": "enterLong, enterShort",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/selllong.htm",
+      "title": "exitLong, exitShort, exitTrade",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/tradeupdate.htm",
+      "title": "tradeUpdate",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/trade.htm",
+      "title": "Trade Variables",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/fortrades.htm",
+      "title": "for(open_trades), ...",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/advisor.htm",
+      "title": "adviseLong, adviseShort",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/results.htm",
+      "title": "results",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/markowitz.htm",
+      "title": "markowitz",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/renorm.htm",
+      "title": "distribute, knapsack",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/optimize.htm",
+      "title": "optimize",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/objective.htm",
+      "title": "objective, parameters",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/loop.htm",
+      "title": "loop",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/mode.htm",
+      "title": "Mode flags",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/order.htm",
+      "title": "order",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/login.htm",
+      "title": "login",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/brokercommand.htm",
+      "title": "brokerCommand",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/ta.htm",
+      "title": "Indicators",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/candle.htm",
+      "title": "Candle Patterns",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/transform.htm",
+      "title": "Statistics, Transformations",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/filter.htm",
+      "title": "Spectral Analysis",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/frame.htm",
+      "title": "frame, frameSync",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/day.htm",
+      "title": "dayHigh, dayLow, ...",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/month.htm",
+      "title": "Time / Calendar",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/crossover.htm",
+      "title": "crossOver, crossUnder",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/peak.htm",
+      "title": "peak, valley",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/rising.htm",
+      "title": "rising, falling",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/slope.htm",
+      "title": "slope, line",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/sortdata.htm",
+      "title": "sortData, sortIdx",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/shift.htm",
+      "title": "shift",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/rev.htm",
+      "title": "rev",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/diff.htm",
+      "title": "diff",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/cfilter.htm",
+      "title": "filter, renorm",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/randomize.htm",
+      "title": "randomize",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/predict.htm",
+      "title": "predict",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/contractcpd.htm",
+      "title": "contractCPD",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/ordercvd.htm",
+      "title": "orderCVD",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/detect.htm",
+      "title": "frechet",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/ddscale.htm",
+      "title": "Cold Blood Index",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/polyfit.htm",
+      "title": "polyfit, polynom",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/evaluate.htm",
+      "title": "evaluate",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/season.htm",
+      "title": "Seasonal Strength",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/ccy.htm",
+      "title": "Currency Strength",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/cot.htm",
+      "title": "Commitment of Traders",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/slider.htm",
+      "title": "slider",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/panel.htm",
+      "title": "panel, ...",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/printf.htm",
+      "title": "printf, print, msg",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/progress.htm",
+      "title": "progress",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/sound.htm",
+      "title": "sound",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/plot.htm",
+      "title": "plot, plotBar, ...",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/profile.htm",
+      "title": "plotProfile, ...",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/color.htm",
+      "title": "color",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/loadstatus.htm",
+      "title": "SaveMode",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/putvar.htm",
+      "title": "putvar, getvar",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/exec.htm",
+      "title": "exec",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/keys.htm",
+      "title": "keys",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/mouse.htm",
+      "title": "mouse",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/window.htm",
+      "title": "window",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/email.htm",
+      "title": "email",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/report.htm",
+      "title": "report",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/str_.htm",
+      "title": "String handling",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/file_.htm",
+      "title": "File access",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/data.htm",
+      "title": "Dataset handling",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/http.htm",
+      "title": "HTTP functions",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/ftp.htm",
+      "title": "FTP transfer",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/ifelse.htm",
+      "title": "ifelse, valuewhen, ...",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/version.htm",
+      "title": "require, version",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/call.htm",
+      "title": "call",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/sleep.htm",
+      "title": "wait",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/watch.htm",
+      "title": "watch",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/lock.htm",
+      "title": "lock, unlock",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/setf.htm",
+      "title": "setf, resf, isf",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/timer.htm",
+      "title": "timer",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/sys_malloc.htm",
+      "title": "malloc, free, ...",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/memory.htm",
+      "title": "memory",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/quit.htm",
+      "title": "quit",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/is.htm",
+      "title": "Status flags",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/script.htm",
+      "title": "System strings",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/exitcode.htm",
+      "title": "ExitCode",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/hwnd.htm",
+      "title": "Window handle",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/barperiod.htm",
+      "title": "BarPeriod, TimeFrame",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/date.htm",
+      "title": "Dates, holidays, market",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/assetzone.htm",
+      "title": "Time zones",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/numbars.htm",
+      "title": "Bar, NumBars, ...",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/lookback.htm",
+      "title": "LookBack, UnstablePeriod, ...",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/numsamplecycles.htm",
+      "title": "Oversampling",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/numwfocycles.htm",
+      "title": "Walk-Forward optimization",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/numtotalcycles.htm",
+      "title": "Multiple cycles",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/numcores.htm",
+      "title": "Multiple cores",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/dataslope.htm",
+      "title": "DataSplit, DataSkip, ...",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/ticktime.htm",
+      "title": "TickTime, MaxRequests, ...",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/stop.htm",
+      "title": "Stop, Profit, Trail, Entry, ...",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/timewait.htm",
+      "title": "LifeTime, EntryTime, ...",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/lots.htm",
+      "title": "Margin, Risk, Lots, ...",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/spread.htm",
+      "title": "Spread, Commission, ...",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/pip.htm",
+      "title": "PIP, PIPCost, Leverage, ...",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/balance.htm",
+      "title": "Balance, Equity, ...",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/contracts.htm",
+      "title": "ContractType, Multiplier, ...",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/numassets.htm",
+      "title": "NumAssetsListed",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/algovar.htm",
+      "title": "AlgoVar, AssetVar, AssetStr",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/detrend.htm",
+      "title": "Detrend, shuffling",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/fill.htm",
+      "title": "Fill modes",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/verbose.htm",
+      "title": "Verbose",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/barmode.htm",
+      "title": "BarMode",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/assetmode.htm",
+      "title": "AssetMode",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/opt.htm",
+      "title": "TrainMode",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/plotmode.htm",
+      "title": "PlotMode",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/plotbars.htm",
+      "title": "PlotBars, PlotWidth, ...",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/cmd.htm",
+      "title": "Command",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/colors.htm",
+      "title": "Colors",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/winloss.htm",
+      "title": "Trade Statistics",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/statistics.htm",
+      "title": "Strategy Statistics",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/export.htm",
+      "title": "Export",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/trouble.htm",
+      "title": "Troubleshooting",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/errors.htm",
+      "title": "Error Messages",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/afaq.htm",
+      "title": "F.A.Q.",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/zsystems.htm",
+      "title": "The Z Strategies",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/brokers.htm",
+      "title": "Brokers & Data Feeds",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/brokerarb.htm",
+      "title": "Broker Arbitrage",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/brokerplugin.htm",
+      "title": "Broker API",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/ally.htm",
+      "title": "Ally Invest",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/alpaca.htm",
+      "title": "Alpaca",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/binance.htm",
+      "title": "Binance",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/binancefutures.htm",
+      "title": "Binance Futures",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/bitfinex.htm",
+      "title": "Bitfinex",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/bittrex.htm",
+      "title": "Bittrex",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/gdax.htm",
+      "title": "Coinbase / GDAX",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/coinigy.htm",
+      "title": "Coinigy",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/deribit.htm",
+      "title": "Deribit",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/dukascopy.htm",
+      "title": "Dukascopy",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/iqfeed.htm",
+      "title": "DTN / IQFeed",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/finvasia.htm",
+      "title": "Finvasia",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/fix.htm",
+      "title": "FIX",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/fxcm.htm",
+      "title": "FXCM",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/ib.htm",
+      "title": "IB / TWS Bridge",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/iex.htm",
+      "title": "IEX",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/ig.htm",
+      "title": "IG",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/kraken.htm",
+      "title": "Kraken",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/mt4plugin.htm",
+      "title": "MT4 / MT5 Bridge",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/nxcore.htm",
+      "title": "NxCore",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/oanda.htm",
+      "title": "Oanda",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/rithmic.htm",
+      "title": "Rithmic",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/saxo.htm",
+      "title": "Saxo Bank",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/tdamtrade.htm",
+      "title": "TDA / Schwab",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/tradestation.htm",
+      "title": "TradeStation Bridge",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/tradier.htm",
+      "title": "Tradier",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/xtb.htm",
+      "title": "XTB",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/vps.htm",
+      "title": "Zorro in the Cloud",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/format.htm",
+      "title": "Formats Cheat Sheet",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/tips.htm",
+      "title": "Tips & Tricks",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/links.htm",
+      "title": "Links & Books",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/restrictions.htm",
+      "title": "Licenses",
+      "level": 0
+    },
+    {
+      "url": "https://zorro-project.com/manual/en/credits.htm",
+      "title": "Credits & Disclaimer",
+      "level": 0
+    }
+  ],
+  "images": [
+    {
+      "url": "https://zorro-project.com/manual/images/zorro.png",
+      "path": "zorro.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/monitors.jpg",
+      "path": "monitors.jpg"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/spectrum.png",
+      "path": "spectrum.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/sae_3.png",
+      "path": "sae_3.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/distribution.png",
+      "path": "distribution.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/chart.png",
+      "path": "chart.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/testing1.png",
+      "path": "testing1.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/WFOProfile_placebo.png",
+      "path": "WFOProfile_placebo.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/MRC_placebo.png",
+      "path": "MRC_placebo.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/training.png",
+      "path": "training.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/optimize.png",
+      "path": "optimize.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/contour.png",
+      "path": "contour.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/trading.png",
+      "path": "trading.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/zstatus.png",
+      "path": "zstatus.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/chartviewer.png",
+      "path": "chartviewer.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/chartdetail.png",
+      "path": "chartdetail.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/debugging2.png",
+      "path": "debugging2.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/deepnet4.png",
+      "path": "deepnet4.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/arrow.gif",
+      "path": "arrow.gif"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/z5perf102.png",
+      "path": "z5perf102.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/z5perf112.png",
+      "path": "z5perf112.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/vcpp1.png",
+      "path": "vcpp1.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/vcpp8.png",
+      "path": "vcpp8.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/vcpp7.png",
+      "path": "vcpp7.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/vcpp6.png",
+      "path": "vcpp6.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/vcpp5.png",
+      "path": "vcpp5.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/rbridge1.png",
+      "path": "rbridge1.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/npp2.jpg",
+      "path": "npp2.jpg"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/mandelbrot.jpg",
+      "path": "mandelbrot.jpg"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/work4_lp.png",
+      "path": "work4_lp.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/work4_detail.png",
+      "path": "work4_detail.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/work4_13.png",
+      "path": "work4_13.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/work4_25.png",
+      "path": "work4_25.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/work4_15.png",
+      "path": "work4_15.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/work5_p12.png",
+      "path": "work5_p12.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/work5_p22.png",
+      "path": "work5_p22.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/work5_p32.png",
+      "path": "work5_p32.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/work5_45.png",
+      "path": "work5_45.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/work6_22.png",
+      "path": "work6_22.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/work7_16.png",
+      "path": "work7_16.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/workshop8.png",
+      "path": "workshop8.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/prompt.png",
+      "path": "prompt.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/plot1.jpeg",
+      "path": "plot1.jpeg"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/plot2.jpeg",
+      "path": "plot2.jpeg"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/plot3.jpeg",
+      "path": "plot3.jpeg"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/plot4.jpeg",
+      "path": "plot4.jpeg"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/copyArray.png",
+      "path": "copyArray.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/loadPackages.png",
+      "path": "loadPackages.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/regression_graph.png",
+      "path": "regression_graph.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/residuals.png",
+      "path": "residuals.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/pairs_trade.png",
+      "path": "pairs_trade.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/spread_histogram.png",
+      "path": "spread_histogram.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/spread_prices.png",
+      "path": "spread_prices.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/sample_vs_population_statistics.png",
+      "path": "sample_vs_population_statistics.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/law-of-large-numbers-in-R.png",
+      "path": "law-of-large-numbers-in-R.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/central-limit-theorem-in-R.png",
+      "path": "central-limit-theorem-in-R.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/non-normal-distribution-in-R1.png",
+      "path": "non-normal-distribution-in-R1.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/central-limit-theorem-non-normal-in-R.png",
+      "path": "central-limit-theorem-non-normal-in-R.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/bias-and-efficiency-of-estimator-in-R.png",
+      "path": "bias-and-efficiency-of-estimator-in-R.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/gif.latex",
+      "path": "gif.latex"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/gif(1).latex",
+      "path": "gif(1).latex"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/gif(2).latex",
+      "path": "gif(2).latex"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/linear-and-non-linear-relationship-in-R.png",
+      "path": "linear-and-non-linear-relationship-in-R.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/gif(3).latex",
+      "path": "gif(3).latex"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/gif(4).latex",
+      "path": "gif(4).latex"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/gif(5).latex",
+      "path": "gif(5).latex"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/gif(6).latex",
+      "path": "gif(6).latex"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/random_variable.png",
+      "path": "random_variable.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/flip-coins-in-R.png",
+      "path": "flip-coins-in-R.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/brownian-motion-in-R.png",
+      "path": "brownian-motion-in-R.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/autocorrelation-in-R.png",
+      "path": "autocorrelation-in-R.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/random-walk-distribution.png",
+      "path": "random-walk-distribution.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/histogram-in-R.png",
+      "path": "histogram-in-R.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/stock-price-in-R.png",
+      "path": "stock-price-in-R.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/stock-return-distribution-in-R.png",
+      "path": "stock-return-distribution-in-R.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/autocorrelation-of-returns-in-R.png",
+      "path": "autocorrelation-of-returns-in-R.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/simulation-of-stock-price-in-R.png",
+      "path": "simulation-of-stock-price-in-R.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/price-graph-in-R.png",
+      "path": "price-graph-in-R.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/correlation-of-stocks-in-R.png",
+      "path": "correlation-of-stocks-in-R.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/simulated-stock-prices-in-R.png",
+      "path": "simulated-stock-prices-in-R.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/cars-dataframe.png",
+      "path": "cars-dataframe.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/graph11.png",
+      "path": "graph11.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/graph2.png",
+      "path": "graph2.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/graph3.png",
+      "path": "graph3.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/graph4.png",
+      "path": "graph4.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/ggplot2-graph.png",
+      "path": "ggplot2-graph.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/Rstudio-Knitr-document.png",
+      "path": "Rstudio-Knitr-document.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/Knitr-pdf-document.png",
+      "path": "Knitr-pdf-document.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/pdf-with-graph-knitr.png",
+      "path": "pdf-with-graph-knitr.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/knitr-with-R-output.png",
+      "path": "knitr-with-R-output.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/normalize.png",
+      "path": "normalize.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/rangebars.png",
+      "path": "rangebars.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/condor.png",
+      "path": "condor.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/markowitz.png",
+      "path": "markowitz.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/ta.png",
+      "path": "ta.png"
+    },
+    {
+      "url": "https://zorro-project.com/manual/images/ta1.png",
+      "path": "ta1.png"
+    }
+  ]
+}
