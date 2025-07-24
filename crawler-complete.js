@@ -63,7 +63,7 @@ async function fetchWithRetry(url, retries = 3) {
 async function downloadImage(imageUrl, targetPath) {
   try {
     const response = await fetchWithRetry(imageUrl);
-    const buffer = await response.buffer();
+    const buffer = Buffer.from(await response.arrayBuffer());
     await fs.ensureDir(path.dirname(targetPath));
     await fs.writeFile(targetPath, buffer);
     console.log(chalk.green(`✓ Downloaded image: ${path.basename(targetPath)}`));
