@@ -1,0 +1,12 @@
+{
+  "projectTitle": "Zorro Trading Platform",
+  "description": "Professional algorithmic trading platform for developing, testing, and executing trading strategies. Features include C/Lite-C scripting, machine learning, portfolio optimization, and multi-broker support.",
+  "folders": [
+    "docs/",
+    "images/"
+  ],
+  "excludeFolders": [],
+  "excludeFiles": [
+    "LICENSE"
+  ]
+}

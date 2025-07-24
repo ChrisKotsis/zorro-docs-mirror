@@ -1,7 +1,8 @@
 # Dependencies
 node_modules/
 *.lock
-package-lock.json
+# Don't ignore package-lock.json - needed for GitHub Actions
+# package-lock.json
 
 # Logs
 logs/
@@ -11,7 +12,8 @@ yarn-debug.log*
 yarn-error.log*
 
 # Output
-zorro-docs-output/
+# Don't ignore the documentation output - we want it in the repo!
+# zorro-docs-output/
 *.html
 *.json
 !package.json
