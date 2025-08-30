@@ -9,7 +9,7 @@ source: "https://zorro-project.com/manual/en/rithmic.htm"
 
 [Rithmic](https://www.rithmic.com/apis), LLC is a leading provider of direct market access (DMA) trade execution services. The Rithmic R API allows a trading algo to access real-time price, place orders and manage portofolios.
 
-The Rithmic plugin was developed by Kun Zhao and licensed under the MIT License. It can be downloaded from the author's [GithHub page](https://github.com/kzhdev/rithmic_zorro_plugin/releases), Place the **rithmic.dll** file into the **Plugin** or **Plugin64** folder under Zorro's root path, and **rithmic\_ssl\_cert\_auth\_params** into Zorro's root path. Enter the Rithmic specific settings to **Zorro.ini** or **ZorroFix.ini** as described on Github. Generate an API key for your account on the Rithmic website.
+The Rithmic plugin was developed by Kun Zhao and licensed under the MIT License. It can be downloaded from the author's [GithHub page](https://github.com/kzhdev/rithmic_zorro_plugin/releases), Place the 32-bit or 64-bit **rithmic.dll** file into the **Plugin** or **Plugin64** folder under Zorro's root path, and place the **rithmic\_ssl\_cert\_auth\_params** file into Zorro's root path. Enter the Rithmic specific settings to **Zorro.ini** or **ZorroFix.ini** as described on Github. Generate an API key for your account on the Rithmic website.
 
 Zorro login fields for Rithmic:
 

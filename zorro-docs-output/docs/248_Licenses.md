@@ -39,15 +39,18 @@ The other trading restrictions are not monitored. We trust your honesty not to v
 
 # How to get Zorro S (free)
 
-The quickest way, of course, is ordering a permanent Zorro S license, or a monthly or annual subscription on the [Zorro download page](https://zorro-project.com/download.php). Your payment will be used to fund Zorro development and add new Zorro features. There are some alternative ways to get a free Zorro S license:  
+The quickest way, of course, is ordering a Zorro S license, or a monthly or annual subscription on the [Zorro download page](https://zorro-project.com/download.php). Your payment will be used to fund Zorro development and add new Zorro features. However there are some alternative ways to get Zorro S for free:
 
 *   **Contribute something substantial** to the user community, such as an [API plugin](brokerplugin.md) for a broker, feed, or platform. It should be coded in C/C++, and the source code should be available. Contact support@opgroup.de for reviewing your plugin and getting a free Zorro S subscription.  
      
 *   Find a Zorro bug in a release candidate. If you discover a new and serious software malfunction prior to the official release, you'll get a free 3 months Zorro S subscription or - if you have Zorro S already - 3 months free support. For identifying and reporting bugs, look [here](bugs.md).  
+      
+    
+*   Help other users on the [User Forum](https://opserver.de/ubb7/ubbthreads.php?ubb=cfrm&c=1). Any 100 substantial posts on the forum since August 2025 get you a free 3 months Zorro S subscription or - if you have Zorro S already - 3 months free support.  
      
  *   If you are a **charitable, non-religious organization** under tax-exemption status such as IRC 501(c)(3), you are eligible for a free Zorro S subscription. Please contact support@opgroup.de with a description of your organization and a scan of your IRC document for review.  
 
-A Zorro S subscription is automatically verified about once a day at Zorro start. The verification process requires Internet connection. It does not send any personal data. A live trading session is not affected by verification or by an expired license. A permanent or infinite Zorro S license does not use online verification and can run on a machine that is not connected to the Internet.
+A Zorro S subscription is automatically verified about once per day at Zorro start. The verification process requires Internet connection. It only reads the license data from our server, but does not send any data. The license is only verified at start, so a live trading session won't be affected by verification or by an expired license. A permanent or infinite Zorro S license does not use online verification and can run on a machine that is not connected to the Internet.
 
 # Zorro redistribution licenses
 

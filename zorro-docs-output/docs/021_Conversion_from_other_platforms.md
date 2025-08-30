@@ -15,19 +15,19 @@ Generally, Zorro can replicate any indicator and any strategy or trading algorit
 
 Even perfectly converted [algo trading strategies](https://zorro-project.com/algotrading.php) can produce very different backtests and charts on different platforms. Especially MT4/MT5 backtests are often not reproducible with other platforms. When platform A produces a positve and platform B a negative backtest result of the same strategy - which one should you trust? Here's what to check for determining the reason of backtest and chart differences:
 
-*   **Compare the price data.** Print out several candles with the same time stamps and check. Have they the same OHLC prices? Are they from ask, bid, or trade prices? Is the timestamp from the open, the center, or the close of the bar? UTC or a local time zone? Unadjusted or split and dividend adjusted? When using tick data, does it contain the same quotes? Forex, CFD, and cryptocurrency prices from different sources are normally very different on the minute or tick level. Candles of the same source look different dependent on price type (ask/bid/last) and time zone. Some platforms (e.g. Tradingview) do not synchronize bars to full hours or days, but to some arbitrary time. It is therefore normal and usual that even charts of the same date, asset, and source, but from two different platforms, contain different candles.
-*   **Compare the indicators.** Are they based on the same algorithm, and return the same value? Some platforms, such as MT4, use simplified algorithms for some indicators and thus get different results. Even with an identical algorithm, cumulative indicators such as EMA or MACD can return different results especially at the begin of the simulation when the platform has a different [unstable period](181_LookBack_UnstablePeriod.md) or does not use lookback or unstable periods at all.
+*   **Compare the price data.** Print out several candles with the same time stamps and check. Have they the same OHLC prices? Are they from ask, bid, or trade prices? Is the timestamp from the open, the center, or the close of the bar? UTC or a local time zone? Unadjusted or split and dividend adjusted? When using tick data, does it contain the same quotes? Forex, CFD, and cryptocurrency prices from different sources are often very different on the minute or tick level. Even data from the same source can look very different dependent on price type (ask/bid/last) and time zone. Some platforms, such as Tradingview, do not synchronize bars to full hours or days, but to the start time of the script. It is therefore perfectly normal that even charts of the same date, asset, and price source, but from two different platforms, contain different candles.
+*   **Compare the indicators.** Are they based on the same algorithm, and return the same value? Some platforms, such as MT4 or TradeStation, use different algorithms for some indicators and thus get different results. For instance, the average true range is normally calculated with an EMA, bur some platforms use an SMA, so you need to replace ATR with ATRS for reprodcing the results. Even with an identical algorithm, cumulative indicators such as EMA or MACD can return different results especially at the begin of the simulation when the platform has a different [unstable period](181_LookBack_UnstablePeriod.md) or does not use lookback or unstable periods at all.
 *   Check the **script structure** and **bar creation**. Does it run on any tick or on any bar? Are the bars aligned on the same time? Does it trade with the same [market hours and weekend](200_BarMode.md) settings?
-*   **Compare the account simulation**. Are lot size, leverage, margin, rollover fees, and commission considered, and are they identical? Does the platform simulate realistic order filling, or a 'naive' [fill mode](198_Fill_modes.md) that enters and exits trades at the current price or at the pre-set stop or entry levels? Some platforms, even high priced options tools, do not consider spreads, transaction costs, or slippage in their results.
+*   **Compare the account simulation**. Are lot size, leverage, margin, rollover fees, and commission considered, and are they identical? Does the platform simulate realistic order filling, or a 'naive' [fill mode](198_Fill_modes.md) that enters and exits trades at the current price or at the pre-set stop or entry levels? Some platforms, even high priced options tools, do not consider ask-bid spreads, transaction costs, or slippage in their results.
 *   **Compare [optimization](016_OptimalF_money_management.md) and [backtest](006_Testing.md) methods**. Is the test in-sample, out-of-sample, or walk-forward? Are parameters optimized with genetic, brute force, or platform specific algorithms? In-sample backtests, as with MT4, produce normally meaningless results.
-*   **Compare the** [performance metrics](012_Performance_Report.md). Win rate and profit factor are normally unsuspicious, but other figures such as drawdown, annual return, Sharpe ratio, or volatility are often calculated with very different methods.  
+*   **Compare the** [performance metrics](012_Performance_Report.md). Win rate and profit factor are normally unsuspicious, but other figures such as drawdown, annual return, Sharpe ratio, or volatility are often calculated with very different methods. Do not compare apples with oranges.  
      
 
 ### TradeStation™, MultiCharts™, TradeSignal™
 
-**TradeStation** was the first platform that supported automated trading. Its **EasyLanguage**™, also used by **MultiCharts** and in a variant named 'Equilla' by **TradeSignal**, has a similar design philosophy as Zorro's lite-C. Although the EasyLanguage syntax is a mix of C and Pascal, conversion to C is relatively straightforward. EasyLanguage **Vars** are equivalent to C [data series](091_series.md). The first element of a series has no index, thus **MyData** in EasyLanguage is the same as **MyData\[0\]** in C. Keywords are case insensitive and local variables are preserved between function calls. Array indices start with **0** as in C, but in many EasyLanguage code examples you find them starting with **1**. So the arrays are probably allocated with 1 extra element. Trigonometric functions (**Sine**, **Cosine** etc) expect angles in degrees (**0..360**), while in C and in most other languages angles are in radians (**0..2\*PI**). **Log** is the logarithm base **_e_** as in C.
+**TradeStation** was the first platform that supported automated trading. Its **EasyLanguage**™, also used by **MultiCharts** and in a variant named 'Equilla' by **TradeSignal**, has a similar design philosophy as Zorro's lite-C. Although the EasyLanguage syntax is a mix of C and Pascal, conversion to C is relatively straightforward. EasyLanguage variables are equivalent to C [data series](091_series.md). The first element of a series has no index, thus **MyData** in EasyLanguage is the same as **MyData\[0\]** in C. Keywords are case insensitive. Local variables are preserved between function calls, do declare them with as **static** for replicating that. Array indices start with **0** as in C, but in many EasyLanguage code examples you find them starting with **1**. So the arrays are probably allocated with 1 extra element. Trigonometric functions (**Sine**, **Cosine** etc) expect angles in degrees (**0..360**), while in C and in most other languages angles are in radians (**..2\*PI**). **Log** is the logarithm base **_e_** as in C.
 
-At the time of this writing, EasyLanguage did still not support functions, which is a strong limitation to complex projects. But separate scripts can be called like functions. The execution of an EasyLanguage script is similar to a lite-C script, with a lookback period determined by the **MaxBarsBack** variable. Aside from the function definitions, EasyLanguage strategies and lite-C strategies look very similar.
+At the time of this writing, EasyLanguage did not support functions like other languages, but requires separate scripts for them. The execution of an EasyLanguage script is similar to a lite-C script, with a lookback period determined by the **MaxBarsBack** variable. Aside from the missing functions, EasyLanguage strategies and lite-C strategies look very similar.
 
 ```c
 _{ Easylanguage version }
@@ -49,13 +49,10 @@ _// Zorro version (lite-C)
 // Choppy Market Index Function by George Pruitt_  
 var ChoppyMarketIndex(int periodLength) 
 {
-  if(periodLength != 0) {  
-    var denom = HH(periodLength) – LL(periodLength);  
-    var num = priceClose(periodLength-1) – priceClose(0);  
-    if(denom != 0) 
-      return abs(num/denom)\*100;
-  }
-  return 0;  
+  if(!periodLength) return 0;  
+  var Denom = HH(periodLength,0) – LL(periodLength,0);  
+  var Num = priceC(periodLength-1) – priceC(0);  
+  return abs(Num/fix0(Denom))\*100;
 }
 ```
 ```c
@@ -91,30 +88,34 @@ _// Zorro version (lite-C)_
 _// enter a trade when the RSI12 crosses over 75 or under 25_
 function run()
 {
-  BarPeriod = 60;
+  int LengthLE = 20,LengthSE = 20;
+  var OverSold = 25, OverBought = 75, 
+    StoplossPips = 100, ProfitTargetPips = 100;
 _// get the RSI series_
-  vars RSIs = series(RSI(seriesC(),20));
+  vars Var0s = series(RSI(seriesC(),LengthLE));
+  vars Var1s = series(RSI(seriesC(),LengthSE));
  
-_// set stop / profit levels and trade duration_
-  Stop = 100\*PIP;
-  TakeProfit = 100\*PIP;
-  LifeTime = 24;
+_// set stop / profit levels_
+  Stop = StoplossPips\*PIP;
+  TakeProfit = ProfitTargetPips\*PIP;
  
 _// if rsi crosses over buy level, exit short and enter long_
-  if(crossOver(RSIs,75))
+  if(crossOver(Var0s,OverBought))
     enterLong();
 _// if rsi crosses below sell level, exit long and enter short_
-  if(crossUnder(RSIs,25))
+  if(crossUnder(Var1s,OverSold))
     enterShort();
 }
 ```
 ```c
-_// calculate some EasyLanguage parameters in lite-C_
+_// calculate frequently used EasyLanguage parameters in lite-C_
 int MarketPosition = sign(NumOpenLong-NumOpenShort);
 var PriceScale = 100; _// always 100 for stocks and futures_
 var MinMove = PIP \* PriceScale; _// Stock: 0.01 \* 100, Emini: 0.25 \* 100_
 var PointValue = LotAmount / PriceScale; _// Stock: 0.01, Emini: 0.50_
 var BigPointValue = LotAmount;
+var EntryPrice = 0;
+for(current\_trades) if(TradeIsOpen) EntryPrice = TradeFill;
 ```
   
 

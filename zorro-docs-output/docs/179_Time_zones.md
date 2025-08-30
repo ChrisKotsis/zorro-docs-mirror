@@ -15,7 +15,7 @@ Time zone of bars (default: **UTC**). Affects bar generation: daily bars will st
 
 ## HistoryZone
 
-Time zone of the historical data files, for converting them to **UTC**. This variable is rarely needed since timestamps in historical data files should be already in UTC. If not, set **HistoryZone** to the time zone in the data. The time stamps in historical data files and [dataset](125_sortData_sortIdx.md) files are then automatically converted to UTC on **dataLoad** or **dataParse**.
+Time zone of the historical data files, for converting them to **UTC**. This variable is rarely needed since timestamps in historical data files should be already in UTC. If not, set **HistoryZone** to the time zone in the data. The time stamps in historical data files and [dataset](125_sortData_sortIdx.md) files are then automatically converted to UTC on **dataLoad** or **dataParse**. 
 
 ## BrokerZone
 
@@ -52,7 +52,7 @@ Asset specific time frame, automatically set by **AssetFrameZone**. **0** when t
 
 *   **BarZone, HistoryZone**, and **BrokerZone** affect the sampling of bars and thus must be set before loading history with the first [asset](013_Asset_Account_Lists.md)() call. The asset-specific **AssetZone** and **AssetMarket** must be set after selecting the [asset](013_Asset_Account_Lists.md) and can be changed at runtime.
 *   If backtests use price history in local time and no time zone is set, all time/date functions and variables are then also in local time instead of UTC. 
-*   Setting a non-UTC **BarZone** generates a daily bar of 23 or 25 hours when the daylight saving period begins or ends. The [run](088_run.md) function can run twice or be skipped when the clock is set backwards or forwards. This should be taken into account in strategies that strongly rely on a 24-hour bar period or on bars ending or starting at a certain time.
+*   Setting a non-UTC **BarZone** generates a daily bar of 23 or 25 hours when the daylight saving period begins or ends. The [run](088_run.md) function can run twice or be skipped when the clock is set backwards or forwards. This does normally not matter, but should be taken into account in strategies that strongly rely on a 24-hour bar period or on bars ending or starting at a certain time.
 *   For emulating day bars of different assets with different time zones, use 1-hour bars with **AssetFrameZone** and **AssetFrame** (see example). Use [FrameOffset](177_BarPeriod_TimeFrame.md) for starting the emulated bar at a certain local hour.
 
 ### Examples:
@@ -80,6 +80,6 @@ while(asset(loop("EUR/USD","USD/JPY")))
 
 ### See also:
 
-[TimeFrame](177_BarPeriod_TimeFrame.md), [StartMarket](100_tradeUpdate.md), [BarMode](200_BarMode.md), [Time/Date functions](month.md),. [asset](013_Asset_Account_Lists.md)
+[TimeFrame](177_BarPeriod_TimeFrame.md), [StartMarket](100_tradeUpdate.md), [BarOffset](177_BarPeriod_TimeFrame.md), [BarMode](200_BarMode.md), [TickFix](187_TickTime_MaxRequests.md), [Time/Date functions](month.md),. [asset](013_Asset_Account_Lists.md)
 
 [► latest version online](javascript:window.location.href = 'https://zorro-project.com/manual/en' + window.location.href.slice\(window.location.href.lastIndexOf\('/'\)\))

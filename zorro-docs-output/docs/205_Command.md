@@ -7,7 +7,7 @@ source: "https://zorro-project.com/manual/en/cmd.htm"
 
 ## Command\[0\] .. Command\[3\]
 
-Contains the numbers passed with the **\-i** option on the [command line](027_Command_Line_Options.md).  
+Contains the numbers passed with the **\-i** option on the [command line](027_Command_Line_Options.md) (Zorro S only).  
 
 ### Type:
 
@@ -15,7 +15,7 @@ Contains the numbers passed with the **\-i** option on the [command line](027_Co
 
 ## Define
 
-The name given with the **\-d** option on the [command line](027_Command_Line_Options.md). 
+The name given with the **\-d** option on the [command line](027_Command_Line_Options.md) (Zorro S only). 
 
 ### Type:
 

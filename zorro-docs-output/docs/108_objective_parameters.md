@@ -11,14 +11,14 @@ This page is about user-defined methods and objectives for backtest-based [param
 
 ## objective(): var
 
-A user-supplied **objective** function can be used for calculating individual optimization targets or for analyzing the preceding training run. It is called at the end of every optimization step and supposed to return a performance metric based on the [statistics](116_Statistics_Transformations.md) or [trade results](winloss.md) of that step. If required, it can also be used to store results in a [file](158_File_access.md) or [dataset](125_sortData_sortIdx.md) for further evaluation, such as plotting a 3D parameter chart. A default **objective** function is located in the **default.c** file. It uses the Pessimistic Return Ratio (PRR) for the optimization target, requires at least 10 trades, and treats the highest win and worst loss as outliers:
+A user-supplied **objective** **function** - also known as **'fitness function'** - can be used for calculating the optimization target by analyzing the preceding training run. It is called at the end of every optimization step and supposed to return a performance metric based on the [statistics](116_Statistics_Transformations.md) or [trade results](winloss.md) of that step. If required, it can also be used to store results in a [file](158_File_access.md) or [dataset](125_sortData_sortIdx.md) for further evaluation, such as plotting a 3D parameter chart. A default **objective** function is located in the **default.c** file. It uses the Pessimistic Return Ratio (PRR) for the optimization target, requires at least 10 trades, and treats the highest win and worst loss as outliers:
 
 ```c
 _// optimizing objective based on PRR_
 var objective()
 {
   if(NumWinTotal < 2 || NumWinTotal+NumLossTotal < MinTrades) 
-    return 0.; _// needs at least 5 trades_
+    return 0.; _// needs at least 10 trades, 2 of them positive_
   var wFac = 1./sqrt(1.+NumWinTotal); 
   var lFac = 1./sqrt(1.+NumLossTotal);
   var Win = WinTotal, Loss = LossTotal;

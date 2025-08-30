@@ -17,7 +17,7 @@ Reallocates the memory area given by **ptr**. It must have been previously alloc
 
 ## zalloc(long size): void\* (temporary)
 
-Like **malloc**, but returns a pointer to a temporary memory area that is initialized to zero and preserved until the next **zalloc** call. This function is fast, and the memory area needs not be freed. Use this for allocating a single temporary array inside functions.
+Like **malloc**, but returns a pointer to a temporary memory area that is initialized to zero and preserved until the next **zalloc** call. This function is fast, and the memory area needs not be freed. Use this for allocating a temporary array inside functions. If you need mutliple arrays, use only a singe **zalloc** call and divide the area among the arrays.  
 
 ### Parameters:
 

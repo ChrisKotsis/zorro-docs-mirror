@@ -86,7 +86,7 @@ function run()
 {
   BarPeriod = 1440;
   Hedge = 2; 
-  EntryTime = ExitTime = 500;  
+  EntryTime = LifeTime = 500;  
   var Price;
   var Grid = 100\*PIP; _// grid spacing_
   var Current = priceClose();

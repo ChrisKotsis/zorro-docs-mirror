@@ -26,6 +26,12 @@ The main system flags:
 ## SKIP3
 
 Do not [enter](buylong.md) trades in the first, second, or third of every 3 weeks of the historical price data (the period can be set up with [DataSkip](dataslope.md)). These flags can be used for out-of-sample testing by separating test data from training data while still covering the same time period. These flags must be set in the [INITRUN](013_Asset_Account_Lists.md).  
+
+## TRAILSTOP
+
+## TRAILLIMIT
+
+If the entry stop, entry limit, stop loss, or profit target of an open or pending trade is updated by [tradeUpdate](100_tradeUpdate.md) or by exceeding the [MaxLong/MaxShort](190_Margin_Risk_Lots.md) limits, change the parameter only when the new level is closer to the current price..  
    
 
 ## PEEK
@@ -179,6 +185,11 @@ Run a test immediately after training, without clicking \[Test\]. If the simulat
 ## PLOTNOW
 
 Plot a chart immediately after testing, without clicking \[Result\]. Automatically set when the script plots a histogram with [plotBar](146_plot_plotBar.md). This flag must be set in the [INITRUN](013_Asset_Account_Lists.md).
+
+## FASTEXIT
+
+When called from the command line, exit immediately instead of waiting 3 seconds.  
+ 
 
 ### Remarks
 

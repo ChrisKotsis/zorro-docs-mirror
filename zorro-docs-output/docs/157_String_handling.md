@@ -97,7 +97,7 @@ Returns a substring from the string **str**, or **0** when no more substring is 
 **delimiter** - character or set of characters that separate the substrings, f.i. **","** for the comma that separates fields in a CSV file, or **"\\n"** for a line feed.  
  
 
-## strvar (string str, string name_,_ var default): var
+## strvar (string str, string name, var default): var
 
 Parses a number from the string **str** that is preceded by the identifier **name**. If no identifier **name** is found in the string **str**, the function returns the **default** value. Can be used to parse **.ini** or **.json** files. This is not a standard C string function.
 
@@ -229,7 +229,7 @@ Converts a number from a string to a **var** or **int** variable. If the string 
 
 ## sftoa (var Value, int Digits): string
 
-Returns **Value** converted to a temporary string with the given number of significant **Digits**. For instance **sftoa(0.00123456, 4)** will return **"0.001235"**, and **sftoa(12.3456, 4)** will return **"12.35"**. A negative **Digits** number enforces the number of decimals. This is not a standard C string function.
+Returns **Value** converted to a temporary string with the given number of significant **Digits**. For instance **sftoa(0.00123456, 4)** will return **"0.001235"**, **sftoa(12.3456, 4)** will return **"12.35"**, and **sftoa(123,0)** will return **"123"**. A negative **Digits** number enforces the number of decimals. This is not a standard C string function.
 
 ### Parameters:
 

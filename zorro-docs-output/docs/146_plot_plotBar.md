@@ -33,7 +33,7 @@ Displays the **Text** with the given **Color** at a given **X,Y** relative or ab
 
 ## plotData (string Name): DATA\*
 
-Returns a pointer to the **DATA** struct with the data stored by a chart plot or histogram with the given **Name**. The **DATA** struct is defined in **include\\trading.h**. **DATA->Data\[DATA->start\]** is the first valid data point, and **DATA->Data\[DATA->end\]** is the last. The data points are in chronological order. **DATA->Data\[n\]** is the data point at bar number **n**, and its timestamp is therefore **wdateBar(n)**. The function can be used for retrieving the plot curve, for analyzing it, for modifying data before plotting, or for exporting it to other charting tools.
+Returns a pointer to the **DATA** struct with the data stored by a chart plot or histogram with the given **Name**. The **DATA** struct is defined in **include\\trading.h**. **D->Data\[D->start\]** is the first valid data point, and **D->Data\[D->end\]** is the last. The data points are in chronological order. **D->Data\[n\]** is the data point at bar number **n**, and its timestamp is **wdateBar(n)**. The function can be used for retrieving the plot curve, for analyzing it, for modifying data before plotting, or for exporting it to other charting tools. For generating a [series](091_series.md) in reverse order from the data, use **rev(D->Data+D->start,D->end-D->start).**
 
 ## plotChart (string FileName)
 

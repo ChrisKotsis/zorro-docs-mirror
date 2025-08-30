@@ -13,7 +13,7 @@ Trade time limit in bars. After the given number of bars (default: **0** for no 
 
 ## EntryTime
 
-Pending order lifetime in bars. When an [enter](buylong.md) command is given, wait the given number of bars (default: **1**) until the [entry limit](188_Stop_Profit_Trail_Entry.md) is met. If that does not happen during that time, the trade is removed and a "Missed Entry" message is printed to the log file.
+Pending order lifetime in bars. When an [enter](buylong.md) command is given, wait the given number of bars (default: **1**) until the [entry limit](188_Stop_Profit_Trail_Entry.md) is met. If that does not happen during that time, the trade is removed and a "Missed Entry" message is printed to the log file. The entry time of pending trades is extended by [enter](buylong.md) commands that do not open a trade due to [MaxLong/MaxShort](190_Margin_Risk_Lots.md)[.](190_Margin_Risk_Lots.md)
 
 ### Range:
 

@@ -9,7 +9,7 @@ source: "https://zorro-project.com/manual/en/stop.htm"
 
 ## Entry
 
-Entry limit, entry stop: Enter the subsequent trade when the price reaches the given limit or moves by the given distance (default = **0** = enter immediately at market). The value can be positive or negative, and can be either directly a ask price level, or a distance to the current close price. A positive price level or positive distance constitutes an **entry stop**, a negative price level or negative distance constitutes an **entry limit**.  
+Entry limit, entry stop: Enter the subsequent trade when the price reaches the given limit or moves by the given distance (default = **0** = enter immediately at market). The value can be positive or negative, and can be either directly an ask price level, or a distance to the current ask price. A positive price level or positive distance constitutes an **entry stop**, a negative price level or negative distance constitutes an **entry limit**.  
   An entry limit buys when the price moves against the trade direction and touches or crosses the limit. It increases the profit because it buys at a price that went in opposite direction to the trade. An entry stop buys when the price moves in trade direction and reaches or crosses the limit; it reduces the profit, but enters only when the price is moving in favorable direction, and thus acts as an additional trade filter. For a long trade, an entry limit should be below and an entry stop should be above the current price. If the entry price is not reached within the allowed time period (set through [EntryTime](timewait.md)), the trade is cancelled and a "Missed Entry" message is printed to the log file.
 
 ## OrderLimit

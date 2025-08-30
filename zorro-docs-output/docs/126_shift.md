@@ -15,7 +15,7 @@ Shift the first **Length** elements of **Data** by one position, then fill **Dat
 
 ### Remarks
 
-*   The functions can be used to shift static or dynamic series under certain conditions or in a [tick](089_tick_tock.md) or [tock](089_tick_tock.md) function. Dynamic series are otherwise automatically shifted at any time frame.
+*   The functions can be used to shift static series or var arrays conditionally or in a [tick](089_tick_tock.md) or [tock](089_tick_tock.md) function. Dynamic series are otherwise automatically shifted at any time frame.
 
 ### Example:
 

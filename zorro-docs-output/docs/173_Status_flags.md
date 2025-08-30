@@ -44,7 +44,7 @@ First run of the session or simulation with valid price data, parameters, factor
 
 ## FIRSTINITRUN
 
-First initial run of the script, in the case of multiple simulation runs due to training cycles or [NumTotalCycles](numtotalcycles.md). While **INITRUN** and **FIRSTRUN** is set at the start of any simulation run, **FIRSTINITRUN** is only set at the first initial run. It is not set in any subsequent training or total cycles.
+First initial run of the script, in the case of multiple simulation runs due to training cycles or [NumTotalCycles](numtotalcycles.md). While **INITRUN** and **FIRSTRUN** is set at the start of any simulation run, **FIRSTINITRUN** is only set at the first initial run. It is not set in any subsequent training or test cycles.
 
 ## EXITRUN
 

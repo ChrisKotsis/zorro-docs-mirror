@@ -7,7 +7,7 @@ source: "https://zorro-project.com/manual/en/statistics.htm"
 
 # Strategy performance statistics
 
-The following system variables can be evaluated in the [objective](108_objective_parameters.md) or [evaluate](137_evaluate.md) function. Some become available only at the end of a simulation or a live trading session, others are updated at any bar during the test or session. There is also a set of [trade statistics](winloss.md) that can be evaluated during the backtest. The statistics variables can be used for calculating individual performance metrics and printing them to the [performance report](012_Performance_Report.md).  
+The following system variables can be evaluated in the script or the [objective](108_objective_parameters.md) or [evaluate](137_evaluate.md) function. Some become available only at the end of a simulation or a live trading session, so they are only available to [objective](108_objective_parameters.md) or [evaluate](137_evaluate.md). Other variabes are updated at any bar during the test or live session, and thus can be evaluated in the script and affect the algorithm. There is also a set of [trade statistics](winloss.md) that can be evaluated anytime. The statistics variables can be used for calculating individual performance metrics, and printing them to the [performance report](012_Performance_Report.md).  
  
 
 ## DrawDownMax
@@ -18,7 +18,7 @@ Maximum drawdown, the largest difference between a balance peak and the lowest s
 
 Maximum drawdown as above, in percent of the preceding balance peak. Updated at any bar.
 
-## MAE
+## MAEDepth
 
 Maximum adverse excursion, the largest difference between an equity peak and the lowest subsequent equity valley during the simulation period, in account currency units. Updated at any bar.
 
@@ -50,13 +50,17 @@ Total win or loss by rollover and margin interest during the simulation period, 
 
 Total loss by commissions during the simulation period, in account currency units. Updated at any trade.
 
+## InterestCost
+
+Total loss by interest charged by the broker. Updated any day.
+
 ## ReturnMean
 
 Mean of all bar returns on investment. The bar return on investment is the equity difference to the previous bar, divided by [Capital](190_Margin_Risk_Lots.md). If **Capital** is not set, the sum of normalized maximum drawdown and maximum margin is used. Only available at the end.
 
 ## ReturnStdDev
 
-Standard deviation of all bar returns on investment. Can be used together with **ReturnMean** for calculating the annualized Sharpe Ratio and other metrics.Only available at the end.
+Standard deviation of all bar returns on investment. Can be used together with **ReturnMean** for calculating the annualized **Sharpe Ratio** (**Sharpe = ReturnMean/ReturnStdDev\*InMarketBars\*(365.25\*24\*60)/NumMinutes**) and other metrics. Only available at the end.
 
 ## ReturnUlcer
 
@@ -99,6 +103,10 @@ Total number of bars with open trades. Updated at any bar.
 
 Sum of the durations of all trades, in bars. Updated at any trade. Can be bigger than the duration of the test when several positions are simultaneously open.
 
+## NumMinutes
+
+Total duration of the backtest period; can be used for normalizing metrics to 3 years or for calculating profit per period. The backtest years are **NumMinutes/(365.25\*24\*60)**. For annualizing a result, multiply it with the inverse of this formula.
+
 ### Type:
 
 **int** for numbers that count something, otherwise **var**. Read/only.  
@@ -106,7 +114,7 @@ Sum of the durations of all trades, in bars. Updated at any trade. Can be bigger
 
 ## ResultsAtBar
 
-Array in chronological order containing the sums of wins and losses of all open and closed trades at every bar, in account currency units. **(var)ResultsAtBar\[Bar\]** is the result at end of the simulation.
+Array in chronological order containing the sums of wins and losses of all open and closed trades at every bar, in account currency units. **(var)ResultsAtBar\[Bar\]** is the end result of the simulation.
 
 ### Type:
 
@@ -114,11 +122,11 @@ Array in chronological order containing the sums of wins and losses of all open 
 
 ## ProfileAtBar
 
-Array in chronological order containing the blue equity, balance, or pip return profile at every bar. 
+Array in chronological order containing the blue equity, balance, or pip return profile from the chart, at every bar. 
 
 ## DrawDownAtBar
 
-Array in chronological order containing the red underwater profile at every bar.
+Array in chronological order containing the red underwater profile from the chart, at every bar.
 
 ### Type:
 

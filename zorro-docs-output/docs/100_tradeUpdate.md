@@ -23,7 +23,9 @@ Updates pool trades to the current open virtual trades in [virtual hedging](019_
 
 ### Remarks:
 
-*   Only the positions of virtual trades can be increased. Pool trades take over the new size either at the next bar or when calling **tradeUpdate()**.
+*   Only the positions (**NewLots**) of real or virtual trades can be increased. Pool trades take over the new lot size either at the next bar or when calling **tradeUpdate()**.
+*    Trades are automatically updated with the new parameters when the maximum number of trades by [MaxLong/MaxShort](190_Margin_Risk_Lots.md) is exceeded.
+*   If the [TRAILSTOP](018_TradeMode.md) or [TRAILPROFIT](018_TradeMode.md) flags are set, stops and profit targets are only changed when they are closer to the current price level.
 
 ### Example:
 

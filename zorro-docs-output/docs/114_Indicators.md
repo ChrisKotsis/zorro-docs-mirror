@@ -549,7 +549,7 @@ Avg Triangular Moving Average (also known under the name **TMA**); a form of Wei
 
 1-day Rate-Of-Change (see **ROC**) of a Triple EMA (see **TEMA**).  
 
-## TrueRange(): var
+## TrueRange(_int Offset_): var
 
 Rng True Range (TR); **max(High\[0\],Close\[1\])-min(Low\[0\],Close\[1\])** of the current asset price series. See also **ATR**, **ATRS**.  
 

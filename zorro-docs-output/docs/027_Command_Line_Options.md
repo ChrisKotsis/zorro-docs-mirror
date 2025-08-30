@@ -5,9 +5,9 @@ source: "https://zorro-project.com/manual/en/command.htm"
 
 # Command Line Options
 
-# Zorro command line
+# Automatization with the command line (Zorro S)
 
-Zorro can be started directly from an external program, a shortcut, a batch file, the Windows command shell, or a PHP **exec** call on a Windows server. The command line looks like this:
+Zorro S can be started directly from an external program, a shortcut, a batch file, the Windows command shell, or a PHP **exec** call on a Windows server. In this way, Zorro training or tests can be automatized. The command line looks like this:
 
 **"C:\\Users\\YourName\\Zorro\\Zorro.exe" _\[filename\]_** **_\[options\]_**
 
@@ -49,11 +49,11 @@ Select the given asset from the \[Assets\] scrollbox.
 
 ### \-c accountname
 
-Selects the account with the given name from a user defined [account list](013_Asset_Account_Lists.md).
+Selects the account with the given name from a user defined [account list](013_Asset_Account_Lists.md). 
 
-### \-d definename
+### \-d string
 
-Passes a [#define](060_define_undef.md) statement with the given **definename** to the script, and stores the **definename** also in the [Define](cmd.md) string (Zorro S only). This way, a script started with the command line can behave or compile differently. Only a single **#define** can be set through the command line.
+Stores the given string (no blanks or special characters) in the [Define](cmd.md) string. In lite-C, it also generates a [#define](060_define_undef.md) statement. This way, a script started with the command line can get file names or other text based information, and in case of lite-C compile differently.
 
 ### \-u string
 
@@ -61,11 +61,11 @@ Allows to enter strings or other content that can be parsed from the command lin
 
 ### \-i number
 
-Passes an integer number to the script (Zorro S only) that can be read through the [Command](cmd.md) variable. Up to 4 numbers can be transferred to the script, each preceded by **"-i"**. This way, the same script started with the command line can behave in different ways.
+Passes an integer number to the script that can be read through the [Command](cmd.md) variable. Up to 4 numbers can be transferred to the script, each preceded by **"-i"**. This way, the same script started with the command line can behave in different ways.
 
 ### \-x 
 
-Compiles the selected script to an executable, like the [EXE](018_TradeMode.md) flag, and exit afterwards (Zorro S only).  
+Compiles the selected script to an executable, like the [EXE](018_TradeMode.md) flag, and exit afterwards.  
 
 ### \-diag
 
@@ -85,37 +85,50 @@ The command line can be evaluated with the [report](012_Performance_Report.md) f
 
 ### Examples
 
-Start a re-training run with the **Z3** strategy.
+Start a re-training run with a strategy.
 
-**Zorro.exe -train Z3**
+```c
+**Zorro.exe -train MyStrategy**
+```
 
 From outside the Zorro folder, run the script **pricedownload.c** with the selected asset **"USD/CAD"** in test mode.
 
+```c
 **"c:\\Users\\MyName\\Zorro\\Zorro.exe" -run pricedownload -a USD/CAD**
+```
 
 Start Zorro in diagnostics mode. A file **diag.txt** is generated in the Zorro folder.
 
+```c
 **Zorro.exe -diag**
+```
 
 A **.bat** file in the Zorro folder that trains 3 scripts when clicked on.
 
-**Zorro -train MyStrategy1  
-Zorro -train MyStrategy2  
+```c
+**Zorro -train MyStrategy1
+Zorro -train MyStrategy2
 Zorro -train MyStrategy3**
+```
+A **.bat** file that runs a Zorro script 50 times in 2 nested loops and passes the loop numbers to **[Command\[0\]](cmd.md)** and **[Command\[1\]](cmd.md)**.
+```c
+**for /l %%x in (1, 1, 5) do (
+for /l %%y in (1, 1, 10) do (
+  @echo Loop %%x %%y
+  Zorro -run MyScript -i %%x -i %%y**
+)
+)
+**pause**
+```
 
-A **.bat** file that runs a Zorro script 50 times in 2 nested loops and passes the loop numbers to **Command\[0\]** and **Command\[1\]**.
+A **.bat** file that executes a script with any **.csv** file name in a certain directory passed to the [Define](cmd.md) string:
 
-**for /l %%x in (1, 1, 5) do (  
-for /l %%y in (1, 1, 10) do (  
-  @echo Loop %%x %%y  
-  Zorro -run MyScript -i %%x -i %%y  
-**))**  
-pause**  
-
- 
+```c
+**for %%f in (Data\\MyFolder\\\*.csv) do Zorro -run MyScript -d %%f**
+```
 
 ### See also:
 
-[Testing](006_Testing.md), [Training](007_Training.md), [Trading](004_Trading_Strategies.md), [Zorro.ini](007_Training.md), [ExitCode](175_ExitCode.md), [report](012_Performance_Report.md), [Command](cmd.md)
+[Testingg](006_Testing.md), [Training](007_Training.md), [Trading](004_Trading_Strategies.md), [Zorro.ini](007_Training.md), [ExitCode](175_ExitCode.md), [report](012_Performance_Report.md), [Command](cmd.md)
 
 [► latest version online](javascript:window.location.href = 'https://zorro-project.com/manual/en' + window.location.href.slice\(window.location.href.lastIndexOf\('/'\)\))

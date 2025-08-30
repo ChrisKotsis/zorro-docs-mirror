@@ -15,7 +15,7 @@ The duration of one bar in minutes (default = **60**). The theoretical minimum b
 
 ## BarOffset
 
-Bar start/end time offset in minutes; **0** or a positive number smaller than **BarPeriod** (default = **940** with daily bars, otherwise **0**). Bars and frames normally start at a date/time boundary; f.i. 60-minute bars start at every full hour, and daily bars normally start at UTC midnight when **BarOffset** is **0**. For daily bars, use **BarOffset** shift the bar begin to the desired trading time of the day; the **940** default sets it to 15:40 in the bar [time zone](assetzone.md). **BarOffset** is also automatically set by **[NumSampleCycles](numsamplecycles.md)** for dividing a bar into equal time intervals and decreasing the offset by one interval per cycle; on the last cycle, **BarOffset** is 0.  
+Bar start/end time offset in minutes; **0** or a positive number smaller than **BarPeriod** (default = **940** with daily bars, otherwise **0**). Bars and frames normally start at a date/time boundary; f.i. 60-minute bars start at every full hour, and daily bars normally start at UTC midnight when **BarOffset** is **0**. For daily bars, use **BarOffset** to shift the bar begin to the desired trading time of the day; the **940** default sets it to 15:40 in the bar [time zone](assetzone.md). **BarOffset** is also automatically set by **[NumSampleCycles](numsamplecycles.md)** for dividing a bar into equal time intervals and decreasing the offset by one interval per cycle; on the last cycle, **BarOffset** is 0.  
 
 ## TimeFrame
 

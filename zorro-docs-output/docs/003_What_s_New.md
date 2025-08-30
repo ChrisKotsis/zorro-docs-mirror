@@ -7,24 +7,30 @@ source: "https://zorro-project.com/manual/en/new.htm"
 
 # What's new?
 
-### Updating Zorro 2.62 / 2.64 to Zorro 2.66 - questions and answers
+### Updating Zorro 2.62 / 2.64 to Zorro 2.67 - questions and answers
 
-*   The 64-bit mode data format has changed in 2.64. Recompile earlier 64-bit script DLLs.
+*   The data format in 64-bit mode has changed. Recompile your 64-bit C++ scripts.
 *   The default minimum number of trades per optimization cycle was changed from 5 to 10.
 *   How do I update a live trading Zorro without interrupting? The procedure is described under [Trading](trading.htm#update).
 *   Why do I get **error messages** when the script previously compiled fine? Most likely due to improved error detection, a name conflict with a new keyword, or a deprecated variable or function. Deprecated keywords are defined in **legacy.h**, which can be included for still using them.
 *   Why do I get a different backtest result? Most likely due to new price histories, new asset parameters, or other changes. You can easily find out by comparing both logs.
 *   Why can't I test the new Z system? You need recent historical data. Get it from the [Zorro download page](https://zorro-project.com/download.php).
-*   Why are my settings gone? Updates overwrite default settings. Don't modify defaults, but keep individual settings in individual files (**ZorroFix.ini**, **Z1.ini**, **Z2.ini**, etc).
-*   For ignoring the [MaxLong/MaxShort](190_Margin_Risk_Lots.md) limits in \[Train\] mode, [NOMAX](016_OptimalF_money_management.md) must now be set.
+*   Why are my settings gone? You probably edited them in a wrong place. Updates overwrite default settings. Keep individual settings in individual files, like **ZorroFix.ini**, **Z1.ini**, **Z2.ini**, etc. They won't be overwritten.
+*   The [Fill](198_Fill_modes.md) mode was changed. Limit entries and exits now fill at the current price. The previous, more pessimistic limit fill behavior can be activated with the new Fill mode 2.
+*   [MaxLong/MaxShort](190_Margin_Risk_Lots.md) now affect training. To prevent this: **if(!Train) MaxLong = MaxShort = 1;**
 
-### Zorro 2.67.6 (beta version)
+### Zorro 2.67.7 (beta version)
 
 *   John Ehlers' improved [HighPass3](129_filter_renorm.md) filter was added to the indicator library.
 *   The [DrawDownPercent](116_Statistics_Transformations.md) variable returns the largest drawdown depth in percent of the preceding balance peak.
-*   [MaxLong/MaxShort](190_Margin_Risk_Lots.md) now also affect pending trades when [Entry](188_Stop_Profit_Trail_Entry.md) was modified.
+*   [MaxLong/MaxShort](190_Margin_Risk_Lots.md) now affect training. To prevent this, use **if(!Train) MaxLong = MaxShort = 1;**
 *   The [trade list](export) format has changed. The list now also contains commission, MAE, and MFE of trades.
-*   For ignoring the [MaxLong/MaxShort](190_Margin_Risk_Lots.md) limits in \[Train\] mode, [NOMAX](016_OptimalF_money_management.md) must be set.
+*   The [MaxLong/MaxShort](190_Margin_Risk_Lots.md) limits now also update the open trade lifetime when [TR\_EXTEND](018_TradeMode.md) is set.
+*   The [MAE](116_Statistics_Transformations.md) function returns the maximum adverse excursion of a data series.
+*   The [TRAILSTOP/TRAILLIMIT](018_TradeMode.md) flags affect the trailing of entry or exit stops and limits when trades are updated.
+*   The [Fill](198_Fill_modes.md) mode was changed. Limit entries and exits now fill at the current price. The previous, more pessimistic limit fill behavior can be activated with the new Fill mode 2.
+*   The format of the parameter files (**\*.par**) was changed. Parameters and training results are now stored in CSV format.
+*   A WFO cycle analysis was added to the [performance report](012_Performance_Report.md).
 
 The latest published beta version or the latest release candiate are available on the Zorro Download Page. [Zorro S features](restrictions.md) can be unlocked in beta versions with a valid Zorro license. [Z strategies](zsystems.md) are not included in beta versions. A list of fixed bugs can be found under [bugs](bugs.md).  
 

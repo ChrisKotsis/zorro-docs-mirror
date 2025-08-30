@@ -19,14 +19,14 @@ Returns the difference of **x** to its value from **Period** bars before.
 
 ### Remarks
 
-*   This function generates a [series](091_series.md) (see remarks).
+*   This function generates a [series](091_series.md) and must be called in a fixed order in the script.
 *   **diff(log(x),1)** returns the log return of **x** , since **log(a/b) = log(a) - log(b)**.
 
 ### Example:
 
 ```c
 _// generate a price difference serie_
-vars Changes = series(diff(priceClose(),1));
+vars Changes = series(diff(priceC(),1));
 ```
 
 ### See also:

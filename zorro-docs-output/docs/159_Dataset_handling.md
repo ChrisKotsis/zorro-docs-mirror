@@ -139,7 +139,7 @@ Sets the predefined **rMin,** **rMax, rMinIdx** and **rMaxIdx** variables to the
 
 ## dataCopy (int Handle, var\* Data): int
 
-Fills the **Data** array with the content of the dataset, while all **float** elements are converted to **double**. Sets the **rMin** and **rMax** variables to the minimum and maximum value. Returns the number of elements. The **Data** array must have at least the same number of elements as the dataset.   
+Fills the **Data** array with the content of the dataset in column-row order, while all **float** elements are converted to **double**. Sets the **rMin** and **rMax** variables to the minimum and maximum values. Returns the number of elements. The **Data** array must have at least the same number of elements as the dataset.   
    
 
 # Helper functions

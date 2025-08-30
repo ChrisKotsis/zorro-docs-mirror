@@ -7,13 +7,13 @@ source: "https://zorro-project.com/manual/en/dlls.htm"
 
 # **Developing Algo Trading Systems in C++**
 
-The Zorro platform accepts 4 types of algo trading scripts in the **Strategy** folder: lite-C code (**.c**), C++ code (**.cpp**), lite-C executables (**.x**), and DLLs (**.dll**). **Zorro64** has no lite-C compiler and thus runs only **.cpp** and **.dll** scripts. Scripts of supported types appear in the \[Script\] scrollbox and run automatically when the \[Test\], \[Train\], or \[Trade\] button is clicked.
+The Zorro platform accepts 4 types of algo trading scripts in the **Strategy** folder: lite-C code (**.c**), C++ code (**.cpp**), lite-C executables (**.x**), and DLLs (**.dll**). The 64-bit version **Zorro64** has no lite-C compiler and thus accepts only **.cpp** and **.dll** scripts. Scripts of supported types appear in the \[Script\] scrollbox and run automatically when the \[Test\], \[Train\], or \[Trade\] button is clicked.
 
  [Zorro S](restrictions.md) can compile **.x** and **.dll** files from **c.** and **.cpp** sources automatically. For compiling **.cpp** scripts it utilizes the **Visual Studio™** **VC++** compiler. Theoretically other languages can also be implemented, such as C#, Java, Pascal, Delphi, or Basic, as long as they are able to generate a 32- or 64-bit Windows DLL. The included batch and header files in **Source\\VC++** can serve as templates for integrating other languages.
 
-Using C++ as script language has many advantages. Additional development tools, such as the Visual Studio debugger and profiler, are available. External libraries, such as **Boost**, can be integrated without a wrapper. The 64-bit mode has access to the whole PC memory for backtests. All lite-C functions and all system variables can still be used, but additionally you have C++ classes and templates at your disposal. Error handling is more strict and you'll get warnings about bad code style. The VC++ compiler is a bit slower than the lite-C on-the-fly compiler, but is only invoked when the script was changed. The resulting code runs equally fast or - in 64 bit mode - even faster. The only disadvantage is that you have to install the free **Microsoft Visual Studio™** **2022** or above.
+When should you use lite-C and when C++? Most scripts and strategies have a simple structure, and lite-C is absolutely sufficient. But as soon as a script becomes more complex end exceeds 100 lines of code, you might want to switch it to C++. Using C++ as script language has many advantages. Additional development tools, such as the Visual Studio debugger and profiler, are available. External libraries, such as **Boost**, can be integrated without a wrapper. The 64-bit mode has access to the whole PC memory for backtests. All lite-C functions and all system variables can still be used, but additionally you have C++ classes and templates at your disposal. Error handling is more strict and you'll get warnings about bad code style. The VC++ compiler is a bit slower than the lite-C on-the-fly compiler, but is only invoked when the script was changed. The resulting code runs equally fast or - in 64 bit mode - even faster. The only disadvantage is that you have to install the free **Microsoft Visual Studio™** **2022** or above.
 
-The Visual Studio debugger can display local and global variables and can step into code without the need of [watch](166_watch.md) statements (which won't display C++ variables anyway). It is better suited than lite-C for finding hidden bugs or crashes in the code. However for finding bugs or flaws in the trading logic, the [Zorro visual debugger](011_Chart_Viewer_Debugger.md) is still the best way, and works with C and C++ projects as well.
+The **Visual Studio Debugger** can display local and global variables, can profile code execution, and can step into code without the need of [watch](166_watch.md) statements. Use if when you It is better suited than lite-C for finding hidden bugs or crashes in the code. However for finding bugs or flaws in the trading logic, the [Zorro visual debugger](011_Chart_Viewer_Debugger.md) is still the best way, and works with C and C++ projects as well.
 
 ### Getting started with C++
 
@@ -110,6 +110,14 @@ if(test(x) && test(y)) .. _// lite-C always calls test(x) and test(y)_
 if(test(x) && test(y)) .. _// C++ calls test(y) only when test(x) returns nonzero_
 ```
 
+### String vs. char\* vs. const char\*
+
+In lite-C, there's no difference between strings, char pointers, and constant char pointers. In C++, **string** is defined as **char\***, and is different to the type **const char\***.
+```c
+string Name = "Sherlock"; _// lite-C_  
+const char\* Name = "Sherlock"; _//_ _C++_
+```
+
 ### Different string comparing
 
 In lite-C, strings can be compared with string constants using the normal comparison operators, such as **\==**, **!=**, or **switch...case**. In the C++ DLL headers, a **string** is typedef'd as a **char\*** pointer, and comparison with a constant would always result in **false**. Either use C++ types like **CString** or **basic\_string** for string handling (but make sure to call lite-C functions always with C-style, null-terminated strings), or use the **str...** functions from the C library.
@@ -124,7 +132,7 @@ In lite-C, **bool** has a size of 4 bytes, in C++ it's 1 byte. The lite-C **bool
 
 ### Different pointer size
 
-In lite-C a pointer has always a size of 4 bytes. In C++ it can have 4 or 8 bytes, depending on whether you compile with **Zorro** or **Zorro64**. Consider this when coding pointer arithmetics. The predefined variable types **size\_t** and **intptr\_t** also change between 4 and 8 bytes.
+In lite-C a pointer has always a size of 4 bytes. In C++ it can have 4 or 8 bytes, depending on whether you compile with **Zorro** or **Zorro64**. Consider this when coding pointer arithmetics. The predefined variable types **size\_t** and **intptr\_t** also change between 4 and 8 bytes. Make sure to recomplie DLL-based strategies when using a newer or different Zorro version, since the size of global structs may be different. 
 
 ### No watch()ed variables
 
@@ -136,9 +144,9 @@ print(TO\_WINDOW,"\\nMy Variable: %.2f",MyVar) _//_ _C++_
 
 ### Colliding definitions
 
-Many lite-C variables and flags are pre-defined in **variables.h** and **trading.h**. If you're using a C++ library with a function, variable, or flag that has the same name, undefine the lite-C keyword with an **#undef** statement after including **zorro.h** and before including the headers of your library. Otherwise you'll get compiler errors.
+Many lite-C variables and flags are pre-defined in **variables.h** and **trading.h**. If you're using a C++ library with a function, variable, or flag that has the same name, undefine the lite-C keyword with an **#undef** statement after including **zorro.h** and before including the headers of your library. Otherwise you'll get compiler errors. 
 
-### Using DLL functions
+### Calling external DLL functions
 
 In lite-C, the **API** macro imports functions from a DLL library. In C/C++, use the **LoadLibrary** and **GetProcAddress** standard functions for that:
 ```c
@@ -171,9 +179,9 @@ You can write strategy DLLs in any language that supports 32-bit or 64-bit dynam
 
 When importing the **GLOBALS** struct, set up the compiler so that it does not pad the struct with dummy elements for aligning the struct members. If available, use a #pragma or similar statement to set the struct alignment to 4 bytes or below for all structs in the **trading.h** header. This is needed to ensure that the structs have identical size in your DLL and in Zorro. 
 
-# VC++ setup for a DLL project
+# VC++ setup for a DLL project (free Zorro version)
 
-If you own Zorro S, you need not read this chapter, since Zorro S automatically generates a VC++ project file (**\*.vcxproj**) when compilig a C++ script in the Strategy folder. You only need to click on it for invoiking the Visual Studio debugger. However with the free version, you need to set up a VC++ project for any C++ script. The dialogs shown below are for Visual C++ 2017 Community; for later versions like VC++ 2019 and 2022 they are very similar:
+If you own Zorro S, you need not read this chapter, since Zorro S automatically generates a VC++ project file (**\*.vcxproj**) when compilig a C++ script in the Strategy folder. You only need to click on it for invoiking the Visual Studio environment. However with the free version, you need to set up a VC++ project for any C++ script. The dialogs shown below are for Visual C++ 2017, but for later versions like VC++ 2019 and 2022 they are very similar:
 
 *   If you haven't already, download and install Visual Studio with the C++ desktop applications environment. Make yourself familiar with its editor and tools - there are tons of books and courses for Visual Studio.  
       

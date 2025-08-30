@@ -11,7 +11,7 @@ Determines the number of logical CPU cores for [WFO](numwfocycles.md) training (
 
 ## Core
 
-The current core number in a WFO multicore training run, or the current [process number](engine.md), or **0** when no multicore process is running (read/only).
+The current core number in a WFO multicore training run from **1..NumCores**, or the current [process number](engine.md), or **0** when no multicore process is set up (read/only).
 
 ### Type:
 

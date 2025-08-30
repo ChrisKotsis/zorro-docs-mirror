@@ -21,11 +21,11 @@ The current value of all open trades by the strategy. This is the profit or loss
 
 ## RiskTotal
 
-The estimated maximum risk of all open trades by the current script. The risk is estimated as trade costs plus loss at either the initial stop loss distance, or at an 1% adverse price move when no stop is used. Due to trailing and exit mechanisms, the real risk is normally smaller than the estimated risk, but can also be higher in cases of large price moves or large exit slippage.
+The estimated maximum risk of all currently open trades. The risk is estimated as trade costs plus loss at either the initial stop loss distance, or at an 1% adverse price move when no stop is used. Due to trailing and exit mechanisms, the real risk is normally smaller than the estimated risk, but can also be higher in cases of large price moves or large exit slippage.
 
 ## MarginTotal
 
-The current allocated margin of all open trades of the strategy, calculated through [MarginCost](192_PIP_PIPCost_Leverage.md) under assumption of a constant margin requirement of open trades. This can be different in live trading when brokers adapt the margin requirement to the market situation or asset price. A margin call is simulated in test and training mode when [Capital](190_Margin_Risk_Lots.md) **\> 0** and **Equity - MarginTotal** reaches zero.
+The current allocated margin of all open trades, calculated through [MarginCost](192_PIP_PIPCost_Leverage.md) under assumption of a constant margin requirement of open trades. This can be different in live trading when brokers adapt the margin requirement to the market situation or asset price. A margin call is simulated in test and training mode when [Capital](190_Margin_Risk_Lots.md) **\> 0** and **Equity - MarginTotal** reaches zero.
 
 ## MarginVal
 
@@ -57,6 +57,4 @@ else
 
 ### See also:
 
-[enterLong](buylong.md)/[Short](buylong.md), [Win / Loss](winloss.md), [Capital](190_Margin_Risk_Lots.md)
-
-[► latest version online](javascript:window.location.href = 'https://zorro-project.com/manual/en' + window.location.href.slice\(window.location.href.lastIndexOf\('/'\)\))
+[enterLong](buylong.md)/[Short](buylong.md), [Win / Loss](winloss.md), [Capital](190_Margin_Risk_Lots.md), [Statistics](116_Statistics_Transformations.md) [► latest version online](javascript:window.location.href = 'https://zorro-project.com/manual/en' + window.location.href.slice\(window.location.href.lastIndexOf\('/'\)\))

@@ -12,7 +12,7 @@ Splits **x** in a fractional and integer part, each of which has the same sign a
 ### Parameters:
 
 **x** - any number.  
-**p** - **var** pointer, or **0** if the integer part is not needed.  
+**p** - **var** pointer for the integer part.  
 
 ### Returns:
 

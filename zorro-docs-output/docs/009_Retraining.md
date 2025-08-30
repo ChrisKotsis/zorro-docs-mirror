@@ -5,13 +5,13 @@ source: "https://zorro-project.com/manual/en/retraining.htm"
 
 # Retraining
 
-# Retraining and Retesting
+# Retraining and Retesting (Zorro S)
 
 A live trading strategy should be retrained in regular intervals for adapting its parameters to the current market situation. It should also be retested after a certain trading time for verifying that the script behaves identically in live trading and in the backtest. Retraining and retesting are [Zorro S](restrictions.md) features and are executed by a separate process, this way preventing any interruption of the live trading process. The newly trained parameters, rules, or machine learning models are then automatically loaded by the trading system at the begin of the next bar.
 
 ### Retraining
 
-The retraining process ([Zorro S](restrictions.md) required) is triggered either automatically by setting the [ReTrainDays](100_tradeUpdate.md) variable, or manually by clicking the \[Train\] button while trading. A second Zorro instance will pop up and start a [training run](007_Training.md), while the first Zorro continues trading. In this training run the **[ReTrain](013_Asset_Account_Lists.md)** boolean variable is nonzero. The script can then download new price data from the server, and generate a new parameter and AI rule set (see also [workshop 5](tutorial_fisher.md)). After finishing the training run, the second Zorro closes. The new parameters, rules and factors are then automatically loaded by the trading instance. Example of a retraining statement in the script:
+The retraining process is triggered either automatically by setting the [ReTrainDays](100_tradeUpdate.md) variable, or manually by clicking the \[Train\] button while trading. A second Zorro instance will pop up and start a [training run](007_Training.md), while the first Zorro continues trading. In this training run the **[ReTrain](013_Asset_Account_Lists.md)** boolean variable is nonzero. The script can then download new price data from the server, and generate a new parameter and AI rule set (see also [workshop 5](tutorial_fisher.md)). After finishing the training run, the second Zorro closes. The new parameters, rules and factors are then automatically loaded by the trading instance. Example of a retraining statement in the script:
 
 ```c
 if(ReTrain) { 
@@ -30,7 +30,7 @@ Re-training a WFO system is required in intervals corresponding to the length of
 
 ### Retesting
 
-The retesting process ([Zorro S](restrictions.md) required) is triggered by clicking the \[Test\] button while trading. Its purpose is verifying whether the script behaves in the simulation exactly as in live trading. For this, Zorro downloads historical data and then performs a backtest over the period since the begin of trading. The log, profits, and trades from the backtest can then be compared to the live trading session.
+The retesting process is triggered by clicking the \[Test\] button while trading. Its purpose is verifying whether the script behaves in the simulation exactly as in live trading. For this, Zorro downloads historical data and then performs a backtest over the period since the begin of trading. The log, profits, and trades from the backtest can then be compared to the live trading session.
 
 For retesting the trading session, a second Zorro instance will perform the actual test while the first Zorro continues trading. The start date of the trading session and the bar offset are transferred to the second instance via command line. In the test run the **[ReTest](013_Asset_Account_Lists.md)** boolean variable is nonzero and can be used to set up test parameters in the script. After finishing the test, the second Zorro closes. The trade list **\*\_trd.csv** can then be compared to **trades.csv**. Example of a retesting statement in the script:
 

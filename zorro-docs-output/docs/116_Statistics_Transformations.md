@@ -56,21 +56,25 @@ where **Σ** is the summation operator. The **LinearReg** function returns **b +
   
 Source in **ta-lib.zip**. For higher order regression, use [polyfit / polynom](136_polyfit_polynom.md). For logistic regression with multiple variables, use the [advise(PERCEPTRON)](advisor.md) function.  
 
-## LinearRegPredict(vars Data, int TimePeriod, int Offset): var
+## LinearRegPredict(vars Data, int Period, int Offset): var
 
-Linear Regression Prediction at **Offset**; returns **b + m\*(TimePeriod-Offset-1)**. Use a negative offset to return the valur for a future bar, a positive offset for a previous bar, and zero for the current bar. Source in **indicators.c**.  
+Linear Regression Prediction at **Offset**; returns **b + m\*(Period-Offset-1)**. Use a negative offset to return the valur for a future bar, a positive offset for a previous bar, and zero for the current bar. Source in **indicators.c**.  
 
-## LinearRegAngle(vars Data, int TimePeriod): var
+## LinearRegAngle(vars Data, int Period): var
 
 Linear Regression Angle. Returns **m** converted to degrees. Source in **ta-lib.zip**. Due to the arbitrary x and y units of a price chart, the absolute angle is not a useful parameter unless you're on the esoteric side.  
 
-## LinearRegIntercept(vars Data, int TimePeriod): var
+## LinearRegIntercept(vars Data, int Period): var
 
 Linear Regression Intercept. Returns **b**. Source in **ta-lib.zip**.  
 
-## LinearRegSlope(vars Data, int TimePeriod): var
+## LinearRegSlope(vars Data, int Period): var
 
 Linear Regression Slope. Returns **m** as data difference per bar. Source in **ta-lib.zip**. 
+
+## MAE(vars Data, int Period): var
+
+Maximum adverse excursion. **rMin** has the **Data** value at the maximum drawdown from a preceding peak, **rMax** the value at the preceding peak, **rMinIdx** and **rMaxIdx** are their indices. Returns the maximum drawdown depth. The depth in percent is **rMax/MAE\*100**.Source in **indicators.c**.  
 
 ## MatchIndex(vars Data, var Reference, int Period): int
 
@@ -104,13 +108,17 @@ Lowest and highest values over a specified period. Result in **rMin**, **rMax**.
 
 Indexes of lowest and highest values over a specified period. Result in **rMinIdx**, **rMaxIdx**. **0** = current bar, **1** = one bar ago, and so on. Source in **ta-lib.zip**.
 
-## Mode(vars Data, int TimePeriod, int Steps): var
+## Mode(vars Data, int Length, int Steps): var
 
-Most frequent **Data** value within **TimePeriod**. For this the **Data** range is divided into **Steps** separate ranges, and the number of values that fall into a range is counted. The function returns the value with the highest count. Source in **indicators.c**. 
+Most frequent **Data** value within **Length**. For this the **Data** range is divided into **Steps** separate ranges, and the number of values that fall into a range is counted. The function returns the value with the highest count. Source in **indicators.c**. 
 
-## Moment(vars Data, int TimePeriod, int N): var
+## Moment(vars Data, int Length, int N): var
 
-The statistical moment **N** (**1..4**) of the **Data** series section given by **TimePeriod**. The first moment is the mean, second is variance, third is skewness, fourth ist kurtosis. The standard deviation is the square root of the second moment. The mean is stored in **rMean**. See also **SemiMoment**. Source in **indicators.c**.
+The statistical moment **N** of the **Data** series section given by **Length**. The first moment is the mean, second is variance, third is skewness, fourth ist kurtosis. 
+
+<table><tbody><tr><td><strong>N = 0</strong></td><td>Standard Deviation</td></tr><tr><td><strong>N = 1</strong></td><td>Mean</td></tr><tr><td><strong>N = 2</strong></td><td>Variance</td></tr><tr><td><strong>N = 3</strong></td><td>Skewness</td></tr><tr><td><strong>N = 4</strong></td><td>Kurtosis</td></tr><tr><td><strong>N += 8</strong></td><td>Divide Variance by Length instead of Length-1</td></tr></tbody></table>
+
+The standard deviation is the square root of the variance. By adding **8**, the population variance instead of sample variance is used.The mean is also stored in **rMean**. See also **SemiMoment**. Source in **indicators.c**.
 
 ## NumAbove(vars Data, int Length, var Theshold): var
 

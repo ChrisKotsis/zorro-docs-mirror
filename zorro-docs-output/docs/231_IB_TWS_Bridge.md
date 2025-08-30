@@ -5,7 +5,7 @@ source: "https://zorro-project.com/manual/en/ib.htm"
 
 # IB / TWS Bridge
 
-# Interactive Brokers Bridge
+# Interactive Brokers Bridge (Zorro S)
 
 [Interactive Brokers™](https://www.interactivebrokers.co.uk) offers access to most major exchanges, a huge number of supported assets including options and futures, and low trading costs. The IB bridge gives Zorro algo trading strategies direct access the IB API, either through IB's Trader Workstation (**TWS**), or through the **IB Gateway**. The TWS is preferable for testing a script, the Gateway for automated trading. The TWS, a bloated java program, normally stops every 24 hours and interrupts the connection. The Gateway lasts a bit longer and usually disconnects every weekend. Thus, long-term algo trading with the IB API requires supervising the trading system and restarting the Gateway every Monday. When downloading TWS or Gateway from the IB website, get the release (stable) version, not the beta (unstable) version.
 

@@ -44,7 +44,7 @@ Global loss limit in units of the account currency (default = **0** = no loss li
 
 ## MaxShort
 
-Maximum number of open and pending long or short trades with the same asset and algo. If the limit amount is reached in \[Test\] or \[Trade\] mode, [enter](buyLong.md) calls do not enter more trades, but they still close reverse positions and update the entry, stop, profit target, and lifetime parameters of open or pending trades to the values that the new trade would have. If set to a negative number, open or pending trades are not updated. The limits are ignored in \[Train\] mode. 
+Maximum number of open and pending long or short trades with the same asset and algo. If the limit is reached, [enter](buyLong.md) calls do not enter more trades, but they still close reverse positions and update the entry, stop, profit target, life time, and entry time parameters of open or pending trades to the values that the new trade would have. If set to a negative number, open or pending trades are not updated. The maximum numbers are ignored in \[Train\] mode when the [NOMAX](016_OptimalF_money_management.md) flag is set. 
 
 ### Type:
 

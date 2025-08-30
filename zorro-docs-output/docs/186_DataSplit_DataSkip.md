@@ -64,6 +64,6 @@ function run()
 
 ### See also:
 
-[Mode](018_TradeMode.md), [WFO](numwfocycles.md)
+[Mode](018_TradeMode.md), [TrainMode](016_OptimalF_money_management.md), [WFO](numwfocycles.md)
 
 [► latest version online](javascript:window.location.href = 'https://zorro-project.com/manual/en' + window.location.href.slice\(window.location.href.lastIndexOf\('/'\)\))

@@ -108,7 +108,7 @@ Maximum loss of a trade so far.
 
 ## NumWinTotal
 
-Number of profitable trades so far. The average return per winning trade is **WinTotal/NumWinTotal**.
+Number of trades closed with a profit so far, including partially closed trades. The average return per profitable trade is **WinTotal/NumWinTotal**.
 
 ## NumLossLong
 
@@ -116,7 +116,7 @@ Number of profitable trades so far. The average return per winning trade is **Wi
 
 ## NumLossTotal
 
-Number of lost trades so far. The average return per trade is **(WinTotal-LossTotal)/(NumWinTotal+NumLossTotal)**. The number of closed trades is **NumWinTotal+NumLossTotal**.
+Number of trades closed with a loss so far, including partially closed trades. The average return per trade is **(WinTotal-LossTotal)/(NumWinTotal+NumLossTotal)**. The total number of closed trades is **NumWinTotal+NumLossTotal**.
 
 ## LossStreakLong
 
