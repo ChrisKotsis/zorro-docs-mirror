@@ -56,11 +56,11 @@ Total loss by interest charged by the broker. Updated any day.
 
 ## ReturnMean
 
-Mean of all bar returns on investment. The bar return on investment is the equity difference to the previous bar, divided by [Capital](190_Margin_Risk_Lots.md). If **Capital** is not set, the sum of normalized maximum drawdown and maximum margin is used. Only available at the end.
+Mean of all bar returns on investment. The bar return on investment is the equity difference to the previous bar, divided by [Capital](190_Margin_Risk_Lots.md). If **Capital** is not set, the sum of normalized maximum drawdown and maximum margin is used. Only for bars with open positions, and only available at the end.
 
 ## ReturnStdDev
 
-Standard deviation of all bar returns on investment. Can be used together with **ReturnMean** for calculating the annualized **Sharpe Ratio** (**Sharpe = ReturnMean/ReturnStdDev\*InMarketBars\*(365.25\*24\*60)/NumMinutes**) and other metrics. Only available at the end.
+Standard deviation of all bar returns on investment. Can be used together with **ReturnMean** for calculating performance metrics, such as Sharpe Ratio (see examples). Only available at the end.
 
 ## ReturnUlcer
 
@@ -70,9 +70,9 @@ Ulcer Index in percent; worst drawdown after an equity peak. Only available at t
 
 R2 coefficient; the similarity of the equity curve with a straight line ending up at the same profit.Only available at the end.
 
-## ReturnLR
+## ReReturnLR
 
-Gross profit by linear regression of the equity curve. Only available at the end.  
+Theoretical net profit by linear regression of the equity curve. Only available at the end.  
 
 ## ReturnCBI
 
@@ -105,7 +105,7 @@ Sum of the durations of all trades, in bars. Updated at any trade. Can be bigger
 
 ## NumMinutes
 
-Total duration of the backtest period; can be used for normalizing metrics to 3 years or for calculating profit per period. The backtest years are **NumMinutes/(365.25\*24\*60)**. For annualizing a result, multiply it with the inverse of this formula.
+Total duration of the backtest period; can be used for normalizing metrics to 3 years or for calculating profit per period. The backtest years are **NumMinutes/(365.25\*24\*60)**. . For annualizing a result, divide it by this formula.
 
 ### Type:
 
@@ -150,14 +150,18 @@ Array in chronological order containing the balance or equity (dependent on the 
 ### Example:
 
 ```c
-_// print the annualized Sharpe Ratio to the performance report_ 
+_// calculate some performance_ metrics
 function evaluate()
 { 
-  if(NumWinTotal == 0) return;
-  var MySharpe = ReturnMean/ReturnStdDev;
-_// roughly adjust to annual in-market bars_
-  MySharpe \*= sqrt(InMarketBars/NumYears);
-  printf(TO\_REPORT,"\\nMy Sharpe: %.2f",MySharpe);
+  if(NumWinTotal == 0) return; _// nothing worth to calculate
+_  var Years = NumMinutes/**(365.25\*24\*60);**
+  int NumTrades = NumWinTotal+NumLossTotal;
+  var NetProfit = WinTotal-LossTotal-InterestCost;
+  var Sharpe = **ReturnMean/ReturnStdDev\*sqrt(InMarketBars/Years);
+  var Calmar = NetProfit/fix0(DrawDownMax)/Years;
+**  var Expectancy = (WinTotal-LossTotal)/NumTrades;
+  var GAGR = 100.\*(pow((NetProfit+MarginMax)/MarginMax,1./Years)-1.);
+  ...
 }
 ```
 

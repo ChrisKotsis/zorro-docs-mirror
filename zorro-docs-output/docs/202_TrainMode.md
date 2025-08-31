@@ -35,7 +35,7 @@ Set this to **0** for early aborting the optimization (**int**).
 
 ## NumTrainCycles
 
-Number of training cycles (**int**, default = **1**) for special purposes, such as training a combination of interdependent rules and parameters in a given order (see [Training](training.md)). In any cycle, set either [RULES](018_TradeMode.md), or [PARAMETERS](018_TradeMode.md), or both, dependent on training method. Not to be confused with [WFO cycles](numwfocycles.md) or **Generations**.
+Number of training cycles (**int**, default = **1**). Use multiple cycles for special purposes, such as training a parameter set a second time, or training a combination of interdependent rules and parameters in a given order (see [Training](training.md)). In any cycle, set either [RULES](018_TradeMode.md), or [PARAMETERS](018_TradeMode.md), or both, dependent on training method. Not to be confused with [WFO cycles](numwfocycles.md) or **Generations**.
 
 ## TrainCycle
 
