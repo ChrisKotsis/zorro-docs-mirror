@@ -36,7 +36,7 @@ Time zone of the current [asset](013_Asset_Account_Lists.md) for daily trading; 
 
 ### Type:
 
-**int**, **UTC** for UTC time (default), **EST** for New York, **WET** for London, **CET** for Frankfurt, **AEST** for Sydney, **JST** for Tokyo, or any number from **\-23..+23** that gives the time zone offset in hours to UTC. Daylight saving time is used, except for UTC and for time zones at or beyond JST.  
+**int**, **UTC** for UTC time (default), **EST** for New York, **CST** for Chikago, **WET** for London, **CET** for Frankfurt, **AEST** for Sydney, **JST** for Tokyo, or any number from **\-23..+23** that gives the time zone offset in hours to UTC. Daylight saving time is used, except for UTC and for time zones at or beyond JST.  
  
 
 ## AssetFrame

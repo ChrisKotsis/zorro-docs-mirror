@@ -43,6 +43,10 @@ In combination with **\-run**, **\-train**, or **\-trade**: run with minimized Z
 
 In combination with **\-run**, **\-train**, or **\-trade**: don't close Zorro afterwards.
 
+### \-quiet
+
+Don't open a message box when Zorro encounters a fatal [error](errors.md); print the error in the message window instead. Don't wait 4 seconds after a command line run before closing the Zorro window.
+
 ### \-a assetname
 
 Select the given asset from the \[Assets\] scrollbox.
@@ -57,7 +61,7 @@ Stores the given string (no blanks or special characters) in the [Define](cmd.md
 
 ### \-u string
 
-Allows to enter strings or other content that can be parsed from the command line with the [report](012_Performance_Report.md) funcrion.
+Allows to enter more strings or other content that can be parsed from the command line with the [report](012_Performance_Report.md) funcrion.
 
 ### \-i number
 
@@ -73,11 +77,7 @@ Starts Zorro in 'black box' mode, as if the [DIAG](199_Verbose.md) flag was set.
 
 ### \-w offset
 
-Shift the Zorro window by the given number of pixels to the right.
-
-### \-quiet
-
-Don't open a message box when Zorro encounters a fatal [error](errors.md); print the error in the message window instead. Don't wait 3 seconds after a command line run before closing the Zorro window.  
+Shift the Zorro window by the given number of pixels to the right.  
   
   
 The command line can be evaluated with the [report](012_Performance_Report.md) function, so arbitrary user-defined command line options can be added. Use the [ExitCode](175_ExitCode.md) variable for returning with a script-defined exit code or error level.  

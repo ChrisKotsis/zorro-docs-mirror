@@ -5,7 +5,7 @@ source: "https://zorro-project.com/manual/en/panel.htm"
 
 # panel, ...
 
-# User interface panels
+# User interface
 
 For setting up strategy parameters, triggering actions, or displaying something, the following elements are available:
 

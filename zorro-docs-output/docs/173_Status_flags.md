@@ -15,7 +15,7 @@ Zorro's current status can be checked through **status flags** that can be eithe
 
 ## TRADEMODE
 
-The script is running in \[Test\], \[Train\], or \[Trade\] mode.
+The script is doing a \[Test\], \[Train\], or \[Trade\] run (see also [Button](button.md)).
 
 ## DEMO
 
@@ -150,6 +150,6 @@ function run()
 
 ### See also:
 
-[System flags](018_TradeMode.md), [isf](168_setf_resf_isf.md)
+[System flags](018_TradeMode.md), [isf](168_setf_resf_isf.md), [Button](button.md)
 
 [► latest version online](javascript:window.location.href = 'https://zorro-project.com/manual/en' + window.location.href.slice\(window.location.href.lastIndexOf\('/'\)\))

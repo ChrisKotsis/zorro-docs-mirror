@@ -95,11 +95,12 @@ Datasets can be plotted to a histogram or statistics chart with the [plot](146_p
 
 Generates a [contour chart](107_optimize.md) of a 3-field dataset. The resulting image is stored under **Filename** when [PL\_FILE](203_PlotMode.md) is set, otherwise displayed on the interactive chart. The value in the first field of a record is displayed as a contour color ranging from red to green. The second field is the x coordinate and the third field the y coordinate (see example). **CONTOUR|DOT** plots a cross at every xy coordinate. This function can be used to display parameter contour charts from CSV files exported by genetic or brute force training.
 
-## dataChart (int Handle, string Filename, HEATMAP, NULL)
+## dataChart (int Handle, string Name, HEATMAP, var\* Scale)
 
-Generates a [heatmap](profile.htm#heatmap) from a 2D dataset. The resulting image is stored under **Filename** when [PL\_FILE](203_PlotMode.md) is set, otherwise displayed on the interactive chart. The dataset contains heat values in a column x row matrix that are displayed in colors ranging from blue to red. This function can be used to display correlation or weight heatmaps.  
+Generates a [heatmap](profile.htm#heatmap) from a 2D dataset. The resulting image is stored under **Name** when [PL\_FILE](203_PlotMode.md) is set, otherwise displayed on the interactive chart with the titel **Name**. The dataset contains heat values in a column x row matrix that are displayed in colors ranging from blue to red. This function can be used to display correlation or weight heatmaps.  
   
  ![](../images/heatmap.png) ![](../images/contour.png)  
+Heatmaps can be displayed with data values in the fields by giving **HEATMAP|LABELS**. The x and y axes can can scaled by giving a **Scale** array consisting of x offset, x scale factor, y offset, and y scale factor. 
 
 # Accessing data
 

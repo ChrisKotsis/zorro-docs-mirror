@@ -9,15 +9,15 @@ source: "https://zorro-project.com/manual/en/setf.htm"
 
 ## setf (int Mode, int Flag)
 
-Macro that sets a **Flag** or flag combination in the variable **Mode**. For instance, **setf(TradeMode,TR\_PHANTOM)** sets the **TR\_PHANTOM** flag for the [TradeMode](018_TradeMode.md) variable.
+Identical to **Mode |= (Flag)**. Sets a **Flag** or flag combination in the variable **Mode** without affecting the other flags. For instance, **setf(TradeMode,TR\_PHANTOM)** sets the **TR\_PHANTOM** flag for the [TradeMode](018_TradeMode.md) variable.
 
 ## resf (int Mode, int Flag)
 
-Macro that resets a **Flag** or flag combination in the variable **Mode**.
+Identical to **Mode &= ~(Flag)**. Resets a **Flag** or flag combination in the variable **Mode**.
 
 ## isf (int Mode, int Flag): int
 
-Macro that evaluates to nonzero when the a **Flag** in the **Mode** variable is set.  For instance, **if(isf(TrainMode,PEAK))** ... checks if the **PEAK** flag is set in the [TrainMode](016_OptimalF_money_management.md) variable.
+Identical to **(Mode&(Flag))**. Evaluates to nonzero when the a **Flag** in the **Mode** variable is set.  For instance, **if(isf(TrainMode,PEAK))** ... checks if the **PEAK** flag is set in the [TrainMode](016_OptimalF_money_management.md) variable.
 
 ## swap (var a, var b)
 

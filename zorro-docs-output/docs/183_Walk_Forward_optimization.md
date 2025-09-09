@@ -31,7 +31,7 @@ Anchored Walk Forward Optimization (**NumWFOCycles** **\= -5**)
 
 Alternative to **NumWFOCycles**; number of bars of one WFO cycle (training + test), f.i. **5\*24** for a one-week WFO cycle with 1-hour bars. For getting a fixed test period of **N** bars, set **WFOPeriod** to **N\*100/(100-DataSplit)**. Since the number of WFO cycles now depends on the number of bars in the history, [asset](013_Asset_Account_Lists.md) must be called before. The WFO period is automatically adjusted so that the simulation period covers an integer number of WFO cycles. 
 
-## SelectWFO
+## WFOSelect
 
 Set this to a certain WFO cycle number for selecting only this cycle in a training or test; otherwise the process runs over all cycles. Setting it to **\-1** selects the last cycle that's normally used for live trading.
 
@@ -46,6 +46,14 @@ The number of the current WFO cycle, from **1** to **NumWFOCycles**. Automatical
 ## WFOBar
 
 The bar number inside the current WFO cycle, starting with **0** at the begin of the cycle. Can be used to determine when the cycle starts: **if(WFOBar == 0)**. Automatically set during a WFO test.
+
+## ISPeriod
+
+Number of bars of the in-sample (training) period of a WFO cycle. Automatically set in the [FIRSTRUN](013_Asset_Account_Lists.md) of a WFO test.
+
+## OOSPeriod
+
+Number of bars of the out-of-sample (test) period of a WFO cycle. Automatically set in the [FIRSTRUN](013_Asset_Account_Lists.md) of a WFO test.
 
 ### Type:
 

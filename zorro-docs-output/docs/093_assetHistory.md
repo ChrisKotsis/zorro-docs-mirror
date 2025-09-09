@@ -7,7 +7,7 @@ source: "https://zorro-project.com/manual/en/loadhistory.htm"
 
 ## assetHistory(string Name, int Mode): int
 
-Loads price history either from the currently selected broker or data feed, or from a specified online price source in CSV or JSON format. Stores the data in a dataset or in a **.t6** or **.t1** file in the **History** folder. Online price sources can be user defined; some popular sources such as Quandl, Stooq etc. are predefined.  
+Loads price history either from the currently selected broker or data feed, or from a specified online price source in CSV or JSON format. Stores the data in a dataset or in a **.t6**, **.t2**, or **.t1** file in the **History** folder. Online price sources can be user defined; some popular sources such as Quandl, Stooq etc. are predefined.  
 
 ### Parameters:
 

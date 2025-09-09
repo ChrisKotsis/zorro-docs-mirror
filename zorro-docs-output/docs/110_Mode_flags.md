@@ -184,16 +184,12 @@ Run a test immediately after training, without clicking \[Test\]. If the simulat
 
 ## PLOTNOW
 
-Plot a chart immediately after testing, without clicking \[Result\]. Automatically set when the script plots a histogram with [plotBar](146_plot_plotBar.md). This flag must be set in the [INITRUN](013_Asset_Account_Lists.md).
-
-## FASTEXIT
-
-When called from the command line, exit immediately instead of waiting 3 seconds.  
+Plot a chart immediately after testing, without clicking \[Result\]. Automatically set when the script plots a histogram with [plotBar](146_plot_plotBar.md). This flag must be set in the [INITRUN](013_Asset_Account_Lists.md).  
  
 
 ### Remarks
 
-*   In old scripts, flag combinations like **set(PARAMETERS+TICKS)** were used for setting several flags, **reset(TICKS)** for switching off a flag, and **mode(TICKS)** for checking the flag state. These methods are still supported, but for new scripts use **set(PARAMETERS,TICKS)** , **set(TICKS|OFF)**, and **is(TICKS)**.
+*   In old scripts, flag combinations like **set(PARAMETERS|TICKS)** were used for setting several flags, **reset(TICKS)** for switching off a flag, and **mode(TICKS)** for checking the flag state. These methods are still supported, but for new scripts use **set(PARAMETERS,TICKS)** , **set(TICKS|OFF)**, and **is(TICKS)**.
 
 ### Example:
 

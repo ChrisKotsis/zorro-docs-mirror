@@ -65,11 +65,11 @@ Ulcer index         12%
 Scholz tax          14026 EUR
 Sample cycles ProF  1.39 1.40 1.31 1.33 1.37 1.38
 
-WFO Cycle        Best   Worst     Avg
-Gross Profit   14712$  11013$  12931$
-Profit Factor    2.99    1.12    1.38
-Num Trades        301      69     285
-Win Rate          61%     34%     44%
+WFO Cycle      3(best) 5(worst)    Avg
+Gross Profit   14712$   11013$  12931$
+Profit Factor    2.99     1.12    1.38
+Num Trades        301       69     285
+Win Rate          61%      34%     44%
 
 Year Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec Total%
 2010              -2  20 -16  20 -13  22  10  -8   8   +38

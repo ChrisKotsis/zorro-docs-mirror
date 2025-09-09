@@ -9,7 +9,7 @@ source: "https://zorro-project.com/manual/en/script.htm"
 
 ## Script
 
-Name of the script without the **".c"** extension. Can be changed for generating or loading parameters, rules, and factors from files with a different name, this way sharing training data with other scripts. Script names must not contain spaces or special characters.
+Name of the script without the **".c"** extension. Can be changed in the script for generating or loading parameters, rules, and factors from files with a different name. In this way the script can sharing training data with other scripts, or can produce logs with different names in different [cycles](numtotalcycles.md). Script names must not contain spaces or special characters.
 
 ## Algo
 

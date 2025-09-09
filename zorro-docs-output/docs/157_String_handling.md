@@ -16,8 +16,7 @@ Fills the char array **dest** with the content of string **src**. The buffer siz
 ### Parameters:
 
 **dest** - destination string, either a [char array](aarray.md) of sufficient length or a temporary string as returned from **strmid**, **strf**, or **strx**.  
-**src** - source string  
- 
+**src** - source string
 
 ## strcat (string dest, string src): string
 
@@ -67,13 +66,12 @@ Compares all or the first **count** characters of the strings (case sensitive) a
 
 ## strstr (string str1, string str2): string
 
-Returns a substring beginning with the first occurrence (case sensitive) of **str2** within **str1**, or **NULL** when **str2** is not contained in **str1**. This function is often used to check if a string has the same content or is contained in another string, or to parse string content by keywords. 
+Returns a substring beginning with the first occurrence (case sensitive) of **str2** within **str1**, or **NULL** when **str2** is not contained in **str1**. This function is often used to check if a string can be found in another string, or to parse string content by keywords. 
 
 ### Parameters:
 
 **str1** - string to search within  
 **str2** - substring to be found  
-   
 
 ## strchr (string str, int c): string
 
@@ -89,7 +87,7 @@ Returns a substring beginning with the first (**strchr**) or last (**strrchr**) 
 
 ## strtok (string str, string delimiter): string
 
-Returns a substring from the string **str**, or **0** when no more substring is found. The set of characters in the **delimiter** string specifies the characters that separate the substrings.
+Returns a substring from the string **str**, or **0** when no more substring is found. The set of characters in the **delimiter** string specifies the characters that separate the substrings. This function can be used to parse CSV or similar files.
 
 ### Parameters:
 
@@ -99,14 +97,13 @@ Returns a substring from the string **str**, or **0** when no more substring is 
 
 ## strvar (string str, string name, var default): var
 
-Parses a number from the string **str** that is preceded by the identifier **name**. If no identifier **name** is found in the string **str**, the function returns the **default** value. Can be used to parse **.ini** or **.json** files. This is not a standard C string function.
+Parses a number from the string **str** that is preceded by the identifier **name**. If no identifier **name** is found in the string, the function returns the **default** value. Can be used to parse **.csv**, **.ini**, or **.json** files. This is not a standard C string function.
 
 ### Parameters:
 
 **str** - string containing the number.  
 **name** - substring, variable identifier, or **0** to read the first number out of the string.  
-**val** - returned when no identifier **name** or no number was found in the string.  
- 
+**default** - returned when no identifier **name** or no number was found in the string. Use **NIL** for detecting **name**.
 
 ## strtext (string str, string name_,_ string default): string (temporary)
 
@@ -129,7 +126,7 @@ Returns a temporary string (see remarks) with a trade identifier, as in the log 
 
 ## strcon (CONTRACT\*): string
 
-Returns a temporary string (see remarks) with a [contract symbol](014_Asset_Symbols.md). This is not a standard C string function.
+Returns a temporary string (see remarks) with the [contract symbol](014_Asset_Symbols.md). This is not a standard C string function.
 
 ### Parameters:
 
@@ -173,18 +170,18 @@ Converts an 8-bit char string to a temporary 16-bit wide string, i.e. an array o
 **str** - string containing the text to be converted, 1000 characters max.  
  
 
-## stridx (string Str, _int Index)_: int
+## stridx (string str, _int index)_: int
 
-Assigns the given **Str** string to the given **Index** number, a unique integer in the 1..1000 range. Useful for indexing [arrays](aarray.md) or [datasets](125_sortData_sortIdx.md) with strings, such as asset or algo names. If **Index** is **0**, the function generates and return an index This is not a standard C string function.
+Assigns the given **str** string to the given **index** number, a unique integer in the 1..1000 range. Useful for indexing [arrays](aarray.md) or [datasets](125_sortData_sortIdx.md) with strings, such as asset or algo names. If **index** is **0**, the function generates and return an index This is not a standard C string function.
 
 ### Parameters:
 
-**str** - string to be converted to an index, 15 characters max.
+**str** - string to be converted to an index, 15 characters max.  
+**index** - number associated to the string.
 
-## strxid (int Index): string
+## strxid (int index): string
 
-Returns the string associated to the given **Index**. Example: **int i = stridx("EUR/USD",0), j = stridx("USD/JPY",0); printf("\\n%i %i %s %s",i,j,strxid(i),strxid(j));**. This is not a standard C string function.  
-  
+Returns the string associated to the given **index**. Example: **int i = stridx("EUR/USD",0), j = stridx("USD/JPY",0); printf("\\n%i %i %s %s",i,j,strxid(i),strxid(j));**. This is not a standard C string function.  
  
 
 ## strf (string format, ...): string (temporary)
@@ -194,7 +191,6 @@ Returns a temporary string (see remarks) with data and variables formatted by th
 ### Parameters:
 
 **format** - format string, limited to a single line (no **"\\n"** characters) and to maximum 1000 characters of the returned string.  
-   
 
 ## sprintf (string dest, string format, ...): int
 
@@ -204,7 +200,6 @@ Like **strf**, but fills a given char array with formatted data, and returns the
 
 **dest** - destination string, a [char array](aarray.md) of sufficient length.  
 **format** - format string (see [format codes](format.md)).  
-   
 
 ## sscanf (string str, string format, ...): int
 
@@ -225,7 +220,6 @@ Converts a number from a string to a **var** or **int** variable. If the string 
 ### Parameters:
 
 **str** - string containing a number.  
- 
 
 ## sftoa (var Value, int Digits): string
 
@@ -235,6 +229,16 @@ Returns **Value** converted to a temporary string with the given number of signi
 
 **Value** - value to convert.  
 **Digits** - number of nonzero digits when positive, decimals when negative.  
+ 
+
+## strselect (string\* List, int NunStrings): int
+
+Opens a dialog to select one of the strings from the given **List** of strings. Returns the index of the selected string, or -1 if no string was selected.This is not a standard C string function.
+
+### Parameters:
+
+**List** - array of strings**  
+NumStrings** - number of strings in the array.  
    
 
 ### Remarks:
@@ -270,11 +274,23 @@ function main()
 }
 ```
 ```c
-**_// make a temporary string permanent_**
+**_// copy a temporary string to a permanent string_**
 ...
 static char MyPermanentString\[100\];
 strcpy(MyPermanentString,strx("I like Ninja!","Ninja","Zorro"));
 ...
+```
+```c
+_// open a dialog to select an algorithm_
+...
+string Items\[4\];
+Items\[0\] = "Trend";
+Items\[1\] = "Counter Trend";
+Items\[2\] = "Channel";
+Items\[3\] = "Cycle";
+int N = strselect(Items,4);
+if(N<0) printf("Error");
+else printf("\\n%s selected!",Items\[N\]);
 ```
 
 ### See also:

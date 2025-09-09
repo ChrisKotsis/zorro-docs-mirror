@@ -71,7 +71,7 @@ Highest [objective](108_objective_parameters.md) return value so far (**var**, r
 
 ## Parameters
 
-Pointer to a list of **PARAMETER** structs for the current asset/algo component. The **Min, Max,** and **Step** elements are set up in the list after the first [INITRUN](018_TradeMode.md) in \[Train\] mode. The **PARAMETER** struct is defined in **trading.h**.
+Pointer to a lobal list of **PARAMETER** structs for the current asset/algo component. The **Min, Max,** and **Step** elements are set up in the list after the first [INITRUN](018_TradeMode.md) in \[Train\] mode. The **PARAMETER** struct is defined in **trading.h**.
 
 ### Remarks:
 
