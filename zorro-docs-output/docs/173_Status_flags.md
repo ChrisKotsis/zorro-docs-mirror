@@ -94,7 +94,11 @@ The Zorro instance was started through the [command line](027_Command_Line_Optio
 
 ## COMPILED
 
-The script is an executable (\*.x).  
+The script is an executable (\*.x). 
+
+## STEPWISE
+
+The script runs in single step mode. For details see [debugging](011_Chart_Viewer_Debugger.md).  
  
 
 ## PORTFOLIO

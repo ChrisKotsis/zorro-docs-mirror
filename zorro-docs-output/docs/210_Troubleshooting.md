@@ -13,42 +13,43 @@ In less trivial cases you'll see an error message when the script is running, an
 
 ### Clean code
 
-The best way to avoid bugs is good coding style that allows quick reading and understanding the code. This should be no problem with strategy scripts that are normally short and have a linear structure. Still, even a 20-line script can be written as a cluttered lump of spaghetti code. Some suggestions for avoiding bugs already when writing the script:
+The best way to avoid bugs is good coding style that allows quick reading and understanding the code. This should be no problem with strategy scripts, since they are normally very short and have a linear structure. Still, even a 20-line script can be written as a cluttered lump of spaghetti code. Some suggestions for avoiding bugs already when writing the script:
 
-*   Have a naming convention for variables and functions. In the script examples, usually definitions are all caps (**DO\_TEST**), variables begin with uppercase letters (**Price**) and functions with lowercase letters (**price()**). Variables with multiple elements, such as series, end with 's' (**vars Prices**). Some exceptions are by tradition, like lowercase one-letter variables (**int i**) and uppercase traditional indicators (**EMA**), but the details of the naming convention do not matter as long as you're familiar with it and stick to it.  
+*   Have a naming convention for variables and functions. In the script examples, usually definitions are all caps (**DO\_TEST**), variables begin with uppercase letters (**Price**) and functions with lowercase letters (**price()**). Variables with multiple elements, such as series, end with 's' (**vars Prices**). Some exceptions are by tradition, like lowercase one-letter variables (**int i**) and uppercase traditional indicators (**EMA**). Whatever naming convention you use, be familiar with it and stick to it.  
     
-*   Keep similar things together. For instance, set up similar variables at one place, define all **series** at another place, put all **optimize** calls together, and open all trades at a central place in the code.  
+*   Keep similar things together. For instance, set up similar variables at one place, define all **series** at another place, put all **optimize** calls together, and open all trades at the same place in the code.  
     
 *   Be careful about the order of statements. A script is run from begin to end, so statements that affect other statements must be placed earlier. Set up parameters that affect the generating of bars, such as **BarPeriod** or the **TICKS** flag, at the begin of your script _before_ loading assets. Select the asset _before_ setting asset specific parameters such as **MarginCost** or **Spread**. Set up trade parameters, such as **Stop** or **LifeTime**, _before_ entering the trade. Statements in wrong order have either no effect, or will produce error messages.
 *   When functions open, create, or load something, always check for nonzero the returned pointer or handle, and manage the case that the requested file, trade, contract, or memory area was not found, not opened, or not available.
-*   Do not assume that prices are always available. Do not divide by a price or indicator without making sure it's nonzero. Zorro has a convenient [fix0](069_invalid.md) function for that.  
-    
+*   Do not assume that prices are always available. Do not divide by a price or indicator without making sure it's nonzero. Zorro has a convenient [fix0](069_invalid.md) function for values of which you are not sure that they are always nonzero.
 *   Make the script behavior transparent. Print any event in the log, such as any signal or condition that affects opening or closing trades. This way you can understand at a glance which variable values led to which trade decision in the backtest.  
     
 *   Run the script at least once with **Verbose = 2** or **Verbose = 3** settings. Even though you'll then get a very verbose log file, you'll see more warnings about suspicious script behavior. **Verbose** at or above **2** will also print out function calls with invalid parameters.
 
 ### Error messages
 
-Error messages at compiling the script are simple syntax errors. Typical examples:
+Error messages at compiling the script are syntax errors. The line in question is printed in the error message. This makes those errors easy to identify and fix, even for a beginner. If you cannot find the error in the displayed line, scan the previous part of the code for missing brackets or semicolons. You should not need help with fixing syntax errors. If you do, start over with a C tutorial or book.
+
+Typical causes of syntax errors:
 
 *   Something is mistyped
-*   A bracket, quotation mark, or semicolon is missing (often in a previous line),
+*   A bracket, quotation mark, or semicolon is missing (often in a previous line!),
 *   A string contains a single backslash '\\' instead of a double backslash '\\\\', also often in a previous line,
 *   An object got the same name as a pre-defined function or variable (all names can be found in **include\\functions.h** and **include\\variables.h**),
 *   A variable had a wrong type,
 *   A function had a wrong number or type of parameters.
 
-The script and line in question is printed in the error message. This makes those errors easy to identify and fix, even for a beginner. You should not need help with syntax errors. If you do, start over with a C tutorial or book.
+If an external DLL does not load, check if it a) exists, b) can load all needed modules (=> use Dependency Walker), and c) is not locked or access restricted by Windows.
 
-If a DLL does not load, check if it a) exists, b) can load all needed modules (=> Dependency Walker), and c) is not locked or access restricted by Windows.
+If the script compiles with no error messages, it can still have bugs and produce runtime errors (like **"Error 123: ...."**). Under [error messages](errors.md) you'll find a list of all such errors and warnings, and their likely reasons. Most runtime errors will terminate the script; some are mere hints that something in your code is likely wrong and you should look into it. Messages related to opening and closing positions are listed under [Log](010_Log_Messages.md); known issues with brokers are described on the related page ([FXCM](fxcm.md), [IB](062_DefineApi_LoadLibrary.md), [Oanda](237_Oanda.md), [MT4](mt4plugin.md), etc). The answers to many typical issues of script development can be found in the [FAQ](afaq.md) list.
 
-If the script compiles with no error messages, it can still have bugs and produce a runtime error (like **"Error 123: ...."**). Under [error messages](errors.md) you'll find a list of all such errors and warnings, and their likely reasons. Messages related to opening and closing positions are listed under [Log](010_Log_Messages.md); known issues with brokers are described on the related page ([FXCM](fxcm.md), [IB](062_DefineApi_LoadLibrary.md), [Oanda](237_Oanda.md), [MT4](mt4plugin.md), etc). The answers to many typical issues of script development can be found in the [FAQ](afaq.md) list.
+If you see a strange number like like **"1.#J"** or **"1.#IND"** in the log or message window, or got [Error 037](errors.md), [Error 011](errors.md), or similar errors, you're likely having an error in an [expression](050_Expressions.md). Such as a division by zero, or the square root of a negative number. A quick workaround for division by zero errors is replacing **A / B** with **A / fix0(B)**.
 
-If you see a strange number like like **"1.#J"** or **"1.#IND"** in the log or message window, or got [Error 037](errors.md), [Error 011](errors.md), or similar errors, you're likely having a buggy [expression](050_Expressions.md). Such as a division by zero at the begin of the simulation when indicators are not yet initialized and price series are still a flat line. A quick workaround for division bugs is replacing **A / B** with **A / fix0(B)**.
+If you see **"(Null)"** in the log, it's usually attempting to print a nonexisting string.
 
-If you see **"(Null)"** in the log, it's usually printing an uninitialized string.
+If you see a runtime error message in the message window, but have no clue at which part of your code the problem happens, the quickest way to find it is placing **[watch("?...")](166_watch.md)** statements at suspicious places. The given parameter is then displayed at the end of the error mesage. For instance, **watch("?10")** will add a **(10)** at the end of all subsequent error messages, and **watch("?TEST")** will add **(TEST)**. You can remove the statements when the error is found and fixed.
 
-If you see a runtime error message in the message window, but have no clue at which part of your code the problem happens, the quickest way to find it is placing **[watch("?...")](166_watch.md)** statements before suspicious places. The parameter is then displayed at the end of the error mesage. For instance, **watch("?10")** will add a **(10)** at the end of all subsequent error messages, and **watch("?TEST")** will add **(TEST)**. You can remove the statements when the error is fixed.
+A great alternative to **watch** statements is writing your code in C++. You can then use the **Microsoft™ Visual Debugger** for single stepping through the code and observing its behavior directly. For complex strategies with more than 100 lines of code, C++ is strongly recommended. See [Coding in C++](dlls.md).
 
 If you trade live and see an error message beginning with an exclamation mark **"!"**, it's a message from your broker, often giving the reason for not opening or closing a trade. For details, see [Log](010_Log_Messages.md) about a list of all possible messages in a live trading session.
 
@@ -80,7 +81,7 @@ You want your script to do something, but it refuses to obey and does something 
 
 Debugging strategy scripts is a special case of program debugging. You're normally interested in the behaviour of a variable or signal from bar to bar. There are several methods to observe the behavior of variables, either from code line to code line, or from bar to bar, or during the whole test run:
 
-*   Use the [visual debugger](011_Chart_Viewer_Debugger.md) to single-step through parts of code, or through loops, while observing variables and trade signals. Place [watch](166_watch.md)**("!...",...)** statements with exclamation mark and with the variables to observe inside the loop to check, or behind suspicious code lines.  
+*   Use the [Zorro Debugger](011_Chart_Viewer_Debugger.md) to single-step through parts of code, or through loops, while observing variables and trade signals. Place [watch](166_watch.md)**("!...",...)** statements with exclamation mark and with the variables to observe inside the loop to check, or behind suspicious code lines.  
      
 *   Set the [LOGFILE](018_TradeMode.md) flag, and set [Verbose](199_Verbose.md) to a high value, like **3** or **7**. Use [printf](143_printf_print_msg.md) statements to print variables and other information to the log file. Run a test, open the **.log** file and examine the trades in detail. If the problem happens only when training a script, use **print(TO\_FILE,...)** for printing information to the training log.  
      

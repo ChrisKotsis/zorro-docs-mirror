@@ -146,16 +146,18 @@ Returns a temporary string (see remarks) that contains a substring of **str**, w
 
 ## strxc (string str, char orig, char repl): string (temporary)
 
+## strxc (string out, string str, char orig, char repl)
+
 ## strx (string str, string orig, string repl): string (temporary)
 
 ## strx (string out, int size, string str, string orig, string repl)
 
-Returns a temporary string (see remarks) or fills an existing string with a copy of **str** where all ocurrences of **orig** are exchanged with **repl**. This is not a standard C string function. For cutting off a string at a certain character, replace it with 0 (f.i. **strxc(Name, '.', 0)** cuts off the extension from a file name). 
+Returns a temporary string (see remarks) or fills an existing string with a copy of **str** where all ocurrences of **orig** are exchanged with **repl**. This is not a standard C string function. For cutting off a string at a certain character, replace it with 0 (f.i. **strxc(Name, '.', 0)** cuts off the extension from a file name).
 
 ### Parameters:
 
-**out** - target string to be filled. Must be allocated before and have sufficient size.  
-**size** - size of the target string, or **0** for the same size as the source string.**  
+**out** - target string to be filled, or **str** for filling the source string if the size does noch change. A taget string have been allocated before and have sufficient size.  
+**size** - size of the target string if different, or **0** for the same size as the source string.**  
 str** - string containing the source text, 1000 characters maximum.  
 **orig** - original text or char to be exchanged, or **0** for inserting **repl** at the begin.  
 **repl** - replacement text or char.  

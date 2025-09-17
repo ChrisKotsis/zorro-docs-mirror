@@ -117,6 +117,7 @@ In lite-C, there's no difference between strings, char pointers, and constant ch
 string Name = "Sherlock"; _// lite-C_  
 const char\* Name = "Sherlock"; _//_ _C++_
 ```
+If a function expects **const char\*** and you want to pass  a string, use the **(const char\*)** typecast. Vice versa, if you have defined a string constant like **"ABCDEF"** and you want to pass it to a function that expexts a string, use the **(string)** or **(char\*)** typecast.
 
 ### Different string comparing
 

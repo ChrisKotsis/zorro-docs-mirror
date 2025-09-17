@@ -72,19 +72,7 @@ Unrealized component profit so far; **WinValLong-LossValLong+WinValShort-LossVal
 
 ## ProfitTotal
 
-Realized and unrealized total profit so far; **WinTotal-LossTotal+WinValTotal-LossValTotal**.
-
-## BalanceLong
-
-## BalanceShort
-
-Sum of returns of all closed trades of the current component; **WinLong-LossLong** or **WinShort-LossShort**.
-
-## EquityLong
-
-## EquityShort
-
-Sum of returns of all closed, plus value of all open trades of the current component; **BalanceLong+WinValLong-LossValLong** or **BalanceShort+WinValShort-LossValShort**.
+Realized and unrealized total profit so far; **WinTotal-LossTotal+WinValTotal-LossValTotal**. .
 
 ## WinMaxLong
 

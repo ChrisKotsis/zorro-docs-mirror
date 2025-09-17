@@ -5,7 +5,7 @@ source: "https://zorro-project.com/manual/en/chart.htm"
 
 # Chart Viewer / Debugger
 
-# Chart Viewer and Visual Debugger
+# Chart Viewer and Debugger
 
 A click on the \[Result\] button after a test run opens the chart viewer and debugger. It allows to zoom and scroll from an overview of the whole simulation down to a single day or hour, and can replay or single step through the strategy for debugging purposes. Charts can be exported and stored as images, or already generated as images..
 
@@ -52,7 +52,7 @@ Debugging opens the chart window at the current position, and another window wit
 
 The trade list has the same format as on the [live status page](004_Trading_Strategies.md).
 
-The stepwise change of variables and indicators can be visualized either with a [watch](166_watch.md) statement, or by [plotting](146_plot_plotBar.md) them in the chart. For debugging single loops or function calls, place **watch ("!...", ...)** statements inside. \[Step\] will then not proceed to the next bar, but to the next **watch** statement. Stepwise debugging normally begins at the end of the [LookBack](181_LookBack_UnstablePeriod.md) period. For beginning at a certain date or bar number, call [watch](143_printf_print_msg.md) dependent on a condition, f.i. **if(date() >= 20150401) watch("!...", ...);**. Set the [STEPWISE](018_TradeMode.md) flag for starting the backtest already in debugging mode.
+The stepwise change of variables and indicators can be visualized either with a [watch](166_watch.md) statement, or by displaying them in a [panel](142_panel.md), or by [plotting](146_plot_plotBar.md) them in the chart. For debugging single loops or function calls, place **watch ("!...", ...)** statements inside. \[Step\] will then not proceed to the next bar, but to the next **watch** statement. Stepwise debugging normally begins at the end of the [LookBack](181_LookBack_UnstablePeriod.md) period. For beginning at a certain date or bar number, call [watch](143_printf_print_msg.md) dependent on a condition, f.i. **if(date() >= 20150401) watch("!...", ...);**. Set the [STEPWISE](018_TradeMode.md) flag for starting the backtest already in debugging mode.
 
 *   For suggestions about writing clean code and dealing with bugs and errors in your script, read [troubleshooting](210_Troubleshooting.md).
 *   For testing the behavior of a strategy under simulated market conditions, such as extreme drops, use an artificial price curve (see [SHAPE)](197_Detrend_shuffling.md).

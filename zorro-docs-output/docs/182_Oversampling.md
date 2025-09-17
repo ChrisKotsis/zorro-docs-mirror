@@ -36,11 +36,11 @@ The number of the current cycle from **1** to **NumSampleCycles**. Automatically
 *   On bar periods of one or several hours, oversampling is often useful to get enough trades for properly optimizing and testing a strategy. Good values for **NumSampleCycles** are **2..6** for per-bar oversampling. Even higher oversampling factors won't increase the accuracy much further.
 *   Oversampling starts with the highest offset and ends with offset 0. For instance, on a 60 minutes bar period and **NumSampleCycles = 4**, the 4 cycles get bar offset 45, 30, 15, and 0.
 *   Oversampling must be activated before the first [asset](013_Asset_Account_Lists.md) call. It cannot be used when [BarOffset](177_BarPeriod_TimeFrame.md) is otherwise set or when the strategy is based on certain times or dates, f.i. strategies that always trade on the first of any month or on market opening or closing time.
-*   For a histogram of the performance dependent on start time, **SampleOffset** in combination with **[NumTotalCycles](numtotalcycles.md)** can be used.
+*   For a histogram of the performance dependent on start time, use **SampleOffset** in combination with **[NumTotalCycles](numtotalcycles.md)**.
 *   Oversampling increases the memory footprint, similar to the [TICKS](018_TradeMode.md) flag.
 *   The performance of the separate cycles is displayed in the [performance report](012_Performance_Report.md) under **Cycle performance**. High performance differences between cycles normally indicates an unstable strategy. The global [statistics values](winloss.md) are the average over all sample cycles.
 *   When the [ALLCYCLES](018_TradeMode.md) flag is set, the component specific [statistics values](winloss.md) and the [portfolio analysis](012_Performance_Report.md) are the sum over all bar cycles; they keep their values from the last cycle when a new cycle is started. Otherwise they are reset at the begin of every cycle and thus reflect the last cycle at the end of the simulation. The log contains all cycles when  [ALLCYCLES](018_TradeMode.md) is set; otherwise it contains only the last cycle.
-*   In the [price chart](011_Chart_Viewer_Debugger.md), the trade symbols are taken from the last cycle. The equity curve is the average over all cycles.
+*   In the [price chart](011_Chart_Viewer_Debugger.md), the trade symbols are taken from the last cycle, and the equity or balance curve is the average over all cycles. When plotting individual equity curves or accumulative parameters in **ALLCYCLES** mode, take them only from the first cycle to avoid their accumulation over all cycles (**if(SampleCycle == 1) plot(...);**).
 
 ### Examples:
 

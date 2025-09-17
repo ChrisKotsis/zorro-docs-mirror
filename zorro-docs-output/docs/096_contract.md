@@ -132,13 +132,13 @@ Calculates the margin cost of the given non-covered short put/call contract for 
 
 Returns a pointer of the class name of the given contract; only available in live trading mode since historical contracts have no class. Source code in **contract.c**.
 
-## contractLetter (int AssetMonth): string
+## contractLetter (int Month): string
 
-Returns the letter assigned to the given expiration month (F Jan, G Feb, H Mar, J Apr, K May, M Jun, N Jul, Q Aug, U Sep, V Oct, X Nov, Z Dec). Source code in **contract.c**.
+Returns the letter assigned to the given expiration month (F Jan, G Feb, H Mar, J Apr, K May, M Jun, N Jul, Q Aug, U Sep, V Oct, X Nov, Z Dec). This function can be used to generate a contract [symbol](014_Asset_Symbols.md). Source code in **contract.c**.
 
-## contractExpiry (DATE Date,int Days,int Modus): int
+## contractExpiry (DATE Date, int Month): int
 
-Returns the next expiration date in YYYYHHMM format of at least **Days** after **Date** of a contract expiring every 3rd Friday quarterly (**Modus = 1**) or monthly (**Modus = 0**). Date can be set to **NOW**. This function can be used to generate a contract [symbol](014_Asset_Symbols.md).  
+Returns the next expiration date in YYYYHHMM format after the given **Date** of a contract expiring every 3rd Friday quarterly (**Month = -4**) or monthly (**Month = -1**). If a **Month** from **1** to **12** is given, returns the date of the 3rd Friday of the given month. Date can be set to **NOW** for returning the upcoming expiration. This function can also be used to generate a contract [symbol](014_Asset_Symbols.md).  
    
 
 ## contractPrintChain ()

@@ -15,19 +15,18 @@ source: "https://zorro-project.com/manual/en/new.htm"
 *   Why do I get a different backtest result? Most likely due to new price histories, new asset parameters, or other changes. You can easily find out by comparing both logs.
 *   Why can't I test the new Z system? You need recent historical data. Get it from the [Zorro download page](https://zorro-project.com/download.php).
 *   Why are my carefully edited settings gone? You probably edited them in a wrong place. Updates overwrite default settings. Keep individual settings in individual files, like **ZorroFix.ini**, **Z1.ini**, **Z2.ini**, etc. They won't be overwritten.
-*   The [Fill](198_Fill_modes.md) mode was changed. Limit entries and exits now fill at the current price. The previous limit fill behavior can be activated with the new Fill mode 2.
-*   [MaxLong/MaxShort](190_Margin_Risk_Lots.md) now affect training. To prevent this: **if(!Train) MaxLong = MaxShort = 1;**
+*   The [Fill](198_Fill_modes.md) mode was changed. Limit entries and exits now fill at the current price. The previous limit fill behavior can be activated with the new Fill mode 2. It [TR\_FRC](018_TradeMode.md) is not set, fill prices are now rounded to the point size of the asset.
 *   The format of the parameter files (**\*.par**) was changed. Parameters and training results are now stored in CSV format.
 
 ### Zorro 2.68.3 (beta version)
 
 *   John Ehlers' improved [HighPass3](129_filter_renorm.md) filter was added to the indicator library.
 *   The [DrawDownPercent](116_Statistics_Transformations.md) variable returns the largest drawdown depth in percent of the preceding balance peak.
-*   [MaxLong/MaxShort](190_Margin_Risk_Lots.md) now affect training. To prevent this, use **if(!Train) MaxLong = MaxShort = 1;**
+*   [MaxLong/MaxShort](190_Margin_Risk_Lots.md) now affect training when the [LIMITS](016_OptimalF_money_management.md) flag is set.
 *   The [trade list](export) format has changed. The list now also contains commission, MAE, and MFE of trades.
-*   The [MaxLong/MaxShort](190_Margin_Risk_Lots.md) limits now also update the open trade lifetime when [TR\_EXTEND](018_TradeMode.md) is set.
+*   The [MaxLong/MaxShort](190_Margin_Risk_Lots.md) limits now update also the open trade lifetime when [TR\_EXTEND](018_TradeMode.md) is set.
 *   The [MAE](116_Statistics_Transformations.md) function returns the maximum adverse excursion of a data series.
-*   The [TRAILSTOP/TRAILLIMIT](018_TradeMode.md) flags affect the trailing of entry or exit stops and limits when trades are updated.
+*   The [TR\_ANYSTOP/ANYLIMIT](018_TradeMode.md) flags affect the trailing of entry or exit stops and limits when trades are updated.
 *   The [Fill](198_Fill_modes.md) mode was changed. Limit entries and exits now fill at the current price. The previous limit fill behavior can be activated with the new Fill mode 2.
 *   The format of the parameter files (**\*.par**) was changed. Parameters and training results are now stored in CSV format.
 *   A WFO cycle analysis was added to the [performance report](012_Performance_Report.md).

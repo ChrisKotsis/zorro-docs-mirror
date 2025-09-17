@@ -9,7 +9,7 @@ source: "https://zorro-project.com/manual/en/script.htm"
 
 ## Script
 
-Name of the script without the **".c"** extension. Can be changed in the script for generating or loading parameters, rules, and factors from files with a different name. In this way the script can sharing training data with other scripts, or can produce logs with different names in different [cycles](numtotalcycles.md). Script names must not contain spaces or special characters.
+Name of the script without the **".c"** extension. Can be changed in the code for generating or loading parameters, rules, and factors with a different name. In this way the script can share training data with other scripts. If [LogNumber](numtotalcycles.md) is nonzero, the logs are also saved under the given name. A script name must not contain spaces or special characters.
 
 ## Algo
 
@@ -45,7 +45,7 @@ User-supplied string with path, name suffix, and extension of the historical dat
 History = "\*a.t6";** reads price history from **AAPL\_2015a.t6**; if not found, uses **AAPLa.t6**.  
 **History = "?.t6";** reads price history from **AAPL.t6**.  
 **History = "History\\\\Temp[\\\\\*.t1](file://*.t1)";** reads tick data history from **History\\Temp\\AAPL\_2015.t1**.  
-**History = "D:\\\\Data\\\\Options[\\\\\*.t8](file://*.t8)";** reads price history from option chains in **D:\\Data\\Options\\AAPL.t8**.
+**History = "D:\\\\Data\\\\Options[\\\\\*.t8](file://*.t8)";** reads underlying price history from option chains in **D:\\Data\\Options\\AAPL.t8**.
 
 ## Curves
 
