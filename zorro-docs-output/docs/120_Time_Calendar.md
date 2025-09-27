@@ -132,7 +132,8 @@ Returns UTC date and time of the bar with the given bar number (**0...[NumBars](
 
 ## wdatef (string Format, string DateTime): var
 
-Returns date and time in **DATE** format of the given **DateTime** string. Can be used to parse date/time fields in CSV files in various [formats](116_Statistics_Transformations.md). Seconds are read with decimals.
+Returns date and time in **DATE** format of the given **DateTime** string. Can be used to parse date/time fields in CSV files in various [formats](116_Statistics_Transformations.md). Seconds are read with decimals.  
+ 
 
 ## strdate (string Format, int offset): string
 
@@ -140,17 +141,22 @@ Returns date and time in **DATE** format of the given **DateTime** string. Can b
 
 ## strdate (string Format, var Date): string
 
-Returns a temporary string in the given **[Format](116_Statistics_Transformations.md)** with the date and time of the given bar offset or **DATE** variable; can be used in [printf](143_printf_print_msg.md) statements. Predefined formats are **YMD**, **HM, HMS**, **YMDHMS**. If the **Format** string ends with **"%S."**, milliseconds are added; otherwise seconds are rounded to the next full second. Examples: **strdate(YMD,0)** returns a string with the date of the current bar, and **strdate("%y-%m-%d %H:%M:%S.",NOW)** returns the current date and time in millisecond precision. 
+Returns a temporary string in the given **[Format](116_Statistics_Transformations.md)** with the date and time of the given bar **offset** or **Date**; can be used in [printf](143_printf_print_msg.md) statements. Predefined formats are **YMD**, **HM, HMS**, **YMDHMS**. If the **Format** string ends with **"%S."**, milliseconds are added; otherwise seconds are rounded to the next full second. Examples: **strdate(YMD,0)** returns a string with the date of the current bar, and **strdate("%y-%m-%d %H:%M:%S.",NOW)** returns the current date and time in millisecond precision.   
+ 
+
+## nthDay(var Date, int Dow, int N): var
 
 ## nthDay(int Year, int Month, int Dow, int N): var
 
-Returns the Windows DATE format of the Nth given weekday of the given month. For instance, **nthDay(2016,11,FRIDAY,3)** returns the date of the third friday in November 2016. Source code in **contract.c**, which must be included for this function.
+Returns the date of the **N**th given weekday at or after the given **Date**, or of the given **Year** and **Month**. For instance, **nthDay(2025,12,FRIDAY,3)** returns the date of the third Friday in December 2025. Useful for determining contract expiration dates.  
+ 
 
 ## dmy (int **YYYYMMDD**): var
 
 ## ymd (var Date): int
 
-Convert a date in the **YYYYMMDD** format to the Windows **DATE** format and vice versa. For instance, **ymd(wdate(NOW) - 10)** returns the date from 10 days ago in the YYYYMMDD format.
+Convert a date in the **YYYYMMDD** format to the Windows **DATE** format and vice versa. For instance, **ymd(wdate(NOW) - 10)** returns the date from 10 days ago in the YYYYMMDD format.  
+ 
 
 ## utm (var Date): int
 

@@ -9,6 +9,8 @@ source: "https://zorro-project.com/manual/en/cot.htm"
 
 The Commitments of Traders (COT) is a market report by the Commodity Futures Trading Commission (CFTC), listing the holdings of participants in futures of financial instruments, metals, and other commodities. It is believed by some traders to give insight into the upcoming development of those markets. The CFTC releases a new report every Friday at 3:30 p.m. Eastern Time, and the report reflects the commitments of traders on the prior Tuesday.
 
+\*\*\* The COT report is currently unavailable due to the switch from Quandl to NASDAQ. We will update the URLs and data format in a future version. \*\*\*
+
 The following functions return selected parts of the COT report, and work likewise in backtest and live trading:
 
 ## COT (int Handle, string Code, int Field): var

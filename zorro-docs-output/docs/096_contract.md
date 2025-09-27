@@ -136,9 +136,9 @@ Returns a pointer of the class name of the given contract; only available in liv
 
 Returns the letter assigned to the given expiration month (F Jan, G Feb, H Mar, J Apr, K May, M Jun, N Jul, Q Aug, U Sep, V Oct, X Nov, Z Dec). This function can be used to generate a contract [symbol](014_Asset_Symbols.md). Source code in **contract.c**.
 
-## contractExpiry (DATE Date, int Month): int
+## contractExpiry (int Year, int Month): int
 
-Returns the next expiration date in YYYYHHMM format after the given **Date** of a contract expiring every 3rd Friday quarterly (**Month = -4**) or monthly (**Month = -1**). If a **Month** from **1** to **12** is given, returns the date of the 3rd Friday of the given month. Date can be set to **NOW** for returning the upcoming expiration. This function can also be used to generate a contract [symbol](014_Asset_Symbols.md).  
+Returns the YYYYMMDD expiration date - the third Friday - of the given **Year** and **Month**. This function can be used to generate a contract [symbol](014_Asset_Symbols.md). Source code in **contract.c**.  
    
 
 ## contractPrintChain ()

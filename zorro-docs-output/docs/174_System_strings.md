@@ -41,9 +41,10 @@ Name suffix and extension of the file containing the [OptimalF](016_OptimalF_mon
 
 ## History
 
-User-supplied string with path, name suffix, and extension of the historical data files, for selecting between different sets and types (**.t1**, **.t2**, **.t6**, **.t8**) of price histories. If not set, **.t6** and the [HistoryFolder](007_Training.md) path is assumed. A **'\*'** character at the begin of the name represents the asset name and an optional year number, **'?'** represents the asset name with no year number. **History** must be set before the first [asset()](013_Asset_Account_Lists.md) or [assetHistory()](loadhistory.md) call. Examples (for AAPL 2015):**  
-History = "\*a.t6";** reads price history from **AAPL\_2015a.t6**; if not found, uses **AAPLa.t6**.  
-**History = "?.t6";** reads price history from **AAPL.t6**.  
+User-supplied string with path, name suffix, and extension of the historical data files, for selecting between different sets and types (**.t1**, **.t2**, **.t6**, **.t8**) of price histories. If not set, **.t6** and the [HistoryFolder](007_Training.md) path is assumed. A **'\*'** character at the begin of the string represents the asset name with optional year number, **'?'** represents the asset name with no year number, and **'#'** represents the appended year number. **History** must be set before the first [asset()](013_Asset_Account_Lists.md) or [assetHistory()](loadhistory.md) call, but can be set differently for different assets. Examples (for AAPL 2015):**  
+History = "\*eod.t6";** reads price history from **AAPL\_2015eod.t6**; if not found, uses **AAPLeod.t6**.  
+**History = "\*adj#.t6";** reads price history from **AAPLadj\_2015.t6**; if not found, uses **AAPLadj.t6.  
+History = "?.t6";** reads price history from **AAPL.t6**.  
 **History = "History\\\\Temp[\\\\\*.t1](file://*.t1)";** reads tick data history from **History\\Temp\\AAPL\_2015.t1**.  
 **History = "D:\\\\Data\\\\Options[\\\\\*.t8](file://*.t8)";** reads underlying price history from option chains in **D:\\Data\\Options\\AAPL.t8**.
 

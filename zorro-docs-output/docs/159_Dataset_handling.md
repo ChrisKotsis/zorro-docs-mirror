@@ -7,14 +7,15 @@ source: "https://zorro-project.com/manual/en/data.htm"
 
 # Dataset handling
 
-The following functions can be used for downloading and parsing data from various sources, and storing it in binary datasets. A dataset is a list of records, normally in time descending order. Any record begins with an 8-byte timestamp field that can also hold other 8-byte data in special cases. The subsequent fields have a size of 4 bytes and can contain floats, ints, or strings. The size of a record in bytes is therefore **4+fields\*4**. The total number of records must not exceed the **[int](aarray.md)** range.  
-  Datasets can store option chains, order books, asset names, reports, earnings, interest rates, or any other data organized in rows and columns. Text strings can have any size and can occupy several adjacent fields. A dataset can be saved, loaded, imported or exported, searched, sorted, merged, split, resized, or used as indicator in backtests. The **.t1**, **.t2**, **.t6**, and **.t8** historical data files are in fact datasets with 1, 2, 6, or 8 data fields plus 1 timestamp field.
+A dataset is an ordered list of records, normally in time descending order. Each record consist of multiple binary data fields. The first field is normally an 8-byte timestamp in DATE format. It can also hold other 8-byte data when timestamps are not needed. The subsequent fields have a size of 4 bytes and can contain floats, ints, or strings. The size of a record in bytes is therefore **4+fields\*4**. The total number of records in a dataset must not exceed **2147483647**, which is the positive **[int](aarray.md)** range.  
+  Datasets can store option chains, order books, asset names, reports, earnings, interest rates, or any other data organized in rows and columns. Text strings can have any size and can occupy several adjacent fields. A dataset can be saved, loaded, imported or exported, searched, sorted, merged, split, resized, or used as indicator in backtests. The **.t1**, **.t2**, **.t6**, and **.t8** historical data files are in fact datasets with 1, 2, 6, or 8 data fields plus 1 timestamp field.  
+  Any dataset is identified by its handle, which is a number from 1..1000. Thus, you cannot use more than 1000 datasets in your script. 
 
 The following functions are used to create or load a dataset:
 
 ## dataNew (int Handle, int Records, int Fields): void\*
 
-Deletes the given dataset (if any), frees the memory, and creates a new dataset with the given number of **Records** and **Fields**. If they are **0**, the dataset is deleted, but no new dataset is created. Returns a pointer to the begin of the first record, or **0** when no new dataset was created.
+Deletes the dataset with the given **Handle**, frees the memory, and creates a new dataset with the given number of **Records** and **Fields**. If both are **0**, the dataset is deleted, but no new dataset is created. Returns a pointer to the begin of the first record, or **0** when no new dataset was created.
 
 ## dataLoad (int Handle, string Filename, int Fields): int
 
@@ -30,7 +31,7 @@ Downloads the dataset with the given **Code** from Quandl™ or other price sour
 
 ## dataParse (int Handle, string Format, string Filename, _int Start, int Num_): int
 
-Parses a part or all data records from the CSV file **Filename** and appends them at the start of the dataset with the given **Handle** number. For beginning a new dataset when content was already parsed, call **dataNew(Handle,0,0)** before. **Num** records are parsed, beginning with the record **Start**. If both parameters are omitted or zero, the whole CSV file is parsed.  
+Parses a part or all data records from the CSV file **Filename** and appends them at the start of the dataset with the given **Handle** number. For beginning a new dataset, call **dataNew(Handle,0,0)** before. **Num** records are parsed, beginning with the record **Start**. If both parameters are omitted or zero, the whole CSV file is parsed.  
   Records can have time/date, floating point, integer, and text fields. CSV headers are skipped. Several CSV files can be appended to the same dataset when their record format is identical. The CSV file can be in ascending or descending chronological order, but the resulting dataset should normally be in descending order, i.e. the newest records are at the begin. Any record in the dataset begins with a time stamp field in [DATE](116_Statistics_Transformations.md) format; the other fields can be in arbitrary order determined by the **Format** string (see Parameters). If the CSV file does not contain time stamps, the first field in the record is filled with zero.  
   The function returns the number of records read, or **0** when the file can not be read or has a wrong format. Please see below under **Remarks** how to build a correct format string and how to debug the parsing.
 
@@ -60,7 +61,7 @@ The opposite to **dataParse**; stores a part or all of the dataset with the give
 
 ## dataMerge (int Handle1, int Handle2): int
 
-Merges dataset **Handle2** into dataset **Handle1**. Both datasets must be sorted in descending time stamp order, and the first dataset must begin with an earlier timestamp than the second. When timestamps overlap, the content from the second dataset replaces content from the first. This function can be used to stitch datasets together. Returns the total number of records, or **0** when the datasets could not be merged
+Merges both datasets and stores the result in the first dataset with **Handle1**. Both datasets must be sorted in descending time stamp order and must contain the same number of fields per record. When timestamps overlap, the content from the second dataset replaces content from the first. This function can be used to stitch datasets together. Returns the total number of records, or **0** when the datasets could not be merged
 
 ## dataAppend (int Handle1, int Handle2, _int Start, int Num_): int
 
@@ -197,7 +198,7 @@ dataSave(1,"History[\\\\AAPL.t6](file://AAPL.t6)");
 _// read a time series out of field 1 of dataset H_
 vars MyData = series(dataVar(H,dataFind(H,wdate(0)),1));
 
-_// Coinbase Bitcoin/EUR price to .t1_
+_// convert Coinbase Bitcoin/EUR price data to .t1_
 void main()
 {
   string Format = "+0,,,%t,f,f,s";
@@ -214,6 +215,35 @@ _// display progress bar and check \[Stop\] button_
     if(!progress(100\*i/Records,0)) break;
   }
   if(Records) dataSave(2,"History[\\\\BTCEUR.t1](file://BTCEUR.t1)");
+}
+
+_// load all years of history in a T6 dataset_
+#define HTEMP 999 _// temporary handle_
+int dataLoadHistory(int Handle,string Symbol,int StartYear,int EndYear)
+{
+  dataNew(Handle,0,0);
+  int Year,Records = 0;
+  for(Year = StartYear; Year <= EndYear; Year++)
+    if(dataLoad(HTEMP,strf("History[\\\\%s\_%4i.t6",Symbol,Year),7](file://%25s_%254i.t6%22,Symbol,Year\),7)))
+      Records = dataMerge(Handle,HTEMP);
+  return Records;
+}
+
+_// save a T6 dataset split into separate years_
+void dataSaveHistory(int Handle,string Symbol)
+{
+  int i,Records,LastYear=0,End=0;
+  dataSize(Handle,&Records,0);
+  for(i=0; i<Records; i++)
+  {
+    int Year = ymd(dataVar(Handle,i,0))/10000;
+    if(!LastYear) LastYear = Year;
+    if(Year < LastYear) { // reverse order
+      dataSave(Handle,strf("History[\\\\%s\_%4i.t6",Symbol,LastYear),End,i-End](file://%25s_%254i.t6%22,Symbol,LastYear\),End,i-End));
+      LastYear = Year;
+      End = i;
+    }
+  }
 }
 
 _// evaluate an extra parameter stored with time stamps in a dataset_
