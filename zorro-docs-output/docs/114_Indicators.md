@@ -309,9 +309,13 @@ Avg Keltner Channel, by Charles Keltner. A Simple Moving Average - [SMA](#sma)**
 
 Lowest value of the **[priceLow](022_Price_History.md)** function over the **TimePeriod** ending with **Offset** (default **0**). F.i. **LL(3,10)** returns the lowest price between the last 10 and the last 13 bars. Uses the current asset price series. Sets **rMinIdx** to the bar offset with the lowest price. [TimeFrame](177_BarPeriod_TimeFrame.md) > 1 is supported. Source code in **indicators.c**. See also [dayLow](119_dayHigh_dayLow.md). 
 
+## LRSI(vars Data, var Gamma): var
+
+Osc Laguerre RSI, by John Ehlers. RSI based on intermediate values from a [Laguerre filter](116_Statistics_Transformations.md). Source code in **indicators.c**.
+
 ## LSMA(vars Data, int TimePeriod, int Offset): var
 
-Avg Least Squares Moving Average. Calculates a linear regression line over the recent **TimePeriod**, and returns the value of that line at the given bar **Offset** (**0** for the current bar). Negative offsets return future values of the regression line and can be used for forecasting. See also **QLSMA**, [polyfit](136_polyfit_polynom.md), [LinearReg](116_Statistics_Transformations.md), [predict](131_predict.md). Source code in **indicators.c**.  
+Avg Least Squares Moving Average. Calculates a linear regression line over the recent **TimePeriod**, and returns the value of that line at the given bar **Offset** (**0** for the current bar). Negative offsets return future values of the regression line and can be used for forecasting. See also **QLSMA**, [polyfit](136_polyfit_polynom.md), [LinearReg](116_Statistics_Transformations.md), [predict](131_predict.md). Source code in **indicators.c**.
 
 ## MACD(vars Data, int FastPeriod, int SlowPeriod, int SignalPeriod)
 

@@ -29,14 +29,13 @@ If you want a new Zorro function, feature, or a new broker plugion, there are tw
 ### Zorro 2.70.0 (release candidate)
 
 *   The new **Z6+** trading system with adaptive grid was added to the [Z systems](zsystems.md).
-*   John Ehlers' improved [HighPass3](129_filter_renorm.md) filter was added to the indicator library.
+*   John Ehlers' improved [HighPass3](129_filter_renorm.md) filter and his [LRSI](033_W4a_Indicator_implementation.md) indicator were added to the indicator library.
 *   The [DrawDownPercent](116_Statistics_Transformations.md) variable returns the largest drawdown depth in percent of the preceding balance peak.
-*   [MaxLong/MaxShort](190_Margin_Risk_Lots.md) now affect training when the [LIMITS](016_OptimalF_money_management.md) flag is set.
+*   [MaxLong/MaxShort](190_Margin_Risk_Lots.md) now affect training when the [LIMITS](016_OptimalF_money_management.md) flag is set. They update also the open trade lifetime when [TR\_EXTEND](018_TradeMode.md) is set.
 *   The [trade list](export) format has changed. The list now also contains commission, MAE, and MFE of trades.
-*   The [MaxLong/MaxShort](190_Margin_Risk_Lots.md) limits now update also the open trade lifetime when [TR\_EXTEND](018_TradeMode.md) is set.
 *   The [MAE](116_Statistics_Transformations.md) function returns the maximum adverse excursion of a data series.
 *   The [TR\_ANYSTOP/ANYLIMIT](018_TradeMode.md) flags affect the trailing of entry or exit stops and limits when trades are updated.
-*   The [Fill](198_Fill_modes.md) mode was changed. Limit entries and exits now fill at the current price. The previous limit fill behavior can be activated with the new Fill mode 2.
+*   The [Fill](198_Fill_modes.md) mode was changed. Limit entries and exits now fill at the current price. The previous limit fill behavior can be activated with Fill mode 2. It [TR\_FRC](018_TradeMode.md) is not set, fill prices are now rounded to the point size of the asset.
 *   The format of the parameter files (**\*.par**) was changed. Parameters and training results are now stored in CSV format.
 *   A WFO cycle analysis was added to the [performance report](012_Performance_Report.md).
 *   The [contractExpiry](096_contract.md) function can be used to generate a contract symbol.
