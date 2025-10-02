@@ -54,7 +54,7 @@ User-supplied string with path, name, and extension of the file containing the e
 
 ## SymbolTrade
 
-The trading [symbol](014_Asset_Symbols.md) of the current asset as set up in the asset list, or the plain asset name when the asset has no assigned trading symbol. Does not contain the optional broker or price source name. Can be modified with [strcpy](str_.md).
+The trading [symbol](014_Asset_Symbols.md) of the current asset as set up in the asset list, or the plain asset name when the asset has no assigned trading symbol. Does not contain the optional broker or price source name. Can be modified with [strcpy](str_.md) (see example).
 
 ## SourceTrade
 
@@ -97,6 +97,23 @@ History = "\*s1.t6";   _ // read historical data from f.i. "EURUSD\_2013s1.t6"_
 History = "?.t6";   _ // enforce historical data with no year number, f.i. "EURUSD.t6"_
 WebFolder = "C:\\\\inetpub\\\\vhosts\\\\httpdocs\\\\trading";  _// VPS web folder_
 assetAdd(Asset,strf("%s:%s",NewSource,SymbolLive)); _// change source of current asset_
+```
+```c
+_// change a future's symbol quarterly expiration date_
+void updateSymbol()
+{
+  string ExpDate = strstr(SymbolTrade,"FUT-");
+  if(!ExpDate) return; _// no future 
+_  int OldExpiry = atoi(ExpDate+4);
+  int Month = month(wdate(NOW)); 
+  Month = ((Month+2)/3)\*3; _// next quarter: 3, 6, 9, 12
+_  int NewExpiry = ymd(nthDay(year(NOW),Month,FRIDAY,3));
+  if(OldExpiry == NewExpiry) return;
+  memcpy(ExpDate+4,sftoa(NewExpiry,8),8);
+  strcpy(SymbolLive,SymbolTrade);
+  strcpy(SymbolHist,SymbolTrade);
+  printf("#\\n%s new contract",SymbolLive);
+}
 ```
 
 ### See also:

@@ -94,7 +94,7 @@ The Zorro instance was started through the [command line](027_Command_Line_Optio
 
 ## COMPILED
 
-The script is an executable (\*.x). 
+The script is an executable (\*.x or \*.dll). 
 
 ## STEPWISE
 

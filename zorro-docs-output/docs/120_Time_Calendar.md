@@ -218,6 +218,11 @@ if(at(1615)) {
 
 _// convert a time stamp from EST to UTC_
 TimeStamp -= (EST+dst(EST,TimeStamp))/24.;
+
+_// calculate the next quarterly expiration date_
+int Month = month(wdate(NOW)); 
+Month = ((Month+2)/3)\*3; _// next quarter: 3, 6, 9, 12_
+_i_nt ExpireDate = ymd(nthDay(year(NOW),Month,FRIDAY,3));
 ```
 
 ### See also:
