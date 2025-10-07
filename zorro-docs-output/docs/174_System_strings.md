@@ -23,13 +23,17 @@ The current asset name (read/only), set up initially by the \[Asset\] scrollbox.
 
 The name of the previously selected asset; in a [trade loop](fortrades.md) the name of the asset that was selected before the loop.
 
-## Assets
-
-A NULL-terminated **string** array containing the names of all available assets in the [asset list](013_Asset_Account_Lists.md) (read/only). Can be used either as a [**loop**](109_loop.md) parameter, or for enumerating assets, f.i. **for(N = 0; Assets\[N\]; N++)**. The asset names are valid after the first [asset](013_Asset_Account_Lists.md) or [assetList](013_Asset_Account_Lists.md) call. The number of assets in the list is returned by [assetList](013_Asset_Account_Lists.md).
-
 ## AssetBox
 
 The name of the currently visible asset in the \[Asset\] scrollbox (read/only).
+
+## Assets
+
+NULL-terminated **string** array, automatically populated with the names of all available assets in the [asset list](013_Asset_Account_Lists.md) (read/only). Can be used either as a [**loop**](109_loop.md) parameter, or used for enumerating assets, f.i. **for(N = 0; Assets\[N\]; N++)**. The asset names are valid after the first [asset](013_Asset_Account_Lists.md) or [assetList](013_Asset_Account_Lists.md) call. The number of assets in the list is returned by [assetList](013_Asset_Account_Lists.md).
+
+## Algos
+
+User-supplied NULL-terminated **string** array, containing algo names to be used as a [**loop**](109_loop.md) parameter.
 
 ## Account
 

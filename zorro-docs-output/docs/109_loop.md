@@ -9,11 +9,15 @@ source: "https://zorro-project.com/manual/en/loop.htm"
 
 ## loop(Assets) : string
 
-Enumerate assets or algos for training their parameters or rules separately. The **loop** function gets many pointers, such as asset or algo names, as arguments. In \[Test\] and \[Trade\] mode it returns the first pointer on the first call, the next pointer on the next call and so on. It returns **0** after the last pointer of its arguments. In \[Train\] mode it returns the first pointer in the first component training cycle, the next one in the next cycle and so on. Component training cycles end after the last pointer. Alternatively the single **Assets** pointer can be given for enumerating all assets.
+## loop(Algos) : string
+
+Enumerate assets or algos for training their parameters or rules separately. The **loop** function gets many pointers, such as asset or algo names, as arguments. In \[Test\] and \[Trade\] mode it returns the first pointer on the first call, the next pointer on the next call and so on. It returns **0** after the last pointer of its arguments. In \[Train\] mode it returns the first pointer in the first component training cycle, the next one in the next cycle and so on. Component training cycles end after the last pointer. Alternatively the single [Assets](020_Included_Scripts.md) or [Algos](020_Included_Scripts.md) pointer can be given for enumerating asset or algo names.
 
 ## of(string Name1, string Name2, ... ) : string
 
 ## of(Assets) : string
+
+## of(Algos) : string
 
 Enumerate pointers as above, but for general purposes and without the special behavior in \[Train\] mode.
 
@@ -23,10 +27,10 @@ Enumerate pointers as above, but for general purposes and without the special be
 
 ### Parameters:
 
-<table border="0" cellpadding="2" cellspacing="2"><tbody><tr valign="top"><td><strong>Name1, Name2 ...</strong></td><td><p>Up to 40 arguments, all different, usually <strong>strings</strong> with an asset or algo name.</p></td></tr><tr valign="top"><td><strong>Assets</strong></td><td><p><a href="script.htm">Predefined array</a> with all asset names; used for enumerating all assets in the <a href="account.htm">asset list</a>.</p></td></tr></tbody></table>
+<table border="0" cellpadding="2" cellspacing="2"><tbody><tr valign="top"><td><strong>Name1, Name2 ...</strong></td><td><p>Up to 40 arguments, all different, usually <strong>strings</strong> with an asset or algo name.</p></td></tr><tr><td><strong>Assets</strong></td><td><p><a href="script.htm">Predefined array</a> with all asset names; used for enumerating all assets in the <a href="account.htm">asset list</a>.</p></td></tr><tr valign="top"><td><strong>Algos</strong></td><td><p><a href="script.htm">Predefined array</a>, set up by script to a list of all algo names.</p></td></tr></tbody></table>
 
    
-The following variables are valid after a **loop** call (not used for **of**):
+The following variables are valid after a **loop** call (not for **of**):
 
 ## Loop1
 
