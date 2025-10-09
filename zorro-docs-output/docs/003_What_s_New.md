@@ -18,15 +18,20 @@ source: "https://zorro-project.com/manual/en/new.htm"
 *   The [Fill](198_Fill_modes.md) mode was changed. Limit entries and exits now fill at the current price. The previous limit fill behavior can be activated with the new Fill mode 2. It [TR\_FRC](018_TradeMode.md) is not set, fill prices are now rounded to the point size of the asset.
 *   The format of the parameter files (**\*.par**) was changed. Parameters and training results are now stored in CSV format.
 
+### Zorro 2.71.2 (beta version)
+
+*   Pending trades are now also saved and resumed when restarting a session.
+*   The [loop](109_loop.md) function now also accepts an array of algo names.
+
 The latest published beta version or the latest release candiate are available on the Zorro Download Page. [Zorro S features](restrictions.md) can be unlocked in beta versions with a valid Zorro license. [Z strategies](zsystems.md) are not included in beta versions. A list of fixed bugs can be found under [bugs](bugs.md).  
 
 # Future Zorro features
 
-If you want a new Zorro function, feature, or a new broker plugion, there are two ways to get it. You can either pay us for implementing it, and donate the feature to the community. Or you can suggest it on the [User Forum](https://opserver.de/ubb7/ubbthreads.php?ubb=cfrm&c=1) in the Zorro Future section. There you can also comment or support features suggested by other users. We normally implement any suggested feature when it is useful (please give a usage example), popular (supported by other users), backwards compatible (won't break existing scripts), and efficient (saves a lot of code in a script). How long it takes depends on the usefulness of the feature and how hard it is to implement. Donated features have priority.  
+If you want a new Zorro function, feature, or a new broker plugin, there are two ways to get it. You can either pay us for implementing it, and donate the feature to the community. Or you can suggest it on the [User Forum](https://opserver.de/ubb7/ubbthreads.php?ubb=cfrm&c=1) in the Zorro Future section. There you can also comment or support features suggested by other users. We normally implement any suggested feature when it is useful (please give a usage example), popular (supported by other users), backwards compatible (won't break existing scripts), and efficient (saves a lot of code in a script). How long it takes depends on the usefulness of the feature and how hard it is to implement. Donated features have priority.  
 
 # Zorro Release History
 
-### Zorro 2.70.0 (release candidate)
+### Zorro 2.70.0 (released September 2025)
 
 *   The new **Z6+** trading system with adaptive grid was added to the [Z systems](zsystems.md).
 *   John Ehlers' improved [HighPass3](129_filter_renorm.md) filter and his [LRSI](033_W4a_Indicator_implementation.md) indicator were added to the indicator library.

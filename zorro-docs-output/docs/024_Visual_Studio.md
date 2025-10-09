@@ -133,7 +133,15 @@ In lite-C, **bool** has a size of 4 bytes, in C++ it's 1 byte. The lite-C **bool
 
 ### Different pointer size
 
-In lite-C a pointer has always a size of 4 bytes. In C++ it can have 4 or 8 bytes, depending on whether you compile with **Zorro** or **Zorro64**. Consider this when coding pointer arithmetics. The predefined variable types **size\_t** and **intptr\_t** also change between 4 and 8 bytes. Make sure to recomplie DLL-based strategies when using a newer or different Zorro version, since the size of global structs may be different. 
+In lite-C a pointer has always a size of 4 bytes. In C++ it can have 4 or 8 bytes, depending on whether you compile with **Zorro** or **Zorro64**. Consider this when coding pointer arithmetics. The predefined variable types **size\_t** and **intptr\_t** also change between 4 and 8 bytes. Make sure to recomplie DLL-based strategies when using a newer or different Zorro version, since the size of global structs may be different.  In lite-C, **bool** has a size of 4 bytes, in C++ it's 1 byte. The lite-C **bool** type is equivalent to the C++ **BOOL** type. For avoiding confusion, you might prefer to use **int** instead of **bool / BOOL**.
+
+### Different constant precision
+
+In lite-C, floating point constants in the code are read with 7 digits precision. In C++ it's 14 digits. 
+```c
+printf("\\n %.10f", 0.55555555); _// lite-C prints 0.555555555224_  
+printf("\\n %.10f", 0.55555555); _// C++ prints 0.555555555000_
+```
 
 ### No watch()ed variables
 
