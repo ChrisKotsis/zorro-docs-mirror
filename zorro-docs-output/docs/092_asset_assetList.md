@@ -7,7 +7,7 @@ source: "https://zorro-project.com/manual/en/asset.htm"
 
 ## asset (string Name) : int
 
-Selects an asset from the [asset list](013_Asset_Account_Lists.md), and loads its price history in the initial run from the broker or historical data. [Price](022_Price_History.md) and trade functions, and all asset related variables ([Spread](spread.md), [Symbol](020_Included_Scripts.md), [AssetVar](196_AlgoVar_AssetVar_AssetStr.md) etc.) are automatically switched to the new asset. Sets [AssetPrev](020_Included_Scripts.md) to the previous asset name. Must be called in the first run (**[INITRUN](is.md)**) for any asset used of the script.  
+Selects an asset from the [asset list](013_Asset_Account_Lists.md), and loads its price history in the initial run from the broker or historical data. On subsequent script starts, price data is not loaded again unless [PRELOAD](018_TradeMode.md) was set or the \[Edit\] button was clicked. [Price](022_Price_History.md) and trade functions, and all asset related variables ([Spread](spread.md), [Symbol](020_Included_Scripts.md), [AssetVar](196_AlgoVar_AssetVar_AssetStr.md) etc.) are automatically switched to the new asset. Sets [AssetPrev](020_Included_Scripts.md) to the previous asset name. Must be called in the first run (**[INITRUN](is.md)**) for any asset used in the script.  
 
 ### Parameters:
 

@@ -78,7 +78,7 @@ Pointer to a lobal list of **PARAMETER** structs for the current asset/algo comp
 *   **TrainMode** must be set up before the first [optimize](107_optimize.md) call.
 *   Training methods for machine learning or rules generating are set up with the [advise](advisor.md) function.
 *   Alternative optimization algorithms from external libraries or individual optimization targets can be set up with the [parameters](108_objective_parameters.md) and [objective](108_objective_parameters.md) functions.
-*   [Parameter charts](007_Training.md) are only produced by **Ascent** optimization when [LOGFILE](018_TradeMode.md) is set. It is recommended to do first an Ascent training for determining the parameter dependence of a strategy. Afterwards the final optimization can done with a different algorithm if requried.
+*   [Parameter charts](007_Training.md) are only produced by **Ascent** optimization with [LOGFILE](018_TradeMode.md) set. It is recommended to do first an Ascent training for determining the parameter dependence of a strategy. Afterwards the final optimization can done with a genetic or brute force method if requried.
 *   [Parameter spreadsheets](209_Export.md) are exported by **Genetic** and **Brute Force** optimization. They can be used for generating 2-d parameter heatmaps or 3-d parameter surfaces with Excel or other programs.
 *   Percent steps (negative 4th parameter of the **optimize** function) are replaced by 10 equal steps for brute force and genetic optimization.
 *   In genetic optimization, parameter combinations that were already evaluated in the previous generation are not evaluated again and are skipped in the log. This lets the algorithm run faster with higher generations.
