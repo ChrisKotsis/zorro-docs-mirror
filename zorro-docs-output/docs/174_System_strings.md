@@ -78,6 +78,10 @@ The symbols and account names assigned to the current asset for live and histori
 
 The folder in which Zorro was installed, with trailing backslash, f.i. **"C:\\Program Files\\Zorro\\"** (read/only). This is not necessarily the root folder of the data files - see the remarks about [UAC](started.htm#uac).
 
+## LogFolder
+
+The folder for the log files and reports; if not set, they are stored in the **Log** folder.
+
 ## WebFolder
 
 The folder for the HTML page that displays the trade status. If not set up otherwise, the HTML documents are generated in the **Log** folder. Can be set up in the [Zorro.ini](007_Training.md) file.

@@ -18,10 +18,11 @@ source: "https://zorro-project.com/manual/en/new.htm"
 *   The [Fill](198_Fill_modes.md) mode was changed. Limit entries and exits now fill at the current price. The previous limit fill behavior can be activated with the new Fill mode 2. It [TR\_FRC](018_TradeMode.md) is not set, fill prices are now rounded to the point size of the asset.
 *   The format of the parameter files (**\*.par**) was changed. Parameters and training results are now stored in CSV format.
 
-### Zorro 2.71.2 (beta version)
+### Zorro 2.71.3 (beta version)
 
 *   Pending trades are now also saved and resumed when restarting a session.
 *   The [loop](109_loop.md) function now also accepts an array of algo names.
+*   The [LogFolder](020_Included_Scripts.md) for the log files and reports can now be set up in by script.
 
 The latest published beta version or the latest release candiate are available on the Zorro Download Page. [Zorro S features](restrictions.md) can be unlocked in beta versions with a valid Zorro license. [Z strategies](zsystems.md) are not included in beta versions. A list of fixed bugs can be found under [bugs](bugs.md).  
 
