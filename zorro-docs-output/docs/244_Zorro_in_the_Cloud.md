@@ -158,7 +158,7 @@ It is recommended that you regularly observe Zorro's trade list, profit status, 
 *   In the **zorro.ini** file, edit **WebFolder** and set it to the web folder of your server. The default web folder of a Windows server is normally **C:\\inetpub\\wwwroot**.  
        
     
-*   You can now visit Zorro's [trade status page](trading.htm#status) through the public IP address of your server - for instance, by entering **http:\\\\198.765.43.12\\Z12.htm** in your browser's address field. Note that anyone else who knows this address can observe your trade success! So you might want to add an authentication role to the IIS web server, or hide the status page in a cryptic subdirectory.
+*   You can now visit Zorro's [trade status page](trading.htm#status) through the public IP address of your server - for instance, by entering **http:\\\\123.456.78.90\\Z12.htm** in your browser's address field. Note that anyone else who knows this address can observe your trade success! So you might want to add an authentication role to the IIS web server, or hide the status page in a cryptic subdirectory.
 
 ### Providing trade signals
 

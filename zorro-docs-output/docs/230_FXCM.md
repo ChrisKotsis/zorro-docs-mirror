@@ -7,11 +7,11 @@ source: "https://zorro-project.com/manual/en/fxcm.htm"
 
 # FXCM Plugin
 
-The included FXCM plugin allows direct trading with FXCM Markets Ltd or FXCM Australia Pty. Ltd on demo and real accounts, without the need to use the MT4 platform. FXCM offers some advantages, such as index, commodity, and cryptocurrency CFDs, free tick-based, good-quality historical price data, a free API, and no minimum monthly investments.
+The included FXCM plugin allows direct trading with FXCM Markets Ltd or FXCM Australia Pty. Ltd on demo and real accounts, without the need to use the MT4 platform. Aside from forex, FXCM offers index, commodity, and cryptocurrency CFDs, free tick-based, good-quality historical price data, a free API, and no minimum monthly investments.
 
 For opening a demo or real account, visit [FXCM.](https://www.fxcm.com) The demo account will normally expire after a month of no trading, but can be renewed indefinitely by opening a new demo account.
 
-  !!  For using the FXCM API, you must unzip a bunch of DLLs. They are contained in the **FXCM.zip** archive in the Zorro installation. Unpack them directly into the Zorro main folder. The DLLs beginning with **"api-ms-win-core"** are only needed for very old Windows versions such as Vista or Server 2012. XP is not supported by the FXCM API. When you successfully installed the DLLs, the FXCM plugin will appear in the Broker scrollbox.
+The FXCM plugin is available in a 32 bit and a 64 bit version. For using it, you must unzip a bunch of DLLs. The 32 bit DLLs are contained in the **FXCM.zip** archive in the Zorro installation, the 64 bit DLLs in the Zorro64 subfolder. Unpack them directly into the Zorro main folder resp in the Zorro64 folder. The DLLs beginning with **"api-ms-win-core"** are only needed for very old Windows versions such as Vista or Server 2012. Windows XP is not supported by the FXCM API. When you successfully unpacked the DLLs, the FXCM plugin will appear in the Broker scrollbox.
 
 Zorro login fields for FXCM:
 

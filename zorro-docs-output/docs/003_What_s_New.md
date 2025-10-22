@@ -23,6 +23,7 @@ source: "https://zorro-project.com/manual/en/new.htm"
 *   Pending trades are now also saved and resumed when restarting a session.
 *   The [loop](109_loop.md) function now also accepts an array of algo names.
 *   The [LogFolder](020_Included_Scripts.md) for the log files and reports can now be set up in by script.
+*   The [64 bit FXCM plugin](230_FXCM.md) is now officially included (it was 'unoffially' already in 2.70). 
 
 The latest published beta version or the latest release candiate are available on the Zorro Download Page. [Zorro S features](restrictions.md) can be unlocked in beta versions with a valid Zorro license. [Z strategies](zsystems.md) are not included in beta versions. A list of fixed bugs can be found under [bugs](bugs.md).  
 
