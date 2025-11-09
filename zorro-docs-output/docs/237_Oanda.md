@@ -7,7 +7,7 @@ source: "https://zorro-project.com/manual/en/oanda.htm"
 
 # Oanda Plugin
 
-You can trade with Oanda™ either through the [MT4 bridge](mt4plugin.md), or with a direct API connection using the Oanda plugin (not for EU residents). Outside the EU, the API connection is preferable due to higher speed, lower spreads, and the ability to trade currencies with minimum volume of a single unit. Oanda is a 'dealing desk' broker with a large selection of index and commodity CFDs, free historical price data, a free API, no minimum monthly investment, no minimum lot size, and a simple margin and fee structure. Especially trading with minimum volume opens interesting possibilities, for instance running strategy tests on real Oanda accounts with tiny lot sizes, instead of demo accounts. 
+You can trade with Oanda™ either through the [MT4 bridge](mt4plugin.md), or with a direct API connection using the Oanda plugin. Oanda API trading is not permitted in several countries. Otherwise, the API connection is preferable due to higher speed, lower spreads, and the ability to trade currencies with minimum volume of a single unit. Oanda is a 'dealing desk' broker with a large selection of index and commodity CFDs, free historical price data, a free API, no minimum monthly investment, no minimum lot size, and a simple margin and fee structure. Especially trading with minimum volume opens interesting possibilities, for instance running strategy tests on real Oanda accounts with tiny lot sizes, instead of demo accounts. 
 
 For opening an Oanda demo account for API access, visit [http://www.oanda.com](http://www.oanda.com), and select an **fxTrader** practice account. If you have the choice between enabled or disabled hedging, select disabled for reducing transaction costs. Demo accounts have limitations in downloading historical price data. For opening a live account, use the affiliate link of the [download page](http://zorro-project.com/download.php) for claiming your free Zorro S subscription (details and conditions [here](restrictions.md)). You will need an **Access Token** for trading through the API. For this, sign in on the Oanda website with your user name, then select Other Action / Manage API Access for getting your token. It's a long hexadecimal string that serves as a password. Make sure to store it for later use. You will need to revoke your token and generate a new one when you create a sub-account. The access token must be put into Zorro's password field for connecting to Oanda.
 
@@ -48,6 +48,8 @@ More commands, f.i. for retrieving order book data, can be implemented on user r
 
 The Oanda plugin uses the Oanda REST API. Compared with other broker APIs, the REST API is well structured, easy to implement, supports full trade management and allows unrestricted price history access. Known issues of the Oanda API are:
 
+*   **API permission**. Residents of the EU and certain other countries are not permitted to trade with the Oanda API. In that case, orders are rejected with messages like **"account\_new\_positions\_locked"** or similar. You can then only use the [MT4 bridge](mt4plugin.md) to trade with Oanda.  
+     
 *   **Historical price data.** Oanda delivers no full resolution tick data, but a maximum of 24 ticks per minute. For this reason T1 data from Oanda has a smaller file size and lower resolution than T1 data from other brokers. On the other hand, Oanda's price history loads fast and goes far back. With demo accounts the access to historical data is limited.  
       
 *   **Asset parameters.** The Oanda V20 API does not return rollover rates, so swap and commission must be identified on the Oanda website and manually entered in the asset list.  
@@ -58,7 +60,7 @@ The Oanda plugin uses the Oanda REST API. Compared with other broker APIs, the R
 *   **Compliance/Hedging.** Oanda accounts with disabled hedging require special settings. They are NFA compliant, but Oanda works around most NFA issues on their side of the API, so the [NFA](mode.htm#nfa) flag needs not be set. [Hedge](019_Hedge_modes.md) must be either disabled (**Hedge = 0**) or in virtual hedging mode (**Hedge = 4 or 5**), otherwise closing trades will cause error messages. Oanda API 2.0 requires stop loss orders to have a unique size, therefore stop loss limits are handled on the Zorro side. Partial closing is supported by the API.  
        
     
-*   **Multiple instances.** Due to the NFA compliance, multiple Zorro instances can only trade on the same Oanda account when they trade different assets. Otherwise one Zorro could close positions opened by the other Zorro by reversal. For trading several systems at the same time with the same assets, use sub-accounts.  
+*   **Multiple instances.** Due to the NFA compliance, multiple Zorro instances can only trade on the same Oanda account when they trade different assets. Otherwise one Zorro would close positions opened by the other Zorrol. For trading several systems at the same time with the same assets, use sub-accounts.  
      
 *   **Shorthand Tickets.** Oanda uses 64-bit trade tickets, which can be theoretically a 20-digit number. Zorro deals with them internally, but displays only the last 10 digits on the trade status page.  
      

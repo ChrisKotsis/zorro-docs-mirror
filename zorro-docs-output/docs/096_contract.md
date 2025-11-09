@@ -7,7 +7,7 @@ source: "https://zorro-project.com/manual/en/contract.htm"
 
 # Options, Futures, FOPs
 
-The following functions can be used for selecting, analyzing, and trading options, futures, and options on futures (FOPs). Due to their additional parameters, such as type, strike, and expiration, options trading is a bit more complex than trading the underlying. A brief introduction to options trading and options strategy development with Zorro can be found in the **[Black Book](https://www.amazon.de/Black-Book-Financial-Hacking-Algorithmic/dp/1546515216)** chapter 8.
+The following functions can be used for selecting, analyzing, and trading options, futures, and options on futures (FOPs). Due to their additional parameters, such as type, strike, and expiration, options trading is a bit more complex than trading the underlying. An introduction to options trading and options strategy development with Zorro can be found in the **[Black Book](https://www.amazon.de/Black-Book-Financial-Hacking-Algorithmic/dp/1546515216)** chapter 8. A very brief introduction is also found on Financial Hacker.
 
 ## contractUpdate (string Name, int Handle, int Mode): int
 
@@ -136,9 +136,9 @@ Returns a pointer of the class name of the given contract; only available in liv
 
 Returns the letter assigned to the given expiration month (F Jan, G Feb, H Mar, J Apr, K May, M Jun, N Jul, Q Aug, U Sep, V Oct, X Nov, Z Dec). This function can be used to generate a contract [symbol](014_Asset_Symbols.md). Source code in **contract.c**.
 
-## contractExpiry (int Year, int Month): int
+## contractSetSymbol (int Days, int N): int
 
-Returns the YYYYMMDD expiration date - the third Friday - of the given **Year** and **Month**. This function can be used to generate a contract [symbol](014_Asset_Symbols.md). Source code in **contract.c**.  
+Sets [SymbolLive](020_Included_Scripts.md) and [SymbolTrade](020_Included_Scripts.md) of the current selected underlying future to the next expiration date after the given number of days. The expiration date is the third Friday of either any month (**N = 1**) or any third month (**N = 3**). Returns the expiration date in  YYYYMMDD format. Source code in **contract.c**.  
    
 
 ## contractPrintChain ()
@@ -272,7 +272,7 @@ _// Check expiration and buy them back when in the money_
 ```
 ```c
 _// Load high res contract chains from daily files like "SPY\_20210505.t8"_
-if(day(0) != day(1)) { _// new day?_
+if(!is(LOOKBACK) && day(0) != day(1)) { _// new day?_
   if(Live) { _// load a new contract chain
 _    if(!contractChain(0,0)) _// first try the fast way_
 	contractUpdate(0,0,CALL|PUT); _// then the slow way_

@@ -83,12 +83,12 @@ Reads the content of a file into a string or array, and appends **0** at the end
 
 ## file\_write (string name, string content, size\_t length)
 
-Stores the content of a string, series, or other data array in a file.
+Creates a file or folder, and stores the content of the given string or data array.
 
 ### Parameters:
 
-**name** - file path  
-**content** - **string** or other data to be written.  
+**name** - file or folder path.  
+**content** - **string** or other data to be written, or **0** for creating a folder.  
 **length** - number of bytes to be written, or **0** for writing the complete content of a **string**.
 
 ## file\_append (string name, string content, size\_t length)
@@ -102,6 +102,26 @@ Opens a file and appends text or other data either at the end (**file\_append**)
 **name** - file name with path.  
 **content** - text or other data to be appended at the end or begin of the file.  
 **length** - number of bytes to be written, or **0** for writing the content of a **string**.
+
+## file\_appendCSV (string name, string record)
+
+Opens a CSV file and appends the given CSV record to the end. If the first field of the record matches a first field in the file, the record is not appended, but replaces the original line in the file. In this way a CSV file can be updated with a new record. If the file does not exist, it is created.
+
+### Parameters:
+
+**name** - file name with path.  
+**record** - a line with comma separated fields to be appended or to replace a record in the file.
+
+## file\_sortCSV (string name, int field, int mode)
+
+Opens a CSV file and sorts its records by the numeric value in the given field. 
+
+### Parameters:
+
+**name** - file name with path.  
+**field** - number ot fhe field with the sort criteria.  
+**mode** -  **0** for ascending, **1** for descending sorting.  
+ 
 
 ### Remarks:
 

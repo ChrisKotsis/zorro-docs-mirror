@@ -113,8 +113,22 @@ Parses text from the string **str** and returns a temporary string containing th
 
 **str** - string containing the text to be extracted.  
 **name** - substring, text identifier. For a JSON token, put it in double quotes followd by a colon (f.i. **"\\"datetime\\":"**).  
-**default** - returned when no identifier **name** was found in the string.  
- 
+**default** - returned when no identifier **name** was found in the string.
+
+## strvarCSV (string str, string name_,_ int field): var
+
+Like **strvar**, but parses the number from a subsequent field in a CSV file. Can be used to parse the content of CSV files This is not a standard C string function.
+
+## strfield (string str, string name, iint field): string
+
+Like **strtext**,, but returns a pointer to the content of a subsequent field in a CSV file. Can be used to parse or modifxy the content of CSV files This is not a standard C string function.
+
+### Parameters:
+
+**str** - string containing the text to be extracted.  
+**name** - substring, token identifier, or **0** for counting the fields from the begin of the string.  
+**field** - the number of commas in the CSV record to skip before returning the number or text  
+. 
 
 ## strtr (TRADE\*): string
 
