@@ -1,101 +1,155 @@
-# Zorro Documentation Mirror
+# Zorro Documentation Crawler
 
-**Official mirror of the Zorro Trading Platform documentation for Context7 integration.**
+Downloads and converts the Zorro Trading Platform documentation from https://zorro-project.com/manual/ into self-contained HTML files for offline use.
 
-This repository contains a complete mirror of the [Zorro Trading Platform](https://zorro-project.com) documentation, converted to Markdown format and optimized for modern documentation tools.
+## Quick Start
 
-## 📜 License & Permission
+### Option 1: Markdown Format (Recommended for LLM use)
 
-This documentation mirror is published with explicit permission from the Zorro Project team. The documentation content remains the property of oP group Germany.
+```bash
+# Complete pipeline: Download HTML + Convert to Markdown
+./update-docs-to-markdown.sh
+```
 
-- **Original Documentation**: https://zorro-project.com/manual/
-- **Purpose**: Making Zorro documentation accessible through Context7 and modern dev tools
-- **Permission**: Granted by the Zorro Project team for Context7 integration
+This will:
+- Download all documentation pages from zorro-project.com
+- Download all images
+- Convert HTML to clean Markdown format
+- Create outputs in `./zorro-docs-markdown/` (Markdown) and `./zorro-docs-output/` (HTML)
+- Optionally copy to `~/ats/docs/06-zorro-markdown/` and `~/ats/docs/06-zorro/`
 
-## 🤖 Automated Updates
+### Option 2: HTML Only
 
-This repository automatically updates daily to ensure the documentation stays current with the official Zorro manual.
+```bash
+# Download HTML documentation only
+./update-docs.sh
+```
 
-- **Update Schedule**: Daily at 2 AM UTC
-- **Update Method**: GitHub Actions workflow
-- **Last Update**: Check the commit history
+This will:
+- Download all documentation pages from zorro-project.com
+- Download all images
+- Create self-contained HTML files in `./zorro-docs-output/`
+- Optionally copy to `~/ats/docs/06-zorro/`
 
-## 📁 Repository Structure
+## Manual Usage
 
+### Prerequisites
+
+- Node.js 18+ installed
+- npm
+- Internet connection
+
+### Installation
+
+```bash
+npm install
+```
+
+### Update Documentation
+
+```bash
+# Complete pipeline: HTML + Markdown conversion
+./update-docs-to-markdown.sh
+
+# Or download HTML only
+node crawler-complete.js
+
+# Convert existing HTML to Markdown
+python3 convert-to-markdown.py zorro-docs-output zorro-docs-markdown
+
+# Basic crawler (docs only, no images)
+node crawler-v2.js
+
+# Test on single page
+node test-crawler.js
+```
+
+## Output Structure
+
+### HTML Output
 ```
 zorro-docs-output/
-├── docs/              # All documentation pages in Markdown
-├── images/            # All diagrams and screenshots
-├── README.md          # Main documentation index
-├── SUMMARY.md         # Table of contents
-└── context7.json      # Context7 configuration
+├── content/       # All documentation HTML files
+├── images/        # All diagrams and screenshots
+├── index.html     # Main documentation index
+└── doc_index.json # Searchable documentation index
 ```
 
-## 🚀 Using with Context7
+### Markdown Output (for LLM consumption)
+```
+zorro-docs-markdown/
+├── content/       # All documentation in Markdown format
+├── images/        # All diagrams and screenshots (copied)
+└── index.md       # Main documentation index
+```
 
-This documentation is optimized for use with [Context7](https://context7.com), allowing you to:
+## Scripts
 
-- Access Zorro documentation directly in your IDE
-- Search across all documentation instantly
-- Get context-aware code suggestions
-- View documentation offline
+### Main Scripts
+- **`update-docs-to-markdown.sh`** - Complete pipeline (HTML + Markdown) ⭐ RECOMMENDED
+- **`update-docs.sh`** - HTML only update
+- **`convert-to-markdown.py`** - Convert HTML to Markdown
 
-### Integration Steps
+### Node.js Crawlers
+- **`crawler-complete.js`** - Main crawler (downloads everything)
+- **`crawler-v2.js`** - Basic version (HTML only)
+- **`crawler-with-images.js`** - Downloads docs + images separately
+- **`test-crawler.js`** - Test single page
 
-1. Install Context7 in your IDE
-2. Search for "Zorro" in Context7
-3. Select this documentation source
-4. Start coding with instant documentation access!
+## Features
 
-## 📖 Documentation Contents
+- ✅ Downloads all 276 documentation pages
+- ✅ Downloads all images with original filenames
+- ✅ Creates self-contained offline documentation
+- ✅ Respects rate limiting (polite crawling)
+- ✅ Progress tracking
+- ✅ Error recovery
 
-The mirror includes:
+## Updating Your Offline Docs
 
-- **Complete API Reference**: All Zorro functions and indicators
-- **Trading Strategies**: Examples and tutorials
-- **Workshops**: Step-by-step learning materials
-- **Deep Learning**: Machine learning with Zorro
-- **Broker Integration**: Connection guides
-- **Performance Analysis**: Backtesting and optimization
+### For LLM Use (Recommended)
 
-## 🛠️ Technical Details
+```bash
+cd ~/ats/zorro-docs-mirror
+./update-docs-to-markdown.sh
+```
 
-### Crawler Information
+The script will:
+1. Backup existing docs (HTML and Markdown)
+2. Download latest HTML from zorro-project.com
+3. Convert HTML to clean Markdown
+4. Offer to copy to `~/ats/docs/06-zorro-markdown/` (Markdown) and `~/ats/docs/06-zorro/` (HTML)
 
-This documentation is maintained by an automated crawler that:
+### For HTML Only
 
-- Respects server resources with rate limiting
-- Preserves the original documentation structure
-- Downloads all images with original filenames
-- Converts HTML to clean Markdown
-- Maintains internal links between pages
+```bash
+cd ~/ats/zorro-docs-mirror
+./update-docs.sh
+```
 
-### For Contributors
+The script will:
+1. Backup existing docs
+2. Download latest from zorro-project.com
+3. Offer to copy to ~/ats/docs/06-zorro/
 
-If you notice any issues with the documentation mirror:
+## Notes
 
-1. Check if the issue exists in the [original documentation](https://zorro-project.com/manual/)
-2. If it's a conversion issue, please [open an issue](https://github.com/ChrisKotsis/zorro-docs-mirror/issues)
-3. For content corrections, contact the Zorro Project team directly
+- First run will take 5-10 minutes (downloads ~276 files + images)
+- Subsequent runs are faster (only updates changed files)
+- Respects zorro-project.com server with rate limiting
+- Output is fully self-contained (works offline)
 
-## 🔄 Manual Update
+## Troubleshooting
 
-To manually trigger a documentation update:
+**If download fails:**
+- Check internet connection
+- Verify zorro-project.com is accessible
+- Try reducing concurrent downloads in crawler-complete.js
 
-1. Go to [Actions](https://github.com/ChrisKotsis/zorro-docs-mirror/actions)
-2. Select "Daily Zorro Documentation Update"
-3. Click "Run workflow"
+**If images are missing:**
+- Run: `node download-images-fixed.js`
+- Or rerun: `node crawler-complete.js`
 
-## 📞 Contact
+## License
 
-- **Zorro Project**: https://zorro-project.com
-- **Repository Issues**: [GitHub Issues](https://github.com/ChrisKotsis/zorro-docs-mirror/issues)
-- **Context7**: https://context7.com
-
-## ⚖️ Legal
-
-This is an authorized mirror of the Zorro documentation. All documentation content is © oP group Germany. The crawler and conversion tools in this repository are provided under the MIT license.
-
----
-
-*This repository is not affiliated with oP group Germany except for having permission to mirror the documentation for Context7 integration.*
+Crawler tool is provided as-is. Zorro documentation © oP group Germany.
