@@ -101,7 +101,7 @@ Generates a [contour chart](107_optimize.md) of a 3-field dataset. The resulting
 Generates a [heatmap](profile.htm#heatmap) from a 2D dataset. The resulting image is stored under **Name** when [PL\_FILE](203_PlotMode.md) is set, otherwise displayed on the interactive chart with the titel **Name**. The dataset contains heat values in a column x row matrix that are displayed in colors ranging from blue to red. This function can be used to display correlation or weight heatmaps.  
   
  ![](../images/heatmap.png) ![](../images/contour.png)  
-Heatmaps can be displayed with data values in the fields by giving **HEATMAP|LABELS**. The x and y axes can can scaled by giving a **Scale** array consisting of x offset, x scale factor, y offset, and y scale factor. 
+Heatmaps can be displayed with data values in the fields by giving **HEATMAP|LABELS**. The numbers on the x and y axes can be scaled by passing a **Scale** array consisting of x offset, x scale factor, y offset, and y scale factor. 
 
 # Accessing data
 

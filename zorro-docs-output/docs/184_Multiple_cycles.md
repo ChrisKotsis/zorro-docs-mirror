@@ -13,7 +13,7 @@ Repeat the complete simulation in training or test mode in as many cycles as giv
 
 ## TotalCycle
 
-The number of the cycle from **1** to **NumTotalCycles**. Read/only, automatically set by **NumTotalCycles**.
+The number of the current cycle from **1** to **NumTotalCycles**. Read/only, automatically set by **NumTotalCycles**.
 
 ## LogNumber
 

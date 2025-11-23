@@ -105,9 +105,9 @@ The script runs in single step mode. For details see [debugging](011_Chart_Viewe
 
 The script called the [loop](109_loop.md) function.
 
-## ASSETS
+## ASSETSET
 
-The script called the [asset](013_Asset_Account_Lists.md) function.
+The script called the [asset](013_Asset_Account_Lists.md) or [assetAdd](013_Asset_Account_Lists.md) function.
 
 ## PLOTSTATS
 

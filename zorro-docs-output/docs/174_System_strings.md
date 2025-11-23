@@ -7,9 +7,11 @@ source: "https://zorro-project.com/manual/en/script.htm"
 
 # Predefined and user-supplied strings
 
-## Script
+ 
 
-Name of the script without the **".c"** extension. Can be changed in the code for generating or loading parameters, rules, and factors with a different name. In this way the script can share training data with other scripts. If [LogNumber](numtotalcycles.md) is nonzero, the logs are also saved under the given name. A script name must not contain spaces or special characters.
+## RootName
+
+Name root for the exported parameters, rules, and factors (default = script name). Can be changed for sharing training data with other scripts. If [LogNumber](numtotalcycles.md) is nonzero, the logs are also saved under the **DataName**. The name must not contain spaces or special characters. 
 
 ## Algo
 

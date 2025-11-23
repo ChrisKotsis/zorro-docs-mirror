@@ -16,17 +16,17 @@ _// Counter trend trading function from Workshop 5_
 function tradeCounterTrend()
 {
   TimeFrame = 4;	_// 4 hour time frame_
-  vars Price = series(price(0));
-  vars Filtered = series(BandPass(Price,optimize(30,25,35),0.5));  
-  vars Signal = series(FisherN(Filtered,500));  
+  vars Prices = series(price(0));
+  vars Filtereds = series(BandPass(Prices,optimize(30,25,35),0.5));  
+  vars Signals = series(FisherN(Filtereds,500));  
   var Threshold = optimize(1,0.5,2,0.1);
 
   Stop = optimize(4,2,10) \* ATR(100);  
   Trail = 4\*ATR(100);
   
-  if(crossUnder(Signal,-Threshold))
+  if(crossUnder(Signals,-Threshold))
     enterLong();
-  else if(crossOver(Signal,Threshold))
+  else if(crossOver(Signals,Threshold))
     enterShort();
 }
 
@@ -34,12 +34,12 @@ _// Trend trading function from Workshop 4_
 function tradeTrend()
 {
   TimeFrame = 1; _// 1 hour time frame_
-  vars Price = series(price(0));
-  vars Trend = series(LowPass(Price,optimize(500,300,700)));  
+  vars Prices = series(price(0));
+  vars Trend = series(LowPass(Prices,optimize(500,300,700)));  
   
   Stop = optimize(4,2,10) \* ATR(100);  
   Trail = 0;  
-  vars MMI\_Raw = series(MMI(Price,300));
+  vars MMI\_Raw = series(MMI(Prices,300));
   vars MMI\_Smooth = series(LowPass(MMI\_Raw,500));
   
   if(falling(MMI\_Smooth)) {
