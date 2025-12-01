@@ -51,7 +51,8 @@ Opens a file dialog box at a given directory that lets the user select a file na
 ### Parameters:
 
 **path** - initial directory to open, f.i. **"Data"**, or **0** for opening the Zorro directory.  
-**filter** - list of pairs of null-terminated filter strings, or **0** for selecting all files. If the first filter string begins with **'#'**, it generates a save dialog, otherwise an open dialog. The last string must be terminated by two null characters (**"\\0"**). The first string in each pair describes the filter (f.i. **"Parameter Files"**), and the second string specifies the filter pattern (f.i. **"\*.par"**). Example: **"CSV Files\\0\*.csv\\0\\0"**. Multiple filter patterns can be separated with a semicolon (f.i. **"\*.par;\*.fac;\*.c"**). The pattern must not contain spaces. Example of a filter list with three pairs: **"All files (\*.\*)\\0\*.\*\\0Par, Fac\\0\*.par;\*.fac\\0Text files\\0\*.txt\\0\\0"**.  
+**filter** - list of pairs of null-terminated filter strings /see below), or a 3-character file extension, or **0** for selecting all files. If the filter string begins with **'#'**, it generates a save dialog, otherwise an open dialog.  
+If a filter pair list, the last string must be terminated by two null characters (**"\\0\\0"**). The first string in each pair describes the filter (f.i. **"Parameter Files"**), and the second string specifies the filter pattern (f.i. **"\*.par"**). Example: **"CSV Files\\0\*.csv\\0\\0"**. Multiple filter patterns can be separated with a semicolon (f.i. **"\*.par;\*.fac;\*.c"**). The pattern must not contain spaces. Example of a filter list with three pairs: **"All files (\*.\*)\\0\*.\*\\0Par, Fac\\0\*.par;\*.fac\\0Text files\\0\*.txt\\0\\0"**.  
  
 
 ## file\_next (string path): string

@@ -20,7 +20,7 @@ Fills the char array **dest** with the content of string **src**. The buffer siz
 
 ## strcat (string dest, string src): string
 
-Appends a copy of **src** to the end of the string **dest**. The buffer size of **dest** must not be exceeded.
+Appends a copy of **src** to the end of the string **dest**. The buffer size of **dest** must be of sufficient length.
 
 ## strcatf (string dest, string src): string
 
@@ -38,8 +38,16 @@ Returns the number of characters in the given string.
 
 ### Parameters:
 
+**str** - string
+
+## strcspn (string str,string set): int
+
+Returns the index of the first occurrence of a character that belongs to a set of characters. Can be used to clip a string or to copy it up to a delimiter.
+
+### Parameters:
+
 **str** - string  
- 
+**set** - character set, f.i. **" ,\\n"** for the first occurrence of either blank, comma, or line feed.
 
 ## strcount (string str, char c): int
 
@@ -115,19 +123,19 @@ Parses text from the string **str** and returns a temporary string containing th
 **name** - substring, text identifier. For a JSON token, put it in double quotes followd by a colon (f.i. **"\\"datetime\\":"**).  
 **default** - returned when no identifier **name** was found in the string.
 
-## strvarCSV (string str, string name_,_ int field): var
+## strvarCSV (string str, string name_,_ int field, var default): var
 
 Like **strvar**, but parses the number from a subsequent field in a CSV file. Can be used to parse the content of CSV files This is not a standard C string function.
 
-## strfield (string str, string name, iint field): string
+## strfield (string str, string name, int field): string
 
-Like **strtext**,, but returns a pointer to the content of a subsequent field in a CSV file. Can be used to parse or modifxy the content of CSV files This is not a standard C string function.
+Like **strtext**,, but returns a pointer to the content of a subsequent field in a CSV file. Can be used to parse or modify the content of CSV files This is not a standard C string function.
 
 ### Parameters:
 
 **str** - string containing the text to be extracted.  
 **name** - substring, token identifier, or **0** for counting the fields from the begin of the string.  
-**field** - the number of commas in the CSV record to skip before returning the number or text  
+**field** - the number of commas in the CSV record to skip before returning the field content  
 . 
 
 ## strtr (TRADE\*): string

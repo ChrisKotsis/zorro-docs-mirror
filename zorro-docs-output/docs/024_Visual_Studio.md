@@ -7,7 +7,7 @@ source: "https://zorro-project.com/manual/en/dlls.htm"
 
 # **Developing Algo Trading Systems in C++**
 
-The Zorro platform accepts 4 types of algo trading scripts in the **Strategy** folder: lite-C code (**.c**), C++ code (**.cpp**), lite-C executables (**.x**), and DLLs (**.dll**). The 64-bit version **Zorro64** has no lite-C compiler and thus accepts only **.cpp** and **.dll** scripts. Scripts of supported types appear in the \[Script\] scrollbox and run automatically when the \[Test\], \[Train\], or \[Trade\] button is clicked.
+The Zorro platform accepts 4 types of scripts in the **Strategy** folder: lite-C code (**.c**), C++ code (**.cpp**), lite-C executables (**.x**), and DLLs (**.dll**). The 64-bit version **Zorro64** has no lite-C compiler and thus accepts only **.cpp** and **.dll** scripts. Scripts of supported types appear in the \[Script\] scrollbox and run automatically when the \[Test\], \[Train\], or \[Trade\] button is clicked.
 
  [Zorro S](restrictions.md) can compile **.x** and **.dll** files from **c.** and **.cpp** sources automatically. For compiling **.cpp** scripts it utilizes the **Visual Studio™** **VC++** compiler. Theoretically other languages can also be implemented, such as C#, Java, Pascal, Delphi, or Basic, as long as they are able to generate a 32- or 64-bit Windows DLL. The included batch and header files in **Source\\VC++** can serve as templates for integrating other languages.
 
@@ -69,7 +69,7 @@ If lite-C scripts have no header, the **<default.c>** header is automatically in
 
 ### Exported and void functions
 
-If a function does not return something, it must be defined with the **void** type. This is optional in lite-C, but mandatory in C++. If functions are exported by the DLL - such as **run**, **main**, **objective**, etc - define them with the **DLLFUNC** macro. The **function** keyword is defined as **DLLFUNC void** in C++.
+If a function does not return something, it must be defined with the **void** type. This is optional in lite-C, but mandatory in C++. If functions are exported by the DLL - such as **run**, **main**, **objective**, etc - define them with the **DLLFUNC** macro. The **function** keyword is defined as **DLLFUNC int** in C++; functions of **function** type must therefore return a value. 
 ```c
 function click() { ... } _// lite-C_
 DLLFUNC void click() { ... } _// C++_
@@ -190,7 +190,7 @@ When importing the **GLOBALS** struct, set up the compiler so that it does not p
 
 # VC++ setup for a DLL project (free Zorro version)
 
-If you own Zorro S, you need not read this chapter, since Zorro S automatically generates a VC++ project file (**\*.vcxproj**) when compilig a C++ script in the Strategy folder. You only need to click on it for invoiking the Visual Studio environment. However with the free version, you need to set up a VC++ project for any C++ script. The dialogs shown below are for Visual C++ 2017, but for later versions like VC++ 2019 and 2022 they are very similar:
+If you own Zorro S, you need not read this chapter, since Zorro S automatically generates a VC++ project file (**\*.vcxproj**) when compiling a C++ script in the Strategy folder. You only need to click on it for invoking the Visual Studio environment. However with the free version, you need to set up a VC++ project for any C++ script. The dialogs shown below are for Visual C++ 2017, but for later versions like VC++ 2019 and 2022 they are very similar:
 
 *   If you haven't already, download and install Visual Studio with the C++ desktop applications environment. Make yourself familiar with its editor and tools - there are tons of books and courses for Visual Studio.  
       
@@ -239,7 +239,9 @@ If you own Zorro S, you need not read this chapter, since Zorro S automatically 
     
 *   Mistakes - for instance, a wrong compiler setup - will cause [Error 062](errors.md) when starting the DLL. In that case check your project for a correct setup.  
       
-*   If a strategy DLL works on your PC, but produces [Error 062](errors.md) on another PC, the reason is most likely a missing module. Use a tool such as [Dependency Walker](http://www.dependencywalker.com/) for finding out which module is missing on that particular PC. If the DLL needs VC++ runtime libraries, install **vc\_redist.x86.exe** or **vc\_redist.x64.exe**.
+*   If a strategy DLL works on your PC, but produces [Error 062](errors.md) on another PC, the reason is most likely a missing module. Use a tool such as [Dependency Walker](http://www.dependencywalker.com/) for finding out which module is missing on that particular PC. If the DLL needs VC++ runtime libraries, install **vc\_redist.x86.exe** or **vc\_redist.x64.exe**.  
+     
+*   You can run a **.cpp** script either directly from Zorro, or directly from the VC++ environment. While developing the script, VC++ is preferable, since it allows to immediately jump to lines with syntax errorr, or to debug the code line by line. If the script includes further code that you're working on, always use VC++. Zorro willl display syntax errors only in the main **.cpp** script, but not in included code.
 
 If you have a mix of lite-C and C++ scripts, we recommend to add a '+' to a **.cpp** script name for marking it in the scrollbox. Since **.c** overrides **.cpp**, don't use the same name for both variants. The example file **MyStrategy+.cpp** contains C++ versions of workshops and example scripts. Which one to compile can be selected with a #define at the begin. Check it out for learning the differences of writing a strategy in VC++ instead of lite-C. All known code differences are listed below. If you encounter any other incompatility with a function or variable, please report on the user forum or to Zorro support.
 

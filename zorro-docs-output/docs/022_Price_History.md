@@ -79,7 +79,9 @@ For looking into **.t8**, **.t6**, **.t2**, or **.t1** files and displaying thei
 
 ### The Download script
 
-For downloading free data from brokers or online price sources, you can use **Download.c,** a small script for retrieving or updating prices and asset parameters. You can download either the history of a single asset, or do a bulk download of all assets of a given [asset list](013_Asset_Account_Lists.md). The script opens a control panel with a few toggle buttons (blue) and entry fields (yellow):
+Historical data for many common tasks is avaiable on the [Zorro Download Page](https://zorro-project.com/download.php). Further data is available from brokers, online price sources, and data vendors. For downloading data from your broker, a small script - **Download.c** - is included in the Zorro distribution. It can be used not only for retrieving price data, but also for updating asset parameters. You can download either the history of a single asset, or do a bulk download of all assets of a given [asset list](013_Asset_Account_Lists.md).
+
+The script opens a tiny control panel with a few toggle buttons (blue) and entry fields (yellow):
 
 <table cellspacing="1" class="auto-style2"><tbody><tr><td>History</td><td>&nbsp;</td></tr><tr><td class="auto-style3">AAPL</td><td>Either asset symbol, or asset list file name</td></tr><tr><td class="auto-style3">2020-2024</td><td>Time period to download</td></tr><tr><td class="auto-style4">M1</td><td>Data resolution: M1, T1, T2, or D1</td></tr><tr><td class="auto-style4">Ask/Bid</td><td>Data type: Ask/Bid, Bid, Trades, Unadjusted, Parameters</td></tr><tr><td class="auto-style4">Broker</td><td>Data source: Broker, Stooq, Yahoo, AlphaVantage</td></tr><tr><td class="auto-style4">Download!</td><td>Click here to start the download.</td></tr></tbody></table>
 
