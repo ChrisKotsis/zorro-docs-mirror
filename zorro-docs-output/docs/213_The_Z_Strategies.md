@@ -91,7 +91,7 @@ A combination of Z1 and Z2, exploiting the anticorrelation of their equity curve
 
 ### Z6+
 
-The new Z6+ system is available in the upcoming Zorro version 2.70. It is a special type of grid trader with an adaptive grid. Although we have listed grid trading among the [17 worst trading methods](https://financial-hacker.com/seventeen-popular-trade-strategies-that-i-dont-really-understand/), this one is different, since it is based on a real inefficiency of Forex markets. The effect is visible in the chart below, from the AUD/USD pair:
+The new Z6+ system is a special type of grid trader with an adaptive grid. Although we have listed grid trading among the [17 worst trading methods](https://financial-hacker.com/seventeen-popular-trade-strategies-that-i-dont-really-understand/), this one is different, since it is based on a real inefficiency of Forex markets. The effect is visible in the chart below, from the AUD/USD pair:
 
 ![](../images/Z6_VSpectrum_s.png)
 
