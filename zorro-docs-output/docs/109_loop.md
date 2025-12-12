@@ -11,9 +11,11 @@ source: "https://zorro-project.com/manual/en/loop.htm"
 
 ## loop(Algos) : string
 
-Enumerate assets or algos for training their parameters or rules separately. The **loop** function gets many pointers, such as asset or algo names, as arguments. In \[Test\] and \[Trade\] mode it returns the first pointer on the first call, the next pointer on the next call and so on. It returns **0** after the last pointer of its arguments. In \[Train\] mode it returns the first pointer in the first component training cycle, the next one in the next cycle and so on. Component training cycles end after the last pointer. Alternatively the single [Assets](020_Included_Scripts.md) or [Algos](020_Included_Scripts.md) pointer can be given for enumerating asset or algo names.
+Enumerate assets or algos for training their parameters or rules separately. The **loop** function gets many strings, such as asset or algo names, as arguments. In \[Test\] and \[Trade\] mode it returns the first pointer on the first call, the next pointer on the next call and so on. It returns **0** after the last pointer of its arguments. In \[Train\] mode it returns the first pointer in the first component training cycle, the next one in the next cycle and so on. Component training cycles end after the last pointer. Alternatively the single [Assets](020_Included_Scripts.md) or [Algos](020_Included_Scripts.md) pointer can be given for enumerating asset or algo names.
 
 ## of(string Name1, string Name2, ... ) : string
+
+## of(int N1, int N2, ... ) : intptr\_t
 
 ## of(Assets) : string
 
@@ -23,11 +25,11 @@ Enumerate pointers as above, but for general purposes and without the special be
 
 ### Returns
 
-**Name1** on the first call or training cycle, **Name2** on the next call or training cycle, and so on. The last call or cycle returns **0**.
+**Name1** on the first call, **Name2** on the next call, and so on. The last call returns **0**.
 
 ### Parameters:
 
-<table border="0" cellpadding="2" cellspacing="2"><tbody><tr valign="top"><td><strong>Name1, Name2 ...</strong></td><td><p>Up to 40 arguments, all different, usually <strong>strings</strong> with an asset or algo name.</p></td></tr><tr><td><strong>Assets</strong></td><td><p><a href="script.htm">Predefined array</a> with all asset names; used for enumerating all assets in the <a href="account.htm">asset list</a>.</p></td></tr><tr valign="top"><td><strong>Algos</strong></td><td><p><a href="script.htm">Predefined array</a>, set up by script to a list of all algo names.</p></td></tr></tbody></table>
+<table border="0" cellpadding="2" cellspacing="2"><tbody><tr valign="top"><td><strong>Name1, Name2 ...</strong></td><td><p>Up to 40 arguments, usually <strong>strings</strong> with asset or algo names.</p></td></tr><tr><td><strong>N1, N2 ...</strong></td><td><p>Up to 40 integers.</p></td></tr><tr><td><strong>Assets</strong></td><td><p><a href="script.htm">Predefined array</a> with the asset names from the selected <a href="account.htm">asset list</a>.</p></td></tr><tr valign="top"><td><strong>Algos</strong></td><td><p><a href="script.htm">Predefined array</a>, to be set up by script to a list of all algo names.</p></td></tr></tbody></table>
 
    
 The following variables are valid after a **loop** call (not for **of**):
@@ -55,7 +57,7 @@ Total number of cycles of the first and second **loop**.
 
 *   In \[Train\] mode the **loop** function is handled in a special way. A complete training cycle is executed for every **loop** pointer. This ensures that parameters, rules, and factors are generated separately for every strategy component. The [algo](095_algo.md) function can be used to identify the strategy component in the parameter, factor, or rule file (see the example in [Workshop 6](tutorial_kelly.md)).
 *   Up to two **loop** calls in fixed order can be placed in the [run](088_run.md) function, usually either an asset **loop**, or an algo **loop**, or an algo **loop** nested in the asset **loop**. For multiple loops through assets or algos, or for enumerating components outside the **run** function, use either **of()** or [for(...assets)](fortrades.md) / [for(...algos)](fortrades.md).
-*   Do not abort code inside **loop** or **of** with **break** or **return**, or else the remaining assets or algos won't be executed. Use **continue** for prematurely aborting a loop and continuing with the next pointer.
+*   The **loop** and **of** functions enumerate all elements up to the end. Therefore do not abort a **loop**/**of** loop with **break** or **return**. Use **continue** for skipping elements. Call **of(0)** for resetting all **of** functions to their first element.
 *   Do not enumerate assets in a **loop** call when you only want to train common parameters, such as the holding time for a portfolio rotation. Use **of** insteead.
 *   The returned string or pointer remains valid until the next **loop** or **of** call. For storing asset or algo specific information in a loop, use a [AlgoVar](196_AlgoVar_AssetVar_AssetStr.md), or a [series](091_series.md), or global arrays.
 

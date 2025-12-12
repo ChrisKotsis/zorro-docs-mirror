@@ -80,7 +80,7 @@ Reads the content of a file into a string or array, and appends **0** at the end
 
 **name** - file path  
 **content** - **string** or array of any type to be filled with the content of the file; must have a size of at least **length+1**.  
-**length** - maximum number of characters or bytes to read, or **0** for reading the whole file into a buffer of sufficient size. 
+**length** - maximum number of characters or bytes to fill, or **0** for reading the whole file into a buffer of sufficient size. 
 
 ## file\_write (string name, string content, size\_t length)
 
@@ -104,24 +104,25 @@ Opens a file and appends text or other data either at the end (**file\_append**)
 **content** - text or other data to be appended at the end or begin of the file.  
 **length** - number of bytes to be written, or **0** for writing the content of a **string**.
 
-## file\_appendCSV (string name, string record)
+## file\_appendCSV (string name, string record, int field1, int field2)
 
-Opens a CSV file and appends the given CSV record to the end. If the first field of the record matches a first field in the file, the record is not appended, but replaces the original line in the file. In this way a CSV file can be updated with a new record. If the file does not exist, it is created.
+Opens a CSV file and appends the given CSV record to the end. If the fields **field1** up to **field2** of the record match the corresponding fields in the file, the record is not appended, but replaces the original line in the file. In this way a CSV file can be updated with a new record. If the file does not exist, it is created.
 
 ### Parameters:
 
 **name** - file name with path.  
-**record** - a line with comma separated fields to be appended or to replace a record in the file.
+**record** - a line with comma separated fields to be appended or to replace a record in the file.  
+**field1, field2** - range of fields to compare. 
 
 ## file\_sortCSV (string name, int field, int mode)
 
-Opens a CSV file and sorts its records by the numeric value in the given field. 
+Opens a CSV file and sorts its records, except for the header line, by the numeric value in the given field. 
 
 ### Parameters:
 
 **name** - file name with path.  
 **field** - number ot fhe field with the sort criteria.  
-**mode** -  **0** for ascending, **1** for descending sorting.  
+**mode** -  **0** ascending, **1** descending sorting..  
  
 
 ### Remarks:
