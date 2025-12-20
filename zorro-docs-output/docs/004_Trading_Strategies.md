@@ -31,7 +31,7 @@ In the chart, the height of a bar is equivalent to how often a certain price app
 
 ### Developing algo trading strategies
 
-There are plenty possibilities for algo trading strategies that really work. What you need to know:
+There are plenty - in fact, infinite - algorithms that work for trading strategies. You can find an overview of strategy development in the [Black Book](247_Links_Books.md). What you need to know:
 
 *   Some basic information about the financial markets that you want to trade.
 *   An idea or concept of exploiting a particular market inefficiency.
@@ -39,7 +39,7 @@ There are plenty possibilities for algo trading strategies that really work. Wha
 *   Read, write, and debug code: Learn [C](tutorial_var.md) and [R](Lecture%201.md).
 *   Dealing with [statistical effects](007_Training.md) that cause different outcomes of test and live trading.
 
-What never works is stacking indicators until the backtest turns positive. Indicators are possibly the result, but never the begin of strategy development. The general process is described here: [Build Better Strategies](http://www.financial-hacker.com/build-better-strategies-part-3-the-development-process/). For practical development, read the **Black Book** and /or take the **Algo Bootcamp** (see [links](links.md)). When you need help with strategy coding, contact our [development service](http://zorro-project.com/development.php).
+What never works is stacking indicators until the backtest turns positive. Indicators are possibly the result, but never the begin of strategy development. The general process is described in the Black Book and in a brief version under [Build Better Strategies](http://www.financial-hacker.com/build-better-strategies-part-3-the-development-process/). The new [Evaluation Shell](shell.md) helps you in the final stages of development. When you need help with strategy coding, contact our [development service](http://zorro-project.com/development.php).
 
 When you develop an algorithmic trading strategy, you use historical price data for testing and optimizing. When you trade it, prices are live. There is no guarantee that the past is repeating. The market and its inefficiencies undergo changes of any kind all the time. Therefore, even when you're using proven systems such as the [Z strategies](zsystems.md), you always deal with an element of uncertainty. The future is unknown. For not relying only on your luck, learn as much as you can, and develop and deploy as many different strategies as possible.
 

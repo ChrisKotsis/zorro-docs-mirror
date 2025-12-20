@@ -1,8 +1,8 @@
 # Zorro Documentation Images Report
 
 ## Summary
-- Total unique images: 130
-- Successfully downloaded: 130
+- Total unique images: 131
+- Successfully downloaded: 131
 
 ## Image List
 - zorro.png (https://zorro-project.com/manual/images/zorro.png)
@@ -17,13 +17,14 @@
 - training.png (https://zorro-project.com/manual/images/training.png)
 - optimize.png (https://zorro-project.com/manual/images/optimize.png)
 - contour.png (https://zorro-project.com/manual/images/contour.png)
+- arrow.gif (https://zorro-project.com/manual/images/arrow.gif)
+- RangerMatrix.png (https://zorro-project.com/manual/images/RangerMatrix.png)
 - trading.png (https://zorro-project.com/manual/images/trading.png)
 - zstatus.png (https://zorro-project.com/manual/images/zstatus.png)
 - chartviewer.png (https://zorro-project.com/manual/images/chartviewer.png)
 - chartdetail.png (https://zorro-project.com/manual/images/chartdetail.png)
 - debugging2.png (https://zorro-project.com/manual/images/debugging2.png)
 - deepnet4.png (https://zorro-project.com/manual/images/deepnet4.png)
-- arrow.gif (https://zorro-project.com/manual/images/arrow.gif)
 - z5perf102.png (https://zorro-project.com/manual/images/z5perf102.png)
 - z5perf112.png (https://zorro-project.com/manual/images/z5perf112.png)
 - vcpp1.png (https://zorro-project.com/manual/images/vcpp1.png)
@@ -137,4 +138,4 @@
 - bridge2.png (https://zorro-project.com/manual/images/bridge2.png)
 
 ## Last Updated
-2025-12-19T02:42:47.607Z
+2025-12-20T02:40:30.527Z
