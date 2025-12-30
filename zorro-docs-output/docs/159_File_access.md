@@ -66,7 +66,7 @@ Enumerate files in a directory. Returns the first file name (without directory p
 
 ## file\_content (string name): string (temporary)
 
-Returns a null-terminated temporary string with the content of the file, or **0** when the file was not found. The string keeps its content only until the next **file\_content** call. For multiple files to be read at the same time, allocate buffers and use **file\_read**.
+Returns a null-terminated temporary string with the content of the file, or **0** when the file was not found. The predefined **var rLength** is set to the length of the file. The string keeps its content only until the next **file\_content** call. For multiple files to be read at the same time, allocate buffers and use **file\_read**.
 
 ### Parameters:
 

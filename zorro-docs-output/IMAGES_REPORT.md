@@ -1,8 +1,8 @@
 # Zorro Documentation Images Report
 
 ## Summary
-- Total unique images: 131
-- Successfully downloaded: 131
+- Total unique images: 135
+- Successfully downloaded: 135
 
 ## Image List
 - zorro.png (https://zorro-project.com/manual/images/zorro.png)
@@ -18,7 +18,11 @@
 - optimize.png (https://zorro-project.com/manual/images/optimize.png)
 - contour.png (https://zorro-project.com/manual/images/contour.png)
 - arrow.gif (https://zorro-project.com/manual/images/arrow.gif)
+- shelldefault.png (https://zorro-project.com/manual/images/shelldefault.png)
 - RangerMatrix.png (https://zorro-project.com/manual/images/RangerMatrix.png)
+- RealityCheck_s1.png (https://zorro-project.com/manual/images/RealityCheck_s1.png)
+- shellvars0.png (https://zorro-project.com/manual/images/shellvars0.png)
+- shellvars1.png (https://zorro-project.com/manual/images/shellvars1.png)
 - trading.png (https://zorro-project.com/manual/images/trading.png)
 - zstatus.png (https://zorro-project.com/manual/images/zstatus.png)
 - chartviewer.png (https://zorro-project.com/manual/images/chartviewer.png)
@@ -138,4 +142,4 @@
 - bridge2.png (https://zorro-project.com/manual/images/bridge2.png)
 
 ## Last Updated
-2025-12-29T02:53:03.689Z
+2025-12-30T02:45:47.414Z

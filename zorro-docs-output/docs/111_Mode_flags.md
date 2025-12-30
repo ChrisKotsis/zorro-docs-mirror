@@ -46,7 +46,7 @@ Do not shift [dynamic series](091_series.md) and do not change their first eleme
 
 ## NOFACTORS
 
-Don't calculate **OptimalF** factors in test and training. Useful when OptimalF calculation takes a long time due to a large number of trades. For training script-generated factors with a user-defined algorithm, set both **FACTORS** and **NOFACTORS** flags and set **OptimalF**, **OptimalFLong**, **OptimalFShort** to a script calculated value in the **[FACCYCLE](013_Asset_Account_Lists.md)** training run (**if(is(FACCYCLE)) ...**). 
+Don't automatically calculate **OptimalF** factors in test and training. Useful when OptimalF calculation takes a long time due to a large number of trades. For training script-generated factors with a user-defined algorithm, set both **FACTORS** and **NOFACTORS** flags and set **OptimalF**, **OptimalFLong**, **OptimalFShort** to a script calculated value in the **[FACCYCLE](013_Asset_Account_Lists.md)** training run (**if(is(FACCYCLE)) ...**). 
 
 ## COMMONSTART
 
@@ -91,7 +91,7 @@ Causes historical data to be read at any script start. In \[Trade\] mode, data f
 
 ## FACTORS
 
-\[Train\] mode: generate [OptimalF](016_OptimalF_money_management.md) capital allocation factors and store them in **Data/\*.fac**. \[Test\] / \[Trade\] mode: load **OptimalF** factors for allocating capital. If this flag is not set, all **OptimalF** factors are **1**.  
+\[Train\] mode: generate [OptimalF](016_OptimalF_money_management.md) capital allocation factors and store them in **Data/\*.fac**. \[Test\] / \[Trade\] mode: load **OptimalF** factors for allocating capital. If this flag is not set, all **OptimalF** factors are **1**. This flag must be set before the first [asset](013_Asset_Account_Lists.md) call.  
 **OptimalF** factors are normally generated from the whole backtest period. For generating them individually per WFO cycle, use the **[ALLCYCLES](016_OptimalF_money_management.md)** training mode.
 
 ## RULES
