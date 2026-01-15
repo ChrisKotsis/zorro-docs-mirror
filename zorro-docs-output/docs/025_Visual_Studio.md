@@ -234,14 +234,13 @@ If you own Zorro S, you need not read this chapter, since Zorro S automatically 
 
 ![](../images/vcpp5.png)
 
-*   For writing another strategy DLL, you need not necessarily repeat the whole setup procedure. It's normally more convenient to just duplicate the project folder, and rename the source file and the project name in the **.vcxproj** file, which is a simple text file.  
-      
-    
 *   Mistakes - for instance, a wrong compiler setup - will cause [Error 062](errors.md) when starting the DLL. In that case check your project for a correct setup.  
       
 *   If a strategy DLL works on your PC, but produces [Error 062](errors.md) on another PC, the reason is most likely a missing module. Use a tool such as [Dependency Walker](http://www.dependencywalker.com/) for finding out which module is missing on that particular PC. If the DLL needs VC++ runtime libraries, install **vc\_redist.x86.exe** or **vc\_redist.x64.exe**.  
      
-*   You can run a **.cpp** script either directly from Zorro, or directly from the VC++ environment. While developing the script, VC++ is preferable, since it allows to immediately jump to lines with syntax errorr, or to debug the code line by line. If the script includes further code that you're working on, always use VC++. Zorro willl display syntax errors only in the main **.cpp** script, but not in included code.
+*   You can run a **.cpp** script either directly from Zorro, or directly from the VC++ environment by clicking on the **.vcxproj** file (Zorro S only). While developing the script, VC++ is preferable, since it allows to immediately jump to lines with syntax errorr, or to debug the code line by line. If the script includes further code that you're working on, always use VC++. Zorro willl display syntax errors only in the main **.cpp** script, but not in included code.  
+     
+*   When running a **.cpp** script that #includes other scripts, make sure to compile again after changing something in an included file. This is not automatically detected by Zorro, since it only compares the timestamp of the main script. Clicking on \[Edit\] always triggers recompilation.
 
 If you have a mix of lite-C and C++ scripts, we recommend to add a '+' to a **.cpp** script name for marking it in the scrollbox. Since **.c** overrides **.cpp**, don't use the same name for both variants. The example file **MyStrategy+.cpp** contains C++ versions of workshops and example scripts. Which one to compile can be selected with a #define at the begin. Check it out for learning the differences of writing a strategy in VC++ instead of lite-C. All known code differences are listed below. If you encounter any other incompatility with a function or variable, please report on the user forum or to Zorro support.
 

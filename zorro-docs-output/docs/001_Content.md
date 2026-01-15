@@ -28,6 +28,7 @@ This manual covers:
     *   [Deep Learning](deeplearning.md)
     *   [Price Curve Manipulation](197_Detrend_shuffling.md)
     *   [Virtual Hedging](019_Hedge_modes.md)
+    *   [Phantom Trading](018_TradeMode.md)
     *   [HFT Simulation](198_Fill_modes.md)
     *   [Oversampling](numsamplecycles.md)
     *   [Money Management](016_OptimalF_money_management.md)

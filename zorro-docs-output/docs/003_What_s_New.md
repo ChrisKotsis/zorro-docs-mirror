@@ -7,7 +7,7 @@ source: "https://zorro-project.com/manual/en/new.htm"
 
 # What's new?
 
-### Updating Zorro 2.62 / 2.64 to Zorro 2.70 - questions and answers
+### Updating Zorro 2.64 / 2.70 to Zorro 2.73 - questions and answers
 
 *   The data format in 64-bit mode has changed. Recompile your 64-bit C++ scripts.
 *   How do I update a live trading Zorro without interrupting? The procedure is described under [Trading](trading.htm#update).
@@ -15,19 +15,22 @@ source: "https://zorro-project.com/manual/en/new.htm"
 *   Why do I get a different backtest result? Most likely due to new price histories, new asset parameters, or other changes. You can easily find out by comparing both logs.
 *   Why can't I test the new Z system? You need recent historical data. Get it from the [Zorro download page](https://zorro-project.com/download.php).
 *   Why are my carefully edited settings gone? You probably edited them in a wrong place. Updates overwrite default settings. Keep individual settings in individual files, like **ZorroFix.ini**, **Z1.ini**, **Z2.ini**, etc. They won't be overwritten.
-*   The [Fill](198_Fill_modes.md) mode was changed. Limit entries and exits now fill at the current price. The previous limit fill behavior can be activated with the new Fill mode 2. It [TR\_FRC](018_TradeMode.md) is not set, fill prices are now rounded to the point size of the asset.
+*   The [Fill](198_Fill_modes.md) mode was changed. Limit entries and exits now fill at the current price plus slippage. The previous limit fill behavior can be activated with fill mode 2. It [TR\_FRC](018_TradeMode.md) is not set, fill prices are now rounded to the point size of the asset.
 *   The format of the parameter files (**\*.par**) was changed. Parameters and training results are now stored in CSV format.
 
-### Zorro 2.72.2 (beta version)
+### Zorro 2.73.2 (beta version)
 
 *   The new [Evaluation Shell](shell.md) automatizes most of the strategy development process.
-*   Pending trades are now also saved and resumed when restarting a session.
+*   Pending trades are now saved and resumed when restarting a session.
+*   For compatibility with other platforms, 1 point simulated slippage was automatically applied to orders.
 *   The [loop](109_loop.md) function now also accepts an array of algo names.
 *   The [LogFolder](020_Included_Scripts.md) for the log files and reports can now be set up in by script.
 *   The [64 bit FXCM plugin](230_FXCM.md) is now officially included (it was 'unoffially' already in 2.70). 
 *   New file functions: [file\_appendCSV](158_File_access.md), [file\_sortCSV](158_File_access.md).
 *   New string functions: [strvarCSV](str_.md), [strtextCSV](str_.md), [strfield](str_.md).
 *   The often used [MMI](033_W4a_Indicator_implementation.md) function was recoded and is now 10x faster.
+*   [NOFLAT](018_TradeMode.md) skips flat bars.
+*   The [phantom](102_phantom.md) function makes equity curve trading easier.
 
 The latest published beta version or the latest release candiate are available on the Zorro Download Page. [Zorro S features](restrictions.md) can be unlocked in beta versions with a valid Zorro license. [Z strategies](zsystems.md) are not included in beta versions. A list of fixed bugs can be found under [bugs](bugs.md).  
 
