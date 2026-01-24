@@ -9,7 +9,7 @@ source: "https://zorro-project.com/manual/en/tradestation.htm"
 
 TradeStation is a Florida-based broker that supports many instruments, including stocks, options, futures, and futures options. The TradeStation plugin was designed specifically to work with TradeStation's v3 Web API. You need [Zorro S](restrictions.md) for using the plugin.
 
-For using the bridge you need an API Key and API Secret. The steps:
+The TradeStation bridge was developed by Andrew Dolder. For using the bridge you need an API Key and API Secret. The steps:
 
 *   Email TradeStation support and specifically request v3 keys.
 *   Enter key and secret in the User and Password fields.

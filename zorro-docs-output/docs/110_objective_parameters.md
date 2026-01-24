@@ -60,7 +60,7 @@ var objective()
   return ((var)(NumWinLong+NumWinShort))/max(1,NumLossLong+NumLossShort);
 }
 ```
-  
+Alternatively, objective functions of different names can be assigned with the [event](164_call.md) function.  
 
 ## parameters(): int
 

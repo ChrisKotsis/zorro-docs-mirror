@@ -1,8 +1,8 @@
 # Zorro Documentation Images Report
 
 ## Summary
-- Total unique images: 135
-- Successfully downloaded: 135
+- Total unique images: 134
+- Successfully downloaded: 134
 
 ## Image List
 - zorro.png (https://zorro-project.com/manual/images/zorro.png)
@@ -131,7 +131,6 @@
 - Z8heat.png (https://zorro-project.com/manual/images/Z8heat.png)
 - z8msg.png (https://zorro-project.com/manual/images/z8msg.png)
 - z9perf.png (https://zorro-project.com/manual/images/z9perf.png)
-- z10perf.png (https://zorro-project.com/manual/images/z10perf.png)
 - z13perf.png (https://zorro-project.com/manual/images/z13perf.png)
 - z5zulu0.jpg (https://zorro-project.com/manual/images/z5zulu0.jpg)
 - tws.png (https://zorro-project.com/manual/images/tws.png)
@@ -142,4 +141,4 @@
 - bridge2.png (https://zorro-project.com/manual/images/bridge2.png)
 
 ## Last Updated
-2026-01-23T02:48:21.361Z
+2026-01-24T02:44:33.818Z

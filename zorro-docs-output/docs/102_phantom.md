@@ -7,15 +7,15 @@ source: "https://zorro-project.com/manual/en/phantom.htm"
 
 ## phantom (int Dir, int FastPeriod, int SlowPeriod) : int
 
-Indicator for 'equity curve trading'. Detects from the equity curve if the market has changed and trading with the current asset/algo combination is not advised. Can be used to switch from live trading to phantom trading by setting the [TR\_PHANTOM](018_TradeMode.md) flag.
+Indicator for 'equity curve trading'. Detects from the equity curve if the market is in an unprofitable state and trading with the current asset/algo combination is not advised. Can be used to switch from live trading to phantom trading by setting the [TR\_PHANTOM](018_TradeMode.md) flag.
 
 ### Parameters:
 
-<table border="0"><tbody><tr><td><strong>Dir</strong></td><td><strong>1</strong> for long trading, <strong>-1</strong> for short trading, <strong>0</strong> for both.</td></tr><tr><td><strong>TimeFrame</strong></td><td>The number of bars in the series to be compared, or <strong>0</strong> for using the length of the pattern. Determines the horizontal size of the pattern.</td></tr><tr><td><strong>Scale</strong></td><td>The vertical size of the pattern (f.i. <strong>10*PIP</strong> for detecting a 10 pips tall pattern)<strong></strong>. Use a negative scale for inverting the pattern.</td></tr><tr><td><strong>Pattern</strong></td><td>The pattern shape to be detected in the series, given by an array of positive values that starts with the oldest value and ends with <strong>0</strong> as an end mark.</td></tr></tbody></table>
+<table border="0"><tbody><tr><td><strong>Dir</strong></td><td><strong>1</strong> for long trading, <strong>-1</strong> for short trading, <strong>0</strong> for both.</td></tr><tr><td><strong>FastPeriod</strong></td><td>Lowpass period for the short-term component equity curve.</td></tr><tr><td><strong>SlowPeriod</strong></td><td>Lowpass period for the long-term component equity curve.</td></tr></tbody></table>
 
 ### Returns
 
-Similarity between **Data** and **Pattern** in percent, normally in the **20..80** range.
+**1** when the short-term component equity is falling and below its long-term curve, otherwise **0**.
 
 ### Remarks:
 
@@ -25,13 +25,8 @@ Similarity between **Data** and **Pattern** in percent, normally in the **20..80
 ### Example:
 
 ```c
-_//detect 10-pip 10-bar cup formations in the price curve_
-function run()
-{
-  vars Price = series(price());
-  static var cup\[10\] = { 6,3,2,1,1,1,2,3,6,0 };
-  plot("Cup Similarity",frechet(Price, 0, 10\*PIP, cup),NEW,RED);
-}
+if(phantom(0,5,50)) setf(TradeMode,TR\_PHANTOM);
+else resf(TradeMode,TR\_PHANTOM);
 ```
 
 ### See also:

@@ -72,8 +72,9 @@ User-supplied function that is triggered by the following GUI actions:
 \- mouse click on a button cell,  
 \- entering a number or editing a cell,  
 \- clicking the \[Result\] button (**Row** = **\-1**),  
-\- selecting a previously set action from the \[Action\] scrollbox (**Row = -2**).  
-\- selecting an asset with the \[Asset\] scrollbox (**Row** = **\-3**; asset name in [AssetBox](script.md)).  
+\- selecting a previously set action from the \[Action\] scrollbox (**Row = -2, Col =** action number),  
+\- selecting an asset with the \[Asset\] scrollbox (**Row** = **\-3**; asset name in [AssetBox](script.md)),  
+\- or moving one of the 3 user-defined sliders (**Row** = **\-4, Col =** slider number).  
 Dependent on the desired behavior of the button, the function can then change the cell color or content through **panelSet**, and/or save the panel content with **panelSave()**.
 
 ### Remarks:

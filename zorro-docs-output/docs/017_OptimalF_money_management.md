@@ -47,17 +47,22 @@ The first column identifies the component; it consists of the asset name and the
 
 As the factors are stored in a simple text file, they can be edited anytime with a text editor, even while live trading. Zorro detects if factors have been changed, and automatically reloads them. If the factors are evaluated in the strategy, as in some of the [Z strategies](zsystems.md), a component can be excluded from further trading by setting its factor to zero, or by placing a minus sign in front of it for making it negative.
 
-### Variables
+### Functions and variables
 
-When **OptimalF** factors have been generated, they can be accessed or modified with the following variables:
+When **OptimalF** factors have been generated and an asset and/or algo has been selected, its factors can be accessed or modified in backtest and trading with the following function and variables:
 
-## OptimalF
+## optimalf(string Asset, string Algo, int Direction): var
+
+Returns the **OptimalF** value of the given asset, algo, and trade direction (**1** = long, **\-1** = short, **0** = both).   
+ 
 
 ## OptimalFLong
 
 ## OptimalFShort
 
-**OptimalF** factors, combined for long/short and separately for long and short trades of the current strategy component that is selected with the [asset](013_Asset_Account_Lists.md) and [algo](095_algo.md) functions. For long-only systems, only **OptimalFLong** is relevant. The margin to be invested per trade can be calculated by multiplying the investment amount with **OptimalF**. If a component was unprofitable in the training run, its **OptimalF** factor is zero.
+## OptimalF
+
+**OptimalF** values for long, short, and both sorts of trades with the current asset/algo component, after selecting it with the [asset](013_Asset_Account_Lists.md) and [algo](095_algo.md) functions. For long-only systems, only **OptimalFLong** is relevant. The margin to be invested per trade can be calculated by multiplying the investment amount with **OptimalF**. If a component was unprofitable in the training run, its **OptimalF** factor is zero.
 
 ## OptimalFRatio
 

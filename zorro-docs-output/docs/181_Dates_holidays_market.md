@@ -66,7 +66,7 @@ Local market opening and closing time of the selected asset, in **hhmm** local t
 
 ## Holidays
 
-Pointer to an **int** array of holiday dates either in **yyyymmdd** or in **mmdd** 3- or 4-digit format, ending with 0. Default: **{ 101, 1225, 0 }**. Can be set to a 0-terminated array for defining local stock market holidays. The **yyyymmdd** format specifies a holiday only in a certain year, **mmdd** for all years.
+Pointer to an **int** array of holiday dates either in **yyyymmdd** or in **mmdd** 3- or 4-digit format, ending with 0. Default: **{ 101, 1225, 0 }**. Can be set to a 0-terminated array for defining local stock market holidays. The **yyyymmdd** format specifies a holiday only in a certain year, **mmdd** for all years. In the backtest, holidays are treated like weekends.
 
 ### Type:
 

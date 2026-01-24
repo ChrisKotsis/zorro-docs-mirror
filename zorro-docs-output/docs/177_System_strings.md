@@ -11,7 +11,7 @@ source: "https://zorro-project.com/manual/en/script.htm"
 
 ## RootName
 
-Name root for the exported parameters, rules, and factors (default = script name). Can be changed for sharing training data with other scripts. If [LogNumber](numtotalcycles.md) is nonzero, the logs are also saved under the **DataName**. The name must not contain spaces or special characters. 
+Name root for the exported parameters, rules, and factors (default = script name). Can be changed for sharing training data with other scripts. If [LogNumber](numtotalcycles.md) is nonzero, the logs are also saved under the **RootName**. The name must not contain spaces or special characters. 
 
 ## Algo
 
