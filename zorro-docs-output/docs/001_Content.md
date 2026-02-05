@@ -18,7 +18,7 @@ This manual covers:
     *   [Trading](004_Trading_Strategies.md)
     *   [Retraining](009_Retraining.md)
     *   [Debugging](011_Chart_Viewer_Debugger.md)
-    *   [Evaluation](shell.md)
+    *   [Evaluation](010_Evaluation_Shell.md)
     *   [Results](012_Performance_Report.md)  
          
 *   Zorro's main topics and features:
@@ -26,7 +26,7 @@ This manual covers:
     *   [Bars and Candles](005_Bars_and_Candles.md)
     *   [Technical Indicators](033_W4a_Indicator_implementation.md)
     *   [Futures, Options](096_contract.md) and [Combos](097_combo.md)
-    *   [Strategy Evaluation Shell](shell.md)
+    *   [Strategy Evaluation Shell](010_Evaluation_Shell.md)
     *   [Deep Learning](deeplearning.md)
     *   [Price Curve Manipulation](197_Detrend_shuffling.md)
     *   [Virtual Hedging](019_Hedge_modes.md)

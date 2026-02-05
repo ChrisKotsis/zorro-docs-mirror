@@ -21,7 +21,7 @@ source: "https://zorro-project.com/manual/en/new.htm"
 
 ### Zorro 3.01 (release candidate)
 
-*   The new [Evaluation Shell](shell.md) automatizes most of the strategy development process.
+*   The new [Evaluation Shell](010_Evaluation_Shell.md) automatizes most of the strategy development process.
 *   Pending trades are now saved and resumed when restarting a session.
 *   For compatibility with other platforms, 1 point simulated slippage was automatically applied to orders.
 *   The [loop](109_loop.md) function now also accepts an array of algo names.
@@ -45,7 +45,7 @@ If you want a new Zorro function, feature, or a new broker plugin, there are two
 
 ### Zorro 3.01 (January 2026)
 
-*   The new [Evaluation Shell](shell.md) automatizes most of the strategy development process.
+*   The new [Evaluation Shell](010_Evaluation_Shell.md) automatizes most of the strategy development process.
 *   Pending trades are now saved and resumed when restarting a session.
 *   For compatibility with other platforms, 1 point simulated slippage was automatically applied to orders.
 *   The [loop](109_loop.md) function now also accepts an array of algo names.

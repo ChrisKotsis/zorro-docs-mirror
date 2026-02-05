@@ -1,8 +1,8 @@
 # Zorro Documentation Images Report
 
 ## Summary
-- Total unique images: 134
-- Successfully downloaded: 134
+- Total unique images: 136
+- Successfully downloaded: 136
 
 ## Image List
 - zorro.png (https://zorro-project.com/manual/images/zorro.png)
@@ -17,14 +17,16 @@
 - training.png (https://zorro-project.com/manual/images/training.png)
 - optimize.png (https://zorro-project.com/manual/images/optimize.png)
 - contour.png (https://zorro-project.com/manual/images/contour.png)
-- arrow.gif (https://zorro-project.com/manual/images/arrow.gif)
-- shelldefault.png (https://zorro-project.com/manual/images/shelldefault.png)
-- RangerMatrix.png (https://zorro-project.com/manual/images/RangerMatrix.png)
-- RealityCheck_s1.png (https://zorro-project.com/manual/images/RealityCheck_s1.png)
-- shellvars0.png (https://zorro-project.com/manual/images/shellvars0.png)
-- shellvars1.png (https://zorro-project.com/manual/images/shellvars1.png)
 - trading.png (https://zorro-project.com/manual/images/trading.png)
 - zstatus.png (https://zorro-project.com/manual/images/zstatus.png)
+- arrow.gif (https://zorro-project.com/manual/images/arrow.gif)
+- shellvars1.png (https://zorro-project.com/manual/images/shellvars1.png)
+- shellmenu.png (https://zorro-project.com/manual/images/shellmenu.png)
+- shellsummary.png (https://zorro-project.com/manual/images/shellsummary.png)
+- RangerMatrix.png (https://zorro-project.com/manual/images/RangerMatrix.png)
+- RealityCheck_s1.png (https://zorro-project.com/manual/images/RealityCheck_s1.png)
+- shelldefault.png (https://zorro-project.com/manual/images/shelldefault.png)
+- shellvars0.png (https://zorro-project.com/manual/images/shellvars0.png)
 - chartviewer.png (https://zorro-project.com/manual/images/chartviewer.png)
 - chartdetail.png (https://zorro-project.com/manual/images/chartdetail.png)
 - debugging2.png (https://zorro-project.com/manual/images/debugging2.png)
@@ -141,4 +143,4 @@
 - bridge2.png (https://zorro-project.com/manual/images/bridge2.png)
 
 ## Last Updated
-2026-02-04T03:05:31.334Z
+2026-02-05T03:07:18.369Z
