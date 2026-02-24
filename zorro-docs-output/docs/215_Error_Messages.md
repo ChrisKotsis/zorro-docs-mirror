@@ -173,13 +173,12 @@ For suppressing a non-critical runtime error or warning, call **ignore(ErrorNumb
 > Historical price data was insufficient for covering the test period or the [LookBack](181_LookBack_UnstablePeriod.md) period. Possible reasons:
 > 
 > *   An invalid symbol was selected. Check your asset list.
-> *   Historical price data was missing, had gaps, or had insufficient resolution, like EOD data for 1-hour bars. Fix the data.
+> *   Historical price data was missing, had large gaps, or had insufficient resolution, like EOD data for 1-hour bars.
 > *   The broker server delivered insufficient history (especially with MT4). Download price data from other sources, and/or use [PRELOAD](018_TradeMode.md).
 > *   A wrong test or lookback period was set up in the script (see [asset](asset.md)). Check dates and periods in the script.
-> *   The historical data had large gaps or overlapping periods, possibly due to broken downloads. Delete it and download it again,
 > *   Bars are skipped due to weekend, holiday, or outside market hours. Check if the asset is traded around the clock or at weekends (such as cryptocurrencies), and set [BarMode](200_BarMode.md) accordingly.
-> *   A too high [MinutesPerDay](181_LookBack_UnstablePeriod.md) value for one of the used assets.
-> *   A a user-defined [bar](005_Bars_and_Candles.md) type is much larger than the given [BarPeriod](177_BarPeriod_TimeFrame.md). Decrease [BarPeriod](177_BarPeriod_TimeFrame.md) or increase [MinutesPerDay](181_LookBack_UnstablePeriod.md) for allocating more bars.
+> *   An asset was traded only a few hours per day. Adapt the [MinutesPerDay](181_LookBack_UnstablePeriod.md) value.
+> *   A a user-defined [bar](005_Bars_and_Candles.md) type exceeds the given [BarPeriod](177_BarPeriod_TimeFrame.md). Decrease [BarPeriod](177_BarPeriod_TimeFrame.md) or increase [MinutesPerDay](181_LookBack_UnstablePeriod.md) for allocating more bars.
 > 
 > Make sure that used assets are selected in the first run, and that historical data - when needed - is sufficient for the backtest plus lookback period and is of the same type for all assets. Don't use a mix of .t1, .t2, and .t6 data, or a part of the data split into years and another part not. You can download price data from online sources with the Download script. Frequently used data is also available on the Zorro Download page. If price data for a certain year is not available, create a .t6 file of 0 bytes size with the name of the asset and year (f.i. **SPX500\_2017.t6**). Zorro will then skip that period in the simulation and not display the error message.
 

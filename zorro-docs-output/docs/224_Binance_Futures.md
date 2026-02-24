@@ -65,7 +65,9 @@ There are 2 plugin specific commands:
 *   **Maximum request rate.** For limiting the request rate, use **SET\_DELAY** for delaying client account and position requests. Don't use **MaxRequests**, since it would also throttle price requests that however have no limit due to the websocket implementation.  
       
 *   **Minimum request rate.** The Binance server was reported to time out when no price requests are received for a certain time. On scripts with long bar periods, make sure to set [TickTime](187_TickTime_MaxRequests.md) so that a price request is sent every 5..10 seconds.  
-      
+     
+*   **Balance and Equity**. The returned balance is the current position of the account currency (default: **BTC**). The equity is the sum of all currency positions converted to the account currency.  
+       
 *   **Asset parameters**. Spread, price, PIP, and LotAmount are available from the API. All other data must be manually entered as described under [asset list](013_Asset_Account_Lists.md). For assets with variable leverage, set up [Leverage](192_PIP_PIPCost_Leverage.md) and [MarginCost](192_PIP_PIPCost_Leverage.md) by script before entering a trade. Example USDT asset list entries, assuming 100:1 leverage and 0.25% commission:
     ```c
     Name,Price,Spread,RollLong,RollShort,PIP,PIPCost,Margin,Market,LotAmount,Commission,Symbol

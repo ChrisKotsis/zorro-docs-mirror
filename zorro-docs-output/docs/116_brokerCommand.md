@@ -134,6 +134,7 @@ The [spread](191_Spread_Commission.md) is normally only updated when ask/bid quo
 1** - no data;  
 **2** - spread;  
 **3** - WAP. |
+| **SET\_RESTART** | 0000..2359 |   | Set a restart time of the broker plugin. The API is released and restarted at the given HHMM time. |
 | **GET\_UUID** | String | ✔ | Copies the UUID of the last opened trade to the given string. |
 | **SET\_UUID** | String | ✔ | Sets the UUID for the next command from the given string. |
 | **DO\_EXERCISE** | Lots | ✔ | Exercise the given number of contracts of the option type set with **SET\_SYMBOL**. |

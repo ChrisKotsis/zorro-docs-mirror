@@ -30,13 +30,13 @@ The evaluation shell solves that task with a semi-automated process.
 
 <table align="center" border="0"><tbody><tr><td bgcolor="#0000FF" class="auto-style3" valign="middle"><div align="center" class="auto-style3"><strong><br><br>Creeate<br>&nbsp;Jobs</strong></div></td><td><strong><br><br><img class="auto-style2" height="36" src="../images/arrow.gif" width="30"></strong></td><td align="center" bgcolor="#0000FF" class="Stil2"><strong><br><br class="auto-style3">&nbsp;</strong><span class="auto-style3"><strong>Generate<br>&nbsp;Summary</strong></span><strong><br class="auto-style3"></strong></td><td class="Stil4"><strong><br class="auto-style3"><br class="auto-style3"><img class="auto-style3" height="36" src="../images/arrow.gif" width="30"><br><br></strong></td><td align="center" bgcolor="#0000FF" class="Stil4"><strong><br class="auto-style3"><br class="auto-style3"><span class="auto-style3">&nbsp;Cluster</span><br class="auto-style3"><span class="auto-style3">&nbsp;Analysis</span></strong></td><td class="Stil4"><strong><br class="auto-style3"><br class="auto-style3"><img class="auto-style3" height="36" src="../images/arrow.gif" width="30"><br><br></strong></td><td align="center" bgcolor="#0000FF" class="Stil4"><strong><br class="auto-style3"><span class="auto-style3"><br>&nbsp;Correlation</span><br class="auto-style3"><span class="auto-style3">&nbsp;Analysis</span></strong></td><td class="Stil4"><strong><br class="auto-style3"><br class="auto-style3"><img class="auto-style3" height="36" src="../images/arrow.gif" width="30"><br><br></strong></td><td align="center" bgcolor="#0000FF" class="Stil4"><strong><br class="auto-style3"><span class="auto-style3"><br>&nbsp;Montecarlo</span><br class="auto-style3"><span class="auto-style3">&nbsp;Analysis</span></strong></td><td class="Stil4"><strong><br class="auto-style3"><br class="auto-style3"><img class="auto-style3" height="36" src="../images/arrow.gif" width="30"><br><br></strong></td><td align="center" bgcolor="#0000FF" class="Stil4"><strong><br class="auto-style3"><span class="auto-style3"><br>&nbsp;Final</span><br class="auto-style3"><span class="auto-style3">&nbsp;Portfolio</span></strong></td></tr></tbody></table>
 
-The first step is generating sets of parameter settings, named jobs. Any job is a variant of the strategy that you want to test and possibly include in the final portfolio. You can have parameters that select betwen different market detection algorithms, and others that select between different lowpass filters. The parameters are edited in the variables panel, then saved with a mouse click as a job. Instead of entering values in the panel, you can also edit the jobs directly with a spreadsheet program or a text editor.
+The first step is saving several sets of different parameter settings, named jobs. Any job is a variant of the strategy that you want to test and possibly include in the final portfolio. You can have parameters that select betwen different market detection algorithms, and others that select between different lowpass filters. The parameters are edited in the variables panel, then saved with a mouse click as a job. Since a job is just a CSV file with parameter values and ranges, you can also edit or create them directly with a spreadsheet program or a text editor.
 
-The next step is an automated process that runs through all jobs, trains and tests any of them with different asset, algo, and time frame combinations, and stores their results in a summary. The summary is a CSV list with the main performance parameters of all jobs. It is sorted by performance: The best performing jobs are at the top. So you can see at a glance which parameter combinations work with which assets and time frames, and which are not worth to examine further. You can repeat this step with different global settings, such as bar period or optimization method, and generate multiple summaries in this way. 
+The next step is an automated process that runs through all jobs, trains and tests any of them with any asset, algo, and timeframe used by the strategy, and stores their results in a summary. The summary is a CSV list of all jobs with their main performance metrics. It is sorted by performance, so the best performing jobs are at the top. So you can see at a glance which parameter combinations work with which assets and time frames, and which are not worth to examine further. You can repeat this step with different global settings, such as bar period or optimization method, and generate multiple summaries in this way. 
 
-The next step in the process is cluster analysis. Every job in a selected summary is optimized multiple times with different [WFO](numwfocycles.md) settings. These settings are taken from - you guessed it - a separate CSV file that may contain a regular WFO matrix, a list of irregular cycles/datasplit combinations, or both. For reducing the process time, only profitable jobs with rising equity curves - determined by a nonzero **R2 coefficent** - get a cluster analysis. You can also further exclude jobs by removing or outcommenting them in the summary.
+The next step in the process is cluster analysis. Every profitable job in a selected summary is automacially optimized multiple times with different [WFO](numwfocycles.md) settings. These settings are taken from - you guessed it - a separate CSV file that may contain a regular WFO matrix, a list of irregular cycles/datasplit combinations, or both. For reducing the process time, only jobs with rising equity curves - determined by a nonzero **R2 coefficent** - get a cluster analysis. You can also further exclude jobs by removing or outcommenting them in the summary.
 
-After this process, you likely ended up with a couple survivors in the top of the summary. The surviving jobs have all a positive return, a steady rising equity curve, shallow drawdowns, and robust parameter ranges since they passed the cluster analysis. But not all of them are suited for the final portfolio. The purpose of a strategy portfolio is diversifiction, but this would not work with a set of variants that are all tightly correlated and have their drawdowns all at the same time. You want a balanced portfolio with uncorrelated algorithms. Automatically reducing the portfolio to the combinations with the smallest correlation is planned for a future shell version, but at the moment it involves a manual selection. Check the equity curves and keep only the best of all variants with similar curves or the same assets, algos, and time frames. They can now be combined with a mouse click to the final balanced portfolio.
+After this process, you likely ended up with a couple survivors in the top of the summary. The surviving jobs have all a positive return, a steady rising equity curve, shallow drawdowns, and robust parameter ranges since they passed the cluster analysis. But not all of them are suited for the final portfolio. The purpose of a strategy portfolio is diversifiction, but this would not work with a set of variants that are all tightly correlated and have their drawdowns all at the same time. You want a balanced portfolio with uncorrelated algorithms. Automatically reducing the portfolio to the combinations with the smallest correlation is planned for a future shell version, but at the moment it involves a manual selection. Check the individual equity curves of the best jobs, and throw out variants with too-similar curves. The remaining jobs are now be combined with a mouse click to the final balanced portfolio.
 
 But you're not finished yet. Any selection process generates selection bias. Your perfect portfolio will likely produce a great backtest, but will it perform equally well in live trading? To find out, run a Montecarlo analysis. This is the most important test of all, since it can determine whether your strategy exploits a real market inefficiency. If the Montecarlo analysis fails with the final portfolio, it will likely also fail with any other parameter combination, so you need to run it only at the end. If your system passes Montecarlo with a p-value below 5%, you can be relatively confident that the system will return good and steady profit in live trading. Otherwise, back to the drawing board.  
 
@@ -156,7 +156,7 @@ WFO,OOS%
 2, 20
 2, 25
 ```
-This will produce a heatmap as below. The X axis is the number of WFO cycles, the y axis is the OOS period in percent. The numbers in the fields are the resulting strategy performance by **\_Criteria**.
+This will produce a heatmap as below. The X axis is the number of WFO cycles, the Y axis is the OOS period in percent. The numbers in the fields are the resulting strategy performance by **\_Criteria**.
 
 ![](../images/RangerMatrix.png)
 
@@ -171,12 +171,26 @@ Montecarlo Analysis, aka 'Reality Check', is normally only applied to the final 
 
 ![](../images/MRC_placebo.png)
 
-Another one from a real stragegy that generated less performance in the walk-forward analysis, but exploits a real market inefficiency:
+Another Montecarlo histogram from a real stragegy that generated less walk-forward performance than the 'placebo system', but a lot more performance in live trading since it exploits a real market inefficiency:
 
 ![](../images/RealityCheck_s1.png)
 
 More about cluster analysis and Montecarlo analysis can be found on [financial-hacker.com/why-90-of-backtests-fail](https://financial-hacker.com/why-90-of-backtests-fail).  
-   
+ 
+
+### Final portfoio
+
+The goal of evaluation is creating a balanced portfolio from optimal components. Create Algos from Summary will generate this portfolio from all job variants with at least 75% CA and 1.25 profit factor, and store it in **"\*\_algo.bin"** in the **Data** folder. This portfolio is then loaded at start, and further test or training operations are applied to the whole portfolio unless it is reset or something else is selected. The algo/asset/timeframe components are listed at start, like this:
+
+```c
+Algo TRND\_2 (EUR/USD, 60M)
+Algo TRND\_5 (USD/JPY, 60M)
+Algo CNTR\_7 (USD/JPY, 240M)
+Algo CNTR\_8 (EUR/USD, 240M)
+Algo CNTR\_9 (USD/JPY, 240M)
+Algo CNTR\_10 (USD/JPY, 240M)
+```
+The numbers refer to the records in the summary.
 
 ### Very concise tutorial
 
@@ -195,12 +209,12 @@ The following tutorial uses [workshop 6](tutorial_kelly.md) as an example. You c
 *   After a lengthy process, the summary appears with the **CA%** column of the best jobs populated,  
      
 *   Next, portfolio creation. Click \[Train\] and select Create Algos from Summary.
-*   Double click on **Job\\Workshop6c\_Summary.csv.** You'll see a list of algo variants from the top of the summary.
-*   Click \[Start\] to train. The perfomance report will pop up at the end.  
+*   Double click on **Job\\Workshop6c\_Summary.csv.** You'll see a list of select algo variants that build the final system.
+*   Click \[Start\] to train. The perfomance report of the final system will pop up at the end.  
      
-*   Finally, the Montecarlo Reality Check. Click \[Train\]. The algos are automatically loaded,
+*   Finally, the Montecarlo Reality Check. Click \[Train\]. The system with its algos is automatically loaded.
 *   From the \[Action\] scrollbox, select Run MonteCarlo Analysis.
-*   At the end of the process you'll get the **p-value** and a histogram of the system.  
+*   At the end of the process you'll get the **p-value** and a histogram of the final system.  
      
 *   If according to the p-value the system is not worth trading, come up with a better system.
 *   Otherwise click \[Train\]. It must be trained again after the montecarlo process.

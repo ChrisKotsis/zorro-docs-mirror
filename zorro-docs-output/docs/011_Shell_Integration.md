@@ -76,10 +76,6 @@ This encapsulates the variables in a [C struct](047_Structs.md) named **V**. Thu
 Stop = \_optimize(V.StopDist) \* ATR(V.ATRPeriod);
 ```
 
-The startup panel will now look like this (**Workshop6b**):
-
-![](../images/shellvars0.png)
-
 The added script variables appear at the end with a blue background. For illustrating the process, we have added two new variables to workshop 6 for selecting between two market regime detectors (**Hurst** and **MMI**) and two filters (**Lowpass** and **Butterworth**). The variable names and the comments matter. Observe the following rules:
 
 *   If the variable belongs exclusively to a certain algo, let its name begin with the algo name (f.i. **TRND\_Mode**). Otherwise it is assumed that the variable is common for all algos.
@@ -88,7 +84,13 @@ The added script variables appear at the end with a blue background. For illustr
 *   If the variable is to be optimized, enter the **step width** following a comma after the range. If the step width is **0**, the variable is not optimized, even if it appears in an **\_optimize** call in the script. In this way, different jobs can optimize different variables.
 *   After the default value or range, enter a semicolon **';'** and then a short description of the variable.
 
-The Action menu allows now to save and load jobs, browse among jobs, and rearrange the summary. Experiment with different variable settings and save them to the **Jobs** folder (or any other folder). Load all of them with Load Multiple Jobs. Four example jobs from workshop 6 are included, but you normally have a lot more jobs for thorougly testing a strategy, When you click \[Start\] after loading one or multiple jobs, they are all trained. At the end of the process, a bell will ring, and the Summary report will open in the editor. If a summary entry of a particular job already existed in the summary, it is updated with the new results. The jobs with the best performances are at the top of the summary.  
+The startup panel will now look like this (**Workshop6b**):
+
+![](../images/shellvars0.png)
+
+The Action menu allows now to save and load jobs, browse among jobs, and rearrange the [summary report](010_Evaluation_Shell.md). Experiment with different variable settings and save them to the **Jobs** folder (or any other folder). Load all of them with Load Multiple Jobs. Four example jobs from workshop 6 are included, but you normally have a lot more jobs for thorougly testing a strategy,
+
+When you click \[Start\] after loading one or multiple jobs, they are all trained. At the end of the process, a bell will ring, and the summary report will open in the editor. If an entry of a particular job already existed in the summary, it is updated with the new results. The jobs with the best performances are sorted at the top of the summary.  
  
 
 ### Step 3: Creating multiple variants

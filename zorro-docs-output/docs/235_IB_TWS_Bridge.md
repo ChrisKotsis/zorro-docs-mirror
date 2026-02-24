@@ -97,8 +97,7 @@ Any asset you want to trade must be represented by a line in the [asset list](01
     
 *   Options have symbols in the format Ticker-OPT-Expiry-Strike-Put/Call-Exchange, f.i. **AAPL-OPT-20191218-1350.0-C-GLOBEX**. Futures have symbol names in the format Ticker-FUT/FUTX-Expiry-TradingClass-Exchange(-Currency), f.i. **SPY-FUT-20191218-SPY1C-GLOBEX**. Alternatively to the expiry date, a contract month symbol can be used, f.i. **ESH9** for the ES 2019 March contract.  If the trading class of a future is not required, f.i. for **ES**, use the ticker name instead: **ES-FUT-20200319-ES-GLOBEX**. Options on futures have symbol names in the format Ticker-FOP-Expiry-Strike-Put/Call-TradingClass-Exchange, f.i. **ZS-FOP-20191218-900.0-C-OSD-ECBOT**. If the currency is ambiguous or is different to USD, append it at the end, like **DAX-FUTX-20171217-FDAX-DTB-EUR**. The symbols are automatically generated when calling the [contract](096_contract.md) function.  
      
-*   Two special symbol types are supported by the IB bridge. The type **STKCFD** trades as a CFD, but gets the price quotes and historical prices of the underlying stock. This is useful for stock CFDs (f.i. **AAPL-STKCFD**) which can be traded, but get no price quotes from IB. The type **FUTX** can be used for downloading historical data of expired futures contracts.  
-    
+*   Some special symbol types are supported by the IB bridge. The type **STKCFD** trades as a CFD, but gets the price quotes and historical prices of the underlying stock. This is useful for stock CFDs (f.i. **AAPL-STKCFD**) which can be traded, but get no price quotes from IB. The type **FUTX** can be used for downloading historical data of expired futures contracts. The type **CONTFUT** loads historical data of continuous futures contracts.
 
 A example file **AssetsIB.csv** with currencies, CFDs, and stocks is included; we do however not guarantee the accuracy and correctness, so use it at your own risk.
 
@@ -134,6 +133,7 @@ The IB bridge supports the [brokerCommand](113_brokerCommand.md) function with t
 *   **SET\_ORDERTEXT**    (**"ABC/DEF"** for order type **ABC** and Time-In-Force **DEF**)
 *   **SET\_ORDERGROUP** (for OCA orders; have "MID" in the group name for mid price trigger)
 *   **SET\_COMBO\_LEGS**
+*   **SET\_RESTART**
 *   **GET\_PRICE**
 *   **GET\_VOLUME**
 *   **GET\_TRADES**
@@ -163,6 +163,8 @@ The IB bridge supports the [brokerCommand](113_brokerCommand.md) function with t
       Orders on advisor accounts are not (yet) supported by the IB plugin. Contact us if you require an implementation.  
     
 *   **Market hours.** Outside market hours - normally 9:30 .. 15:45 EST for US-traded assets - price quotes are not always available, so you might get a **"unavailable at this time"** warning. Therefore it is recommended to begin a session when the market is open. If [PRELOAD](018_TradeMode.md) is set and the API does not respond to a price request, Zorro will attempt to retrieve the last known historical price. This is indicated by a **"frozen price"** message. Orders executed outside market hours can have higher transaction costs, therefore trading outside market hours should be avoided.  
+    
+*   **Daily restart.** The TWS and the Gateway go down once per day at a given time. To automatically re-login, use the **SET\_RESTART** broker command.  
       
 *   **Asset parameters.** Except for price and bid/ask spread, no asset parameters are available through the IB API. Leverage, commission, pip cost, and lot size of traded assets must be set up manually, either by script or in the [asset list](013_Asset_Account_Lists.md). Typical maintenance leverage on a RegT account is 33 for most Forex pairs, 2 for stocks and ETFs, and 20 for CFDs. The parameters need not be 100% accurate, but should not be too far off in the interest of realistic backtests. You can find examples (with no guarantee of accuracy and correctness) of major currencies, CFDs, and stocks in the included file **AssetsIB.csv**.   
      

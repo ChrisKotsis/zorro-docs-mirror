@@ -59,7 +59,7 @@ No guarantee of completeness or correctness! The lists below can be used as exam
 
 **AssetsFix.csv** - The default asset list when no different list is specified in the script; determines the 15 assets initially available in the scrollbox. Based on an Oanda™ 100:1 USD account with lot size 1000.
 
-**AssetsForex.csv, AssetsForexEUR.csv** - 35 currency pairs, including all pairs of the 7 main currencies EUR, USD, AUD, GBP, CHF, NZD, CAD. For trading with a multitude of currencies. Based on a typical Forex account with 100:1 leverage (**AssetForex**) or 30:1 leverage (**AssetsForexEUR**). Commission is, as usual, included in the spread.
+**AssetsForex.csv, AssetsForexE.csv** - 35 currency pairs, including all pairs of the 7 main currencies EUR, USD, AUD, GBP, CHF, NZD, CAD. For trading with a multitude of currencies. Based on a typical Forex account with 100:1 leverage (**AssetForex**) or 30:1 leverage (**AssetsForexE**). Commission is, as usual, included in the spread.
 
 **AssetsFUT.csv** - 20 frequently used futures contracts of currencies, commodities, and indexes. Use the [contractSetSymbol](096_contract.md) function to adapt the symbols to the desired expiration date.
 

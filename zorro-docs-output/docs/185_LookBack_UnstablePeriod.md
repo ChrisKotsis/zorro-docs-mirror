@@ -29,7 +29,7 @@ Maximum number of trades and [series](091_series.md) per bar, or **0** (default)
 
 ## MinutesPerDay
 
-Minimum daily trading time of the least traded asset in minutes (default = **360**, i.e. 60 minutes \* 6 hours). Internally used for determining the maximum lookback time. Set this to a lower value when [Error 047](errors.md) indicates that the lookback period gets not enough historical bars at trading start. This can be the case when an asset is only traded a few hours per day, or when you use a [bar](005_Bars_and_Candles.md) function that produces only a few bars per day.
+Average daily trading time of the least traded asset in minutes (default = **1000** for daily bars, **360** otherwise). Internally used for determining the size of historical data to be loaded for covering the lookback period. Set this to a higher value for reducing the start time and the needed history when assets are traded around the clock on multiple exchanges. Set this to a lower value when [Error 047](errors.md) indicates that the lookback period gets not enough historical bars at trading start. This can be the case when an asset is only traded a few hours per day, or when you use a [bar](005_Bars_and_Candles.md) function that produces only a few bars per day.
 
 ### Type:
 

@@ -10,30 +10,14 @@ source: "https://zorro-project.com/manual/en/new.htm"
 ### Updating Zorro 2.70 to Zorro 3.01 - questions and answers
 
 *   The data format in **64-bit mode** has changed. Recompile 64-bit scripts.
-*   How do I **update a live trading Zorro** without interrupting? The procedure is described under [Trading](trading.htm#update).
+*   How do I **update a live trading Zorro**? The procedure is described under [Trading](trading.htm#update). If assets or algos were changed, continue the old version at zero volume so that no new trades are opened. Wail until all old trades are closed, then start trading with the new version.
 *   Why do I get **error messages** when the script previously compiled fine? Most likely due to improved error detection, a name conflict with a new keyword, or a deprecated variable or function. Deprecated keywords are defined in **legacy.h**, which can be included for still using them.
-*   Why do I get a **different backtest result**? Most likely due to new price histories, new asset parameters, or other changes. You can easily find out by comparing both logs.
+*   Why do I get a **different backtest result**? This is normal due to new price histories or new asset parameters. You can determine the exact reason by comparing both logs.
 *   Why can't I **test the new Z system**? You need recent historical data. Get it from the [Zorro download page](https://zorro-project.com/download.php).
-*   Why are my carefully edited **settings** gone? You probably edited the default settings, which are overwritten by any update. Keep individual settings in individual files, like **ZorroFix.ini**, **Z1+.ini**, **Z2+.ini**, etc. They won't be overwritten.
+*   Why are my **settings** gone? You probably edited the default settings, which are overwritten by any update. Keep individual settings in individual files, like **ZorroFix.ini**, **Z1+.ini**, **Z2+.ini**, etc. They won't be overwritten.
 *   The [Fill](198_Fill_modes.md) mode was changed. Limit entries and exits now fill at the current price plus slippage. The previous limit fill behavior can be activated with fill mode 2. It [TR\_FRC](018_TradeMode.md) is not set, fill prices are now rounded to the point size of the asset.
 *   The format of the parameter files (**\*.par**) was changed. Parameters and training results are now stored in CSV format.
-*   The **Z1**, **Z2**, and **Z12** systems have been replaced by **Z1+**, **Z2+**, and **Z12+**. You can continue live trading with the old versions, but it is recommended to switch to the new versions.
-
-### Zorro 3.01 (release candidate)
-
-*   The new [Evaluation Shell](010_Evaluation_Shell.md) automatizes most of the strategy development process.
-*   Pending trades are now saved and resumed when restarting a session.
-*   For compatibility with other platforms, 1 point simulated slippage was automatically applied to orders.
-*   The [loop](109_loop.md) function now also accepts an array of algo names.
-*   The [LogFolder](020_Included_Scripts.md) for the log files and reports can now be set up in by script.
-*   The [64 bit FXCM plugin](230_FXCM.md) is now officially included (it was 'unoffially' already in 2.70). 
-*   New file functions: [file\_appendCSV](158_File_access.md), [file\_sortCSV](158_File_access.md).
-*   New string functions: [strvarCSV](str_.md), [strtextCSV](str_.md), [strfield](str_.md).
-*   The often used [MMI](033_W4a_Indicator_implementation.md) function was recoded and is now 10x faster.
-*   [NOFLAT](018_TradeMode.md) skips flat bars.
-*   The [phantom](102_phantom.md) function makes equity curve trading easier.
-*   Moving a slider now triggers the [click](142_panel.md) function.
-*   The [event](164_call.md) function allows re-assigning user-supplied functions to script events.
+*   The **Z1**, **Z2**, and **Z12** systems have been replaced by **Z1+**, **Z2+**, and **Z12+**, and **Z6+** has been modifed.
 
 Beta versions or release candiates are available on the [Zorro Download Page](https://zorro-project.com/download.php). [Zorro S features](restrictions.md) can be unlocked in beta versions with a valid Zorro license. [Z strategies](zsystems.md) are not included in beta versions. A list of fixed bugs can be found under [bugs](bugs.md).  
 
@@ -43,7 +27,7 @@ If you want a new Zorro function, feature, or a new broker plugin, there are two
 
 # Zorro Release History
 
-### Zorro 3.01 (January 2026)
+### Zorro 3.01 (February 2026)
 
 *   The new [Evaluation Shell](010_Evaluation_Shell.md) automatizes most of the strategy development process.
 *   Pending trades are now saved and resumed when restarting a session.
@@ -58,6 +42,7 @@ If you want a new Zorro function, feature, or a new broker plugin, there are two
 *   The [phantom](102_phantom.md) function makes equity curve trading easier.
 *   Moving a slider now triggers the [click](142_panel.md) function.
 *   The [event](164_call.md) function allows re-assigning user-supplied functions to script events.
+*   The IB plugin now supports the [SET\_RESTART](113_brokerCommand.md) command for overcoming the daily disconnection.
 
 ### Zorro 2.70 (September 2025)
 

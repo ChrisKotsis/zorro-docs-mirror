@@ -53,14 +53,26 @@ Enters an open, pending, or closed trade from a **TRADE** struct. Inserts the tr
 *   When converting scripts from other trading software, keep in mind that other trading programs use sometimes different names for trade functions. For instance, TradeStation® uses "Sell Short" for entering a short position and "Buy To Cover" for exiting a short position.
 *   In \[Trade\] mode, all open trades are stored in a **.trd** file in the **Data** folder. The stored trades are automatically continued when the strategy is started again, for instance after a computer crash.
 
-### Example 1: Simple SMA crossing
+### Example: Send a limit order at 5 pip distance to the broker
 
 ```c
 function run()
 {
-  vars Price = series(priceClose());
-  vars SMA100 = series(SMA(Price,100));
-  vars SMA30 = series(SMA(Price,30));
+  BarPeriod = 1;
+  asset("EUR/USD");
+  OrderLimit = priceC() - 5\*PIP;
+  enterLong();
+  quit("Order sent!");  
+}
+```
+
+### Example: Strategy that trades on SMA crossing
+
+```c
+function run()
+{
+  vars SMA100 = series(SMA(seriesC(),100));
+  vars SMA30 = series(SMA(seriesC(),30));
  
   if(crossOver(SMA30,SMA100))
     enterLong();
@@ -69,7 +81,7 @@ function run()
 }
 ```
 
-### Example 2: Grid trading script
+### Example: Grid trading script
 
 ```c
 _// helper function for finding trades at a grid line_
@@ -102,7 +114,7 @@ _// place pending trades at 5 grid lines above and below the current price_
 }
 ```
 
-### Example 3: Using a trade management function
+### Example: Using a trade management function
 
 ```c
 _// TMF that adjusts the stop in a special way_ 
