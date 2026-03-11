@@ -130,8 +130,8 @@ If a machine learning strategy also requires training of parameters, several [tr
     ```c
     NumTrainCycles = 2;
     if(TrainCycle == 0) set(RULES,PARAMETERS); _// Test or Trade mode_
-    else if(TrainCycle == 2) set(PARAMETERS);
     else if(TrainCycle == 1) set(RULES);
+    else if(TrainCycle == 2) set(PARAMETERS);
     ```
     
 *   Rules depend on parameters. An example is a machine learning system with a neural network, where the parameter is the number of neurons in the central layer. In \[Train\] mode set both [RULES](018_TradeMode.md) and [PARAMETERS](018_TradeMode.md) flags. [NumTrainCycles](016_OptimalF_money_management.md) needs not be set. The training run will now automatically repeat through many cycles. For every parameter step a new set of rules will be generated. At the end of the process, the rules with the most robust performance are stored in the **Data** folder. In \[Test\] and \[Trade\] mode set the **RULES** flag only, not **PARAMETERS**, as the parameter only affects rule generation and has no further relevance for the script. Example:

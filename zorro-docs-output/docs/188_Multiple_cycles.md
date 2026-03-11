@@ -27,6 +27,7 @@ If nonzero, any cycle will generate individual log files. When above zero, the g
 
 *   If [BarOffset](177_BarPeriod_TimeFrame.md) was changed or the [PRELOAD](018_TradeMode.md) flag was set, prices are loaded again at the begin of every cycle. This causes a delay, but allows to run cycles with different bar period or bar mode settings, modified price curves, shuffled prices, or different assets. Otherwise prices are only loaded on the first cycle.
 *   For training on any cycle, set the [TESTNOW](018_TradeMode.md) flag and run the cycles in \[Train\] mode.
+*   Multiple cycles with [rules](advisor.md) in C code are not supported by the lite-C compiler. Set either the [VCPP](018_TradeMode.md) flag or call **advise()** with the **FAST** flag.
 
 ### Example (see also Detrend.c, MRC.c):
 

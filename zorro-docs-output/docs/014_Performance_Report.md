@@ -27,7 +27,7 @@ WFO test cycles     11 x 569 bars (137 days)
 WFO training cycles 12 x 3224 bars (111 weeks)
 Lookback period     700 bars (169 days)
 Monte Carlo cycles  200
-Fill mode           Realistic (slippage 5.0 sec)
+Backtest mode       Bars (slippage 5.0 sec)
 Avg bar             5.1 ticks  470.5 pips range
 Spread              0.7 pips (roll -0.70/-0.31)
 Lot size            1.0
