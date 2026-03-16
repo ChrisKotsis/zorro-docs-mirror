@@ -40,7 +40,7 @@ After this process, you likely ended up with a couple survivors in the top of th
 
 But you're not finished yet. Any selection process generates selection bias. Your perfect portfolio will likely produce a great backtest, but will it perform equally well in live trading? To find out, run a Montecarlo analysis. This is the most important test of all, since it can determine whether your strategy exploits a real market inefficiency. If the Montecarlo analysis fails with the final portfolio, it will likely also fail with any other parameter combination, so you need to run it only at the end. If your system passes Montecarlo with a p-value below 5%, you can be relatively confident that the system will return good and steady profit in live trading. Otherwise, back to the drawing board.  
 
-This manual is split in two parts. The following sections deal with the user interface of the shell. For a quick usage example, scroll down to the [tutorial](#tutorial). Attaching the shell to an existing strategy is described in the [second part](shell2.md).  
+This manual is split in two parts. The following sections deal with the user interface of the shell. For a quick usage example, scroll down to the [end](#tutorial). Attaching the shell to an existing strategy is described in the [tutorial](shell2.md).  
 
 ### Variables panel
 
@@ -192,9 +192,9 @@ Algo CNTR\_10 (USD/JPY, 240M)
 ```
 The numbers refer to the records in the summary.
 
-### Very concise tutorial
+### Very concise usage tutorial
 
-The following tutorial uses [workshop 6](tutorial_kelly.md) as an example. You can find prepared template and job files in the **Job** folder.
+The following usage example uses [workshop 6](tutorial_kelly.md). You can find prepared template and job files in the **Job** folder. Adapting the shell to an existing script is described in the [second part](shell2.md).
 
 *   First, create the performance summary. For this select **Workshop6c** and click \[Train\].
 *   From the \[Action\] scrollbox, select Load Multiple Jobs.

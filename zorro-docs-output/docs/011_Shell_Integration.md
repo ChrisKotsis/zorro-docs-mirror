@@ -7,7 +7,7 @@ source: "https://zorro-project.com/manual/en/shell2.htm"
 
 # Evaluation Shell: Adapting a Strategy
 
-This section deals with the modifications of a strategy for integrating the [evaluatien shell](010_Evaluation_Shell.md). Depending on what you want to do and which tests you want to apply, there are several steps of integration. We'll use [workshop6](tutorial_kelly.md) as an example.
+This tutorial section deals with the modifications of a strategy for integrating the [evaluatien shell](010_Evaluation_Shell.md). Depending on what you want to do and which tests you want to apply, there are several steps of integration. We'll use [workshop6](tutorial_kelly.md) as an example.
 
 ### Step 1: Attaching the shell
 

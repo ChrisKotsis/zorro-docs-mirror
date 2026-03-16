@@ -7,10 +7,11 @@ source: "https://zorro-project.com/manual/en/iqfeed.htm"
 
 # DTN IQFeed
 
-[DTN IQFeed](http://www.iqfeed.net)™ is a tick-by-tick unfiltered datafeed for almost all available symbols, with direct connection to the exchanges. The IQFeed plugin ([Zorro S](restrictions.md) required) connects to the IQFeed client application and can retrieve live and historical data. Please note: for using the IQFeed plugin you need to activate it by email to [Support](mailto:support@opgroup.de). The annual activation fee is EUR 65.
+[DTN IQFeed](http://www.iqfeed.net)™ is a tick-by-tick unfiltered datafeed for almost all available symbols, with direct connection to the exchanges. The IQFeed plugin ([Zorro S](restrictions.md) required) connects to the IQFeed client application and can retrieve live and historical data. Please note: for using the IQFeed plugin you need to activate it. The annual activation fee is **EUR 150**.
 
-Installing IQFeed:
+Using IQFeed:
 
+*   Contact [oP group Support](mailto:support@opgroup.de) for activating the IQFeed plugin for your Zorro S license. You will get an activation notice.
 *   Open an account and subscribe the desired markets on [http://www.iqfeed.net](http://www.iqfeed.net/). You will get a login ID - normally a 6 digit number - and a password.
 *   Download the IQFeed Client from the [DTN Download Page](http://www.iqfeed.net/index.cfm?displayaction=support&section=download) and install it into its default folder. Start one of the included apps to make sure that it works.
 *   On Zorro S, select IQFeed and enter your login ID and password.  
@@ -24,7 +25,7 @@ Installing IQFeed:
 
 ### Remarks
 
-*   For looking up an asset symbol, enter the root name on the [IQfeed Symbol Guide](https://iqfeed.net/symbolguide/index.cfm?symbolguide=lookup&displayaction=support&section=guide&web=iqfeed) web page.
+*   For looking up an asset symbol, enter the root name on the [IQfeed Symbol Guide](https://ws1.dtn.com/IQ/Guide/) web page.
 *   For getting prices from IQFeed and trading with a broker, use an [Account list](013_Asset_Account_Lists.md) with a composed [symbol](014_Asset_Symbols.md) that sets up IQFeed for live and historical data, and the broker for trading.
 
 ### Supported broker commands
