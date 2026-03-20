@@ -110,7 +110,8 @@ The exchange for the contracts in live trading. Set the exchange symbol manually
 
 *   Contract variables are only valid when a contract chain was loaded (see [contractUpdate()](096_contract.md)).
 *   **Multiplier** and **Centage** (if required) must be set up for the current asset before loading contract chains.
-*   Some assets require **Exchange** to be set for retrieving prices and trading with options.  
+*   Some assets require **Exchange** to be set for retrieving prices and trading with options.
+*   For modifying a variable of the selected contract,use the **ThisContract** pointer. For instance, **ThisContract->fAsk = 10;** sets the ask price of the current contract to 10 dollars.  
      
 
 ### Examples: see [Options and Futures](096_contract.md)

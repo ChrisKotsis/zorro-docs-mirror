@@ -25,7 +25,7 @@ Here's a non-complete list of useful books and links to algorithmic trading and 
 
 ### Practice
 
-**Johann Christian Lotter, [Black Book of Financial Hacking](https://www.amazon.com/dp/1546515216) / [Das Schwarze Börsenhackerbuch](http://www.amazon.de/dp/1530310784).** **[Contents](https://financial-hacker.com/content3.htm).** Algo trading systems for forex, stocks, and options. Introduction to algorithmic trading with C, and to the algorithms behind the [Z systems](zsystems.md). With source code. **35% book discount** for owners of a permanent [Zorro S](restrictions.md) license (contact info@opgroup.de).  
+**Johann Christian Lotter, [Black Book of Financial Hacking](https://www.amazon.com/dp/B0GSJMB92R) / [Das Schwarze Börsenhackerbuch](http://www.amazon.de/dp/B0GSJRMRBS).** **[Contents](https://financial-hacker.com/content3.htm).** Algo trading systems for forex, stocks, and options. Introduction to algorithmic trading with C, and to the algorithms behind the [Z systems](zsystems.md). With source code. **Discount** for owners of a permanent/infinite [Zorro S](restrictions.md) license.  
 
 **Ernest P. Chan, Quantitative Trading.** Insight in strategy testing and portfolio optimization with many practical advices.
 
