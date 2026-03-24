@@ -19,6 +19,10 @@ source: "https://zorro-project.com/manual/en/new.htm"
 *   The format of the parameter files (**\*.par**) was changed. Parameters and training results are now stored in CSV format.
 *   The **Z1**, **Z2**, and **Z12** systems have been replaced by **Z1+**, **Z2+**, and **Z12+**, and **Z6+** has been modifed.
 
+### Zorro 3.10 beta
+
+*   New plugin: [cTrader](ctrader.md)
+
 Beta versions or release candiates are available on the [Zorro Download Page](https://zorro-project.com/download.php). [Zorro S features](restrictions.md) can be unlocked in beta versions with a valid Zorro license. [Z strategies](zsystems.md) are not included in beta versions. A list of fixed bugs can be found under [bugs](bugs.md).  
 
 # Future Zorro features

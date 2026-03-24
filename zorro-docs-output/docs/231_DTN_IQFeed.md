@@ -7,11 +7,11 @@ source: "https://zorro-project.com/manual/en/iqfeed.htm"
 
 # DTN IQFeed
 
-[DTN IQFeed](http://www.iqfeed.net)™ is a tick-by-tick unfiltered datafeed for almost all available symbols, with direct connection to the exchanges. The IQFeed plugin ([Zorro S](restrictions.md) required) connects to the IQFeed client application and can retrieve live and historical data. Please note: for using the IQFeed plugin you need to activate it. The annual activation fee is **EUR 150**.
+[DTN IQFeed](http://www.iqfeed.net)™ is a tick-by-tick unfiltered datafeed for almost all available symbols, with direct connection to the exchanges. The IQFeed plugin ([Zorro S](restrictions.md) required) connects to the IQFeed client application and can retrieve live and historical data. Please note: for using the IQFeed plugin you need to activate it. The annual activation fee is **EUR 255**.
 
 Using IQFeed:
 
-*   Contact [oP group Support](mailto:support@opgroup.de) for activating the IQFeed plugin for your Zorro S license. You will get an activation notice.
+*   Contact [oP group Support](mailto:support@opgroup.de) for activating the IQFeed plugin for your Zorro S license. You will receive an activation code.
 *   Open an account and subscribe the desired markets on [http://www.iqfeed.net](http://www.iqfeed.net/). You will get a login ID - normally a 6 digit number - and a password.
 *   Download the IQFeed Client from the [DTN Download Page](http://www.iqfeed.net/index.cfm?displayaction=support&section=download) and install it into its default folder. Start one of the included apps to make sure that it works.
 *   On Zorro S, select IQFeed and enter your login ID and password.  
