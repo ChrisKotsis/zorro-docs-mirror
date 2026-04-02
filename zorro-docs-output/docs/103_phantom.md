@@ -20,6 +20,7 @@ Indicator for 'equity curve trading'. Detects from the equity curve if the marke
 ### Remarks:
 
 *   This function creates [series](091_series.md) and thus must be called in a fixed order in the script.
+*   In training mode the function always return zero.
 *   The source code can be found in **indicators.c**.
 
 ### Example:

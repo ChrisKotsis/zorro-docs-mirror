@@ -245,7 +245,7 @@ You'll need [Zorro S](restrictions.md) for trading several automated trading sys
 
 **How does algo trading affect my tax declaration?**
 
-In most countries you have to pay tax for trading profits. Normally the broker keeps records of your trades that you can download from his website. Otherwise Zorro also records all trades in the **trades.csv** spreadsheet in the **Data** folder for your tax declaration. Interest (rollover) and profit/loss are recorded separately. Usually you have to submit this spreadsheet or the broker's records together with your tax declaration. Note that sometimes you cannot deduct trading losses from trading profits ([Scholz Tax](https://financial-hacker.com/the-scholz-brake-fixing-germanys-new-1000-trader-tax/)).
+In most countries you have to pay tax for trading profits. Normally the broker keeps records of your trades that you can download from his website. Otherwise Zorro also records all trades in the **trades.csv** spreadsheet in the **Data** folder for your tax declaration. Interest (rollover) and profit/loss are recorded separately. Usually you have to submit this spreadsheet or the broker's records together with your tax declaration. Note that some countries' tax laws may not allow you to deduct trading losses from trading profits ([Scholz Tax](https://financial-hacker.com/the-scholz-brake-fixing-germanys-new-1000-trader-tax/)).
 
 **How do I update a live trading system?**
 
@@ -257,7 +257,7 @@ Yes. Any strategy can eventually expire. For instance, there was a **Z5** system
 
 **Can I get the source code of a Z system?**
 
-For reasons described above, the Z systems are not available in source code - not even when you license the Zorro platfrom source. However, since the basic algorithms are published, you can hire a programmer (or our [development service](https://zorro-project.com/development.php)) for programming a replica of a Z system. The replica will trade similar, but not identical to the original system.
+For reasons described above, the Z systems are not available in source code - not even when you license the Zorro platform source. However you can hire a programmer (or our [development service](https://zorro-project.com/development.php)) for programming a replica of a Z system. The replica will use similar algorithms, but will not be identical to the original system.
 
 ### See also:
 

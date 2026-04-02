@@ -32,6 +32,7 @@ The settings have only effect when your script does not set those parameters its
 The default values of some variables can be set up in the strategy script by **#define** statements. Example:
 
 ```c
+#define \_ASSETLIST	"AssetsFix"
 #define \_BAR\_PERIOD     240
 #define \_LOOKBACK\_BARS  4000
 #define \_WFO\_CYCLES     16

@@ -15,7 +15,7 @@ Put a user-supplied function on a scheduler in order to to be exeuted at a certa
 
 ## event (int Event, void\* Function): void\*
 
-Assign a user-supplied function to a particular event. Functions with the same name as the event are automatically assigned at script start.
+Assign a user-supplied function to a particular event, thus replacing its default function. Functions with the same name as the event are automatically assigned by default at script start.
 
 ### Parameters:
 
