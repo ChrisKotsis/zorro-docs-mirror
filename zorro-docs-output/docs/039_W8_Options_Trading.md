@@ -21,14 +21,15 @@ void run()
 {
   set(PLOTNOW,LOGFILE);
   BarPeriod = 1440;
+  LookBack = 0;
 
   History = ".t8"; _// use options for unadjusted price history_
   assetList("AssetsIB");
   asset("SPY");
   Multiplier = 100;
 
-_// load today's contract chain_
-  if(!contractUpdate(Asset,0,CALL|PUT)) return; 
+_// load today's contract chain 
+_  if(!contractUpdate(Asset,0,CALL|PUT)) return; 
 
   if(!NumOpenShort) { 
 _// find contracts with 6 weeks expiration and $2 premium_
@@ -57,7 +58,9 @@ Mind the **MarginCost** calculation with the [comboMargin](097_combo.md) functio
 
 ![](../images/workshop8.png)
 
-We can see that in the test period 2012-2018 the strategy achieves not spectacular, but relatively constant annual returns in the 10% area. About 70% of trades are won. Still, it is not advisable to trade this system unchanged - you'll see that when you extend the test period beyond 2018. The system depends on a rising market. When the market tanks, it will fail bad since it has no mechanism for filtering unprofitable periods and limiting losses. We could place a **stop loss** just like for a normal trading system. The contracts are then automatically bought back when the underlying price moves dangerously far. Or we could buy 'insurance' in the form of two additional contracts with more distant strikes. This long/short combination of 4 contracts reduces the profit, but also restricts losses to a limit that can be determined with the strike prices. The **Payoff** script can display the risk and profit curves of arbitrary option combinations. In the [Black Book](247_Links_Books.md) you can find a different options selling system. It survives market crashes with a filter that prevents trading in volatile situations.
+We can see that in the test period 2012-2018 the strategy achieves not spectacular, but relatively constant annual returns in the 10% area. About 70% of trades are won. Still, it is not advisable to trade this system unchanged - you'll see that when you extend the test period beyond 2018. As soon as the market tanks, the system will fail bad since it has no mechanism for filtering unprofitable periods and limiting losses. Options systems do normally not use a stop loss like a normal trading system. Instead, the preferable way is buying 'insurance' in the form of additional long or short contracts with more distant strikes. Such a multi-leg combo reduces the profit, but also restricts losses to a limit that can be determined with the strike prices. The **Payoff** script can display the risk and profit curves of arbitrary option combos.
+
+In the [Black Book](247_Links_Books.md) you can find a real options selling system. It survives market crashes with a filter that prevents trading in volatile situations.
 
 We're now at the end of the strategy coding course. For writing your own systems, it can save you a lot of time when you flip through this manual and make yourself familiar with Zorro's math and statistics functions. Often-used code snippets for your own scripts and strategies can be found on the [Tips & tricks](246_Tips_Tricks.md) page. Writing good code and fixing bugs is described under [Troubleshooting](210_Troubleshooting.md). If you worked with a different trade platform before, read the [Conversion](021_Conversion_from_other_platforms.md) page about how to convert your old scripts or EAs to C. For serious strategy development, some knowledge of the leading data analysis software **R** can be of advantage - check out the [R lectures](Lecture%201.md).
 

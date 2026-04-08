@@ -17,6 +17,7 @@ Determines what's plotted at the end of a test or when clicking \[Result\]. Use 
 **PL\_FINE** - plot equity and price curve in higher resolution.  
 **PL\_LINE** - enforce a line rather than candles for the price curve.  
 **PL\_DIFF** - plot the equity/balance difference to the initial value, rather than the total value. For better visibility of small equity changes when [Capital](190_Margin_Risk_Lots.md) is invested.  
+**PL\_MAIN** - plot only the main chart, no extra charts.  
 **PL\_FILE** - export the chart to a **.png** image, rather than opening the [chart viewer](011_Chart_Viewer_Debugger.md). The file name is composed from the script name, an optional asset name, and the [LogNumber](numtotalcycles.md).  
 **PL\_TITLE** - print the chart title in the upper right area of the chart.  
 **PL\_BENCHMARK** - plot the equity as a line, instead of a bar graph, for comparing equity curves with benchmarks.  

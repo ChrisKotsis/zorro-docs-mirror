@@ -36,9 +36,11 @@ The next step is an automated process that runs through all jobs, trains and tes
 
 The next step in the process is cluster analysis. Every profitable job in a selected summary is automacially optimized multiple times with different [WFO](numwfocycles.md) settings. These settings are taken from - you guessed it - a separate CSV file that may contain a regular WFO matrix, a list of irregular cycles/datasplit combinations, or both. For reducing the process time, only jobs with rising equity curves - determined by a nonzero **R2 coefficent** - get a cluster analysis. You can also further exclude jobs by removing or outcommenting them in the summary.
 
-After this process, you likely ended up with a couple survivors in the top of the summary. The surviving jobs have all a positive return, a steady rising equity curve, shallow drawdowns, and robust parameter ranges since they passed the cluster analysis. But not all of them are suited for the final portfolio. The purpose of a strategy portfolio is diversifiction, but this would not work with a set of variants that are all tightly correlated and have their drawdowns all at the same time. You want a balanced portfolio with uncorrelated algorithms. Automatically reducing the portfolio to the combinations with the smallest correlation is planned for a future shell version, but at the moment it involves a manual selection. Check the individual equity curves of the best jobs, and throw out variants with too-similar curves. The remaining jobs are now be combined with a mouse click to the final balanced portfolio.
+After this process, you likely ended up with a couple survivors in the top of the summary. The surviving jobs have all a positive return, a steady rising equity curve, shallow drawdowns, and robust parameter ranges since they passed the cluster analysis. You can now create a set of algos from the top of the summary with a mouse click, and train them for optimal performance.
 
-But you're not finished yet. Any selection process generates selection bias. Your perfect portfolio will likely produce a great backtest, but will it perform equally well in live trading? To find out, run a Montecarlo analysis. This is the most important test of all, since it can determine whether your strategy exploits a real market inefficiency. If the Montecarlo analysis fails with the final portfolio, it will likely also fail with any other parameter combination, so you need to run it only at the end. If your system passes Montecarlo with a p-value below 5%, you can be relatively confident that the system will return good and steady profit in live trading. Otherwise, back to the drawing board.  
+However, some of these algos might not be suited for the final portfolio. The purpose of a job portfolio is diversification, but this would not work when jobs are strongly correlated and have their drawdowns all at the same time. You want a **balanced portfolio** with uncorrelated algorithms. For this, run an algo comparison. It will display a chart with the equity curves from any job. Check the curves and throw out variants with bad drawdowns, with high volatility, or with too-similar curves. After removing or out-commenting them from the summary, create an algo set again for the final balanced portfolio.
+
+You're not finished yet. Any selection process generates **selection bias**. Your perfect portfolio will likely produce a great backtest, but will it perform equally well in live trading? To find out, run a Montecarlo analysis. This is the most important test of all, since it can determine whether your strategy exploits a real market inefficiency. If the Montecarlo analysis fails with the final portfolio, it will likely also fail with any other parameter combination, so you need to run it only at the end. If your system passes Montecarlo with a **p-value** below 5%, you can be relatively confident that the system will return good and steady profit in live trading. Otherwise, back to the drawing board.  
 
 This manual is split in two parts. The following sections deal with the user interface of the shell. For a quick usage example, scroll down to the [end](#tutorial). Attaching the shell to an existing strategy is described in the [tutorial](shell2.md).  
 
@@ -64,11 +66,11 @@ The system settings in the grey area are mostly self explaining:
 
 ### Action menu
 
-After starting the script in \[Train\] mode, a click on \[Action\] opens a dropdown menu.
+After starting the script in \[Train\] mode, a click on \[Action\] opens a dropdown menu, like this:
 
 ![](../images/shellmenu.png)
 
-<table><tbody><tr><td style="width: 146px" class="auto-style2"><span class="tast">Reset</span></td><td>Reset all variables to their defaults, and remove all loaded jobs and algos.</td></tr><tr><td style="width: 149px" class="auto-style2"><span class="tast">Save Job to CSV</span></td><td>Save the current panel state with all variables to a job file in CSV format, in a folder of your choice (<strong>Job</strong> by default). If the system has no own algos, the file name will be later used for the algo names, so don't use a complex or long name.</td></tr><tr><td style="width: 149px" class="auto-style2"><span class="tast">Load Single Job</span></td><td>Load a set of variables from a job file to the panell for training and analyzing them. If one or more jobs are loaded, backtests will store their 'papertrails' of charts, logs, and reports in a subfolder named after the job.</td></tr><tr><td style="width: 149px" class="auto-style2"><span class="tast">Load Multiple Jobs</span></td><td>Select a folder by clicking on a job file inside. All jobs in that folder are loaded, together with all their asset, algo, and timeframe variants. A click on [<span class="tast">Start</span>] will train all jobs and store their results in the <strong>Summary</strong> and in their 'papertrail' folders.</td></tr><tr><td style="width: 149px" class="auto-style2"><span class="tast">Load Jobs from Summary</span></td><td>Select a summary generated by previous training. All profitable jobs listed in that summary with a positive R2 coefficient are loaded. Jobs can be excluded by adding a <strong>'#'</strong> in front of the name or by deleting them from the summary.</td></tr><tr><td style="width: 149px" class="auto-style2"><span class="tast">Browse Jobs</span></td><td>Select a job from a previously loaded set of jobs, and load its variables into the panel.&nbsp;</td></tr><tr><td style="width: 146px" class="auto-style2"><span class="tast">Run Cluster Analysis</span></td><td>Run a WFO cluster analysis, with WFO offsets and OOS periods defined in a CSV file.&nbsp;Several files with various combinations of offsets and periods are included. For any WFO cycles / OOS period combination, the resulting performance metrics are stored in a <strong>Cluster summary</strong>. For files containing a regular NxM cluster matrix, the returns are displayed in a heatmap as shown below, otherwise in a WFO profile.</td></tr><tr><td style="width: 146px" class="auto-style2"><span class="tast">Run Montecarlo Analysis</span></td><td>Run a Montecarlo 'Reality Check' with the current parameters and shuffled price curves. A reality check can tell whether the WFO performance was just luck, or was caused by a real market inefficiency. The resulting performance metrics are stored in a <strong>MRC summary</strong>, and the results are displayed in a histogram together with the original result with unmodified price curve. Depending on the resulting <strong>p-value</strong>, the backtest performance is qualified as significant, possibly significant, or insignificant.</td></tr><tr><td style="width: 149px" class="auto-style2"><span class="tast">Rearrange Summary</span></td><td>Re-sort the entries in the summary if <strong>_Criteria</strong> has changed.</td></tr><tr><td style="width: 146px" class="auto-style2"><strong>Create Algos from Summary</strong></td><td>Select a summary generated by previous training. All profitable and robust jobs from that summary with a CA result of 75% or better are automatically selected for the final portfolio. Their variables, assets, algos, and time frames are stored in <strong>Data\*_algo.bin</strong>. This file is automatically loaded at start. Training, testing, and trading will now use the full porfolio. To discard it, use <span class="tast">Reset</span>.</td></tr><tr><td style="width: 146px" class="auto-style2"><span class="tast">Download History</span></td><td>Open the Zorro Download Page for getting historical data.</td></tr></tbody></table>
+<table><tbody><tr><td style="width: 146px" class="auto-style2"><span class="tast">Reset</span></td><td>Reset all variables to their defaults, and remove all loaded jobs and algos.</td></tr><tr><td style="width: 149px" class="auto-style2"><span class="tast">Save Job to CSV</span></td><td>Save the current panel state with all variables to a job file in CSV format, in a folder of your choice (<strong>Job</strong> by default). If the system has no own algos, the file name will be later used for the algo names, so don't use a complex or long name.</td></tr><tr><td style="width: 149px" class="auto-style2"><span class="tast">Load Job to Panel</span></td><td>Load a set of variables from a job file to the panel. A click on [<span class="tast">Start</span>] will train the job and store its result in the <strong>Summary</strong>. Any trained job will also store its 'papertrail' of charts, logs, and reports in a subfolder named after the job.</td></tr><tr><td style="width: 149px" class="auto-style2"><span class="tast">Load Job with Variants</span></td><td>Load a job file with its asset, algo, and timeframe variants. A click on [<span class="tast">Start</span>] will train all job variants and store their results in the <strong>Summary</strong> and in their 'papertrail' folders.</td></tr><tr><td style="width: 149px" class="auto-style2"><span class="tast">Load Jobs from Folder</span></td><td>Select a folder by clicking on a job file inside. All jobs in that folder are loaded, together with all their asset, algo, and timeframe variants. A click on [<span class="tast">Start</span>] will train all jobs and store their results in the <strong>Summary</strong> and in their 'papertrail' folders.</td></tr><tr><td style="width: 149px" class="auto-style2"><span class="tast">Load Jobs from Summary</span></td><td>Select a summary generated by previous training. All profitable jobs listed in that summary with a positive R2 coefficient are loaded. Jobs can be excluded by adding a <strong>'#'</strong> in front of the name or by deleting them from the summary.</td></tr><tr><td style="width: 149px" class="auto-style2"><span class="tast">Browse Jobs</span></td><td>Select a job from a previously loaded set of jobs, and load its variables into the panel.&nbsp;</td></tr><tr><td style="width: 146px" class="auto-style2"><span class="tast">Run Cluster Analysis</span></td><td>Run a WFO cluster analysis for all loaded jobs, with WFO offsets and OOS periods defined in a CSV file.&nbsp;Several files with various combinations of offsets and periods are included. For any WFO cycles / OOS period combination, the resulting performance metrics are stored in a <strong>Cluster summary</strong>. For files containing a regular NxM cluster matrix, the returns are displayed in a heatmap, otherwise in a WFO profile.</td></tr><tr><td style="width: 146px" class="auto-style2"><span class="tast">Run Montecarlo Analysis</span></td><td>Run a Montecarlo 'Reality Check' with the current parameters and shuffled price curves. A reality check can tell whether the WFO performance was just luck, or was caused by a real market inefficiency. The resulting performance metrics are stored in a <strong>MRC summary</strong>, and the results are displayed in a histogram together with the original result with unmodified price curve. Depending on the resulting <strong>p-value</strong>, the backtest performance is qualified as significant, possibly significant, or insignificant.</td></tr><tr><td style="width: 149px" class="auto-style2"><span class="tast">Rearrange Summary</span></td><td>Re-sort the entries in the summary if <strong>_Criteria</strong> has changed.</td></tr><tr><td style="width: 146px" class="auto-style2"><strong>Create Algos from Summary</strong></td><td>Select a summary generated by previous training. All profitable and robust jobs from that summary with a CA result of 75% or better are automatically selected for the final portfolio. Their variables, assets, algos, and time frames are stored in <strong>Data\*_algo.bin</strong>. This file is automatically loaded at start. Training, testing, and trading will now use the full porfolio. To discard it, use <span class="tast">Reset</span>.</td></tr><tr><td style="width: 146px" class="auto-style2"><strong>Run Algo Comparison</strong></td><td>Generate a chart with the equity curves from any algo of the portfolio. If you don't like an equity curve, remove the job from the summary (or outcomment it with a <strong>'#'</strong>) and create the algos again.</td></tr><tr><td style="width: 146px" class="auto-style2"><span class="tast">Download History</span></td><td>Open the Zorro Download Page for getting historical data.</td></tr></tbody></table>
 
 When no job was loaded, clicking on \[Start\] will just start a test or training run with the current variable settings in the panel. After a successful backtest, the [performance report](012_Performance_Report.md) will open in the editor, and the chart viewer will display the price curve, the trades, and the equity curve. Train mode will always use walk forward optimization, even when none is defined in the script. Test mode will only run a backtest; so the strategy should have been trained before. After changing any variable, train again. If a variable range was exceeded or historical data was missing for the selected backtest period, you'll get an [error message](errors.md). Training errors will store the error message in **Log\\Errors.txt** and abort.
 
@@ -105,7 +107,7 @@ Aside from the summary and the CA or MA charts, the following reports are produc
 
 ### Results: Cluster analysis
 
-Cluster analysis (CA) can be performed either with the current settings and algos, or with multiple jobs. In the latter case its results are stored in the **CA%** field of the summary report. For reducing process time, only jobs with a positive **R2** value are cluster analyzed. And only jobs with more than 75% positive CA runs will be taken over to the next step, the algorithm selection.
+Cluster analysis (CA) can be performed either with the current settings and algos, or with a selected job and its variants, or with promising jobs loaded from the summary. In the latter cases its results are stored in the **CA%** field of the summary report. For reducing process time, only jobs with profit factor and **R2** value above predefined limits (1.25 and 0.25) will be loaded from the summary. And only jobs with more than 75% positive CA runs will be taken over to the next step, the algorithm selection.
 
 Dependent on the selected cluster template, Cluster analysis will generate either a WFO profile or a heatmap: The cluster template is a CSV file with an arbitrary number of WFO cycle / OOS period combinations, like this:
 
@@ -165,6 +167,28 @@ WFO heatmap, from cluster analysis with a regular matrix
 The color of the fields represents the performance. You want as much red fields in the heatmap as possible. The example above, with the Pessimistic Return Ratio (PRR) as metric, has only 13 red fields out of 25. This job would not pass the 75% CA threshold.  
  
 
+### Create portfolio
+
+The goal of evaluation is creating a balanced portfolio from optimal components. Create Algos from Summary will generate a portfolio from all job variants with at least 75% CA and 1.25 profit factor, and store it in **"\*\_algo.bin"** in the **Data** folder. This portfolio is then loaded at start, and further test or training operations are applied to the whole portfolio unless it is reset or something else is selected. The algo/asset/timeframe components are listed at start, like this:
+
+```c
+Algo TRND\_2 (EUR/USD, 60M)
+Algo TRND\_5 (USD/JPY, 60M)
+Algo CNTR\_7 (USD/JPY, 240M)
+Algo CNTR\_8 (EUR/USD, 240M)
+Algo CNTR\_9 (USD/JPY, 240M)
+Algo CNTR\_10 (USD/JPY, 240M)
+```
+The numbers refer to the records in the summary.
+
+### Results: Algo comparison
+
+After creating and training a portfolio of algos, run an algo comparison in \[Test\] mode. It produces a chart like this:
+
+![](../images/shellalgos.png)
+
+You can now identify equity curves that you don't like - there are several in the above example chart - and remove them from the summary, or outcomment them. The numbers in the algo names are the line number in the summary.
+
 ### Results: Montecarlo analysis
 
 Montecarlo Analysis, aka 'Reality Check', is normally only applied to the final strategy after algos have been generated. It produces a histogram of results from randomized price curves (red) and from the original price curve (black). This one below (from the 'placebo system' in the Financial Hacker article) indicates that you better don't trade that system live, even though it produced a great walk-forward analyis.
@@ -178,19 +202,7 @@ Another Montecarlo histogram from a real stragegy that generated less walk-forwa
 More about cluster analysis and Montecarlo analysis can be found on [financial-hacker.com/why-90-of-backtests-fail](https://financial-hacker.com/why-90-of-backtests-fail).  
  
 
-### Final portfoio
-
-The goal of evaluation is creating a balanced portfolio from optimal components. Create Algos from Summary will generate this portfolio from all job variants with at least 75% CA and 1.25 profit factor, and store it in **"\*\_algo.bin"** in the **Data** folder. This portfolio is then loaded at start, and further test or training operations are applied to the whole portfolio unless it is reset or something else is selected. The algo/asset/timeframe components are listed at start, like this:
-
-```c
-Algo TRND\_2 (EUR/USD, 60M)
-Algo TRND\_5 (USD/JPY, 60M)
-Algo CNTR\_7 (USD/JPY, 240M)
-Algo CNTR\_8 (EUR/USD, 240M)
-Algo CNTR\_9 (USD/JPY, 240M)
-Algo CNTR\_10 (USD/JPY, 240M)
-```
-The numbers refer to the records in the summary.
+ 
 
 ### Very concise usage tutorial
 
@@ -211,8 +223,14 @@ The following usage example uses [workshop 6](tutorial_kelly.md). You can find p
 *   Next, portfolio creation. Click \[Train\] and select Create Algos from Summary.
 *   Double click on **Job\\Workshop6c\_Summary.csv.** You'll see a list of select algo variants that build the final system.
 *   Click \[Start\] to train. The perfomance report of the final system will pop up at the end.  
+      
+    
+*   Next, algo comparison. Click \[Test\]. The portfolio of algos is automatically loaded.
+*    Select Run Algo comparison. It will create a chart with the equity curves of all algos.
+*   Remove jobs with unconvincing equity curves from the summary.
+*   Create algos again from the remaining jobs in the summary.  
      
-*   Finally, the Montecarlo Reality Check. Click \[Train\]. The system with its algos is automatically loaded.
+*   Finally, the Montecarlo Reality Check. Click \[Train\]. The portfolio of algos is automatically loaded.
 *   From the \[Action\] scrollbox, select Run MonteCarlo Analysis.
 *   At the end of the process you'll get the **p-value** and a histogram of the final system.  
      
@@ -225,12 +243,14 @@ Naturally, training hundreds of jobs and variants will take its time. For highes
 
 ### Remarks
 
-*   After changing variable values or ranges in the script, click Reset on the next start, otherwise the variables keep their last stored values and ranges.
-*   If the strategy was changed after creating algos, the whole proces needs not be repeated unless the change is very substantial. Otherwise it is sufficient to create algos with the current summary and train them again.
+*   After temporarily changing variable values or ranges in the script, click Reset on the next start, otherwise the variables keep their last stored values and ranges.
+*   Variables that affect bar creation and training, such as bar period, WFO settings, lookback period, and start/end dates, can onlc be changed for the whole strategy, but not for single jobs.
+*   If the strategy was changed after creating algos, the whole evaluation process must be repeated if the modification affects multiple jobs in different ways. Otherwise it is sufficient to train the algos again.
+*   If a new job was added, load, train, and cluster analyze the job with its algo/asset/timeframe variants.
 *   Make sure that **\_Lookback\_Bars** is sufficient for running all loaded jobs with the largest time frame. When extending or reducing the backtest years, adapt **\_WFO\_Cycles** accordingly.
 *   For highest speed, activate multiple threads, code in C++, and use the 64 bit Zorro version.
 *   If a thread encounters an error, the optimization will stop and the error message can be found in the file **Log\\Errors.txt**.
-*   Training results are only kept for last training run or for the final portfolio. When you switch jobs or change parameters, always train again.
+*   Training results are only kept for last training run or for the final portfolio. Test results of any job are permanently kept in the 'paper trail' folders. When you switch jobs or change parameters, always train again.
 *   Do not open results in Excel while a shell process is running. Excel will block any access to its open files.
 
 ### See also:
