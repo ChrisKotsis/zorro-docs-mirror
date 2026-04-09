@@ -43,10 +43,10 @@ The quickest way, of course, is ordering a Zorro S license, or a monthly or annu
 
 *   **Contribute something substantial** to the user community, such as an [API plugin](brokerplugin.md) for a broker, feed, or platform. It should be coded in C/C++, and the source code should be available. Contact support@opgroup.de for reviewing your plugin and getting a free Zorro S subscription.  
      
-*   Find a Zorro bug in a release candidate. If you discover a new and serious software malfunction prior to the official release, you'll get a free 3 months Zorro S subscription or - if you have Zorro S already - 3 months free support. For identifying and reporting bugs, look [here](bugs.md).  
+*   Find a Zorro bug in a release candidate. If you discover a new and serious software malfunction prior to the official release, you'll get, at your choice, a free 3 months Zorro S subscription, or 3 months free support, or a 10% discount for the permanent or infinite license. For identifying and reporting bugs, look [here](bugs.md).  
       
     
-*   Help other users on the [User Forum](https://opserver.de/ubb7/ubbthreads.php?ubb=cfrm&c=1). Any 100 substantial posts on the forum since August 2025 get you a free 3 months Zorro S subscription or - if you have Zorro S already - 3 months free support.  
+*   Help other users on the [User Forum](https://opserver.de/ubb7/ubbthreads.php?ubb=cfrm&c=1). If you have more than 30 substantial posts on the user forum since October 2025, you'll get, at your choice, a free 3 months Zorro S subscription, or 3 months free support, or a 10% discount for the permanent or infinite license. Contact support@opgroup.de with your forum name for claiming the reward.  
      
  *   If you are a **charitable, non-religious organization** under tax-exemption status such as IRC 501(c)(3), you are eligible for a free Zorro S subscription. Please contact support@opgroup.de with a description of your organization and a scan of your IRC document for review.  
 
