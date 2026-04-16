@@ -1,10 +1,14 @@
 # Zorro Documentation Images Report
 
 ## Summary
-- Total unique images: 136
-- Successfully downloaded: 136
+- Total unique images: 139
+- Successfully downloaded: 139
 
 ## Image List
+- arrowdn.gif (https://zorro-project.com/manual/images/arrowdn.gif)
+- arrow.gif (https://zorro-project.com/manual/images/arrow.gif)
+- arrowleft.gif (https://zorro-project.com/manual/images/arrowleft.gif)
+- arrowup.gif (https://zorro-project.com/manual/images/arrowup.gif)
 - zorro.png (https://zorro-project.com/manual/images/zorro.png)
 - monitors.jpg (https://zorro-project.com/manual/images/monitors.jpg)
 - spectrum.png (https://zorro-project.com/manual/images/spectrum.png)
@@ -19,7 +23,6 @@
 - contour.png (https://zorro-project.com/manual/images/contour.png)
 - trading.png (https://zorro-project.com/manual/images/trading.png)
 - zstatus.png (https://zorro-project.com/manual/images/zstatus.png)
-- arrow.gif (https://zorro-project.com/manual/images/arrow.gif)
 - shellvars1.png (https://zorro-project.com/manual/images/shellvars1.png)
 - shellmenu.png (https://zorro-project.com/manual/images/shellmenu.png)
 - shellsummary.png (https://zorro-project.com/manual/images/shellsummary.png)
@@ -143,4 +146,4 @@
 - bridge2.png (https://zorro-project.com/manual/images/bridge2.png)
 
 ## Last Updated
-2026-04-15T03:13:40.202Z
+2026-04-16T03:14:19.364Z

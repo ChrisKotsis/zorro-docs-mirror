@@ -147,7 +147,7 @@ For your martingale experiments. Better do not trade this one with real money!
 
 ### MinWinRate
 
-Scalping debunker. Plots a histogram of the required win rates for a given asset and trading cost dependent on trade duration in minutes. 
+Scalping debunker. Plots a histogram of the required win rates for a given asset and trading cost dependent on trade duration in minutes. Demonstrates that 'scalping' can only work when the broker loves you so much that they completely waive spread and commission.
 
 ### MRC
 

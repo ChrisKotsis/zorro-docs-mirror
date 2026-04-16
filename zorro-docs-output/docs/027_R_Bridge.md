@@ -140,6 +140,9 @@ function main()
 ```
 ```c
 _// Run a statistics test (ADF)_
+#include <default.c>  
+#include <r.h>
+
 function run()
 {
   set(PLOTNOW);
@@ -160,6 +163,7 @@ _  Rx("ADF = adf.test(Data)"); _// Augmented Dickey-Fuller test_
 ```
 ```c
 _// template for computing trade signals in R_
+#include <default.c>  
 #include <r.h>
 
 int Size = 200; _// number of candles needed by the R algorithm _ 

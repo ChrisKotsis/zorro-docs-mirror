@@ -69,7 +69,7 @@ If lite-C scripts have no header, the **<default.c>** header is automatically in
 
 ### Exported and void functions
 
-If a function does not return something, it must be defined with the **void** type. This is optional in lite-C, but mandatory in C++. If functions are exported by the DLL - such as **run**, **main**, **objective**, etc - define them with the **DLLFUNC** macro. The **function** keyword is defined as **DLLFUNC int** in C++; functions of **function** type must therefore return a value. 
+If a function does not return something, it must be defined with the **void** type. This is optional in lite-C, but mandatory in C++. If functions are exported - like all predefined functions such as **run**, **main**, **objective**, etc - define them with the **DLLFUNC** macro. The **function** keyword is defined as **DLLFUNC int** in C++; functions of **function** type must therefore always return a value. 
 ```c
 function click() { ... } _// lite-C_
 DLLFUNC void click() { ... } _// C++_
