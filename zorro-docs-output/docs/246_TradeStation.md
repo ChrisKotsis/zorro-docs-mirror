@@ -9,11 +9,11 @@ source: "https://zorro-project.com/manual/en/tradestation.htm"
 
 TradeStation is a Florida-based broker that supports many instruments, including stocks, options, futures, and futures options. The TradeStation plugin was designed specifically to work with TradeStation's v3 Web API. You need [Zorro S](restrictions.md) for using the plugin.
 
-The TradeStation bridge was developed by Andrew Dolder. For using the bridge you need an API Key and API Secret. The steps:
+The TradeStation bridge was developed by Andrew Dolder. For using the bridge you need an API Key, an API Secret, and a refresh token. The steps:
 
 *   Email TradeStation support and specifically request v3 keys.
 *   Enter key and secret in the User and Password fields.
-*   Log in with Zorro. You will be required to follow some high-security multi-factor authentication protocols.
+*   Log in with Zorro. You will be required to follow some multi-factor authentication protocols.
 *   Once that's completed, Zorro will print out the API Refresh Token in the log and then quit. \*\*Save the API Refresh Token\*\*.
 *   Copy and paste the API Refresh Token into the password field with a space after the secret, as shown below. Save this permanently into your [Accounts.csv](013_Asset_Account_Lists.md) file, close the CSV file, and restart Zorro.
 *    Henceforth, you will no longer need to follow authentication protocols, unless you change your API keys.
