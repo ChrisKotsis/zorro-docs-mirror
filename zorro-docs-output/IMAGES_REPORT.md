@@ -1,8 +1,8 @@
 # Zorro Documentation Images Report
 
 ## Summary
-- Total unique images: 139
-- Successfully downloaded: 139
+- Total unique images: 141
+- Successfully downloaded: 141
 
 ## Image List
 - arrowdn.gif (https://zorro-project.com/manual/images/arrowdn.gif)
@@ -26,7 +26,9 @@
 - shellvars1.png (https://zorro-project.com/manual/images/shellvars1.png)
 - shellmenu.png (https://zorro-project.com/manual/images/shellmenu.png)
 - shellsummary.png (https://zorro-project.com/manual/images/shellsummary.png)
+- WFOProfile.png (https://zorro-project.com/manual/images/WFOProfile.png)
 - RangerMatrix.png (https://zorro-project.com/manual/images/RangerMatrix.png)
+- shellalgos.png (https://zorro-project.com/manual/images/shellalgos.png)
 - RealityCheck_s1.png (https://zorro-project.com/manual/images/RealityCheck_s1.png)
 - shelldefault.png (https://zorro-project.com/manual/images/shelldefault.png)
 - shellvars0.png (https://zorro-project.com/manual/images/shellvars0.png)
@@ -146,4 +148,4 @@
 - bridge2.png (https://zorro-project.com/manual/images/bridge2.png)
 
 ## Last Updated
-2026-05-21T03:19:23.004Z
+2026-05-22T03:19:01.912Z
