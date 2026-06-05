@@ -190,7 +190,9 @@ When importing the **GLOBALS** struct, set up the compiler so that it does not p
 
 # VC++ setup for a DLL project (free Zorro version)
 
-If you own Zorro S, you need not read this chapter, since Zorro S automatically generates a VC++ project file (**\*.vcxproj**) when compiling a C++ script in the Strategy folder. You only need to click on it for invoking the Visual Studio environment. However with the free version, you need to set up a VC++ project for any C++ script. The dialogs shown below are for Visual C++ 2017, but for later versions like VC++ 2019 and 2022 they are very similar:
+If you own Zorro S, you need not read this chapter, since Zorro S automatically generates a VC++ 2022 project file (**\*.vcxproj**) when compiling a C++ script in the Strategy folder. You only need to click on it for invoking the Visual Studio environment. If you use different Visual Studio versions than VC++ 2022, you can edit the project template **Source\\VC++\\ZorroDLL.proj** and change the toolset line at the begin to the toolset version used by your Visual Studio.
+
+The free Zorro version also supports C++, but you need to manually set up a VC++ project for any C++ script. The dialogs shown below are for Visual C++ 2017, but for later versions like VC++ 2019 and 2022 they are very similar:
 
 *   If you haven't already, download and install Visual Studio with the C++ desktop applications environment. Make yourself familiar with its editor and tools - there are tons of books and courses for Visual Studio.  
       
@@ -237,7 +239,9 @@ If you own Zorro S, you need not read this chapter, since Zorro S automatically 
 *   Mistakes - for instance, a wrong compiler setup - will cause [Error 062](errors.md) when starting the DLL. In that case check your project for a correct setup.  
       
 *   If a strategy DLL works on your PC, but produces [Error 062](errors.md) on another PC, the reason is most likely a missing module. Use a tool such as [Dependency Walker](http://www.dependencywalker.com/) for finding out which module is missing on that particular PC. If the DLL needs VC++ runtime libraries, install **vc\_redist.x86.exe** or **vc\_redist.x64.exe**.  
-     
+    
+*   C++ syntax errors are displayed in the message window and stored in **Log\\compiler.log**.  
+      
 *   You can run a **.cpp** script either directly from Zorro, or directly from the VC++ environment by clicking on the **.vcxproj** file (Zorro S only). While developing the script, VC++ is preferable, since it allows to immediately jump to lines with syntax errorr, or to debug the code line by line. If the script includes further code that you're working on, always use VC++. Zorro willl display syntax errors only in the main **.cpp** script, but not in included code.  
      
 *   When running a **.cpp** script that #includes other scripts, make sure to compile again after changing something in an included file. This is not automatically detected by Zorro, since it only compares the timestamp of the main script. Clicking on \[Edit\] always triggers recompilation.  

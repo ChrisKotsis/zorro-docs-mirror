@@ -24,6 +24,7 @@ source: "https://zorro-project.com/manual/en/new.htm"
 *   The [Evaluation Shell](010_Evaluation_Shell.md) got a new function for algo comparison.
 *   The [phantom](102_phantom.md) function now activates phantom trading automatically for the current algo.
 *   New plugin: [cTrader](229_cTrader.md)
+*   The [SMAFast](033_W4a_Indicator_implementation.md) indicator is a two times faster variant of the [SMA](033_W4a_Indicator_implementation.md).
 
 Beta versions or release candiates are available on the [Zorro Download Page](https://zorro-project.com/download.php). [Zorro S features](restrictions.md) can be unlocked in beta versions with a valid Zorro license. [Z strategies](zsystems.md) are not included in beta versions. A list of fixed bugs can be found under [bugs](bugs.md).  
 

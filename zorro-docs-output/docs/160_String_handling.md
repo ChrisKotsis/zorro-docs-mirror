@@ -11,12 +11,15 @@ The following functions - mostly from the standard C library - can be used to ma
 
 ## strcpy (string dest, string src): string
 
+## strncpy (string dest, string src, int count): string
+
 Fills the char array **dest** with the content of string **src**. The buffer size of **dest** must not be exceeded.
 
 ### Parameters:
 
 **dest** - destination string, either a [char array](aarray.md) of sufficient length or a temporary string as returned from **strmid**, **strf**, or **strx**.  
-**src** - source string
+**src** - source string  
+**count** - max number of chars to copy
 
 ## strcat (string dest, string src): string
 
@@ -178,8 +181,8 @@ Returns a temporary string (see remarks) or fills an existing string with a copy
 
 ### Parameters:
 
-**out** - target string to be filled, or **str** for filling the source string if the size does noch change. A taget string have been allocated before and have sufficient size.  
-**size** - size of the target string if different, or **0** for the same size as the source string.**  
+**out** - target string to be filled; must have been allocated before and have sufficient size.  
+**size** - size of the target string.**  
 str** - string containing the source text, 1000 characters maximum.  
 **orig** - original text or char to be exchanged, or **0** for inserting **repl** at the begin.  
 **repl** - replacement text or char.  

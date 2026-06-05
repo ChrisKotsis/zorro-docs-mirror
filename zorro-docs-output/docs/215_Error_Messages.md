@@ -7,7 +7,7 @@ source: "https://zorro-project.com/manual/en/errors.htm"
 
 # Error messages
 
-Below you'll find a list of possible errors that can occur during compilation or at runtime, together with suggestions for finding the reason of the error. Messages related to opening and closing positions are listed under [Log](010_Log_Messages.md); known issues with brokers are commented on the related page ([FXCM](fxcm.md), [IB](062_DefineApi_LoadLibrary.md), [Oanda](237_Oanda.md), [MT4](mt4plugin.md), etc...) in this manual.
+Below you'll find a list of possible errors that can occur during compilation or at runtime, together with suggestions for finding the reason of the error. Messages related to opening and closing positions are listed under [Log](010_Log_Messages.md); known issues with brokers are commented on the related page ([FXCM](fxcm.md), [IB](062_DefineApi_LoadLibrary.md), [Oanda](237_Oanda.md), [MT4](mt4plugin.md), etc...) in this manual. Depending on [Verbose](199_Verbose.md) settings, runtime error messages are collecterd in the file **Log\\Errors.txt**.
 
 Error messages must never be ignored. Even when your script runs and produces a result, an error message always indicates that something is seriously wrong and must be fixed. Warning messages can be ignored in some cases, but only when you know and understood their reason. You can encounter three types of warning or error messages:
 
@@ -96,7 +96,7 @@ For suppressing a non-critical runtime error or warning, call **ignore(ErrorNumb
 
 ### Error 018: Bad name
 
-> A name was too long, too short, or contained spaces or other invalid characters.
+> A name was too long, too short, or contained spaces or other invalid characters. Algo and asset names must not exceed 15 characters.
 
 ### Error 019: Empty function
 

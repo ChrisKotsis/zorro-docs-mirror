@@ -487,9 +487,13 @@ Rng Smoothed Rate of Change (S-RoC) by Fred G Schutzman. Differs from the **ROC*
 
 Avg Simple Moving Average; the mean of the **Data** series, i.e. the sum of all elementes divided by the time period. Use **[Moment](#moment)** when long time periods are required.
 
+## SMAFast(vars Data, int TimePeriod): var
+
+Avg Mean of **Data** as above, but a faster and cumulative variant. The function internally creates a [series](091_series.md) (see remarks). Source code in **indicators.c**.
+
 ## SMAP(vars Data, int TimePeriod): var
 
-Avg Mean of **Data** as above, but counting only nonzero positive values. Can be used to skip inactive periods f.i. for calculating the average volume. Source code in indicators.c.
+Avg Mean of **Data** as above, but counting only nonzero positive values. Can be used to skip inactive periods f.i. for calculating the average volume. Source code in **indicators.c**.
 
 ## Smooth(vars Data, int CutoffPeriod): var
 
