@@ -36,8 +36,9 @@ The default values of some variables can be set up in the strategy script by **#
 #define \_BAR\_PERIOD     240
 #define \_LOOKBACK\_BARS  4000
 #define \_WFO\_CYCLES     16
-#define \_BACKTEST\_START 201501011
+#define \_BACKTEST\_START 20150101
 #define \_BACKTEST\_END   20251231
+#define \_INVESTMENT 	4
 ```
 
 The Action menu contains only a subset of the shell functions. You can Reset the variables, run Cluster Analysis and Montecarlo analysis, and open the download page to Download History.  
