@@ -25,25 +25,25 @@ Here's a non-complete list of useful books and links to algorithmic trading and 
 
 ### Practice
 
-**Johann Christian Lotter, [Black Book of Financial Hacking](https://www.amazon.com/dp/B0GSJMB92R) / [Das Schwarze Börsenhackerbuch](http://www.amazon.de/dp/B0GSJRMRBS).** **[Contents](https://financial-hacker.com/content3.htm).** Algo trading systems for forex, stocks, and options. Introduction to algorithmic trading with C, and to the algorithms behind the [Z systems](zsystems.md). With source code. **Discount** for owners of a permanent/infinite [Zorro S](restrictions.md) license.  
+**Johann Christian Lotter, [Black Book of Financial Hacking](https://www.amazon.com/dp/B0GSJMB92R) / [Das Schwarze Börsenhackerbuch](http://www.amazon.de/dp/B0GSJRMRBS).** **[Contents](https://financial-hacker.com/content3.htm).** Introduction to algorithmic trading, and to the algorithms behind the [Z systems](zsystems.md). With source code. .  
 
 **Ernest P. Chan, Quantitative Trading.** Insight in strategy testing and portfolio optimization with many practical advices.
 
-**John F. Ehlers, Rocket Science for Traders.** Trading with signal processing methods. Source code in EasyLanguage.
+**John F. Ehlers, Rocket Science for Traders.** Analyzing price curves and generating trade signals with signal processing methods. Highly recommended. Source code in EasyLanguage.
 
-**Robert Pardo,** **The Evaluation and Optimization of Trading Strategies.** Focus on correct backtesting by the inventor of walk-forward analysis for trading systems.
+**Robert Pardo,** **The Evaluation and Optimization of Trading Strategies.** By the inventor of walk-forward analysis. Presents mostly solid methods, possibly except his using profiles from in-sample optimization results for evaluation. 
 
 **Perry J. Kaufman, New Trading Systems and Methods.** All buzzwords you need to know when talking to chart analysts, including a chapter about esotercism and astrology trading.
 
 **Marcos Lopez de Prado, Advances in Financial Machine Learning.** What to consider when applying ML to finance.
 
-**Francois Chollet / J. J. Allaire, Deep Learning with R.** All you need for creating deep learning strategies with Zorro and Keras / Tensorflow.
+**Francois Chollet / J. J. Allaire, Deep Learning with R.** All you need to know for creating deep learning strategies with Zorro and Keras / Tensorflow.
 
 **Philip Z Maymin, Financial Hacking.** Excellent title and good intro to options and derivatives.
 
 **Ralph Vince, Handbook of Portfolio Mathematics.** How to allocate your capital in an optimal way among different assets and strategies.
 
-**Gary Antonacci, Dual Momentum Investing.** Portfolio rotation based on an empirical approach, used for the Z9 system.
+**Gary Antonacci, Dual Momentum Investing.** Portfolio rotation based on an empirical approach, used for the [Z9 system](zsystems.md).
 
 ### Fun
 
