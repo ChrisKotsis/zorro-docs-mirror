@@ -31,9 +31,9 @@ Here's a non-complete list of useful books and links to algorithmic trading and 
 
 **John F. Ehlers, Rocket Science for Traders.** Analyzing price curves and generating trade signals with signal processing methods. Highly recommended. Source code in EasyLanguage.
 
-**Robert Pardo,** **The Evaluation and Optimization of Trading Strategies.** By the inventor of walk-forward analysis. Presents mostly solid methods, possibly except his using profiles from in-sample optimization results for evaluation. 
+**Robert Pardo,** **The Evaluation and Optimization of Trading Strategies.** The classic by the inventor of walk-forward analysis. Presents mostly solid methods, possibly except his advice to use in-sample optimization results for strategy evaluation. 
 
-**Perry J. Kaufman, New Trading Systems and Methods.** All buzzwords you need to know when talking to chart analysts, including a chapter about esotercism and astrology trading.
+**Perry J. Kaufman, New Trading Systems and Methods.** All buzzwords you need to know when talking to chart analysts - including a chapter about astrological trading!
 
 **Marcos Lopez de Prado, Advances in Financial Machine Learning.** What to consider when applying ML to finance.
 

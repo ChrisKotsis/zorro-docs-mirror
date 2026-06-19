@@ -167,7 +167,7 @@ The color of the fields represents the performance. You want as much red fields 
 
 ### Create portfolio
 
-The goal of evaluation is creating a balanced portfolio from optimal components. Create Algos from Summary will generate a portfolio from all job variants with at least 75% CA and 1.25 profit factor, and store it in **"\*\_algo.bin"** in the **Data** folder. This portfolio is then loaded at start, and further test or training operations are applied to the whole portfolio unless it is reset or something else is selected. The algo/asset/timeframe components are listed at start, like this:
+The goal of evaluation is creating a balanced portfolio from optimal components. Create Algos from Best will generate a portfolio from the best job variants with at least 60% CA and 1.25 profit factor, and store it in **"\*\_algo.bin"** in the **Data** folder. This portfolio is then loaded at start, and further test or training operations are applied to the whole portfolio unless it is reset or something else is selected. The algo/asset/timeframe components are listed at start, like this:
 
 ```c
 Algo TRND\_2 (EUR/USD, 60M)
@@ -217,7 +217,7 @@ The following usage example uses [workshop 6](tutorial_kelly.md). You can find p
 *   Now you have the choice between several predefined clusters. Select **WFO\_Cluster3x3**.
 *   After a lengthy process, the summary appears with the **CA%** column of the best jobs populated,  
      
-*   Next, portfolio creation. Click \[Train\] and select Create Algos from Summary.
+*   Next, portfolio creation. Click \[Train\] and select Create Algos from Best.
 *   Double click on **Job\\Workshop6c\_Summary.csv.** You'll see a list of select algo variants that build the final system.
 *   Click \[Start\] to train. The perfomance report of the final system will pop up at the end.  
       

@@ -21,7 +21,7 @@ source: "https://zorro-project.com/manual/en/new.htm"
 
 ### Zorro 3.10 beta
 
-*   The [Evaluation Shell](010_Evaluation_Shell.md) got a new function for algo comparison.
+*   The [Evaluation Shell](010_Evaluation_Shell.md) got new functions for algo selection and algo comparison.
 *   The [phantom](102_phantom.md) function now activates phantom trading automatically for the current algo.
 *   New plugin: [cTrader](229_cTrader.md)
 *   The [SMAFast](033_W4a_Indicator_implementation.md) indicator is a two times faster variant of the [SMA](033_W4a_Indicator_implementation.md).
@@ -33,6 +33,10 @@ Beta versions or release candiates are available on the [Zorro Download Page](ht
 If you want a new Zorro function, feature, or a new broker plugin, there are two ways to get it. You can either pay us for implementing it, and donate the feature to the community. Or you can suggest it on the [User Forum](https://opserver.de/ubb7/ubbthreads.php?ubb=cfrm&c=1) in the Zorro Future section. There you can also comment or support features suggested by other users. We normally implement any suggested feature when it is useful (please give a usage example), popular (supported by other users), backwards compatible (won't break existing scripts), and efficient (saves a lot of code in a script). How long it takes depends on the usefulness of the feature and how hard it is to implement. Donated features have priority.  
 
 # Zorro Release History
+
+### Zorro 3.11 (special version for RangerZ)
+
+*    The [Evaluation Shell](010_Evaluation_Shell.md) got new functions for algo selection and algo comparison.
 
 ### Zorro 3.01 (February 2026)
 
