@@ -39,7 +39,7 @@ This documentation is sourced from the official Zorro manual at: https://zorro-p
 
 ## Last Updated
 
-2026-06-30
+2026-07-01
 
 ## Update Process
 
