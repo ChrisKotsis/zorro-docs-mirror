@@ -49,7 +49,7 @@ Sets various broker plugin parameters or retrieves asset specific data for speci
 | **GET\_FILL** | Trade ID |   | Deprecated; replaced by [BrokerTrade](brokerplugin.md).  Returned the current fill amount of the open order, or **\-1** when the order was not found or was not open anymore. |
 | **GET\_ACCOUNT** | String |   | Fills the string with the account name. |
 | **GET\_DATA** | String |   | General request to a REST API. The string contains the request, usually a JSON object. It can optionally begin with a '#' hash character and the last part of the post address ending with a blank, f.i. **"#data "**). The string is then filled with the response from the API. Returns the response size in characters, or 0 when no valid response was returned. |
-| **GET\_PRICE** | 1 ... 3 |   | Returns a particular price after a **[BrokerAsset](brokerplugin.md)** call. The price type can be given in the argument**:  
+| **GET\_PRICE** | 4 ... 6 |   | Returns a particular price after a **[BrokerAsset](brokerplugin.md)** call. The price type can be given in the argument**:  
 4** - last traded price  
 **5** - last ask price**  
 6** - last bid price |

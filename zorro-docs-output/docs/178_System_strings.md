@@ -82,7 +82,7 @@ The folder in which Zorro was installed, with trailing backslash, f.i. **"C:\\Pr
 
 ## LogFolder
 
-The folder for the log files and reports; if not set, they are stored in the **Log** subfolder.
+The folder for the log files and reports; otherwise they are stored in the **Log** subfolder. Must be set before anything is written into the log.
 
 ## WebFolder
 
