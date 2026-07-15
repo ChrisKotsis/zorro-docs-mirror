@@ -12,7 +12,7 @@ source: "https://zorro-project.com/manual/en/new.htm"
 *   The data format in **64-bit mode** has changed. Recompile 64-bit scripts.
 *   How do I **update a live trading Zorro**? The procedure is described under [Trading](trading.htm#update). If assets or algos were changed, continue the old version at zero volume so that no new trades are opened. Wail until all old trades are closed, then start trading with the new version.
 *   Why do I get **error messages** when the script previously compiled fine? Most likely due to improved error detection, a name conflict with a new keyword, or a deprecated variable or function. Deprecated keywords are defined in **legacy.h**, which can be included for still using them.
-*   Why do I get a **different backtest result**? This is normal due to new price histories or new asset parameters. You can determine the exact reason by comparing both logs.
+*   Why do I get **different backtest results**? This is normal due to new price histories or new asset parameters. You can determine the exact reason by comparing both logs.
 *   Why can't I **test the new Z system**? You need recent historical data. Get it from the [Zorro download page](https://zorro-project.com/download.php).
 *   Why are my **settings** gone? You probably edited the default settings, which are overwritten by any update. Keep individual settings in individual files, like **ZorroFix.ini**, **Z1+.ini**, **Z2+.ini**, etc. They won't be overwritten.
     
@@ -31,6 +31,7 @@ source: "https://zorro-project.com/manual/en/new.htm"
     *   New plugin: [cTrader](229_cTrader.md)
     *   The [SMAFast](033_W4a_Indicator_implementation.md) indicator is a two times faster variant of the [SMA](033_W4a_Indicator_implementation.md).
     *   The [IB plugin](062_DefineApi_LoadLibrary.md) now supports adjusted D1 historical data.
+    *   The default asset parameters - **AssetsFix.csv** - are switched from Oanda to FXM.
     
     ### Zorro 3.01 (February 2026)
     

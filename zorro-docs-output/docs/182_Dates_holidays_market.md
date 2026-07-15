@@ -30,7 +30,7 @@ Maximum number of bars of the simulation (default: **0** = no limit). The simula
 
 ## UpdateDays
 
-Interval in days for automatically [downloading price data](loadhistory.md) from the selected broker (default: **0** = don't automatically download price data). The download process starts when calling [asset()](013_Asset_Account_Lists.md) the first time in a \[Test\] or \[Train\] cycle and the price history is older than the given number of days. Zorro will then log in to the broker, download recent price data in M1 or T1 format dependent on [History](020_Included_Scripts.md), and add it to the price history. This variable can be used for getting fresh data in a [retraining](009_Retraining.md) or [retesting](009_Retraining.md) process. It has no effect in \[Trade\] mode. Set **UpdateDays** to **\-1** for loading prices even when the history is up to date.
+Interval in days for automatically [downloading price data](loadhistory.md) from the selected broker (default: **0** = don't automatically download price data). The download process starts when calling [asset()](013_Asset_Account_Lists.md) the first time in a \[Test\] or \[Train\] cycle and the price history is older than the given number of days. Zorro will then log in to the broker, and download price data in M1 or T1 format (dependent on [History](script.md)) for updating the price history. This variable can be used for getting fresh data in a [retraining](009_Retraining.md) or [retesting](009_Retraining.md) process. It has no effect in \[Trade\] mode. Set **UpdateDays** to **\-1** for loading price data even when the history is up to date.
 
 ## ReTrainDays
 
@@ -51,7 +51,7 @@ Start and end of the business week in **dhhmm** local time in the [BarZone](asse
 
 ## EndMarket
 
-Daily global market opening and closing time in **hhmm** local time in the [BarZone](assetzone.md), **hh** = hour and **mm** = minute. Default: **0930**. Used for local time functions ([day](day.md), [market](month.md), etc.) and for trading and sampling of bars, dependent on [BarMode](200_BarMode.md). Automatically converted from **AssetMarketStart/End** (see below) when [BR\_LOCAL](200_BarMode.md) is set. 
+Daily global market opening and closing time in **hhmm** local time in the [BarZone](assetzone.md), **hh** = hour and **mm** = minute. Default: **930** and **1600** UTC. Used for local time functions ([day](day.md), [market](month.md), etc.) and for trading and sampling of bars, dependent on [BarMode](200_BarMode.md). Automatically converted from **AssetMarketStart/End** (see below) when [BR\_LOCAL](200_BarMode.md) is set. 
 
 ## AssetMarketStart
 
