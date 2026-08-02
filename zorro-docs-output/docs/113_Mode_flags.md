@@ -46,7 +46,7 @@ Do not shift [dynamic series](091_series.md) and do not change their first eleme
 
 ## NOFLAT
 
-Do not shift [dynamic series](091_series.md) and do not change their first element on **series()** calls when the current asset has a flat bar, i.e. all prices are the same. Useful for skipping gaps in the historical data when [BR\_FLAT](200_BarMode.md) was set. 
+Do not shift [dynamic series](091_series.md) and do not change their first element on **series()** calls when the current asset has a flat bar, i.e. all prices of the current candle are the same. Useful for skipping gaps in the historical data when [BR\_FLAT](200_BarMode.md) was set. 
 
 ## NOFACTORS
 

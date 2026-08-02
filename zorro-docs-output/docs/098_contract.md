@@ -5,7 +5,7 @@ source: "https://zorro-project.com/manual/en/contract.htm"
 
 # contract, ...
 
-# Options, Futures, FOPs
+# Contracts: Options, Futures, FOPs
 
 The following functions can be used for selecting, analyzing, and trading options, futures, and options on futures (FOPs). Due to their additional parameters, such as type, strike, and expiration, options trading is a bit more complex than trading the underlying. An introduction to options trading and options strategy development with Zorro can be found in the **[Black Book](https://www.amazon.de/Black-Book-Financial-Hacking-Algorithmic/dp/1546515216)** chapter 8. A very brief introduction is also found on Financial Hacker.
 

@@ -11,7 +11,7 @@ Execute an external program, open a document or URL, or run a script or batch fi
 
 ### Parameters:
 
-**Program** - file name of the exe, batch file, document, URL to be opened. Use **"Editor"** for opening the script editor, **"Zorro"** for another Zorro instance.  
+**Program** - file name of the exe, batch file, document, URL to be opened. Use **"Editor"** for opening the script editor, **"Viewer**" for opening the chart viewer, and "**Zorro"** for another Zorro instance.  
 **Options** - command line parameter string to be passed to the program, or **0** for no command line options.  
 **Flags** - **1** for waiting until the external program was terminated, **2** for hiding its window, otherwise **0**.
 

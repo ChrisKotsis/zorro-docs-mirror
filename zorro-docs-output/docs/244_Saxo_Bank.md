@@ -41,6 +41,8 @@ The Saxo plugin supports the [brokerCommand](113_brokerCommand.md) function with
 ### Remarks
 
 *   The SAXO API is NFA compliant. The [NFA flag](018_TradeMode.md) must be set, no long and short positions must be open simultaneously, and positions must be closed in FIFO compliant way. [Virtual hedging](019_Hedge_modes.md) mode is recommended.
+*   Asset symbols can be found on their website, f.i. [https://www.home.saxo/rates-and-conditions/cfds/spreads-and-commissions](https://www.home.saxo/rates-and-conditions/cfds/spreads-and-commissions) for CFDs.
+*   You need to subscribe market data for the assets you are using. Demo accounts have only acces to Forex assets. For other reasons of unavailable assets, see [https://openapi.help.saxo/Why-do-I-get-NoAccess-instead-of-prices](https://openapi.help.saxo/hc/en-us/articles/4405160773661-Why-do-I-get-NoAccess-instead-of-prices)
 
 ### See also:
 
