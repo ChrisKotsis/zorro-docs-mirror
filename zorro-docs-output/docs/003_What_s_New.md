@@ -16,6 +16,13 @@ source: "https://zorro-project.com/manual/en/new.htm"
 *   Why can't I **test the new Z system**? You need recent historical data. Get it from the [Zorro download page](https://zorro-project.com/download.php).
 *   Why are my **settings** gone? You probably edited the default settings, which are overwritten by any update. Keep individual settings in individual files, like **ZorroFix.ini**, **Z1+.ini**, **Z2+.ini**, etc. They won't be overwritten.
     
+    ### Zorro 3.12 beta
+    
+    *   Lite-C compiler messages are now printed to **Log\\litec.log**.
+    *   The [exec](151_exec.md) function got a shortcut for the image viewer.
+    *   The algo compare function of the [Evaluation Shell](010_Evaluation_Shell.md) now generates an image.
+    *   The new Apex portfolio for [RangerZ](https://zorro-project.com/rangerz.php) yields > 350% out-of-sample annual return.
+    
     Beta versions or release candiates are available on the [Zorro Download Page](https://zorro-project.com/download.php). [Zorro S features](restrictions.md) can be unlocked in beta versions with a valid Zorro license. [Z strategies](zsystems.md) are not included in beta versions. A list of fixed bugs can be found under [bugs](bugs.md).  
     
     # Future Zorro features
@@ -31,7 +38,7 @@ source: "https://zorro-project.com/manual/en/new.htm"
     *   New plugin: [cTrader](229_cTrader.md)
     *   The [SMAFast](033_W4a_Indicator_implementation.md) indicator is a two times faster variant of the [SMA](033_W4a_Indicator_implementation.md).
     *   The [IB plugin](062_DefineApi_LoadLibrary.md) now supports adjusted D1 historical data.
-    *   The default asset parameters - **AssetsFix.csv** - are switched from Oanda to FXM.
+    *   The default asset parameters - **AssetsFix.csv** - are now based on an FXCM 100:1 account.
     
     ### Zorro 3.01 (February 2026)
     
