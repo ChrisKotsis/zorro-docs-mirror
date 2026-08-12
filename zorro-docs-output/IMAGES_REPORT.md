@@ -1,8 +1,8 @@
 # Zorro Documentation Images Report
 
 ## Summary
-- Total unique images: 141
-- Successfully downloaded: 141
+- Total unique images: 142
+- Successfully downloaded: 142
 
 ## Image List
 - arrowdn.gif (https://zorro-project.com/manual/images/arrowdn.gif)
@@ -128,6 +128,7 @@
 - heatmap.png (https://zorro-project.com/manual/images/heatmap.png)
 - shape.png (https://zorro-project.com/manual/images/shape.png)
 - shuffle.png (https://zorro-project.com/manual/images/shuffle.png)
+- rz_apex.png (https://zorro-project.com/manual/images/rz_apex.png)
 - z1perf.png (https://zorro-project.com/manual/images/z1perf.png)
 - z2perf.png (https://zorro-project.com/manual/images/z2perf.png)
 - z12perf.png (https://zorro-project.com/manual/images/z12perf.png)
@@ -148,4 +149,4 @@
 - bridge2.png (https://zorro-project.com/manual/images/bridge2.png)
 
 ## Last Updated
-2026-08-11T02:48:27.307Z
+2026-08-12T02:59:08.712Z
