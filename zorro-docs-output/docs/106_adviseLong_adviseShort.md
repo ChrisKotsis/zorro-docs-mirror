@@ -257,7 +257,7 @@ _// predict the target with the R predict function_
     Rset("AlgoVar",AlgoVar,8);  
     Rset("X",(double\*)Data,NumSignals);  
     Rx(strf("Y <- neural.predict(%i,X)",model+1));  
-    return Rd("Y\[1\]");  
+    return Rd("Y\[1\]"); _// this is returned by advise()_  
   }  
 _// save all trained models_    
   if(Status == NEURAL\_SAVE) {  
