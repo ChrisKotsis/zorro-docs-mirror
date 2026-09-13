@@ -149,4 +149,4 @@
 - bridge2.png (https://zorro-project.com/manual/images/bridge2.png)
 
 ## Last Updated
-2026-09-12T02:24:04.936Z
+2026-09-13T02:24:19.817Z
