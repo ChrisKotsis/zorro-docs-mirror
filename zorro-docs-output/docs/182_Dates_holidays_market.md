@@ -45,7 +45,7 @@ Maximum allowed gap in days in the historical prices and in [downloaded](loadhis
 
 ## EndWeek
 
-Start and end of the business week in **dhhmm** local time in the [BarZone](assetzone.md), where **d** = day number (**1** = Monday .. **7** = Sunday) **hh** = hour and **mm** = minute. Default: Start **72300** (Sunday 23:00), end **52000** (Friday 20:00). Used to determine the weekend for [BarMode](200_BarMode.md) flags. 
+Start and end of the business week in **dhhmm** local time in the [BarZone](assetzone.md), where **d** = day number (**1** = Monday .. **7** = Sunday) **hh** = hour and **mm** = minute. Default: Start **72300** (Sunday 23:00 GMT = Sydney 10:00 am), end **52000** (Friday 20:00 GMT = New York 4:00 pm). Used to determine the weekend for [BarMode](200_BarMode.md) flags. 
 
 ## StartMarket
 
