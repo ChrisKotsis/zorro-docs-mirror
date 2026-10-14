@@ -23,6 +23,7 @@ source: "https://zorro-project.com/manual/en/new.htm"
     *   The algo compare function of the [Evaluation Shell](010_Evaluation_Shell.md) now generates an image for better comparison.
     *   The new **Apex** portfolio for [RangerZ](https://zorro-project.com/rangerz.php) yields > 350% out-of-sample annual return.
     *   The [evaluation shell](010_Evaluation_Shell.md) now supports parameter setting per **.ini** file.
+    *   New plugins: [Capital.com](capitalcom.md), [OpenAlgo](244_OpenAlgo.md).
     
     Beta versions or release candiates are available on the [Zorro Download Page](https://zorro-project.com/download.php). [Zorro S features](restrictions.md) can be unlocked in beta versions with a valid Zorro license key. [Z strategies](zsystems.md) are not included in beta versions. A list of fixed bugs can be found under [bugs](bugs.md).  
     
