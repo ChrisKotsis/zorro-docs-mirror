@@ -11,7 +11,7 @@ Creates a time series of the given **Length** with the given **Value**, and retu
 
 ### Parameters:
 
-<table border="0"><tbody><tr><td><strong>Value</strong></td><td>Optional data value of the series. The series is initially filled with this value, otherwise with <strong>0</strong>. On dynamic series the value is copied into the first element.</td></tr><tr><td><strong>Length</strong></td><td>Optional number of elements of the series; must not change once set. When omitted or <strong>0</strong>, the series gets the length of <strong><a href="nhistory.htm">LookBack</a></strong>. A negative number allocates a static series that can be shifted by script with the <a href="shift.htm">shift</a> function.</td></tr></tbody></table>
+<table border="0"><tbody><tr><td><strong>Value</strong></td><td>Optional data value of the series. The series is initially filled with this value, otherwise with <strong>0</strong>. On dynamic series the value is copied into the first element.</td></tr><tr><td><strong>Length</strong></td><td>Optional number of elements of the series; must not change once set. When omitted or <strong>0</strong>, the series gets the length of <strong><a href="nhistory.htm">LookBack</a></strong>. A negative number allocates a static series that ist not automatically shifted at any bar.</td></tr></tbody></table>
 
 ### Returns:
 

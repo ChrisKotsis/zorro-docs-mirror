@@ -11,7 +11,7 @@ Zorro's standard time zone is UTC (Greenwich mean time), which is also the time 
 
 ## BarZone
 
-Time zone of bars (default: **UTC**). Affects bar generation: daily bars will start and end at **BarZone** midnight plus [BarOffset](177_BarPeriod_TimeFrame.md). For this, set **BarZone** before the first [asset](013_Asset_Account_Lists.md) call. **BarZone** is also used by several date/time functions that use local time. For using specific asset-dependent time zones with intraday bars, see **AssetFrameZone** and **AssetMarketZone**. 
+Local time zone of bars (default: **UTC**). Affects bar generation: daily bars will start and end at **BarZone** midnight plus [BarOffset](177_BarPeriod_TimeFrame.md). For this, set **BarZone** before the first [asset](013_Asset_Account_Lists.md) call. **BarZone** is also used by several date/time functions that use local time. For using specific asset-dependent time zones with intraday bars, see **AssetFrameZone** and **AssetMarketZone**. 
 
 ## HistoryZone
 

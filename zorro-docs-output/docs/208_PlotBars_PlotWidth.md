@@ -21,7 +21,7 @@ Alternative start of the chart, as a date in the **yyyymmdd** format.
 
 ## PlotScale
 
-Candle and symbol width in pixels (default **5**). Use a negative number for displaying hi-low bars instead of candlesticks. The candle type is automatically switched between black/white candles, hi/low bars, and plain lines dependent on this variable and the chart size.
+Candle and symbol width in pixels (default **5**). Use a negative number for displaying hi-low bars instead of candlesticks. The candle type is automatically switched between black/white candles, hi/low bars, and plain lines dependent on this variable and the chart size. Set the [PL\_LINE](203_PlotMode.md) flag for enforcing a plain line. 
 
 ## PlotText
 
