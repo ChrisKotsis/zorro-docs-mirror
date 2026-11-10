@@ -61,11 +61,11 @@ Sets various broker plugin parameters or retrieves asset specific data for speci
 7** - open interest, for options  |
 | **GET\_BOOK** | T2\* | ✔ | Fills the given T2 array with current quotes from the order book. The asset is set with **SET\_SYMBOL**; bid prices are negative, the **time** field is optional. The last T2 element is set to 0 for indicating the end of the array. Returns the number of quotes. |
 | **GET\_TRADES** | TRADE\* | ✔ | Fill the given **TRADE** array with the parameters of all open positions from the current account (see remarks). Return the number of positions. |
-| **GET\_OPTIONS** | CONTRACT\* | ✔ | Fill the given **CONTRACT** array with the option chain of the underlying set with **SET\_SYMBOL** (see remarks). |
-| **GET\_FUTURES** | CONTRACT\* | ✔ | Fill the given **CONTRACT** array with the futures chain of the underlying set with **SET\_SYMBOL** (see remarks). |
-| **GET\_FOP** | CONTRACT\* | ✔ | Fill the given **CONTRACT** array with the options of futures chain of the underlying set with **SET\_SYMBOL** (see remarks). |
+| **GET\_OPTIONS** | CONTRACT\* | ✔ | Fill the given **CONTRACT** array with the option chain of the underlying set with **SET\_SYMBOL** (see remarks). Used by [contractUpdate](contracts.md). |
+| **GET\_FUTURES** | CONTRACT\* | ✔ | Fill the given **CONTRACT** array with the futures chain of the underlying set with **SET\_SYMBOL** (see remarks). Used by [contractUpdate](contracts.md). |
+| **GET\_FOP** | CONTRACT\* | ✔ | Fill the given **CONTRACT** array with the options of futures chain of the underlying set with **SET\_SYMBOL** (see remarks). Used by [contractUpdate](contracts.md). |
 | **GET\_CHAIN** | int\[5000\] | ✔ | Fill the given **int** array with the options chain parameters of the underlying symbol previously set with **SET\_SYMBOL**:  
-The first element gets the number of expirations, second the number of strikes, followed by the list of expirations in the YYYYMMDD format, followed by the list of strikes cast to **float**. Used by the [contractChain](096_contract.md) function. |
+The first element gets the number of expirations, second the number of strikes, followed by the list of expirations in the YYYYMMDD format, followed by the list of strikes cast to **float**. Used by [contractUpdate](contracts.md) and [contractChain](096_contract.md). |
 | **GET\_UNDERLYING** | 0 | ✔ | Get the underlying price for the preceding [brokerAsset](brokerplugin.md) call when the asset was an option. |
 | **GET\_GREEKS** | var\[5\] |   | Get the greeks for a preceding [brokerAsset](brokerplugin.md) or [contractPrice](096_contract.md) call. Fills the parameter array with **P\[0\]** = Implied Volatility; **P\[1\]** = Delta; **P\[2\]** = Gamma; **P\[3\]** = Vega; **P\[4\]** = Theta. Greeks cannot be retrieved with 'fast' price type.0 |
 | **SET\_DELAY** | Time in ms |   | Set delay in ms between commands sent to the broker (normally 20). |

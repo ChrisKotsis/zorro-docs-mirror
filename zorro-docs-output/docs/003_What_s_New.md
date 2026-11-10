@@ -7,7 +7,7 @@ source: "https://zorro-project.com/manual/en/new.htm"
 
 # What's new?
 
-### Updating Zorro 3.01 to Zorro 3.11 - questions and answers
+### Updating Zorro 3.11 to Zorro 3.15 - questions and answers
 
 *   The data format in **64-bit mode** has changed. Recompile 64-bit scripts.
 *   How do I **update a live trading Zorro**? The procedure is described under [Trading](trading.htm#update). If assets or algos were changed, continue the old version at zero volume so that no new trades are opened. Wail until all old trades are closed, then start trading with the new version.
@@ -16,14 +16,7 @@ source: "https://zorro-project.com/manual/en/new.htm"
 *   Why can't I **test the new Z system**? You need recent historical data. Get it from the [Zorro download page](https://zorro-project.com/download.php).
 *   Why are my **settings** gone? You probably edited the default settings, which are overwritten by any update. Keep individual settings in individual files, like **ZorroFix.ini**, **Z1+.ini**, **Z2+.ini**, etc. They won't be overwritten.
     
-    ### Zorro 3.12 beta
-    
-    *   Lite-C compiler messages are now printed to **Log\\litec.log**.
-    *   The [exec](151_exec.md) function got a shortcut for the image viewer.
-    *   The algo compare function of the [Evaluation Shell](010_Evaluation_Shell.md) now generates an image for better comparison.
-    *   The new **Apex** portfolio for [RangerZ](https://zorro-project.com/rangerz.php) yields > 350% out-of-sample annual return.
-    *   The [evaluation shell](010_Evaluation_Shell.md) now supports parameter setting per **.ini** file.
-    *   New plugins: [Capital.com](capitalcom.md), [OpenAlgo](244_OpenAlgo.md).
+    ### Zorro 3.16 beta
     
     Beta versions or release candiates are available on the [Zorro Download Page](https://zorro-project.com/download.php). [Zorro S features](restrictions.md) can be unlocked in beta versions with a valid Zorro license key. [Z strategies](zsystems.md) are not included in beta versions. A list of fixed bugs can be found under [bugs](bugs.md).  
     
@@ -32,6 +25,18 @@ source: "https://zorro-project.com/manual/en/new.htm"
     If you want a new Zorro function, feature, or a new broker plugin, there are two ways to get it. You can either pay us for implementing it, and donate the feature to the community. Or you can suggest it on the [User Forum](https://opserver.de/ubb7/ubbthreads.php?ubb=cfrm&c=1) in the Zorro Future section. There you can also comment or support features suggested by other users. We normally implement any suggested feature when it is useful (please give a usage example), popular (supported by other users), backwards compatible (won't break existing scripts), and efficient (saves a lot of code in a script). How long it takes depends on the usefulness of the feature and how hard it is to implement. Donated features have priority.  
     
     # Zorro Release History
+    
+    ### Zorro 3.15 (November 2026)
+    
+    *   Lite-C compiler messages are now printed to **Log\\litec.log**.
+    *   The [exec](151_exec.md) function got a shortcut for the image viewer.
+    *   The algo compare function of the [Evaluation Shell](010_Evaluation_Shell.md) now generates an image for better comparison.
+    *   The new **Apex** portfolio for [RangerZ](https://zorro-project.com/rangerz.php) yields > 350% out-of-sample annual return.
+    *   The [evaluation shell](010_Evaluation_Shell.md) now supports parameter setting per **.ini** file.
+    *   New plugins: [Capital.com](capitalcom.md), [OpenAlgo](244_OpenAlgo.md).
+    *   The [evaluation shell](shell.htm#command) can now be controlled from the command line.
+    *   Portfolio logs can be reduced to a single algo with the [LogFilter](020_Included_Scripts.md) variable.
+    *   The [contractUpdate](096_contract.md) function now uses the [GET\_CHAIN](113_brokerCommand.md) command, since the other option chain commands are broken with the current TWS API version.
     
     ### Zorro 3.11 (July 2026)
     

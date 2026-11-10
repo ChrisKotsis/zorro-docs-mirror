@@ -11,6 +11,11 @@ source: "https://zorro-project.com/manual/en/rising.htm"
 
 Determines if a series rises or falls, i.e. if **Data\[0\]** is above or below **Data\[1\]**.
 
+## concave (vars Data) : var
+
+Returns the 'concavity' of the series in percent per time frame, positive when concave and negative when convex.  
+Formula: **50.\*(Data\[0\] - 2.\*Data\[1\] + Data\[2\])/Data\[1\]**.
+
 ### Parameters:
 
 <table border="0"><tbody><tr><td><strong>Data</strong></td><td>Data series.</td></tr></tbody></table>

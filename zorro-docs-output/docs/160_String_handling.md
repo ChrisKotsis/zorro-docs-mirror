@@ -130,6 +130,10 @@ Parses text from the string **str** and returns a temporary string containing th
 
 Like **strvar**, but parses the number from a subsequent field in a CSV file. Can be used to parse the content of CSV files This is not a standard C string function.
 
+## strtextCSV (string str, string name_,_ int field, string default): string (temporary)
+
+Like **strtext**, but parses the string from a subsequent field in a CSV file. Can be used to parse the content of CSV files This is not a standard C string function.
+
 ## strfield (string str, string name, int field): string
 
 Like **strtext**,, but returns a pointer to the content of a subsequent field in a CSV file. Can be used to parse or modify the content of CSV files This is not a standard C string function.

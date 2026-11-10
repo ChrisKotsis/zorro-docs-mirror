@@ -23,7 +23,7 @@ The current asset name (read/only), set up initially by the \[Asset\] scrollbox.
 
 ## AssetPrev
 
-The name of the previously selected asset; in a [trade loop](fortrades.md) the name of the asset that was selected before the loop.
+The name of the previously selected asset after an [asset()](013_Asset_Account_Lists.md) call; in a [trade loop](fortrades.md) the name of the asset that was selected before the loop.
 
 ## AssetBox
 
@@ -43,7 +43,11 @@ The name selected with the \[Account\] scrollbox, f.i **"Demo**" or **"FXCM"**.
 
 ## Factors
 
-Name suffix and extension of the file containing the [OptimalF](016_OptimalF_money_management.md) factors; can be set for selecting between different sets of factors. If not set up otherwise, the file begins with the script name and ends with **".fac"**, f.i. **"Z12.fac"**. Set **Factors** f.i. to **"oos.fac"** for reading the factors from the file **"Z12oos.fac"**.  
+Name suffix and extension of the file containing the [OptimalF](016_OptimalF_money_management.md) factors; can be set for selecting between different sets of factors. If not set up otherwise, the file begins with the script name and ends with **".fac"**, f.i. **"Z12.fac"**. Set **Factors** f.i. to **"oos.fac"** for reading the factors from the file **"Z12oos.fac"**.
+
+## LogFilter
+
+Algo Name for suppressing all messages from a different algo in the log, or **""** (default) for not filtering the log.
 
 ## History
 

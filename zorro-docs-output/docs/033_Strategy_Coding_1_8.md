@@ -180,7 +180,9 @@ or:
     _// execute one or several commands that are placed inside these curly brackets_  
 }**
 
-A practical example:
+Curly brackets are used to hold a number of commands together. When you define a variable inside curly brackets, it is only known within these brackets, and unknown outside.
+
+A practical example of **if**:
 
 ```c
 function�main()

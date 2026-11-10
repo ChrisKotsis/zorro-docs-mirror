@@ -94,6 +94,10 @@ When no job was loaded, clicking on \[Start\] will just start a test or training
 
 When one or more jobs are loaded, a click on \[Start\] will train and test all of them in all their asset, algo, and timeframe variants. Their logs, performance reports, and charts will be stored in a subfolders named after the job. In this way training and testing jobs leaves a 'perpertrail' that allows evaluating individual results. Instead of the performace report, a **summary** report will open in the editor.
 
+### Command line
+
+A test or training session can be directly started from the Zorro [command line](027_Command_Line_Options.md) with the **\-d !** option. The exclamation mark can be followed by a number for entering an action menu command, for instance **\-d !0** for reset or **\-d !13** for running an algo comparsion.
+
 ### Results: Summary
 
 The summary report appears when multiple jobs are trained or tested. Any job in any asset, algo, and timeframe variant generates a record in the summary. The summary is sorted, with the best jobs, selected by the **\_Criteria** variable, at the top. It is stored in CSV format, so it can be further evaluated in a spreadsheet program.
@@ -264,6 +268,7 @@ Naturally, training hundreds of jobs and variants will take its time. For highes
 *   After temporarily changing variable values or ranges in the script, click Reset on the next start, otherwise the variables keep their last stored values and ranges.
 *   For overriding a particular variable value, activate Fixed by clicking the the column.
 *   Variables that affect bar creation and training, such as bar period, WFO settings, lookback period, and start/end dates, can only be changed for the whole strategy, but not for single jobs. Leave their Fixed column always enabled.
+*   The set of variables is switched between jobs at any bar. Variables used in [tick](089_tick_tock.md), [manage](018_TradeMode.md), or other event driven functions must be copied into algo variables for taking effect.
 *   If the strategy was changed after creating algos, the whole evaluation process must be repeated if the modification affects multiple jobs in different ways. Otherwise it is sufficient to train the algos again.
 *   If a new job was added, load, train, and cluster analyze the job with its algo/asset/timeframe variants.
 *   For adding multiple jobs to an existing summary, copy the jobs in a new folder, load and train them. then copy the new summary at the end of the existing summary and rearrange the summary.
