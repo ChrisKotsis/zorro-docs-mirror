@@ -44,10 +44,11 @@ function run()
     enterLong();
   if(<span>crossUnder(SMA30,SMA100)</span>)
     enterShort();
-}</pre></td><td><pre><em>// C++ strategy (e.g. "test+.cpp")</em>
+}
+</pre></td><td><pre><em>// C++ strategy (e.g. "test+.cpp")</em>
 #include &lt;zorro.h&gt;
 
-DLLFUNC void run()
+function run()
 {
   vars Prices = series(price(0));
   vars SMA100 = series(SMA(Prices,100));
@@ -57,6 +58,7 @@ DLLFUNC void run()
     enterLong();
   if(<span>crossUnder(SMA30,SMA100)</span>)
     enterShort();
+  return 0;
 }</pre></td></tr></tbody></table>
 
 ### Include <zorro.h>
@@ -72,12 +74,13 @@ If lite-C scripts have no header, the **<default.c>** header is automatically in
 If a function does not return something, it must be defined with the **void** type. This is optional in lite-C, but mandatory in C++. If functions are exported - like all predefined functions such as **run**, **main**, **objective**, etc - define them with the **DLLFUNC** macro. The **function** keyword is defined as **DLLFUNC int** in C++; functions of **function** type must therefore always return a value. 
 ```c
 function click() { ... } _// lite-C_
+function click() { ... return 0; } _// C++_
 DLLFUNC void click() { ... } _// C++_
 ```
 
 ### No variable initialization
 
-The lite-C compiler initializes all global and local variables and arrays to **0**; a normal C++ compiler does not. This means they have random content at start. So take care to properly initialize all variables when necessary (normally also recommended in lite-C code!):
+The lite-C compiler initializes local, global, and static variables and arrays to **0**; a normal C++ compiler does not. This means they have random content at start. So take care to properly initialize all variables when necessary (normally also recommended in lite-C code!):
 ```c
 var MyArray\[10\];  _// lite-C; automatically initialized to zero_
 var MyArray\[10\] = { 0,0,0,0,0,0,0,0,0,0 }; _// C++_
